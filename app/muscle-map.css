@@ -1,0 +1,6 @@
+.muscle-map figure{margin:16px 0 0;background:#17212a;border-radius:12px;overflow:hidden}.muscle-map img{display:block;width:100%;height:auto;max-height:400px;object-fit:contain}.muscle-map figcaption{padding:14px 16px;color:#e3e9e6;font-size:12px;line-height:1.7}.muscle-map .role-key{display:flex;flex-wrap:wrap;gap:8px 20px}.muscle-map .role-key span{display:flex;align-items:center;gap:7px}.muscle-map .role-key i{width:10px;height:10px;flex:none;border-radius:50%;background:#e99546}.muscle-map .role-key .stable i{background:#719f9a}.muscle-map .muscle-map-note{margin:8px 0 0;color:#c5d0cb}
+
+.muscle-map .panel-head h2{margin:0}.muscle-map .panel-head .btn{font-size:12px;min-height:44px;padding:8px 12px}
+.muscle-map .role-key .assist i{background:#d8ba70}
+.muscle-map .role-key .risk i{background:transparent;border:2px dashed #c76161;border-radius:3px;width:14px;height:12px}
+.muscle-map .role-key{display:grid;gap:10px}.muscle-map .role-key .primary{font-weight:700;font-size:14px;color:#fff5e9}.muscle-map .role-key .risk{color:#f0b5ad}.muscle-map .panel-head{gap:12px}.muscle-map .panel-head h2{font-size:20px}.muscle-map .role-key span{align-items:flex-start}.muscle-map .role-key i{margin-top:4px}.muscle-map .muscle-map-note{line-height:1.75}

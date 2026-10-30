@@ -1,0 +1,899 @@
+{
+  "version": 1,
+  "width": 1536,
+  "height": 1024,
+  "base": "assets/muscle-maps/neutral-base-v1.webp",
+  "frontCenter": 458,
+  "backCenter": 1075,
+  "colors": {
+    "primary": "#e59a53",
+    "emphasis": "#cc7430",
+    "assist": "#d8ba70",
+    "stable": "#719f9a",
+    "risk": "#b94545"
+  },
+  "shapes": {
+    "chest": {
+      "front": true,
+      "pair": true,
+      "d": "M449 202 C422 193 385 199 357 223 C367 252 386 274 414 282 C435 286 448 272 451 253 Z"
+    },
+    "upperChest": {
+      "front": true,
+      "pair": true,
+      "d": "M449 202 C422 193 385 199 357 223 C385 220 416 226 449 233 Z"
+    },
+    "frontDelts": {
+      "front": true,
+      "pair": true,
+      "d": "M363 191 C375 186 384 189 390 195 C371 202 359 221 350 240 C341 231 339 213 349 199 Z"
+    },
+    "sideDelts": {
+      "front": true,
+      "pair": true,
+      "d": "M350 194 C329 199 318 217 324 242 L333 251 C335 233 340 212 351 204 Z"
+    },
+    "rearDelts": {
+      "front": false,
+      "pair": true,
+      "d": "M973 191 C954 191 940 211 942 236 L947 250 C968 245 990 229 1003 207 C994 199 985 194 973 191 Z"
+    },
+    "biceps": {
+      "front": true,
+      "pair": true,
+      "d": "M349 252 C358 264 351 294 340 313 C333 324 324 331 316 335 C318 313 321 285 331 267 Z"
+    },
+    "brachialis": {
+      "front": true,
+      "pair": true,
+      "d": "M326 281 C318 294 308 314 307 331 L310 343 C317 340 323 334 328 325 C325 316 325 298 326 281 Z"
+    },
+    "brachioradialis": {
+      "front": true,
+      "pair": true,
+      "d": "M309 334 C298 343 287 361 282 380 L276 400 C287 394 296 381 301 368 L314 342 Z"
+    },
+    "triceps": {
+      "front": false,
+      "pair": true,
+      "d": "M970 250 C982 262 974 292 963 316 C956 327 947 334 937 337 C940 315 943 286 951 266 Z"
+    },
+    "tricepsLong": {
+      "front": false,
+      "pair": true,
+      "d": "M974 256 C982 273 972 299 962 317 L953 326 C961 302 964 277 974 256 Z"
+    },
+    "abs": {
+      "front": true,
+      "pair": true,
+      "d": "M451 281 C437 283 419 288 414 299 L415 353 C418 377 427 400 442 419 L452 421 Z"
+    },
+    "obliques": {
+      "front": true,
+      "pair": true,
+      "d": "M382 280 C391 290 402 300 410 307 L411 354 C412 376 421 398 437 417 L394 392 C389 374 386 352 387 337 L378 309 Z"
+    },
+    "erectors": {
+      "front": false,
+      "pair": true,
+      "d": "M1068 298 C1060 308 1051 327 1048 347 L1048 381 L1067 392 C1071 368 1071 329 1068 298 Z"
+    },
+    "lats": {
+      "front": false,
+      "pair": true,
+      "d": "M989 256 C1004 261 1019 265 1033 265 L1046 287 L1045 372 C1026 366 1008 349 997 327 C988 302 982 276 989 256 Z"
+    },
+    "midTraps": {
+      "front": false,
+      "pair": true,
+      "d": "M1072 198 L1022 198 L1016 223 L1034 249 L1072 261 Z"
+    },
+    "lowerTraps": {
+      "front": false,
+      "pair": true,
+      "d": "M1072 263 L1036 252 C1046 277 1058 298 1072 314 Z"
+    },
+    "upperTraps": {
+      "front": false,
+      "pair": true,
+      "d": "M1067 119 C1060 149 1034 169 1004 185 L1028 194 C1044 190 1060 191 1072 194 L1072 136 Z"
+    },
+    "rhomboids": {
+      "front": false,
+      "pair": true,
+      "deep": true,
+      "d": "M1065 209 L1042 214 L1036 247 L1065 273 Z"
+    },
+    "glutes": {
+      "front": false,
+      "pair": true,
+      "d": "M1005 412 C995 430 989 467 995 489 C1011 495 1042 486 1058 474 C1070 459 1071 438 1067 422 C1050 415 1028 408 1005 412 Z"
+    },
+    "sideGlutes": {
+      "front": false,
+      "pair": true,
+      "d": "M1004 400 L1021 397 L1036 405 C1022 415 1007 427 1001 443 L995 437 C996 423 999 408 1004 400 Z"
+    },
+    "gluteMin": {
+      "front": false,
+      "pair": true,
+      "deep": true,
+      "d": "M1007 406 C1018 405 1031 414 1037 425 L1015 446 L1003 430 Z"
+    },
+    "tfl": {
+      "front": true,
+      "pair": true,
+      "d": "M376 425 L387 436 L384 458 L374 471 L366 460 Z"
+    },
+    "quads": {
+      "front": true,
+      "pair": true,
+      "d": "M384 453 C377 476 377 517 386 551 C392 570 397 578 401 581 C411 553 416 524 411 493 C405 471 396 456 384 453 Z M368 439 C355 475 351 515 360 550 C363 565 366 574 370 579 L381 554 C369 518 371 473 379 452 Z M420 490 C422 518 415 541 405 560 C398 575 400 591 406 600 C418 589 426 571 430 550 C433 528 430 507 424 494 Z"
+    },
+    "hamstrings": {
+      "front": false,
+      "pair": true,
+      "d": "M1001 498 C987 517 985 548 993 577 L1005 607 C1016 602 1020 594 1025 584 L1028 626 L1038 632 C1052 613 1058 580 1060 550 L1061 499 C1042 495 1019 495 1001 498 Z"
+    },
+    "adductors": {
+      "front": true,
+      "pair": true,
+      "d": "M420 462 C434 480 442 502 442 525 C439 546 434 564 428 579 L418 567 C423 536 418 505 408 481 Z"
+    },
+    "adductorMagnus": {
+      "front": false,
+      "pair": true,
+      "deep": true,
+      "d": "M1056 503 L1065 504 L1062 547 C1058 580 1048 603 1040 614 L1034 608 C1045 573 1048 538 1056 503 Z"
+    },
+    "calves": {
+      "front": false,
+      "pair": true,
+      "d": "M994 653 C980 667 969 692 974 716 C977 731 990 739 1000 729 C1006 703 1003 673 999 656 Z M1006 652 C1021 661 1037 688 1035 711 C1033 729 1023 741 1013 731 C1004 706 1003 676 1006 652 Z"
+    },
+    "soleus": {
+      "front": false,
+      "pair": true,
+      "d": "M972 690 C965 714 974 752 982 783 L992 798 L997 796 C986 755 983 721 983 706 Z M1034 690 C1040 717 1033 754 1023 783 L1015 799 L1008 797 C1020 759 1026 725 1025 707 Z"
+    },
+    "soleusDeep": {
+      "front": false,
+      "pair": false,
+      "deep": true,
+      "d": "M991 674 C982 697 983 725 990 753 L1004 778 L1017 750 C1027 720 1025 696 1011 674 Z"
+    },
+    "teres": {
+      "front": false,
+      "pair": true,
+      "d": "M994 253 C1007 254 1017 257 1023 263 L1017 273 C1004 269 995 265 988 261 Z"
+    },
+    "levator": {
+      "front": false,
+      "pair": true,
+      "deep": true,
+      "d": "M1054 145 C1043 162 1034 180 1027 197 L1034 208 C1043 184 1051 166 1060 151 Z"
+    },
+    "calvesAssist": {
+      "front": false,
+      "pair": true,
+      "d": "M994 653 C980 667 969 692 974 716 C977 731 990 739 1000 729 C1006 703 1003 673 999 656 Z M1006 652 C1021 661 1037 688 1035 711 C1033 729 1023 741 1013 731 C1004 706 1003 676 1006 652 Z",
+      "mirrorOnly": true
+    },
+    "sideDeltsLeft": {
+      "front": true,
+      "pair": true,
+      "d": "M350 194 C329 199 318 217 324 242 L333 251 C335 233 340 212 351 204 Z",
+      "mirrorOnly": true
+    },
+    "upperTrapsLeft": {
+      "front": false,
+      "pair": false,
+      "d": "M1067 119 C1060 149 1034 169 1004 185 L1028 194 C1044 190 1060 191 1072 194 L1072 136 Z"
+    }
+  },
+  "maps": [
+    {
+      "id": "incline",
+      "exerciseIds": [
+        "incline"
+      ],
+      "primary": [
+        "chest"
+      ],
+      "emphasis": [
+        "upperChest"
+      ],
+      "assist": [
+        "frontDelts",
+        "triceps"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "胸大肌（上部偏重）",
+        "assist": "肩前束、三头肌",
+        "stable": "腹壁稳定",
+        "risk": "挺腰借力时留意下背"
+      },
+      "note": ""
+    },
+    {
+      "id": "flat",
+      "exerciseIds": [
+        "flat"
+      ],
+      "primary": [
+        "chest"
+      ],
+      "assist": [
+        "frontDelts",
+        "triceps"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "胸大肌",
+        "assist": "肩前束、三头肌",
+        "stable": "腹壁稳定",
+        "risk": "挺腰借力时留意下背"
+      },
+      "note": ""
+    },
+    {
+      "id": "shoulder",
+      "exerciseIds": [
+        "shoulder"
+      ],
+      "primary": [
+        "frontDelts"
+      ],
+      "assist": [
+        "sideDelts",
+        "triceps"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "肩前束",
+        "assist": "肩中束、三头肌",
+        "stable": "腹壁稳定",
+        "risk": "后仰借力时留意下背"
+      },
+      "note": ""
+    },
+    {
+      "id": "lateral",
+      "exerciseIds": [
+        "lateral"
+      ],
+      "primary": [
+        "sideDelts"
+      ],
+      "assist": [],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "upperTraps"
+      ],
+      "labels": {
+        "primary": "肩中束",
+        "assist": "肩胛上旋肌群正常协同",
+        "stable": "腹壁稳定",
+        "risk": "过度耸肩时留意上斜方肌"
+      },
+      "extra": "斜方肌正常参与肩胛上旋；只有明显耸肩抢行程时才需调整。",
+      "note": "斜方肌正常参与肩胛上旋；只有明显耸肩抢行程时才需调整。"
+    },
+    {
+      "id": "fly",
+      "exerciseIds": [
+        "fly"
+      ],
+      "primary": [
+        "chest"
+      ],
+      "assist": [
+        "frontDelts"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "胸大肌",
+        "assist": "肩前束",
+        "stable": "腹壁稳定",
+        "risk": "肩部不适前停止打开"
+      },
+      "note": ""
+    },
+    {
+      "id": "overhead",
+      "exerciseIds": [
+        "overhead"
+      ],
+      "primary": [
+        "triceps"
+      ],
+      "emphasis": [
+        "tricepsLong"
+      ],
+      "assist": [],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "三头肌（长头偏重）",
+        "assist": "无额外重点辅助肌",
+        "stable": "腹壁稳定",
+        "risk": "挺腰摆动时留意下背"
+      },
+      "note": ""
+    },
+    {
+      "id": "lat-pull",
+      "exerciseIds": [
+        "pulldown",
+        "latrow"
+      ],
+      "primary": [
+        "lats"
+      ],
+      "assist": [
+        "biceps",
+        "brachialis",
+        "brachioradialis"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "背阔肌",
+        "assist": "二头肌、肱肌、肱桡肌",
+        "stable": "腹壁稳定",
+        "risk": "后仰或扭腰借力时留意下背"
+      },
+      "note": ""
+    },
+    {
+      "id": "row",
+      "exerciseIds": [
+        "row"
+      ],
+      "primary": [
+        "midTraps",
+        "lowerTraps",
+        "rhomboids"
+      ],
+      "assist": [
+        "lats",
+        "biceps",
+        "rearDelts"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "上背：菱形肌、中下斜方肌",
+        "assist": "背阔肌、二头肌、肩后束",
+        "stable": "腹壁稳定",
+        "risk": "抬胸甩动时留意下背"
+      },
+      "note": "虚线填色为深层肌的位置投影，不是表面肌肉。"
+    },
+    {
+      "id": "rear",
+      "exerciseIds": [
+        "rear"
+      ],
+      "primary": [
+        "rearDelts"
+      ],
+      "assist": [
+        "midTraps",
+        "rhomboids"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "upperTraps"
+      ],
+      "labels": {
+        "primary": "肩后束",
+        "assist": "菱形肌、中斜方肌",
+        "stable": "腹壁稳定",
+        "risk": "过度耸肩时留意上斜方肌"
+      },
+      "note": "虚线填色为深层肌的位置投影，不是表面肌肉。"
+    },
+    {
+      "id": "biceps",
+      "exerciseIds": [
+        "curl",
+        "preacher"
+      ],
+      "primary": [
+        "biceps"
+      ],
+      "assist": [
+        "brachialis",
+        "brachioradialis"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "frontDelts"
+      ],
+      "labels": {
+        "primary": "二头肌",
+        "assist": "肱肌、肱桡肌",
+        "stable": "腹壁稳定",
+        "risk": "前送肩肘借力时留意肩前侧"
+      },
+      "note": ""
+    },
+    {
+      "id": "hammer",
+      "exerciseIds": [
+        "hammer"
+      ],
+      "primary": [
+        "brachialis",
+        "brachioradialis"
+      ],
+      "assist": [
+        "biceps"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "frontDelts"
+      ],
+      "labels": {
+        "primary": "肱肌、肱桡肌",
+        "assist": "二头肌",
+        "stable": "腹壁稳定",
+        "risk": "前送肩肘借力时留意肩前侧"
+      },
+      "note": ""
+    },
+    {
+      "id": "hack",
+      "exerciseIds": [
+        "hack"
+      ],
+      "primary": [
+        "quads"
+      ],
+      "assist": [
+        "glutes",
+        "adductorMagnus"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "股四头肌",
+        "assist": "臀大肌、大收肌",
+        "stable": "腹壁稳定",
+        "risk": "背贴垫，膝与脚尖自然同向"
+      },
+      "note": "虚线填色为深层肌的位置投影，不是表面肌肉。"
+    },
+    {
+      "id": "rdl",
+      "exerciseIds": [
+        "rdl"
+      ],
+      "primary": [
+        "glutes",
+        "hamstrings"
+      ],
+      "assist": [
+        "adductorMagnus"
+      ],
+      "stable": [
+        "abs",
+        "obliques",
+        "erectors"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "臀大肌、腘绳肌",
+        "assist": "大收肌（髋伸协同）",
+        "stable": "竖脊肌、腹壁稳定",
+        "risk": "下背稳定正常；弯腰或反弓腰才需留意"
+      },
+      "note": "虚线填色为深层肌的位置投影，不是表面肌肉。"
+    },
+    {
+      "id": "glutes",
+      "exerciseIds": [
+        "thrust",
+        "kickback"
+      ],
+      "primary": [
+        "glutes"
+      ],
+      "assist": [
+        "hamstrings"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "臀大肌",
+        "assist": "腘绳肌",
+        "stable": "腹壁稳定",
+        "risk": "反弓腰借力时留意下背"
+      },
+      "note": ""
+    },
+    {
+      "id": "legcurl",
+      "exerciseIds": [
+        "legcurl"
+      ],
+      "primary": [
+        "hamstrings"
+      ],
+      "assist": [
+        "calves"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "腘绳肌",
+        "assist": "腓肠肌",
+        "stable": "腹壁稳定",
+        "risk": "固定大腿，避免抬臀借力"
+      },
+      "note": ""
+    },
+    {
+      "id": "extension",
+      "exerciseIds": [
+        "extension"
+      ],
+      "primary": [
+        "quads"
+      ],
+      "assist": [],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "股四头肌",
+        "assist": "无额外重点辅助肌",
+        "stable": "腹壁稳定",
+        "risk": "坐稳，不猛踢或抬臀"
+      },
+      "note": ""
+    },
+    {
+      "id": "abduction",
+      "exerciseIds": [
+        "abduction"
+      ],
+      "primary": [
+        "sideGlutes",
+        "gluteMin"
+      ],
+      "assist": [
+        "tfl"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "臀中肌、臀小肌",
+        "assist": "阔筋膜张肌",
+        "stable": "腹壁稳定",
+        "risk": "骨盆坐稳，避免上身摆动"
+      },
+      "note": "虚线填色为深层肌的位置投影，不是表面肌肉。"
+    },
+    {
+      "id": "calf",
+      "exerciseIds": [
+        "calf"
+      ],
+      "primary": [
+        "calves"
+      ],
+      "assist": [
+        "soleus"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "腓肠肌",
+        "assist": "比目鱼肌",
+        "stable": "腹壁稳定",
+        "risk": "膝基本伸直，避免弹跳借力"
+      },
+      "note": ""
+    },
+    {
+      "id": "crunch",
+      "exerciseIds": [
+        "crunch"
+      ],
+      "primary": [
+        "abs"
+      ],
+      "assist": [
+        "obliques"
+      ],
+      "stable": [],
+      "risk": [
+        "lats"
+      ],
+      "labels": {
+        "primary": "腹直肌",
+        "assist": "腹斜肌",
+        "stable": "深层核心参与（未单独着色）",
+        "risk": "只用手臂下拉时留意背阔肌借力"
+      },
+      "note": ""
+    },
+    {
+      "id": "pallof",
+      "exerciseIds": [
+        "pallof"
+      ],
+      "primary": [
+        "obliques"
+      ],
+      "assist": [
+        "abs"
+      ],
+      "stable": [
+        "erectors"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "腹斜肌（抗旋转）",
+        "assist": "腹直肌",
+        "stable": "竖脊肌稳定；深层腹壁未单独着色",
+        "risk": "抵抗转身，骨盆保持朝向"
+      },
+      "note": ""
+    },
+    {
+      "id": "pushdown",
+      "exerciseIds": [
+        "pushdown"
+      ],
+      "primary": [
+        "triceps"
+      ],
+      "assist": [],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "lats"
+      ],
+      "labels": {
+        "primary": "三头肌",
+        "assist": "无额外重点辅助肌",
+        "stable": "腹壁稳定",
+        "risk": "摆肩或压身体借力时留意背部"
+      },
+      "note": ""
+    },
+    {
+      "id": "lowfly",
+      "exerciseIds": [
+        "lowfly"
+      ],
+      "primary": [
+        "chest"
+      ],
+      "emphasis": [
+        "upperChest"
+      ],
+      "assist": [
+        "frontDelts"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "胸大肌（上部偏重）",
+        "assist": "肩前束",
+        "stable": "腹壁稳定",
+        "risk": "后仰追行程时留意下背"
+      },
+      "note": ""
+    },
+    {
+      "id": "straight",
+      "exerciseIds": [
+        "straight"
+      ],
+      "primary": [
+        "lats"
+      ],
+      "assist": [
+        "teres",
+        "tricepsLong"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "背阔肌",
+        "assist": "大圆肌、三头长头",
+        "stable": "腹壁稳定",
+        "risk": "后仰借力时留意下背"
+      },
+      "note": ""
+    },
+    {
+      "id": "shrug",
+      "exerciseIds": [
+        "shrug"
+      ],
+      "primary": [
+        "upperTraps"
+      ],
+      "assist": [
+        "levator"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "erectors"
+      ],
+      "labels": {
+        "primary": "上斜方肌",
+        "assist": "提肩胛肌",
+        "stable": "腹壁稳定（握持肌未单独着色）",
+        "risk": "甩腰拉重量时留意下背"
+      },
+      "note": "虚线填色为深层肌的位置投影，不是表面肌肉。"
+    },
+    {
+      "id": "adduction",
+      "exerciseIds": [
+        "adduction"
+      ],
+      "primary": [
+        "adductors"
+      ],
+      "assist": [],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "髋内收肌群",
+        "assist": "无额外重点辅助肌",
+        "stable": "腹壁稳定",
+        "risk": "轻负重；出现拉扯痛就停止"
+      },
+      "note": ""
+    },
+    {
+      "id": "seatedcalf",
+      "exerciseIds": [
+        "seatedcalf"
+      ],
+      "primary": [
+        "soleus",
+        "soleusDeep"
+      ],
+      "assist": [
+        "calvesAssist"
+      ],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [],
+      "labels": {
+        "primary": "比目鱼肌",
+        "assist": "腓肠肌",
+        "stable": "腹壁稳定",
+        "risk": "膝保持弯曲，避免弹跳借力"
+      },
+      "note": "背面一侧小腿用虚线展示比目鱼肌深层位置，另一侧保留表层腓肠肌；两侧不是不同的训练效果。"
+    }
+  ],
+  "personalMaps": [
+    {
+      "id": "lateral-left",
+      "exerciseIds": [
+        "lateral-left"
+      ],
+      "primary": [
+        "sideDeltsLeft"
+      ],
+      "assist": [],
+      "stable": [
+        "abs",
+        "obliques"
+      ],
+      "risk": [
+        "upperTrapsLeft"
+      ],
+      "labels": {
+        "primary": "左肩中束",
+        "assist": "肩胛上旋肌群正常协同",
+        "stable": "腹壁稳定",
+        "risk": "左侧过度耸肩时留意上斜方肌"
+      },
+      "extra": "斜方肌正常参与肩胛上旋；只有明显耸肩抢行程时才需调整。",
+      "note": "仅左侧额外补强；图中正面人物的左肩位于画面右侧，背面人物的左肩位于画面左侧。",
+      "personal": true
+    }
+  ]
+}

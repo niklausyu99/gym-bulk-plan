@@ -1,0 +1,13 @@
+(()=>{'use strict';
+let status='检查中',ready=false,registration=null;
+const local=['localhost','127.0.0.1','[::1]'].includes(location.hostname),standalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+const paint=()=>{document.querySelectorAll('[data-offline-label]').forEach(el=>{el.textContent=!navigator.onLine?'当前离线':ready?'离线可用':'本机记录';el.classList.toggle('is-offline',!navigator.onLine);});document.querySelectorAll('[data-offline-detail]').forEach(el=>el.textContent=status);};
+const announce=()=>{window.BulkOffline={ready,status,standalone};paint();};
+const showUpdate=()=>{const el=document.querySelector('#update-notice');el.hidden=false;el.innerHTML='<span>有新版本，记录会保留</span><button type="button" id="apply-app-update">更新</button>';el.querySelector('button').addEventListener('click',()=>{if(!registration?.waiting)return;const unfinished=[...document.querySelectorAll('#food-name,#food-k,#food-p,#food-c,#food-f,#food-fi,#weight-value')].some(i=>i.value.trim());if(unfinished){el.querySelector('span').textContent='先保存或清空当前输入，再更新';return;}window.dispatchEvent(new Event('bulkplan-before-update'));registration.waiting.postMessage({type:'ACTIVATE_UPDATE'});});};
+window.addEventListener('bulkplan-render',paint);window.addEventListener('online',paint);window.addEventListener('offline',paint);
+if(!('serviceWorker' in navigator)||!window.isSecureContext){status='离线暂不可用，请保持联网';announce();return;}
+if(local&&!new URLSearchParams(location.search).has('offline')){status='尚未准备离线内容，请保持联网';announce();return;}
+let refreshing=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(refreshing)return;if(navigator.serviceWorker.controller&&registration?.waiting==null&&ready){refreshing=true;location.reload();}});
+navigator.serviceWorker.register('sw.js',{scope:'./',updateViaCache:'none'}).then(async reg=>{registration=reg;if(reg.waiting)showUpdate();reg.addEventListener('updatefound',()=>{const worker=reg.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed'&&navigator.serviceWorker.controller)showUpdate();});});await navigator.serviceWorker.ready;ready=true;status='内容已保存，可离线打开';announce();}).catch(()=>{status='离线准备未完成，联网后重新打开再试';announce();});
+announce();
+})();

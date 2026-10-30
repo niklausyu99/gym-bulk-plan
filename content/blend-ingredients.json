@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "updated": "2026-10-29",
+  "ingredients": [
+    {
+      "id": "milk",
+      "name": "全脂牛奶",
+      "group": "core",
+      "grams": 258,
+      "portion": "250 ml",
+      "assumption": "250 ml按约258 g估算",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 61.0,
+        "p": 3.15,
+        "c": 4.8,
+        "f": 3.25,
+        "fi": 0.0
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+        "description": "USDA FoodData Central · Milk, whole, 3.25% milkfat, with added vitamin D"
+      }
+    },
+    {
+      "id": "banana",
+      "name": "香蕉",
+      "group": "core",
+      "grams": 118,
+      "portion": "1根",
+      "assumption": "中等大小，去皮可食部约118 g",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 89.0,
+        "p": 1.09,
+        "c": 22.8,
+        "f": 0.33,
+        "fi": 2.6
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/173944/nutrients",
+        "description": "USDA FoodData Central · Bananas, raw"
+      }
+    },
+    {
+      "id": "whey",
+      "name": "MMX Absolute Whey",
+      "group": "core",
+      "grams": 40,
+      "portion": "1 scoop",
+      "assumption": "每勺40 g；采用厂家巧克力味标签作为参照",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 387.5,
+        "p": 75.0,
+        "c": 10.0,
+        "f": 5.0,
+        "fi": 2.5
+      },
+      "source": {
+        "kind": "label",
+        "label": "厂家标签",
+        "url": "https://www.musclemetabolix.com.my/products/mmx-whey-absolute",
+        "labelImage": "https://cdn.store-assets.com/s/1442408/i/106506920.png",
+        "description": "MMX Dutch Chocolate，每40 g：155 kcal / P30 / C4 / F2 / 纤维1 g；其他口味需以包装为准"
+      }
+    },
+    {
+      "id": "oats",
+      "name": "燕麦",
+      "group": "recommended",
+      "grams": 25,
+      "portion": "25 g",
+      "assumption": "干燕麦25 g",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 379,
+        "p": 13.2,
+        "c": 67.7,
+        "f": 6.52,
+        "fi": 10.1
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/173904/nutrients",
+        "description": "USDA FoodData Central · Cereals, oats, regular and quick, not fortified, dry"
+      }
+    },
+    {
+      "id": "peanut",
+      "name": "花生酱",
+      "group": "recommended",
+      "grams": 16,
+      "portion": "1 tbsp",
+      "assumption": "平汤匙约16 g",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 598,
+        "p": 22.2,
+        "c": 22.3,
+        "f": 51.4,
+        "fi": 5.0
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/172470/nutrients",
+        "description": "USDA FoodData Central · Peanut butter, smooth style, without salt"
+      }
+    },
+    {
+      "id": "pineapple",
+      "name": "菠萝",
+      "group": "optional",
+      "grams": 100,
+      "portion": "100 g",
+      "assumption": "去皮可食部100 g",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 50.0,
+        "p": 0.54,
+        "c": 13.1,
+        "f": 0.12,
+        "fi": 1.4
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/169124/nutrients",
+        "description": "USDA FoodData Central · Pineapple, raw, all varieties"
+      }
+    },
+    {
+      "id": "blueberry",
+      "name": "蓝莓",
+      "group": "optional",
+      "grams": 20,
+      "portion": "10–15粒",
+      "assumption": "颗粒大小不同，按约20 g估算",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 57.0,
+        "p": 0.74,
+        "c": 14.5,
+        "f": 0.33,
+        "fi": 2.4
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/171711/nutrients",
+        "description": "USDA FoodData Central · Blueberries, raw"
+      }
+    },
+    {
+      "id": "grapes",
+      "name": "青葡萄",
+      "group": "optional",
+      "grams": 50,
+      "portion": "约10粒",
+      "assumption": "按可食部约50 g估算",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 69.0,
+        "p": 0.72,
+        "c": 18.1,
+        "f": 0.16,
+        "fi": 0.9
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/174683/nutrients",
+        "description": "USDA FoodData Central · Grapes, red or green (European type, such as Thompson seedless), raw"
+      }
+    },
+    {
+      "id": "almonds",
+      "name": "杏仁",
+      "group": "optional",
+      "grams": 14.4,
+      "portion": "约12粒",
+      "assumption": "按约14 g估算，计算使用14.4 g",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 579,
+        "p": 21.2,
+        "c": 21.6,
+        "f": 49.9,
+        "fi": 12.5
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
+        "description": "USDA FoodData Central · Nuts, almonds"
+      }
+    },
+    {
+      "id": "yogurt",
+      "name": "全脂酸奶",
+      "group": "optional",
+      "grams": 30,
+      "portion": "1–2 tbsp",
+      "assumption": "默认2汤匙约30 g，可切换1汤匙约15 g",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 61.0,
+        "p": 3.47,
+        "c": 4.66,
+        "f": 3.25,
+        "fi": 0.0
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/171284/nutrients",
+        "description": "USDA FoodData Central · Yogurt, plain, whole milk"
+      }
+    },
+    {
+      "id": "chocolate",
+      "name": "85%黑巧克力",
+      "group": "optional",
+      "grams": 10,
+      "portion": "1粒",
+      "assumption": "默认每粒约10 g；采用70–85%可可黑巧克力数据",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 598,
+        "p": 7.79,
+        "c": 45.9,
+        "f": 42.6,
+        "fi": 10.9
+      },
+      "source": {
+        "kind": "database",
+        "label": "标准食物估算",
+        "url": "https://fdc.nal.usda.gov/food-details/170273/nutrients",
+        "description": "USDA FoodData Central · Chocolate, dark, 70-85% cacao solids"
+      }
+    },
+    {
+      "id": "milo",
+      "name": "MILO",
+      "group": "optional",
+      "grams": 20,
+      "portion": "1勺",
+      "assumption": "粉末每勺暂按20 g估算，采用马来西亚原味粉标签",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 411,
+        "p": 10.2,
+        "c": 68,
+        "f": 9.9,
+        "fi": 4.6
+      },
+      "source": {
+        "kind": "label",
+        "label": "厂家标签",
+        "url": "https://www.milo.com.my/products",
+        "description": "马来西亚原味MILO粉，每100 g营养标签"
+      }
+    },
+    {
+      "id": "ice",
+      "name": "冰块",
+      "group": "optional",
+      "grams": 0,
+      "portion": "适量",
+      "assumption": "纯水冰块不提供热量",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 0,
+        "p": 0,
+        "c": 0,
+        "f": 0,
+        "fi": 0
+      },
+      "source": {
+        "kind": "water",
+        "label": "纯水",
+        "description": "纯水冰块，无其他添加物"
+      }
+    }
+  ]
+}

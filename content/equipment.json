@@ -1,0 +1,4269 @@
+{
+  "exercises": [
+    {
+      "id": "incline",
+      "preferred": "incline-smith",
+      "reason": "优先低上斜史密斯：重的首项便于渐进加片和设置保护限位；只在椅凳位置允许前臂对齐、肩部舒适时使用。15–30°是试起点，不是已证最优角度。",
+      "goal": "保留上斜多关节推举，胸大肌锁骨部重点，兼有伸肘。",
+      "limitations": "有上斜角度训练研究，未直接比较这三种器械；约44°条件的结果不能证明15–30°最佳。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        },
+        {
+          "title": "Chaves 等 2020：平板与上斜卧推",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7449336/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "incline-smith",
+          "name": "低上斜史密斯卧推",
+          "category": "smith",
+          "laterality": "bilateral",
+          "basis": "smith_display",
+          "conventions": [
+            "added_plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "incline",
+          "rank": 0,
+          "conditional": false,
+          "when": "轨迹合身且可设置安全挡时优先。",
+          "changes": "固定杠路；比哑铃少自由度",
+          "cues": [
+            "先用空杆对齐落点；凳子固定",
+            "肩胛稳定，前臂大致垂直；不强求触胸",
+            "安全挡放在有效底点稍下，先试可脱离"
+          ],
+          "hint": "记录本机加片总重；空杆/配重信息另存，不猜有效重量。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              6,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "incline-machine",
+          "name": "上斜胸推机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "incline",
+          "rank": 1,
+          "conditional": false,
+          "when": "史密斯被占；机器把手和座位能匹配时。",
+          "changes": "靠背、把手与收敛轨迹由型号决定",
+          "cues": [
+            "把手起点在上胸附近",
+            "不为碰到底挡让肩向前滑",
+            "记录座高及把手档位"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              6,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "incline-db",
+          "name": "上斜哑铃卧推",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "incline",
+          "rank": 2,
+          "conditional": false,
+          "when": "固定轨迹不合身，或前两种无空位且能稳定起落重量时。",
+          "changes": "自由轨迹和入位稳定要求增加",
+          "cues": [
+            "从较轻重量试起，掌心角度按舒适调整",
+            "前臂支撑哑铃，不下放到肩部不适",
+            "保留能自行安全结束的余力"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              6,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "flat",
+      "preferred": "flat-db",
+      "reason": "优先平板哑铃卧推：可调整握法与两臂路线，器材常见；已有训练经验且能安全入位是前提。不是为了“稳定肌更多所以增肌更多”。",
+      "goal": "保留水平推胸，在已有上斜固定杠路后提供可自选的手腕与上臂轨迹。",
+      "limitations": "无证据证明在本计划中哑铃优于合身胸推机；此顺序基于轨迹自由与日常执行。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "flat-db",
+          "name": "平板哑铃卧推",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "flat",
+          "rank": 0,
+          "conditional": false,
+          "when": "可安全入位、肩部舒适时优先。",
+          "changes": "两臂独立轨迹",
+          "cues": [
+            "脚与躯干稳定；手腕不过度后折",
+            "肘不强制外展 90°，按肩舒适选路线",
+            "结束先控制哑铃回收，不随意向外扔"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "flat-machine",
+          "name": "水平胸推机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "flat",
+          "rank": 1,
+          "conditional": false,
+          "when": "哑铃入位不便、当日稳定先耗尽或哑铃区拥挤时。",
+          "changes": "支撑增加、机器轨迹限制",
+          "cues": [
+            "座高使把手约在胸中部",
+            "不顶肩换深度",
+            "独立臂设备的每臂加片方式另记"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "flat-smith",
+          "name": "平板史密斯卧推",
+          "category": "smith",
+          "laterality": "bilateral",
+          "basis": "smith_display",
+          "conventions": [
+            "added_plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "flat",
+          "rank": 2,
+          "conditional": false,
+          "when": "胸推机也不可用且史密斯杠路合适时。",
+          "changes": "双手连接固定杠路",
+          "cues": [
+            "空杆调整凳子与杠路",
+            "保护挡先试",
+            "不过度挺腰或弹胸"
+          ],
+          "hint": "记录本机加片总重；空杆/配重信息另存，不猜有效重量。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "shoulder",
+      "preferred": "shoulder-machine",
+      "reason": "优先坐姿肩推机：已有两种胸推后，用支撑降低入位和稳定成本；把手必须允许上臂在舒适的肩胛平面内运动。",
+      "goal": "坐姿有支撑的过头推举；胸推之后补肩前束及部分中束，不额外增加总量。",
+      "limitations": "没有这三种肩推的直接长期肌肥大排名；机器不是普遍更护肩。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "shoulder-machine",
+          "name": "坐姿肩推机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "shoulder",
+          "rank": 0,
+          "conditional": false,
+          "when": "靠背、把手和起点适配时优先。",
+          "changes": "固定或收敛杠杆轨迹",
+          "cues": [
+            "调座椅使起点无需强迫肩外旋",
+            "肘略在躯干前方，不锁死肩胛",
+            "不靠腰后仰挤出终点"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "shoulder-db",
+          "name": "坐姿靠背哑铃肩推",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "shoulder",
+          "rank": 1,
+          "conditional": false,
+          "when": "机器把手过宽、轨迹不适或被占时。",
+          "changes": "自由路线和入位需求增加",
+          "cues": [
+            "靠背较直立且不迫使腰过伸",
+            "可用半中立握",
+            "选能受控入位与结束的重量"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "shoulder-smith",
+          "name": "坐姿史密斯肩推",
+          "category": "smith",
+          "laterality": "bilateral",
+          "basis": "smith_display",
+          "conventions": [
+            "added_plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "shoulder",
+          "rank": 2,
+          "conditional": false,
+          "when": "哑铃入位困难且史密斯能提供舒适杠路时。",
+          "changes": "横杆连接双手，肩位自由度较低",
+          "cues": [
+            "试空杆、凳子置于合适前后位置",
+            "从下巴附近的舒适底点开始，不做颈后推",
+            "设置保护限位"
+          ],
+          "hint": "记录本机加片总重；空杆/配重信息另存，不猜有效重量。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "lateral",
+      "preferred": "lateral-cable-single",
+      "reason": "保留单臂绳索侧平举优先：可小幅调重、另一手扶稳，易控制起点阻力；若排队则直接用哑铃，不为理论阻力曲线等待很久。",
+      "goal": "肩外展直接训练中束；维持原有次数与组数。",
+      "limitations": "哑铃与指定绳索方案均可有效训练肩中束，尚不能据此证明绳索优先。器械适配与设置决定替代顺序。",
+      "sources": [
+        {
+          "title": "Larsen 等 2025：哑铃与绳索侧平举",
+          "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2025.1611468/full"
+        }
+      ],
+      "variants": [
+        {
+          "id": "lateral-cable-single",
+          "name": "扶稳式单臂绳索侧平举",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "lateral",
+          "rank": 0,
+          "conditional": false,
+          "when": "有可用低滑轮，能调到舒适拉力线时优先。",
+          "changes": "单侧、低位有外部力矩",
+          "cues": [
+            "滑轮低位，手在身体旁或稍前，不强迫跨身",
+            "肘轻屈且角度稳定，抬至舒适接近肩高",
+            "允许正常肩胛上旋，不靠突然耸肩起动"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "lateral-db",
+          "name": "双臂哑铃侧平举",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "lateral",
+          "rank": 1,
+          "conditional": false,
+          "when": "滑轮被占或最小档位过重时。",
+          "changes": "底部力矩较小、顶部更难",
+          "cues": [
+            "较轻重量控制离心",
+            "手臂可略在身体前方",
+            "别以躯干摆动跳过中段"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "lateral-machine",
+          "name": "侧平举机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "lateral",
+          "rank": 2,
+          "conditional": false,
+          "when": "想缩短单侧耗时且机器垫位与轴心合适时。",
+          "changes": "支撑与阻力曲线由型号决定",
+          "cues": [
+            "座位让上臂自然贴垫",
+            "不把垫子顶在肘尖",
+            "不为了碰限位强抬肩"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "fly",
+      "preferred": "fly-pecdeck",
+      "reason": "保留蝴蝶机优先：省设置和躯干稳定成本，便于在前面多组推举后控制胸部行程；前提是把手或肘垫不迫使肩过度后伸。",
+      "goal": "在推举之后保留以肩水平内收为主的胸部孤立动作。",
+      "limitations": "未找到本组三种飞鸟版本的直接长期肌肥大排名；省稳定成本不是增肌优越性的证明。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "fly-pecdeck",
+          "name": "坐姿蝴蝶机夹胸",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "fly",
+          "rank": 0,
+          "conditional": false,
+          "when": "机器起始角可调、肩部舒适时优先。",
+          "changes": "躯干支撑",
+          "cues": [
+            "座高使上臂约在胸高或稍低",
+            "先调小起始开度再试",
+            "手臂合拢不靠肩前顶"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "fly-cable-mid",
+          "name": "站姿中位双绳索夹胸",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "dual_cable_each",
+          "conventions": [
+            "stack_display_per_side_kg"
+          ],
+          "sideAxis": "both",
+          "family": "fly",
+          "rank": 1,
+          "conditional": false,
+          "when": "蝴蝶机轨迹不适或被占、双滑轮可用时。",
+          "changes": "站姿稳定需求、自由拉力方向",
+          "cues": [
+            "双滑轮约胸高，分腿站稳",
+            "肘微屈并固定，不变成推胸",
+            "双手向前内合，不夸张交叉"
+          ],
+          "hint": "分别记录左右滑轮标重；两侧相同可显示每侧重量，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "fly-cable-single",
+          "name": "单臂中位绳索夹胸",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "fly",
+          "rank": 2,
+          "conditional": false,
+          "when": "只有一个滑轮空闲时。",
+          "changes": "抗旋转要求提高，时间增加",
+          "cues": [
+            "非工作手扶稳支撑",
+            "骨盆朝前不跟手转",
+            "每侧完成规定组数"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "lowfly-cable",
+          "name": "低至高双绳索夹胸",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "dual_cable_each",
+          "conventions": [
+            "stack_display_per_side_kg"
+          ],
+          "sideAxis": "both",
+          "family": "lowfly",
+          "rank": 3,
+          "conditional": true,
+          "when": "想改为向上内合且肩部舒适时，以替换已有夹胸组数使用。",
+          "changes": "改为向上内合，胸部与肩前束的方向条件改变。",
+          "cues": [
+            "滑轮低位，分腿站稳",
+            "手沿略向上内合至上胸附近，不抬到头顶",
+            "不要屈肘推起或腰部前后摆"
+          ],
+          "hint": "分别记录左右滑轮标重；两侧相同可显示每侧重量，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "overhead",
+      "preferred": "overhead-cable",
+      "reason": "保留双臂过头绳索伸肘优先：肩位有直接研究支持，绳索方向和把手可调；双臂节省训练时间。不是所有人都必须强迫上臂贴耳。",
+      "goal": "保留肩抬高位置的伸肘，重点覆盖三头长头。",
+      "limitations": "直接证据针对过头 vs 中立肩位绳索；未证明双臂绳索比单臂或哑铃更好。",
+      "sources": [
+        {
+          "title": "Maeo 等 2023（2022 在线）：过头与中立肩位绳索伸肘",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35819335/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "overhead-cable",
+          "name": "双臂过头绳索臂屈伸",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "overhead",
+          "rank": 0,
+          "conditional": false,
+          "when": "双臂肩肘均舒适、能稳定躯干时优先。",
+          "changes": "绳索外力线",
+          "cues": [
+            "选能让上臂舒适抬高的滑轮高度与站距",
+            "肘屈伸而躯干不摆",
+            "肋骨不过度外翻，回程受控"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "overhead-cable-single",
+          "name": "单臂过头绳索臂屈伸",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "overhead",
+          "rank": 1,
+          "conditional": false,
+          "when": "绳柄限制双臂手腕角度或左右路径差异明显时。",
+          "changes": "单侧，可自选手柄路线",
+          "cues": [
+            "另一手扶稳或轻托上臂",
+            "不扭腰推重量",
+            "左右独立记录"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "overhead-db",
+          "name": "坐姿单哑铃双手过头臂屈伸",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "one_shared_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "overhead",
+          "rank": 2,
+          "conditional": false,
+          "when": "绳索无空位、可安全握持和入位时。",
+          "changes": "重力阻力曲线不同，双手共持一只哑铃",
+          "cues": [
+            "记录一只哑铃重量而非每手",
+            "靠背支撑，肘不强制内夹",
+            "别用腰伸展把哑铃推起"
+          ],
+          "hint": "两手共同握一只哑铃，记录这一只的重量，不按两手相加。每次完整双臂屈伸记 1 次。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "pulldown",
+      "preferred": "pulldown-cable-neutral",
+      "reason": "优先中等握距中立握绳索高位下拉：方便调重和控制躯干，不需要先达到自重引体能力；中立握是舒适试起点，不是已证背阔增肌冠军。",
+      "goal": "垂直拉，保留高抬臂起始与肘屈协同。",
+      "limitations": "没有可靠直接长期证据支持此握距、握法或下拉机型对本计划更优。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "pulldown-cable-neutral",
+          "name": "中等握距中立握高位下拉",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "pulldown",
+          "rank": 0,
+          "conditional": false,
+          "when": "大腿固定垫合适且中立把手可用时优先。",
+          "changes": "固定坐姿，手端自由路线",
+          "cues": [
+            "固定大腿，躯干仅小幅后倾",
+            "上端允许舒适抬臂，不强制肩胛一直下压",
+            "肘向下，拉到上胸附近而非颈后"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "pulldown-machine",
+          "name": "独立臂下拉机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "pulldown",
+          "rank": 1,
+          "conditional": false,
+          "when": "滑轮下拉被占且机器上端行程适合时。",
+          "changes": "机器支点、轨迹与阻力曲线改变",
+          "cues": [
+            "先试空载起点可否舒适够到",
+            "双臂同步、胸口不抬离垫",
+            "左右加片分别注明"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "pulldown-assisted-pullup",
+          "name": "辅助引体向上（中立握）",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "assistance",
+          "conventions": [
+            "assistance_kg"
+          ],
+          "sideAxis": "both",
+          "family": "pulldown",
+          "rank": 2,
+          "conditional": false,
+          "when": "无下拉空位，辅助机可使 8–12 次受控完成时。",
+          "changes": "身体移动、肩胛运动与辅助方向改变",
+          "cues": [
+            "按机器说明上落平台",
+            "全程控制而不蹬腿",
+            "辅助重量减少才是负荷增加"
+          ],
+          "hint": "记录辅助重量；辅助越大动作越容易，并记录体重。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "row",
+      "preferred": "row-machine-chest",
+      "reason": "优先胸托器械划船：减少 Pull 次日 RDL 前的腰背支撑负担；用中等张肘保留上背用途，不把所有划船都收肘拉向髋。",
+      "goal": "水平拉以上背为主：保留肩水平外展、后伸与受控肩胛前伸/后缩。",
+      "limitations": "没有研究证明胸托器械比这些版本增肌更好；本排序是跨日疲劳与上背动作角色判断。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "row-machine-chest",
+          "name": "胸托器械划船（中等张肘）",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "row",
+          "rank": 0,
+          "conditional": false,
+          "when": "胸垫、握把合身时优先。",
+          "changes": "胸托降低躯干维持需求",
+          "cues": [
+            "肘与躯干约 45–60°作起点，按肩舒适调整",
+            "向下胸/上腹拉，不耸肩",
+            "回程允许肩胛前伸但胸不离垫"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "row-db-chest",
+          "name": "上斜凳胸托双哑铃划船",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "row",
+          "rank": 1,
+          "conditional": false,
+          "when": "器械被占，凳子能让手臂和哑铃自由垂落时。",
+          "changes": "重力线与顶部难点改变",
+          "cues": [
+            "凳子角度确保重量不先碰地",
+            "肘向外后方，胸持续贴凳",
+            "不抬胸甩起"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "row-cable-seated",
+          "name": "坐姿绳索划船（中等张肘）",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "row",
+          "rank": 2,
+          "conditional": false,
+          "when": "无胸托设备时。",
+          "changes": "失去胸托，躯干支撑需求上升",
+          "cues": [
+            "脚踩稳，髋和腰不过度来回摆",
+            "使用能张肘的把手",
+            "若腰先累先减重，不追同样标重"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "latrow",
+      "preferred": "latrow-cable-single",
+      "reason": "保留单臂绳索背阔划船：用支撑和可调拉力线，让肘朝髋部移动，不把抗扭转能力当成训练限制。",
+      "goal": "单侧收肘划船，以肩伸展为主，并保留屈肘；与上背胸托划船区分。",
+      "limitations": "没有三版本直接长期排名；直臂下压的条件替代依据动作角色与原计划许可，不是等效增肌试验证明。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "latrow-cable-single",
+          "name": "扶稳式单臂绳索背阔划船",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "latrow",
+          "rank": 0,
+          "conditional": false,
+          "when": "一个可调滑轮可用时优先。",
+          "changes": "可调整拉力方向",
+          "cues": [
+            "拉力线朝下胸到上腹附近，另一手扶稳",
+            "肘沿身旁向髋部拉，不强求肘远越躯干",
+            "回程肩部受控，不用扭腰拉长行程"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "latrow-machine-single",
+          "name": "单臂胸托低位划船机（收肘）",
+          "category": "machine",
+          "laterality": "unilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "latrow",
+          "rank": 1,
+          "conditional": false,
+          "when": "滑轮被占，低位机器能保持肘靠近躯干时。",
+          "changes": "胸托及固定曲线",
+          "cues": [
+            "调整胸垫使手臂可前伸",
+            "肘向髋方向，而非外展成上背划船",
+            "不转躯干完成终点"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "latrow-db-single",
+          "name": "凳上支撑单臂哑铃划船（收肘）",
+          "category": "dumbbell",
+          "laterality": "unilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "latrow",
+          "rank": 2,
+          "conditional": false,
+          "when": "无合适机器/滑轮时。",
+          "changes": "重力线不同，髋躯干稳定需求上升",
+          "cues": [
+            "非工作手扶凳，背部位置稳定",
+            "肘朝后下方，哑铃靠近髋",
+            "不以躯干旋转换重量"
+          ],
+          "hint": "重量填每只哑铃，不相加。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "straight-cable-rope",
+          "name": "绳柄直臂绳索下压",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "straight",
+          "rank": 3,
+          "conditional": true,
+          "when": "屈肘肌反复成为限制，且明确接受改练固定肘角肩伸展时。",
+          "changes": "保留背阔肩伸展，但取消动态屈肘和同样的划船肩胛任务。",
+          "cues": [
+            "髋仅小幅前折、躯干稳",
+            "肘微屈固定，上臂向下后方移",
+            "手到大腿附近即止，不靠腰后仰"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "rear",
+      "preferred": "rear-machine",
+      "reason": "保留反向蝴蝶机：胸部支撑便于稳定完成较高次数；握把高度需让肩舒适，正常肩胛参与不等于后束“失效”。",
+      "goal": "肩水平外展直接训练后束，限制屈肘变化，允许上背协同。",
+      "limitations": "本次没有找到这三种后束飞鸟直接长期增肌比较；不能用单次肌电排优劣。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "rear-machine",
+          "name": "胸托反向蝴蝶机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "rear",
+          "rank": 0,
+          "conditional": false,
+          "when": "把手、座高与起始角适配时优先。",
+          "changes": "固定轨迹和胸托",
+          "cues": [
+            "把手约肩高或稍低",
+            "肘轻屈固定，双臂向外展开",
+            "终点不硬夹肩胛或把上臂拉得过后"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "rear-cable-single",
+          "name": "扶稳式单臂绳索后束飞鸟",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "rear",
+          "rank": 1,
+          "conditional": false,
+          "when": "机器被占或不合身，只有单滑轮时。",
+          "changes": "拉力可调、单侧稳定要求",
+          "cues": [
+            "滑轮约肩高，身体扶稳",
+            "手臂从前内侧向外展开",
+            "不转腰或变成屈肘划船"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "rear-db-chest",
+          "name": "胸托哑铃后束飞鸟",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "rear",
+          "rank": 2,
+          "conditional": false,
+          "when": "滑轮也不可用且凳子空闲时。",
+          "changes": "底部负荷较低，重力阻力曲线改变",
+          "cues": [
+            "胸贴凳，手臂可自由垂落",
+            "选轻重量，肘角不随抬起变大",
+            "不借抬胸或甩手"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "curl",
+      "preferred": "curl-incline-db",
+      "reason": "保留上斜双哑铃弯举：原计划已明确此版本，靠背减少摆动且易复现；近期研究支持它是合理选择，尚不构成对所有人的绝对排名。",
+      "goal": "在主弯举槽保留肩略后伸、旋后握屈肘；不是把所有肘屈肌视为同一肌肉。",
+      "limitations": "弯举研究对象与测量方式不同，不能据小样本结果判断某一肌头被完全隔离；身后绳索与上斜哑铃仍缺直接长期比较。",
+      "sources": [
+        {
+          "title": "Kobayashi 等 2026：上斜与牧师椅哑铃弯举",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42829982/"
+        },
+        {
+          "title": "Kassiano 等 2025：上斜与牧师椅弯举的局部肌厚",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39809454/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "curl-incline-db",
+          "name": "上斜双哑铃弯举（旋后握）",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "curl",
+          "rank": 0,
+          "conditional": false,
+          "when": "上臂在身后无肩前侧不适时优先。",
+          "changes": "哑铃底部外力矩较小",
+          "cues": [
+            "椅背约 45–60°作舒适起点",
+            "上臂自然垂下稍后，不刻意强拉肩",
+            "手掌朝前/上，肘不主动前摆"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "curl-behind-cable-single",
+          "name": "扶稳式单臂身后绳索弯举",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "curl",
+          "rank": 1,
+          "conditional": false,
+          "when": "凳/哑铃被占且能舒适保持肩略后伸时。",
+          "changes": "底部力矩与绳索方向改变",
+          "cues": [
+            "滑轮低位在身后，站距适中",
+            "上臂轻在身后，不为拉伸让肩前顶",
+            "不转身或前移肘"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "curl-seated-db",
+          "name": "坐姿直立双哑铃弯举（旋后握）",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "curl",
+          "rank": 2,
+          "conditional": true,
+          "when": "肩后伸不舒服但直立坐姿屈肘无痛时。",
+          "changes": "肩部由稍后伸改为靠近躯干中立位置",
+          "cues": [
+            "躯干贴稳靠背，上臂靠身旁",
+            "不甩肩，控制下放",
+            "按这次使用的版本与重量记录"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "preacher-db-single",
+          "name": "单臂哑铃牧师椅弯举",
+          "category": "dumbbell",
+          "laterality": "unilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "preacher",
+          "rank": 3,
+          "conditional": true,
+          "when": "肩后伸版本不适、肩屈曲弯举无痛且愿意改变肩位时。",
+          "changes": "改变为肩屈曲支撑弯举，肌肉长度与肘屈肌分配可能改变。",
+          "cues": [
+            "腋下附近贴垫，上臂稳定",
+            "回程接近伸直但不猛锁肘、反弹",
+            "肩不离垫前探来举起重量"
+          ],
+          "hint": "重量填每只哑铃，不相加。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "hammer",
+      "preferred": "hammer-db",
+      "reason": "优先坐姿双哑铃锤式弯举：中立握直接、器材普遍，靠背帮助减少甩动；不能承诺只练肱肌。",
+      "goal": "中立握屈肘，补充肱肌、肱桡肌与二头共同受力。",
+      "limitations": "无本组三版本直接肌肥大排名；中立握的肌群分配不应由一项肌电推断独占增长。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hammer-db",
+          "name": "坐姿双哑铃锤式弯举",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "hammer",
+          "rank": 0,
+          "conditional": false,
+          "when": "哑铃重量档位合适时优先。",
+          "changes": "坐姿、双臂独立",
+          "cues": [
+            "拇指向上，腕保持中立",
+            "上臂靠身旁，不借肩前摆",
+            "两臂同步，不把左右合成两次"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "hammer-cable-rope",
+          "name": "低位绳索绳柄锤式弯举",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "hammer",
+          "rank": 1,
+          "conditional": false,
+          "when": "哑铃被占或跳重过大时。",
+          "changes": "一根绳两手共享同一配重",
+          "cues": [
+            "两端握稳，腕不向外折",
+            "站稳，肘不过度前移",
+            "同一栈重量只记一次"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "hammer-cable-single",
+          "name": "单臂绳索中立握弯举",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "hammer",
+          "rank": 2,
+          "conditional": false,
+          "when": "绳柄拉扯手腕，需每侧自选角度时。",
+          "changes": "单侧，拉力方向可调",
+          "cues": [
+            "选可保持中立握的把手",
+            "不靠身体旋转起动",
+            "左右独立记录"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "hack",
+      "preferred": "hack-sled",
+      "reason": "保留滑轨哈克深蹲：背垫降低平衡限制，让股四头成为主要训练限制；合身的屈膝行程比机型名重要。",
+      "goal": "膝主导复合下肢动作，股四头为主，保留可控屈膝深度与髋伸展协同。",
+      "limitations": "腿推与腿伸展的比较不能用于哈克与腿推的直接排名。这里按支撑条件和腿日疲劳安排。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        },
+        {
+          "title": "Kobayashi 等 2026：腿伸展与腿推直接比较",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41630124/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "hack-sled",
+          "name": "滑轨哈克深蹲",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "hack",
+          "rank": 0,
+          "conditional": false,
+          "when": "背垫、肩垫与脚台能提供舒适深度时优先。",
+          "changes": "固定滑轨、背托",
+          "cues": [
+            "先试空车与安全挡",
+            "全脚掌接触，膝随脚尖方向自然前移",
+            "骨盆与背垫保持受控，不强求最大深度"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              6,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "hack-legpress",
+          "name": "45°腿推",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "hack",
+          "rank": 1,
+          "conditional": false,
+          "when": "哈克被占或肩垫不适，腿推可舒适屈膝时。",
+          "changes": "坐卧姿势和髋屈曲增加",
+          "cues": [
+            "脚位使屈膝与髋部均舒适",
+            "降到骨盆仍贴垫的深度",
+            "不锁膝猛顶或用手推膝"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              6,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "hack-smith",
+          "name": "史密斯深蹲（膝主导）",
+          "category": "smith",
+          "laterality": "bilateral",
+          "basis": "smith_display",
+          "conventions": [
+            "added_plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "hack",
+          "rank": 2,
+          "conditional": false,
+          "when": "两种器械都不可用，且能控制躯干时。",
+          "changes": "失去背垫，稳定和躯干负担增加",
+          "cues": [
+            "先试杠路与脚位，不统一要求脚伸很远",
+            "保护挡预设",
+            "可控深度，不为追重降低行程"
+          ],
+          "hint": "记录本机加片总重；空杆/配重信息另存，不猜有效重量。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              6,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "rdl",
+      "preferred": "rdl-barbell",
+      "reason": "优先杠铃 RDL：已有训练经验，杠贴腿易复现，负重上限与小幅加片方便；不是因为它必须最重。",
+      "goal": "髋铰链与伸髋，膝轻屈，腘绳肌在髋屈曲时受载；竖脊肌维持姿势。",
+      "limitations": "这三种RDL器械缺少直接长期增肌比较；腰背稳定参与是正常现象。",
+      "sources": [
+        {
+          "title": "Maeo 等 2021：坐姿与俯卧腿弯举",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7969179/"
+        },
+        {
+          "title": "NSCA：罗马尼亚硬拉动作技术",
+          "url": "https://www.nsca.com/education/articles/kinetic-select/romanian-deadlift-rdl/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "rdl-barbell",
+          "name": "杠铃罗马尼亚硬拉",
+          "category": "barbell",
+          "laterality": "bilateral",
+          "basis": "bar_total",
+          "conventions": [
+            "bar_inclusive_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "rdl",
+          "rank": 0,
+          "conditional": false,
+          "when": "能保持髋铰链且杠铃可用时优先。",
+          "changes": "自由杠路线",
+          "cues": [
+            "从站立起，膝轻屈后角度大致稳定",
+            "髋向后，杠贴腿，保持躯干稳定",
+            "到骨盆/脊柱仍可控制的位置返回，不追碰地"
+          ],
+          "hint": "重量填杠铃总重，含杠。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              8,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "rdl-smith",
+          "name": "史密斯罗马尼亚硬拉",
+          "category": "smith",
+          "laterality": "bilateral",
+          "basis": "smith_display",
+          "conventions": [
+            "added_plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "rdl",
+          "rank": 1,
+          "conditional": false,
+          "when": "杠铃区被占，固定杠路允许髋后移时。",
+          "changes": "固定轨迹，不消除腰背受力",
+          "cues": [
+            "脚位先用空杆试，杠仍靠近腿",
+            "不为适应轨道把动作变成深蹲",
+            "设挡，握力先限时可用拉力带"
+          ],
+          "hint": "记录本机加片总重；空杆/配重信息另存，不猜有效重量。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              8,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "rdl-db",
+          "name": "双哑铃罗马尼亚硬拉",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "rdl",
+          "rank": 2,
+          "conditional": false,
+          "when": "无合适杠路或需要自选手臂路线时。",
+          "changes": "负重上限和握持可能先限制",
+          "cues": [
+            "哑铃沿腿旁下放",
+            "两侧髋同步，别转成蹲举",
+            "哑铃上限不足时先不承诺可长期等效"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              8,
+              10
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "thrust",
+      "preferred": "thrust-smith",
+      "reason": "优先史密斯臀推：较自由杠省去水平滚动与平衡处理，又能小幅加片；需要固定凳、合适杠路与厚垫。若场地无法稳固搭建，直接改合身臀推机。",
+      "goal": "屈膝条件下的髋伸展，给臀大肌直接负荷，控制顶端骨盆与肋骨。",
+      "limitations": "已有臀推与深蹲的研究，不能直接用于三种臀推器械排名；此处结合设置、进阶与稳定性建议。",
+      "sources": [
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        },
+        {
+          "title": "Plotkin 等 2023：臀推与深蹲",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37877099/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "thrust-smith",
+          "name": "史密斯臀推",
+          "category": "smith",
+          "laterality": "bilateral",
+          "basis": "smith_display",
+          "conventions": [
+            "added_plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "thrust",
+          "rank": 0,
+          "conditional": false,
+          "when": "凳子可固定、杠路能完整舒适伸髋时优先。",
+          "changes": "固定杠路和凳子设置",
+          "cues": [
+            "上背稳靠固定凳，杠垫放髋褶附近",
+            "脚位使顶端小腿大致垂直作起点",
+            "顶端臀部伸髋，不反弓腰，预试脱离方式"
+          ],
+          "hint": "记录本机加片总重；空杆/配重信息另存，不猜有效重量。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "thrust-machine",
+          "name": "臀推机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "thrust",
+          "rank": 1,
+          "conditional": false,
+          "when": "史密斯被占、搭建不稳或入位麻烦时。",
+          "changes": "束带/压垫与支点改变",
+          "cues": [
+            "按说明固定髋带，不压腹部软组织",
+            "调整背垫与脚台，不能只做很短顶端",
+            "顶端不顶腰"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "thrust-barbell",
+          "name": "杠铃臀推",
+          "category": "barbell",
+          "laterality": "bilateral",
+          "basis": "bar_total",
+          "conventions": [
+            "bar_inclusive_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "thrust",
+          "rank": 2,
+          "conditional": false,
+          "when": "前两者无空位，有稳固凳子和垫且可安全入位时。",
+          "changes": "杠水平稳定与入位成本提高",
+          "cues": [
+            "凳子防滑固定，厚垫减轻局部压迫",
+            "两侧同步，控制杠滚动",
+            "用合适直径片留出入位空间"
+          ],
+          "hint": "重量填杠铃总重，含杠。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 150,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "legcurl",
+      "preferred": "legcurl-seated",
+      "reason": "保留坐姿腿弯举：在机器合身的前提下，髋屈曲让双关节腘绳肌处于更长位置，已有直接增肌比较支持。",
+      "goal": "屈膝腘绳肌训练，和 RDL 的髋伸展互补。",
+      "limitations": "坐姿 vs 俯卧有直接证据；绳索第三无直接增肌排名。机器不合身时不为群体平均优势硬做。",
+      "sources": [
+        {
+          "title": "Maeo 等 2021：坐姿与俯卧腿弯举",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7969179/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "legcurl-seated",
+          "name": "坐姿腿弯举机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "legcurl",
+          "rank": 0,
+          "conditional": false,
+          "when": "大腿固定垫和膝轴对齐、行程舒适时优先。",
+          "changes": "较长双关节腘绳肌位置",
+          "cues": [
+            "膝轴对齐设备转轴",
+            "固定大腿，背与骨盆不弹起",
+            "伸直端受控，不猛拉回程"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "legcurl-prone",
+          "name": "俯卧腿弯举机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "legcurl",
+          "rank": 1,
+          "conditional": false,
+          "when": "坐姿机没有、被占或坐姿压垫不适时。",
+          "changes": "髋更伸展，双关节肌长度改变",
+          "cues": [
+            "膝靠近转轴，踝垫在跟腱上方小腿",
+            "骨盆贴垫，不顶腰",
+            "降低重量试底端"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "legcurl-cable-single",
+          "name": "扶稳站姿单腿绳索腿弯举",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "legcurl",
+          "rank": 2,
+          "conditional": false,
+          "when": "两种腿弯举机不可用，且踝带和低滑轮适合时。",
+          "changes": "髋位、稳定与阻力曲线改变",
+          "cues": [
+            "踝带固定，手扶支撑",
+            "大腿不过度前后摆",
+            "膝屈伸而腰不后仰"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "extension",
+      "preferred": "extension-machine",
+      "reason": "优先可调靠背腿伸展机：易稳定与进阶；若设备允许保持骨盆稳定地稍后倾，可减少髋屈曲。不要为了复现 40°实验角度牺牲支撑。",
+      "goal": "独立伸膝，保留对股直肌及股广肌的直接训练，与复合蹲互补。",
+      "limitations": "有腿伸展 vs 腿推及髋角直接研究；没有机器双腿 vs 单腿 vs 绳索的长期排名。较少髋屈曲的优势不能泛化至所有机器。",
+      "sources": [
+        {
+          "title": "Kobayashi 等 2026：腿伸展与腿推直接比较",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41630124/"
+        },
+        {
+          "title": "Larsen 等 2024 在线／2025：腿伸展髋屈曲角度",
+          "url": "https://doi.org/10.1080/02640414.2024.2444713"
+        }
+      ],
+      "variants": [
+        {
+          "id": "extension-machine",
+          "name": "可调靠背腿伸展机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "extension",
+          "rank": 0,
+          "conditional": false,
+          "when": "膝轴对齐且靠背、骨盆固定时优先。",
+          "changes": "机器曲线；靠背影响髋角",
+          "cues": [
+            "膝轴对齐，垫在脚踝上方小腿",
+            "靠背微后调仅限骨盆仍固定且舒适",
+            "受控伸直到舒适终点，不猛踢或弹回"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "extension-machine-single",
+          "name": "单腿腿伸展机",
+          "category": "machine",
+          "laterality": "unilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "extension",
+          "rank": 1,
+          "conditional": false,
+          "when": "双腿共用负荷不均或该设备单侧更舒适时；机器被占不能解决排队。",
+          "changes": "每侧调重，时间更长",
+          "cues": [
+            "保持同样轴心和靠背",
+            "从更轻每侧重量试起",
+            "每侧 3 组，两边完成算同一组"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "extension-cable-single",
+          "name": "坐姿单腿绳索腿伸展",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "extension",
+          "rank": 2,
+          "conditional": false,
+          "when": "无腿伸展机，有稳固高凳、踝带及合适低滑轮时。",
+          "changes": "支撑、拉力曲线与膝轴约束不同",
+          "cues": [
+            "凳子固定且腿不碰地，滑轮置于身后下方产生屈膝阻力",
+            "大腿贴凳，骨盆不滑动",
+            "若拉力拖动凳子或膝痛，放弃该设置"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "abduction",
+      "preferred": "abduction-machine",
+      "reason": "保留坐姿髋外展机：腿日后段无需平衡成为限制，组间调重快；不宣称某种身体前倾角能精准孤立臀中肌或臀小肌。",
+      "goal": "负重髋外展，骨盆稳定，侧臀肌群共同参与。",
+      "limitations": "没有本组三版本的可靠直接长期肌肥大排名；机器和髋角不等于可准确分离每块侧臀肌。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "ACSM 2026 官方指南说明",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "abduction-machine",
+          "name": "坐姿髋外展机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "abduction",
+          "rank": 0,
+          "conditional": false,
+          "when": "机器起点能调至舒适位置时优先。",
+          "changes": "髋屈曲及双侧支撑",
+          "cues": [
+            "骨盆贴稳，不反复前后甩",
+            "膝跟随机器支撑，不用脚猛蹬",
+            "控制回到起点，不让配重撞底"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "abduction-cable-single",
+          "name": "扶稳站姿绳索髋外展",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "abduction",
+          "rank": 1,
+          "conditional": false,
+          "when": "机器被占/无设备，低滑轮可用时。",
+          "changes": "髋较伸直，支撑腿与骨盆稳定需求增加",
+          "cues": [
+            "身体侧对滑轮，工作腿远离配重端",
+            "脚尖大致向前，腿向侧方抬",
+            "骨盆不侧提、躯干不侧倒"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "abduction-band-seated",
+          "name": "坐姿环形弹力带髋外展",
+          "category": "band",
+          "laterality": "bilateral",
+          "basis": "band_setup",
+          "conventions": [
+            "band_configuration"
+          ],
+          "sideAxis": "both",
+          "family": "abduction",
+          "rank": 2,
+          "conditional": true,
+          "when": "没有机器或绳索时的应急选项。",
+          "changes": "负荷向外增大且难细调",
+          "cues": [
+            "带放膝上方，不勒膝关节",
+            "足部稳定，膝向外展开",
+            "带过轻就换阻力，不能只凭灼烧感"
+          ],
+          "hint": "记录弹力带品牌/型号、条数、固定高度、起始长度与站位距离；公斤可留空。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              15,
+              25
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "calf",
+      "preferred": "calf-standing-machine",
+      "reason": "保留站姿提踵机优先：有支撑且能负重进阶，避免先受握力或平衡限制；膝伸直位置有直接研究支持。",
+      "goal": "伸膝条件下踝跖屈，腓肠肌基础训练，同时比目鱼肌参与。",
+      "limitations": "直接证据是伸膝 vs 屈膝，不是站姿机 vs 腿推 vs 哑铃；研究未证明坐姿更利于比目鱼肌增大。",
+      "sources": [
+        {
+          "title": "Kinoshita 等 2023：站姿与坐姿提踵",
+          "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2023.1272106/full"
+        }
+      ],
+      "variants": [
+        {
+          "id": "calf-standing-machine",
+          "name": "站姿提踵机（膝基本伸直）",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "calf",
+          "rank": 0,
+          "conditional": false,
+          "when": "机器肩垫/腰带合身，脚台稳固时优先。",
+          "changes": "支撑与可调负荷",
+          "cues": [
+            "前脚掌稳放台面，脚跟受控下降",
+            "膝基本伸直但不反张，不用蹲起弹跳",
+            "上提与下放均控制"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 4,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "calf-legpress",
+          "name": "腿推机提踵（膝基本伸直）",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "calf",
+          "rank": 1,
+          "conditional": false,
+          "when": "站姿机无空位，腿推型号明确允许安全提踵时。",
+          "changes": "坐卧位，脚台角和负荷方向改变",
+          "cues": [
+            "按设备要求保留足够前掌接触面",
+            "先设保护，脚不滑到台边",
+            "不随提踵屈伸膝盖"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 4,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "calf-db-single",
+          "name": "扶稳单腿哑铃站姿提踵",
+          "category": "dumbbell",
+          "laterality": "unilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "calf",
+          "rank": 2,
+          "conditional": false,
+          "when": "无专用机或腿推不适合提踵时。",
+          "changes": "单腿与握力限制；自重占比增加",
+          "cues": [
+            "一手扶稳，另一手持一只哑铃",
+            "用稳固脚台，保持骨盆水平",
+            "左右次数与外部负重分开记录"
+          ],
+          "hint": "重量填每只哑铃，不相加。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 4,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "crunch",
+      "preferred": "crunch-cable",
+      "reason": "保留跪姿绳索卷腹：重量可细调、无需抱重物，便于重复记录；动作必须真的发生躯干屈曲。",
+      "goal": "可渐进的躯干屈曲，避免用髋折叠或手臂下拉取代。",
+      "limitations": "没有本组三种卷腹器械的直接长期肌肥大排名；优先级根据进阶和可重复设置。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "ACSM 2026 官方指南说明",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "crunch-cable",
+          "name": "跪姿绳索卷腹",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "crunch",
+          "rank": 0,
+          "conditional": false,
+          "when": "高滑轮和跪垫可用时优先。",
+          "changes": "跪姿与手持绳柄",
+          "cues": [
+            "髋大致固定，胸廓向骨盆卷近",
+            "手与绳柄位置大致不变，不用手臂拉",
+            "回程恢复可控位置，不靠腰猛反伸"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "crunch-machine",
+          "name": "腹肌卷腹机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "crunch",
+          "rank": 1,
+          "conditional": false,
+          "when": "滑轮被占，机器能允许真正躯干屈曲时。",
+          "changes": "机器支点和固定方式改变",
+          "cues": [
+            "调整座位与压垫",
+            "别把动作变成髋部前折",
+            "先轻重确认腹部控制范围"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "crunch-weighted-floor",
+          "name": "地面抱片卷腹",
+          "category": "bodyweight",
+          "laterality": "bilateral",
+          "basis": "bodyweight_load",
+          "conventions": [
+            "body_mass_plus_external_load_kg"
+          ],
+          "sideAxis": "both",
+          "family": "crunch",
+          "rank": 2,
+          "conditional": false,
+          "when": "无滑轮或卷腹机时。",
+          "changes": "行程、重力矩与进阶条件改变",
+          "cues": [
+            "负重抱胸不放后颈",
+            "肩胛离地卷起即可，不做整段坐起",
+            "颈部自然，不猛拉头"
+          ],
+          "hint": "记录体重、额外负重及动作设置；额外负重可记 0 kg，但不代表身体承受的阻力为零。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 3,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "pallof",
+      "preferred": "pallof-cable-standing",
+      "reason": "优先站姿绳索 Pallof 抗旋转推举：可定量调档与复现站位；目的在抗旋转控制，不当成胸推或腹肌增长冠军。",
+      "goal": "抵抗侧向旋转力矩，保留核心稳定任务；本槽仍可选。",
+      "limitations": "专业教学支持任务与设置，无版本间长期增肌比较；1–2 秒停顿是可执行提示，不是研究最优剂量。",
+      "sources": [
+        {
+          "title": "ACE：站姿抗旋转推举",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/332/standing-anti-rotation-press/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "pallof-cable-standing",
+          "name": "站姿绳索 Pallof 抗旋转推举",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "force_origin",
+          "family": "pallof",
+          "rank": 0,
+          "conditional": false,
+          "when": "滑轮可调到胸高时优先。",
+          "changes": "站姿稳定要求",
+          "cues": [
+            "侧对滑轮、双手从胸前推出",
+            "每次推出短暂停 1–2 秒，肩髋保持朝前",
+            "左右以拉力来源侧标记"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。按拉力来自左/右分别记录；两朝向完成算一组，不称为单臂训练。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "pallof-band-standing",
+          "name": "站姿弹力带 Pallof 抗旋转推举",
+          "category": "band",
+          "laterality": "unilateral",
+          "basis": "band_setup",
+          "conventions": [
+            "band_configuration"
+          ],
+          "sideAxis": "force_origin",
+          "family": "pallof",
+          "rank": 1,
+          "conditional": false,
+          "when": "滑轮不可用、可找到可靠胸高固定点时。",
+          "changes": "拉力随伸长增加",
+          "cues": [
+            "固定点牢固，先检查带子",
+            "标记站距与带长，姿势保持一致",
+            "不靠侧移抵消拉力"
+          ],
+          "hint": "记录弹力带品牌/型号、条数、固定高度、起始长度与站位距离；公斤可留空。按拉力来自左/右分别记录；两朝向完成算一组，不称为单臂训练。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "pallof-cable-kneeling",
+          "name": "高跪姿绳索 Pallof 抗旋转推举",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "force_origin",
+          "family": "pallof",
+          "rank": 2,
+          "conditional": false,
+          "when": "站姿容易借腿转身、跪姿膝部舒适且有跪垫时。",
+          "changes": "底面与髋稳定需求改变；不能解决同滑轮排队",
+          "cues": [
+            "双膝着垫，髋保持伸展",
+            "滑轮调至跪姿胸高",
+            "不挺腰或转骨盆"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。按拉力来自左/右分别记录；两朝向完成算一组，不称为单臂训练。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "pushdown",
+      "preferred": "pushdown-rope",
+      "reason": "优先绳柄三头下压：手腕角度可微调、设置快；并非绳柄比直杆增肌更多。",
+      "goal": "补充中立肩位伸肘，仅原有加练条件满足时选择。",
+      "limitations": "绳柄、直杆和弹力带缺少直接长期比较。不同肩位的伸肘研究不能证明某种下压握把更好。",
+      "sources": [
+        {
+          "title": "Maeo 等 2023（2022 在线）：过头与中立肩位绳索伸肘",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35819335/"
+        },
+        {
+          "title": "ACSM 2026 官方指南说明",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "pushdown-rope",
+          "name": "绳柄三头下压",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "pushdown",
+          "rank": 0,
+          "conditional": false,
+          "when": "绳索空闲、手腕肘部舒适时优先。",
+          "changes": "绳柄自由手距",
+          "cues": [
+            "肘贴身附近但不硬夹",
+            "伸肘不靠肩后摆或身体下压",
+            "底端不必夸张外翻绳头"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "pushdown-bar",
+          "name": "直杆或 V 杆三头下压",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "pushdown",
+          "rank": 1,
+          "conditional": false,
+          "when": "仅绳柄被占或绳柄握持不适时；不解决滑轮被占。",
+          "changes": "握法和手腕约束改变",
+          "cues": [
+            "选手腕自然的把手",
+            "固定上臂，手腕不反折",
+            "换把手也保留设置标记"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "pushdown-band",
+          "name": "高位固定弹力带三头下压",
+          "category": "band",
+          "laterality": "bilateral",
+          "basis": "band_setup",
+          "conventions": [
+            "band_configuration"
+          ],
+          "sideAxis": "both",
+          "family": "pushdown",
+          "rank": 2,
+          "conditional": true,
+          "when": "没有可用滑轮且有牢固高位固定点时。",
+          "changes": "伸展末端阻力上升，难量化",
+          "cues": [
+            "检查固定点和带体",
+            "上臂稳，不用身体压带",
+            "选择能在目标次数附近保留余力的阻力"
+          ],
+          "hint": "记录弹力带品牌/型号、条数、固定高度、起始长度与站位距离；公斤可留空。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "lowfly",
+      "preferred": "lowfly-cable",
+      "reason": "保留低至高双绳索夹胸：最直接保留原方向，滑轮可独立调整；没有直接长期研究证明它比普通夹胸更长上胸。",
+      "goal": "保留略向上并向内的肩运动方向，胸肌与肩前束共同参与；仍为可选补充。",
+      "limitations": "上斜推举研究不能直接证明低至高夹胸的局部增肌优势；该轨迹偏向胸部上部，仍需看肩部舒适与控制。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Chaves 等 2020：平板与上斜卧推",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7449336/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "lowfly-cable",
+          "name": "低至高双绳索夹胸",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "dual_cable_each",
+          "conventions": [
+            "stack_display_per_side_kg"
+          ],
+          "sideAxis": "both",
+          "family": "lowfly",
+          "rank": 0,
+          "conditional": false,
+          "when": "双滑轮可用、向上合拢无肩不适时优先。",
+          "changes": "双滑轮轨迹自由",
+          "cues": [
+            "滑轮低位，分腿站稳",
+            "手沿略向上内合至上胸附近，不抬到头顶",
+            "不要屈肘推起或腰部前后摆"
+          ],
+          "hint": "分别记录左右滑轮标重；两侧相同可显示每侧重量，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "lowfly-cable-single",
+          "name": "低至高单臂绳索夹胸",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "lowfly",
+          "rank": 1,
+          "conditional": false,
+          "when": "只有一个滑轮空闲时。",
+          "changes": "单侧抗旋转与耗时增加",
+          "cues": [
+            "另一手扶稳",
+            "骨盆不转，手沿同一弧线",
+            "每侧 1–2 组而非加倍总量"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "lowfly-incline-machine",
+          "name": "可调上斜夹胸机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "lowfly",
+          "rank": 2,
+          "conditional": true,
+          "when": "健身房确有能匹配上斜内合路线的夹胸机时。",
+          "changes": "固定支点与轨迹未必匹配",
+          "cues": [
+            "先试机器是否为飞鸟而非推胸",
+            "座位与起始角不迫使肩后拉",
+            "没有合适机型就不强行使用"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "straight",
+      "preferred": "straight-cable-rope",
+      "reason": "保留绳柄直臂下压：滑轮可调并适合固定肘角的肩伸展；不用它悄悄替换主下拉或上背划船。",
+      "goal": "肘角大致固定的肩伸展，让背阔训练较少受动态屈肘肌限制。",
+      "limitations": "无本组三版本直接长期排名；肘固定减少动态屈肘任务，不代表二头和握力完全不参与。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "straight-cable-rope",
+          "name": "绳柄直臂绳索下压",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "straight",
+          "rank": 0,
+          "conditional": false,
+          "when": "高滑轮可用、抬臂起点舒适时优先。",
+          "changes": "绳柄自由手距",
+          "cues": [
+            "髋仅小幅前折、躯干稳",
+            "肘微屈固定，上臂向下后方移",
+            "手到大腿附近即止，不靠腰后仰"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "straight-cable-bar",
+          "name": "直杆直臂绳索下压",
+          "category": "cable",
+          "laterality": "bilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "both",
+          "family": "straight",
+          "rank": 1,
+          "conditional": false,
+          "when": "绳柄被占，直杆握持无肩腕不适时。",
+          "changes": "双手相连，把手自由度变小",
+          "cues": [
+            "握距按肩舒适",
+            "不弯肘变成下压",
+            "不以身体压杆完成"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "straight-pullover-machine",
+          "name": "肘垫式器械 Pullover",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "straight",
+          "rank": 2,
+          "conditional": false,
+          "when": "无滑轮空位且器械允许舒适抬臂时。",
+          "changes": "肘垫、支点与活动起点改变",
+          "cues": [
+            "按说明调座位和肘垫",
+            "上臂主动压下，肘角大致固定",
+            "不把肋骨顶起换起点"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "shrug",
+      "preferred": "shrug-db",
+      "reason": "优先站姿双哑铃耸肩：手臂在身旁，路线自由且设置少，适合仅 1–2 组补充；重哑铃或握力成为限制时用机器。",
+      "goal": "负重肩胛上提，补充上斜方肌，限制腰部甩动。",
+      "limitations": "没有本组三种耸肩的直接肌肥大排名；哑铃第一是对少量补充组的执行判断。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "shrug-db",
+          "name": "站姿双哑铃耸肩",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "shrug",
+          "rank": 0,
+          "conditional": false,
+          "when": "哑铃足够重且能稳定握持时优先。",
+          "changes": "自由手臂路线",
+          "cues": [
+            "手臂自然垂，肩向上提",
+            "不绕肩，不用屈肘或弹膝",
+            "控制下降；握力先限可考虑拉力带"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "shrug-machine",
+          "name": "耸肩机（双臂）",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "shrug",
+          "rank": 1,
+          "conditional": false,
+          "when": "哑铃负荷上限/握力或入位限制时。",
+          "changes": "机型把手与轨迹改变",
+          "cues": [
+            "把手不迫使手臂远离躯干",
+            "站稳、颈部自然",
+            "不借髋猛顶"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "shrug-smith",
+          "name": "史密斯耸肩",
+          "category": "smith",
+          "laterality": "bilateral",
+          "basis": "smith_display",
+          "conventions": [
+            "added_plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "shrug",
+          "rank": 2,
+          "conditional": false,
+          "when": "无合适哑铃或耸肩机时。",
+          "changes": "手在身体前，固定杠路",
+          "cues": [
+            "杠在大腿前，手臂直垂附近",
+            "小范围肩上提，不拉杠到腹部",
+            "不做颈后杠或绕肩"
+          ],
+          "hint": "记录本机加片总重；空杆/配重信息另存，不猜有效重量。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "preacher",
+      "preferred": "preacher-db-single",
+      "reason": "优先单臂哑铃牧师椅弯举：支撑上臂、可自选旋后角度，器材简单；保留它与主上斜弯举的肩位区别，不把它当作必需“补齐二头”的动作。",
+      "goal": "肩屈曲、有上臂支撑的旋后握弯举，仅满足原有加练条件时选。",
+      "limitations": "直接研究主要比较哑铃上斜与牧师椅；没有证明哑铃牧师椅比器械更增肌，局部肌厚与分离肌体积不可互换。",
+      "sources": [
+        {
+          "title": "Kobayashi 等 2026：上斜与牧师椅哑铃弯举",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42829982/"
+        },
+        {
+          "title": "Kassiano 等 2025：上斜与牧师椅弯举的局部肌厚",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39809454/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "preacher-db-single",
+          "name": "单臂哑铃牧师椅弯举",
+          "category": "dumbbell",
+          "laterality": "unilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "preacher",
+          "rank": 0,
+          "conditional": false,
+          "when": "牧师垫高度合适、有合适小哑铃时优先。",
+          "changes": "单侧及底部较高外力矩",
+          "cues": [
+            "腋下附近贴垫，上臂稳定",
+            "回程接近伸直但不猛锁肘、反弹",
+            "肩不离垫前探来举起重量"
+          ],
+          "hint": "重量填每只哑铃，不相加。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "preacher-machine",
+          "name": "牧师椅弯举机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "both",
+          "family": "preacher",
+          "rank": 1,
+          "conditional": false,
+          "when": "需要更细调重、缩短单侧耗时或哑铃被占时。",
+          "changes": "轴心、握把与曲线改变",
+          "cues": [
+            "座高使上臂贴垫，膝不顶设备",
+            "设备转轴大致对应肘部",
+            "不以抬肩推动把手"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "preacher-cable-single",
+          "name": "单臂绳索牧师椅弯举",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "preacher",
+          "rank": 2,
+          "conditional": false,
+          "when": "无合身弯举机，有稳固垫与低滑轮设置时。",
+          "changes": "滑轮位置改变力矩曲线",
+          "cues": [
+            "垫子固定，绳索不摩擦凳边",
+            "保持上臂贴垫",
+            "不要因为底端绳索更轻就突然拉起"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "kickback",
+      "preferred": "kickback-cable",
+      "reason": "保留扶稳单腿绳索后踢：可调外力线和小幅加重，不需要再加重型髋铰链。",
+      "goal": "单侧髋伸展、尽量稳定骨盆，以少量直接臀肌训练为目的。",
+      "limitations": "没有本组三种后踢长期肌肥大排名；骨盆稳定是执行目标，不意味着完全排除腘绳肌或腰背参与。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "ACSM 2026 官方指南说明",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "kickback-cable",
+          "name": "扶稳单腿绳索臀部后踢",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "kickback",
+          "rank": 0,
+          "conditional": false,
+          "when": "低滑轮、踝带可用时优先。",
+          "changes": "工作膝略屈，负重可调",
+          "cues": [
+            "踝带固定，一手或双手扶稳",
+            "骨盆朝前，腿向后不过度外转",
+            "顶端不以腰后仰换幅度"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "kickback-machine",
+          "name": "单腿臀部后踢机",
+          "category": "machine",
+          "laterality": "unilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg",
+            "plates_per_arm_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "kickback",
+          "rank": 1,
+          "conditional": false,
+          "when": "滑轮被占或踝带不适，机器支撑合适时。",
+          "changes": "踏板/膝垫及固定轨迹不同",
+          "cues": [
+            "按说明调胸垫与脚台",
+            "骨盆保持贴稳支撑",
+            "不蹬膝变成腿推"
+          ],
+          "hint": "记录本机标重，并注明是配重栈、加片总重还是每臂加片；设备编号与座椅设置保持一致。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "kickback-band",
+          "name": "扶稳站姿弹力带后踢",
+          "category": "band",
+          "laterality": "unilateral",
+          "basis": "band_setup",
+          "conventions": [
+            "band_configuration"
+          ],
+          "sideAxis": "working_limb",
+          "family": "kickback",
+          "rank": 2,
+          "conditional": true,
+          "when": "无机器/绳索、有可靠固定点时应急。",
+          "changes": "伸展末端负荷增加，进阶受限",
+          "cues": [
+            "带在踝部合适位置固定",
+            "支撑腿稳定，工作腿后移",
+            "不靠腰摆动追张力"
+          ],
+          "hint": "记录弹力带品牌/型号、条数、固定高度、起始长度与站位距离；公斤可留空。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              15,
+              25
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "adduction",
+      "preferred": "adduction-machine",
+      "reason": "保留髋内收机：能稳定控制起始外展角与调重，适合腿日后段少量训练；不把大腿内侧拉扯当作必须“练开”。",
+      "goal": "直接髋内收，小量可选补充；原有完全无异常疼痛条件保留。",
+      "limitations": "本组三版本没有可靠长期肌肥大排名；这些不是内收肌损伤康复处方，疼痛时不通过换动作继续试重。",
+      "sources": [
+        {
+          "title": "ACSM 2026 阻力训练立场文件（Currier 等）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41843416/"
+        },
+        {
+          "title": "ACSM 2026 官方指南说明",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/"
+        }
+      ],
+      "variants": [
+        {
+          "id": "adduction-machine",
+          "name": "坐姿髋内收机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "adduction",
+          "rank": 0,
+          "conditional": false,
+          "when": "全程无异常拉扯痛，机器可调舒适起点时优先。",
+          "changes": "坐姿髋屈曲及支撑",
+          "cues": [
+            "先轻重、起始开度保守",
+            "骨盆不弹起，双腿受控合拢",
+            "不靠反弹打开到更宽"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "adduction-cable-single",
+          "name": "扶稳站姿绳索髋内收",
+          "category": "cable",
+          "laterality": "unilateral",
+          "basis": "cable_stack",
+          "conventions": [
+            "stack_display_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "adduction",
+          "rank": 1,
+          "conditional": false,
+          "when": "机器无空位，踝带不影响舒适轨迹时。",
+          "changes": "髋较伸直及站姿稳定要求",
+          "cues": [
+            "工作腿靠近滑轮",
+            "腿向内收到中线附近，骨盆不转",
+            "支撑脚不跟着拖动"
+          ],
+          "hint": "填该侧滑轮标重，不推算手端真实张力。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "adduction-side-lying",
+          "name": "侧卧下侧腿髋内收",
+          "category": "bodyweight",
+          "laterality": "unilateral",
+          "basis": "bodyweight_load",
+          "conventions": [
+            "body_mass_plus_external_load_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "adduction",
+          "rank": 2,
+          "conditional": true,
+          "when": "没有器械、仅在自重已足够构成训练负荷时应急。",
+          "changes": "负重上限和重力行程不同",
+          "cues": [
+            "上侧腿跨前支撑，下侧腿受控抬起",
+            "躯干稳定，不滚动骨盆",
+            "自重太轻则跳过此可选项目"
+          ],
+          "hint": "记录体重、额外负重及动作设置；额外负重可记 0 kg，但不代表身体承受的阻力为零。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              15,
+              25
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "seatedcalf",
+      "preferred": "seatedcalf-machine",
+      "reason": "保留坐姿提踵机：膝垫固定、受控脚跟下降和调重方便；它改变腓肠肌长度，不代表对比目鱼肌必然优于站姿。",
+      "goal": "屈膝约 90°条件下跖屈；仍为小腿优先补强时的少量可选变化。",
+      "limitations": "站姿与坐姿比较未检出比目鱼肌增长差异，不能据此认定坐姿更优；三种屈膝器械之间仍缺直接比较。",
+      "sources": [
+        {
+          "title": "Kinoshita 等 2023：站姿与坐姿提踵",
+          "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2023.1272106/full"
+        }
+      ],
+      "variants": [
+        {
+          "id": "seatedcalf-machine",
+          "name": "坐姿提踵机",
+          "category": "machine",
+          "laterality": "bilateral",
+          "basis": "machine_display",
+          "conventions": [
+            "stack_display_kg",
+            "plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "seatedcalf",
+          "rank": 0,
+          "conditional": false,
+          "when": "已符合加练条件、机器可用且膝垫舒适时优先。",
+          "changes": "大腿垫负荷与脚台支撑",
+          "cues": [
+            "膝约 90°，垫压大腿远端而非膝盖骨",
+            "脚跟受控下降，不弹起",
+            "膝位不随提踵变化"
+          ],
+          "hint": "记录本机标重，并注明是配重栈标重或全部加片合计；设备编号与座椅设置保持一致。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "seatedcalf-smith",
+          "name": "史密斯坐姿提踵",
+          "category": "smith",
+          "laterality": "bilateral",
+          "basis": "smith_display",
+          "conventions": [
+            "added_plates_total_kg"
+          ],
+          "sideAxis": "both",
+          "family": "seatedcalf",
+          "rank": 1,
+          "conditional": false,
+          "when": "坐姿机不可用、凳和脚台可稳固设置时。",
+          "changes": "杠压与搭建、脱离要求增加",
+          "cues": [
+            "厚垫置大腿远端、避开髌骨",
+            "先试空杆及安全挡、确保能脱离",
+            "凳和脚台均固定不滑动"
+          ],
+          "hint": "记录本机加片总重；空杆/配重信息另存，不猜有效重量。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        },
+        {
+          "id": "seatedcalf-db-single",
+          "name": "单腿哑铃坐姿提踵",
+          "category": "dumbbell",
+          "laterality": "unilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "seatedcalf",
+          "rank": 2,
+          "conditional": false,
+          "when": "无专用机或不便搭建史密斯时。",
+          "changes": "单腿，哑铃负重上限限制",
+          "cues": [
+            "坐稳，单只哑铃垫在工作侧大腿远端",
+            "手只稳定哑铃，不用手提走负荷",
+            "每侧完成 1–2 组"
+          ],
+          "hint": "重量填每只哑铃，不相加。左右重量、次数、余力分别保存；两侧各完成算本动作一组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              12,
+              20
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 90,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          }
+        }
+      ]
+    }
+  ]
+}
