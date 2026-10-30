@@ -3,6 +3,8 @@
    Source text remains untouched in docs/sources. Muscle diagrams use a shared neutral base and deterministic masks. */
 (()=>{'use strict';
 const guides={
+ wristcurl:{setup:'坐稳，前臂贴大腿或凳面，掌心向上，手腕伸出边缘。',effort:'前臂不动，手掌向前臂方向卷起。',finish:'到舒适可控的屈腕位置停住，不握肘抬臂。',back:'约2秒下放，不强拉手腕，不让哑铃滚到指尖。'},
+ wristextension:{setup:'坐稳，前臂贴大腿或凳面，掌心向下，手腕伸出边缘。',effort:'前臂不动，手背向前臂方向抬起。',finish:'到舒适可控的伸腕位置停住，不甩肘。',back:'约2秒下放，腕部保持受控；使用比腕弯举更轻的重量也正常。'},
  incline:{setup:'椅背约15–30°，背部和双脚支撑稳，肩胛稳定。',effort:'手腕与前臂保持对齐，主动向上推起。',finish:'推到手臂接近伸直，不靠挺腰把重量送高。',back:'约2秒下放到肩关节舒适的深度，不触底反弹。'},
  flat:{setup:'仰卧贴稳训练凳，双脚踩实，肩胛稳定。',effort:'双手平稳推起，手腕和前臂大致对齐。',finish:'手臂接近伸直，保持肩胛与躯干稳定。',back:'约2秒下降，肩部舒适即可；不追求过深或反弹。'},
  shoulder:{setup:'坐稳并贴靠椅背，躯干保持稳定。',effort:'沿肩部舒适的轨迹向上推起。',finish:'保持肋骨与骨盆协调，不用大幅后仰增加高度。',back:'约2秒降回起始位置，控制重量，不突然落下。'},
