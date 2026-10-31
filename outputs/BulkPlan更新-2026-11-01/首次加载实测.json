@@ -1,0 +1,206 @@
+{
+  "scope": "Cold isolated Chromium, local server globally limited to 200000 bytes/s with 100ms response delay. Not an iPhone field measurement.",
+  "ready": true,
+  "cacheReadyMs": 39169,
+  "servedBytes": 7476654,
+  "appFirstViewMs": 2682,
+  "unsavedWeightAfterInitialCache": "62.4",
+  "paint": [
+    {
+      "name": "first-paint",
+      "time": 624
+    },
+    {
+      "name": "first-contentful-paint",
+      "time": 2696
+    }
+  ],
+  "resources": [
+    {
+      "name": "style.css",
+      "bytes": 23229,
+      "duration": 504.0999999977648
+    },
+    {
+      "name": "mobile.css",
+      "bytes": 15416,
+      "duration": 352.9000000022352
+    },
+    {
+      "name": "muscle-map.css",
+      "bytes": 1559,
+      "duration": 251.30000000074506
+    },
+    {
+      "name": "recipe.css",
+      "bytes": 7022,
+      "duration": 251.39999999850988
+    },
+    {
+      "name": "workout.css",
+      "bytes": 8225,
+      "duration": 302.30000000074506
+    },
+    {
+      "name": "equipment.css",
+      "bytes": 3916,
+      "duration": 352.8999999985099
+    },
+    {
+      "name": "theme.css",
+      "bytes": 8151,
+      "duration": 403.69999999925494
+    },
+    {
+      "name": "meals.js",
+      "bytes": 4799,
+      "duration": 554.8000000007451
+    },
+    {
+      "name": "blend.js",
+      "bytes": 4924,
+      "duration": 605.5
+    },
+    {
+      "name": "core.js",
+      "bytes": 11627,
+      "duration": 910.5
+    },
+    {
+      "name": "data.js",
+      "bytes": 32016,
+      "duration": 910.1999999992549
+    },
+    {
+      "name": "movements.js",
+      "bytes": 9121,
+      "duration": 757.4000000022352
+    },
+    {
+      "name": "shoulder.js",
+      "bytes": 2459,
+      "duration": 910.5
+    },
+    {
+      "name": "muscle-maps.js",
+      "bytes": 17935,
+      "duration": 1062.7000000029802
+    },
+    {
+      "name": "session-edit.js",
+      "bytes": 2335,
+      "duration": 1165.4000000022352
+    },
+    {
+      "name": "equipment.js",
+      "bytes": 5673,
+      "duration": 1165.6000000014901
+    },
+    {
+      "name": "handbook.js",
+      "bytes": 40814,
+      "duration": 1267.1000000014901
+    },
+    {
+      "name": "workout.js",
+      "bytes": 4757,
+      "duration": 1267.5
+    },
+    {
+      "name": "workout-view.js",
+      "bytes": 4317,
+      "duration": 1268.1000000014901
+    },
+    {
+      "name": "meal-view.js",
+      "bytes": 1883,
+      "duration": 1369
+    },
+    {
+      "name": "history.js",
+      "bytes": 2415,
+      "duration": 1369.7000000029802
+    },
+    {
+      "name": "storage.js",
+      "bytes": 4212,
+      "duration": 1470.5
+    },
+    {
+      "name": "animation-view.js",
+      "bytes": 2547,
+      "duration": 1520
+    },
+    {
+      "name": "animation-data.js",
+      "bytes": 8925,
+      "duration": 1571.6000000014901
+    },
+    {
+      "name": "equipment-view.js",
+      "bytes": 6339,
+      "duration": 1572.800000000745
+    },
+    {
+      "name": "recipe.js",
+      "bytes": 6746,
+      "duration": 1673
+    },
+    {
+      "name": "equipment-data.js",
+      "bytes": 138236,
+      "duration": 2436.900000002235
+    },
+    {
+      "name": "sync-view.js",
+      "bytes": 4200,
+      "duration": 1724.1000000014901
+    },
+    {
+      "name": "sync.js",
+      "bytes": 8966,
+      "duration": 1774.1000000014901
+    },
+    {
+      "name": "zoom.js",
+      "bytes": 2765,
+      "duration": 1824.5
+    },
+    {
+      "name": "pwa.js",
+      "bytes": 2682,
+      "duration": 1926.1000000014901
+    },
+    {
+      "name": "main.js",
+      "bytes": 85451,
+      "duration": 2538.89999999851
+    },
+    {
+      "name": "manifest.webmanifest",
+      "bytes": 1025,
+      "duration": 398.69999999925494
+    },
+    {
+      "name": "bulkplan-lime-192.png",
+      "bytes": 12165,
+      "duration": 224
+    },
+    {
+      "name": "blend-thumb.webp",
+      "bytes": 15664,
+      "duration": 274
+    },
+    {
+      "name": "bulkplan-lime-32.png",
+      "bytes": 1358,
+      "duration": 152.40000000223517
+    },
+    {
+      "name": "bulkplan-lime-192.png",
+      "bytes": 12165,
+      "duration": 202
+    }
+  ],
+  "errors": []
+}

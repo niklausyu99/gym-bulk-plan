@@ -1,0 +1,122 @@
+[
+  {
+    "case": "empty-start",
+    "empty": true
+  },
+  {
+    "case": "chosen-order",
+    "order": [
+      "curl",
+      "incline"
+    ]
+  },
+  {
+    "case": "add-beyond-suggested",
+    "sets": 10
+  },
+  {
+    "case": "side-only",
+    "base": "已吃\n鸡胸肉 + Aglio Olio Pasta\n约495 kcal · 蛋白 57g · 碳水 43g · 脂肪 17g\n鸡胸肉 约160g\n搭配 Side\n选择 Side\nAglio Olio Pasta\nRoasted Sweet Potato\nRoasted US Potato\nItalian Tomato Pasta\nRoasted Mixed Vege\nRoasted Mushroom Soup",
+    "sideOnly": "已吃\nAglio Olio Pasta\n约232 kcal · 蛋白 9g · 碳水 34g · 脂肪 11g\n鸡胸肉 约160g\n搭配 Side\n选择 Side\nAglio Olio Pasta\nRoasted Sweet Potato\nRoasted US Potato\nItalian Tomato Pasta\nRoasted Mixed Vege\nRoasted Mushroom Soup",
+    "consumed": {
+      "2026-11-01": {
+        "gym": true,
+        "blend": false,
+        "sides": [
+          "aglio",
+          "sweet"
+        ],
+        "addons": [],
+        "eaten": [
+          "meal-0"
+        ],
+        "blendAmount": 1,
+        "mealParts": {
+          "0": {
+            "chicken": false,
+            "side": true
+          }
+        },
+        "mealSnapshots": {
+          "0": {
+            "name": "Aglio Olio Pasta",
+            "nutrition": {
+              "k": 232,
+              "p": 9,
+              "c": 34,
+              "f": 10.6,
+              "fi": null
+            },
+            "parts": {
+              "chicken": false,
+              "side": true
+            },
+            "sideId": "aglio"
+          }
+        }
+      }
+    }
+  },
+  {
+    "case": "empty-combo-not-eaten",
+    "eaten": []
+  },
+  {
+    "case": "unsaved-food",
+    "value": "饭团"
+  },
+  {
+    "case": "unsaved-food-rerender",
+    "value": "饭团"
+  },
+  {
+    "case": "unsaved-weight",
+    "value": "62.4"
+  },
+  {
+    "case": "animation-progress",
+    "first": {
+      "time": 0.643,
+      "duration": 6.583333,
+      "paused": false,
+      "controls": false,
+      "muted": true,
+      "loop": true,
+      "inline": true
+    },
+    "second": 1.9446
+  },
+  {
+    "case": "two-tabs",
+    "weights": [
+      {
+        "date": "2026-10-30",
+        "value": 61
+      },
+      {
+        "date": "2026-10-31",
+        "value": 62
+      }
+    ]
+  },
+  {
+    "case": "width-320",
+    "overflow": {
+      "scroll": 320,
+      "width": 320
+    },
+    "errors": []
+  },
+  {
+    "case": "width-390",
+    "overflow": {
+      "scroll": 390,
+      "width": 390
+    },
+    "errors": []
+  },
+  {
+    "case": "console",
+    "errors": []
+  }
+]

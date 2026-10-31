@@ -12,13 +12,13 @@ Run `npm run build`. This generates the product content and offline resource lis
 
 ## Current status
 
-Feature completion is active. All 29 exercise entries have written technique guidance and muscle-role diagrams, generated from one neutral front/back base and shared regional masks. The user canceled action-pose/trajectory demonstrations; do not resume their generation or stock procurement. Global optimization and acceptance are deferred by the user until content and functions are complete. See docs/PROJECT_STATUS.md.
+BulkPlan 0.5.0 uses the user-requested black/charcoal/fit-lime design. Today’s workouts are selected by muscle group, with ranked equipment choices, editable order and explicit optional suggested combinations. Sets can be added, selected and deleted; saved sessions can be reopened without duplicating records or advancing the cycle again. Separate drafts and pending history edits persist.
 
-Skills are project-local and pinned in skills-lock.json. Latest additions and runtime discovery are recorded in outputs/Skills-补充安装与接入.md and outputs/Skills-补充安装证据.json. DESIGN.md records the approved direction; AGENTS.md records development boundaries.
+All 29 slots / 90 equipment variants retain written technique guidance and muscle-role diagrams. Exact-version animations are available for 46 variants across 24 slots. The user-provided 677 original MP4s are preserved on the `exercise-media` branch under `GYM Exercise Animations/`; they are not included in the application deployment. Runtime demonstrations are silent inline loops with a WebP fallback. Missing exact matches are omitted rather than substituted.
 
-Muscle-map source lives in content/muscle-map-spec.json. The optional developer script scripts/build-muscle-maps.cjs uses Sharp to regenerate assets; the normal build uses the checked-in images and needs no image-processing dependency.
+Chicken breast is recorded independently by portion, above the Side selection. Consumed food retains nutrient snapshots. Existing meal records migrate without changing their totals. The header reports verified synchronization, pending work or an actionable error; offline browsing and local data are distinct from cloud synchronization.
 
-Training days can now be switched after confirmation while retaining separate unfinished drafts. A left-side shoulder supplement shares a 3-set allowance across a rolling 96-hour window. Equipment recommendations cover 29 slots / 90 variants, with per-side records, explicit load conventions and completed-set snapshots. Product equipment data is curated in content/equipment.json; the separate research delivery remains unchanged.
+Project Skills remain in .agents/skills. DESIGN.md records the current direction. Developer reports, research, source files and Skills are excluded from the runtime package. See docs/PROJECT_STATUS.md and outputs/BulkPlan更新-2026-11-01/更新与跟进.md for scope and verification limits.
 
 ## Hosted app and private records
 

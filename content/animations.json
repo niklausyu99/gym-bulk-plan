@@ -1,0 +1,1485 @@
+{
+  "version": 1,
+  "source": "User-supplied GYM Exercise Animations",
+  "sourceBranch": "exercise-media",
+  "reviewedVariants": [
+    {
+      "variantId": "incline-machine",
+      "src": "assets/animations/incline-machine.mp4",
+      "poster": "assets/animations/incline-machine.jpg",
+      "fallback": "assets/animations/incline-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/chest/Lever Incline Hammer Chest Press.mp4",
+      "sourceSha256": "fa9907b735cfa1c8ce971b56ac4f4389cbaba66b54d3089418f1c94e01c6bb38",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/incline-machine.mp4",
+          "sha256": "059a6ea459b7199100d69ef1e995e46aa84a8a33fc9d6ebac336dd71a7a56867",
+          "bytes": 159253
+        },
+        {
+          "path": "assets/animations/incline-machine.jpg",
+          "sha256": "653ced26a37b263bef6b3ac94895c9491a69263af18c61d7eb70e0cd5f5f1bd1",
+          "bytes": 21217
+        },
+        {
+          "path": "assets/animations/incline-machine.webp",
+          "sha256": "29334e822f6a35018af95cb29857200cd5267ad8da5ca23cea5d143a0dc62d3b",
+          "bytes": 199534
+        }
+      ]
+    },
+    {
+      "variantId": "incline-db",
+      "src": "assets/animations/incline-db.mp4",
+      "poster": "assets/animations/incline-db.jpg",
+      "fallback": "assets/animations/incline-db.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/chest/Dumbbell Incline Bench Press.mp4",
+      "sourceSha256": "aa1ae461a7a1a2d914f93bbf533519b458b359616a7556e77871fe4938f1caee",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/incline-db.mp4",
+          "sha256": "8dfed54c20d2be8bf8c2feeb5cd100d302a98d66dcc17c9672ddaa9fde0cf8c5",
+          "bytes": 109101
+        },
+        {
+          "path": "assets/animations/incline-db.jpg",
+          "sha256": "28929d7c1f11ad46af96fa19e89bb25cb9ca1c05b57edc5051581f80bbe1019b",
+          "bytes": 17570
+        },
+        {
+          "path": "assets/animations/incline-db.webp",
+          "sha256": "957d312e16eaa38238d13652ff62050e6a9d20ad4ae7f594f8c7d8029ff323ca",
+          "bytes": 152660
+        }
+      ]
+    },
+    {
+      "variantId": "flat-db",
+      "src": "assets/animations/flat-db.mp4",
+      "poster": "assets/animations/flat-db.jpg",
+      "fallback": "assets/animations/flat-db.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/chest/Dumbbell Bench Press.mp4",
+      "sourceSha256": "4e90bd446cc0ec4eb49a52c60a18ba51568693901a98c6ecbd80f1f485e6f404",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/flat-db.mp4",
+          "sha256": "25e359dbb84a17a6cbed0333f6b634fe682aad784615ee703b36ae9112d84878",
+          "bytes": 126727
+        },
+        {
+          "path": "assets/animations/flat-db.jpg",
+          "sha256": "dfeda7b51b931d7c70e9d0d92a20aaddeb0ea7b8d44804f0679dc52982943366",
+          "bytes": 18035
+        },
+        {
+          "path": "assets/animations/flat-db.webp",
+          "sha256": "56dd7193bfdf4fbd73013f6c123762f4e980efa990218f73a64836622dd2d434",
+          "bytes": 198114
+        }
+      ]
+    },
+    {
+      "variantId": "flat-machine",
+      "src": "assets/animations/flat-machine.mp4",
+      "poster": "assets/animations/flat-machine.jpg",
+      "fallback": "assets/animations/flat-machine.webp",
+      "duration": 6.639967,
+      "note": "",
+      "source": "men/chest/Lever Chest Press.mp4",
+      "sourceSha256": "0a04c4ff5fa3f6548bfcb0a9c43995a49ae0e621628f77dc4c528309a41b8cc8",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/flat-machine.mp4",
+          "sha256": "894dc9a18d85403731afca0c8d61288c7ac1cfb5e992640b879f83a687dae71b",
+          "bytes": 136420
+        },
+        {
+          "path": "assets/animations/flat-machine.jpg",
+          "sha256": "3b1b2e42ceccb1a27240a05ee6253ee6efefea9092aae5005b4cf2d9e644a523",
+          "bytes": 19848
+        },
+        {
+          "path": "assets/animations/flat-machine.webp",
+          "sha256": "b15baa4b2f0bfd444b9a6a7bff6af26a677f79e89f56b47effb6e6589b7f1e2d",
+          "bytes": 180392
+        }
+      ]
+    },
+    {
+      "variantId": "shoulder-machine",
+      "src": "assets/animations/shoulder-machine.mp4",
+      "poster": "assets/animations/shoulder-machine.jpg",
+      "fallback": "assets/animations/shoulder-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Shoulders/Lever Military Press.mp4",
+      "sourceSha256": "6c6437b574e35a60c412b5077dfbf99c3640b9f6f05c9ea9c0dbbb9035d64fef",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/shoulder-machine.mp4",
+          "sha256": "76d9f9624ca2399cd292567e125f6ed654bb3838ab535937c4f5b4f820348f23",
+          "bytes": 128402
+        },
+        {
+          "path": "assets/animations/shoulder-machine.jpg",
+          "sha256": "ce39a2b7b8a0f0e4d602e0e2f2a6004e1ba4947481456948e493624bd9987f48",
+          "bytes": 19585
+        },
+        {
+          "path": "assets/animations/shoulder-machine.webp",
+          "sha256": "7ac7b4ca31b5486f55ab093400d1ffe57de23d0fd199812c727383a61ba251e3",
+          "bytes": 191356
+        }
+      ]
+    },
+    {
+      "variantId": "shoulder-db",
+      "src": "assets/animations/shoulder-db.mp4",
+      "poster": "assets/animations/shoulder-db.jpg",
+      "fallback": "assets/animations/shoulder-db.webp",
+      "duration": 6.573233,
+      "note": "示范使用无靠背凳；有靠背时背部贴稳，躯干不后仰。",
+      "source": "men/Shoulders/Dumbbell Bench Seated Press.mp4",
+      "sourceSha256": "19a5abb57f831fce30124ff9dadc7205060a8d5524de5a396f8c1e5864a7a616",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/shoulder-db.mp4",
+          "sha256": "3c88f2ac9f5959de024af102569226f8010a2db121785f5032d50f5c6a0eb40d",
+          "bytes": 99572
+        },
+        {
+          "path": "assets/animations/shoulder-db.jpg",
+          "sha256": "a5216f8f58919fc6a445b35abf5e054832300c9717fa4c21b208162bc985b119",
+          "bytes": 17785
+        },
+        {
+          "path": "assets/animations/shoulder-db.webp",
+          "sha256": "0864e666e2e33f8ff74a34b46a2115d80a1a490c36386867a405f810414e883b",
+          "bytes": 156192
+        }
+      ]
+    },
+    {
+      "variantId": "shoulder-smith",
+      "src": "assets/animations/shoulder-smith.mp4",
+      "poster": "assets/animations/shoulder-smith.jpg",
+      "fallback": "assets/animations/shoulder-smith.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Shoulders/Smith Seated Shoulder Press.mp4",
+      "sourceSha256": "ebfab014c32d09d9d3a3c56283fca6fc53c9ca77cbdcb0514caf965fa100184c",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/shoulder-smith.mp4",
+          "sha256": "aa1b12e25e7fc6197878447c9697ecc7f9d1c5e19e44c12f8c92c4a3c583a854",
+          "bytes": 121486
+        },
+        {
+          "path": "assets/animations/shoulder-smith.jpg",
+          "sha256": "380e744bc21467642ca6cc66f0d657d5e836b55daa42825342bf96d0f54bec39",
+          "bytes": 23968
+        },
+        {
+          "path": "assets/animations/shoulder-smith.webp",
+          "sha256": "b142dd87dd86e56800c9092ec13069720fdfc5616ebcccd9eb93397b08e383c8",
+          "bytes": 204224
+        }
+      ]
+    },
+    {
+      "variantId": "lateral-cable-single",
+      "src": "assets/animations/lateral-cable-single.mp4",
+      "poster": "assets/animations/lateral-cable-single.jpg",
+      "fallback": "assets/animations/lateral-cable-single.webp",
+      "duration": 6.639967,
+      "note": "",
+      "source": "men/Shoulders/Cable One Arm Lateral Raise.mp4",
+      "sourceSha256": "45ebca5475ebe6b3463df1ec86f63cc33ed0dd419a5579bcfdecc5dbde553791",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/lateral-cable-single.mp4",
+          "sha256": "90926ec0f0ab8932fcbd257f08962ad6d2b23807262ee9f7de936952cddab6e8",
+          "bytes": 120800
+        },
+        {
+          "path": "assets/animations/lateral-cable-single.jpg",
+          "sha256": "104399f03b67189cf3685b30e8389a5f07c7a65ad7489c612d034cb0b31f27fd",
+          "bytes": 25261
+        },
+        {
+          "path": "assets/animations/lateral-cable-single.webp",
+          "sha256": "f84074d26c574a15a9d0890291c2e81ae51ffd64842b697ec8af9d11d2d192b1",
+          "bytes": 205826
+        }
+      ]
+    },
+    {
+      "variantId": "lateral-db",
+      "src": "assets/animations/lateral-db.mp4",
+      "poster": "assets/animations/lateral-db.jpg",
+      "fallback": "assets/animations/lateral-db.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Shoulders/Dumbbell Lateral Raise.mp4",
+      "sourceSha256": "83a2e1a45c0ab7bf168072ae5e129abb9e0e6324578cc06abe77e07b3408115b",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/lateral-db.mp4",
+          "sha256": "17f6f42282f98f762ea3de5646df2252540aa07f29b50cd80e2ef39aad7830dc",
+          "bytes": 103760
+        },
+        {
+          "path": "assets/animations/lateral-db.jpg",
+          "sha256": "52094b402f2aa296eb17f30e71ee4932d89d7257c723b90adb9b2597aa1f7e5f",
+          "bytes": 15813
+        },
+        {
+          "path": "assets/animations/lateral-db.webp",
+          "sha256": "4eb476c69844dc63b704d0e2437e80cfe560aa419ab7cda74f94b4ce564abb64",
+          "bytes": 141602
+        }
+      ]
+    },
+    {
+      "variantId": "lateral-machine",
+      "src": "assets/animations/lateral-machine.mp4",
+      "poster": "assets/animations/lateral-machine.jpg",
+      "fallback": "assets/animations/lateral-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Shoulders/Lever Lateral Raise.mp4",
+      "sourceSha256": "f0399830a61066d5dfc1ec852a5e1c9408d0dadca7b8e88f731ee00d9497956c",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/lateral-machine.mp4",
+          "sha256": "e2b4c86c73c64dda53b8985c2d15dd8221a9a0dd388d5e4e8fe5b59c542c5dd8",
+          "bytes": 132976
+        },
+        {
+          "path": "assets/animations/lateral-machine.jpg",
+          "sha256": "b2c48419c5262c30f707eb38d8af16f7f9baf9c37e565b8993258babf37f08d4",
+          "bytes": 19638
+        },
+        {
+          "path": "assets/animations/lateral-machine.webp",
+          "sha256": "1461b1373b1a8a4a5929315bc5055330119de3f89c62ca089197d6db0c255589",
+          "bytes": 173040
+        }
+      ]
+    },
+    {
+      "variantId": "fly-pecdeck",
+      "src": "assets/animations/fly-pecdeck.mp4",
+      "poster": "assets/animations/fly-pecdeck.jpg",
+      "fallback": "assets/animations/fly-pecdeck.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/chest/Lever Pec Deck Fly.mp4",
+      "sourceSha256": "e346e32ef22fbb83aa762c7d596f82c74dbc3124947d5e61d2565dbb8382ac0c",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/fly-pecdeck.mp4",
+          "sha256": "5eb01121f623864e76db768cd25594a375a48c8ab6bab22b3e1553680e650779",
+          "bytes": 139686
+        },
+        {
+          "path": "assets/animations/fly-pecdeck.jpg",
+          "sha256": "5bebcc89b653867ddd58646b5fe2fdd6b4852cf04757f9c47e3f9307d0978fcd",
+          "bytes": 21123
+        },
+        {
+          "path": "assets/animations/fly-pecdeck.webp",
+          "sha256": "d54d7c6691a3e11e52ef52310d6bf7c06def397b94b4ee171a03f172c6724cf5",
+          "bytes": 190038
+        }
+      ]
+    },
+    {
+      "variantId": "overhead-cable",
+      "src": "assets/animations/overhead-cable.mp4",
+      "poster": "assets/animations/overhead-cable.jpg",
+      "fallback": "assets/animations/overhead-cable.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Triceps/Cable Overhead Triceps Extension (rope attachment).mp4",
+      "sourceSha256": "85819c3010f8354a5318510d16683041b17af856e93a4fbf0b44f5b4cd644f20",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/overhead-cable.mp4",
+          "sha256": "5ca90abd7c74f61d30667095e9963fa69bb86327345eff942fe251d43d47d83a",
+          "bytes": 84708
+        },
+        {
+          "path": "assets/animations/overhead-cable.jpg",
+          "sha256": "8532dcf8ee83db3b1f4b2a34f8f9c8eeb6349ad1f7ad82a03a49d59fbcae864f",
+          "bytes": 19443
+        },
+        {
+          "path": "assets/animations/overhead-cable.webp",
+          "sha256": "361f79710b0b2965a4eae299af95f12dbf9936085b5d2f50dbe19531b865b2da",
+          "bytes": 168148
+        }
+      ]
+    },
+    {
+      "variantId": "overhead-cable-single",
+      "src": "assets/animations/overhead-cable-single.mp4",
+      "poster": "assets/animations/overhead-cable-single.jpg",
+      "fallback": "assets/animations/overhead-cable-single.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Triceps/Cable Standing One Arm Triceps Extension.mp4",
+      "sourceSha256": "66687472a79a8b07b487fccfa6653fa537f5f03d265a57d945524f0e97ea6d89",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/overhead-cable-single.mp4",
+          "sha256": "941eade6b5bda2cc5a057fc3f85397b042e192547429b5152cd6d28173ff01ff",
+          "bytes": 66614
+        },
+        {
+          "path": "assets/animations/overhead-cable-single.jpg",
+          "sha256": "41a21c74d1b6595fac73ca93feeba2272d37c25d5d23b28c687c29492d673b1c",
+          "bytes": 17033
+        },
+        {
+          "path": "assets/animations/overhead-cable-single.webp",
+          "sha256": "8bd4ebd4c8945579e720eb5e3c76ee35cae356f7db99009efaa2e3078dc8759b",
+          "bytes": 133412
+        }
+      ]
+    },
+    {
+      "variantId": "overhead-db",
+      "src": "assets/animations/overhead-db.mp4",
+      "poster": "assets/animations/overhead-db.jpg",
+      "fallback": "assets/animations/overhead-db.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Triceps/Dumbbell Seated Triceps Extension.mp4",
+      "sourceSha256": "34cab5958769b62f328b24af9a03e404ef95fb33f44580b88e6097d50a5a64cc",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/overhead-db.mp4",
+          "sha256": "0fc1d4ebc2dc19e70e81f10da0a799526faef1ed3332fa53d64519b058a6ac60",
+          "bytes": 70321
+        },
+        {
+          "path": "assets/animations/overhead-db.jpg",
+          "sha256": "a1942dd28a90c4f52526816a7c733905ed3e25a9a7d8654b272d02c83808a741",
+          "bytes": 15119
+        },
+        {
+          "path": "assets/animations/overhead-db.webp",
+          "sha256": "697495eb16f1a6edc0c8ed5bcddadd1e2caa3d8f5f37d06c3caca19486bf0d02",
+          "bytes": 109830
+        }
+      ]
+    },
+    {
+      "variantId": "pulldown-cable-neutral",
+      "src": "assets/animations/pulldown-cable-neutral.mp4",
+      "poster": "assets/animations/pulldown-cable-neutral.jpg",
+      "fallback": "assets/animations/pulldown-cable-neutral.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/back/Cable Close Grip Front Lat Pulldown.mp4",
+      "sourceSha256": "bf800abe0f8f9304a9f7d4d22bed25adef97cfa6dea504aef87533e95a2f9098",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/pulldown-cable-neutral.mp4",
+          "sha256": "0f6900ad1bec4525e468a5a1cfa7bc8f29da804460881ead23db69e8b2cccb92",
+          "bytes": 111162
+        },
+        {
+          "path": "assets/animations/pulldown-cable-neutral.jpg",
+          "sha256": "c183a52258f1ee2ca7ab6e3d6691c06ea3203b2d3ee62a4ea63ee3a09a2821c7",
+          "bytes": 18744
+        },
+        {
+          "path": "assets/animations/pulldown-cable-neutral.webp",
+          "sha256": "af70ed19607d393f7c22e42f9749d175d2c13fb41722fbb6742da0362b41c404",
+          "bytes": 151138
+        }
+      ]
+    },
+    {
+      "variantId": "pulldown-machine",
+      "src": "assets/animations/pulldown-machine.mp4",
+      "poster": "assets/animations/pulldown-machine.jpg",
+      "fallback": "assets/animations/pulldown-machine.webp",
+      "duration": 6.573233,
+      "note": "示范采用反握。握法以器械设计和肩部舒适为准。",
+      "source": "men/back/Reverse Grip Machine Lat Pulldown.mp4",
+      "sourceSha256": "e9ada3e7692e3ba9fd8f3a214903ae8d8e20bb97653043451b1e505e5766d9cd",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/pulldown-machine.mp4",
+          "sha256": "aa8eb0b24425379e8b584125d24716225665de9d919624222efefc71e4155f02",
+          "bytes": 159346
+        },
+        {
+          "path": "assets/animations/pulldown-machine.jpg",
+          "sha256": "2df344b8a7f1b232f53655923f36ba8651351fe3ceda900b89da766864f890a4",
+          "bytes": 21562
+        },
+        {
+          "path": "assets/animations/pulldown-machine.webp",
+          "sha256": "df82ce08537e03e62fcd5a7e5381e094ab7e6af30c6f1a59b894d960ea4fb5ff",
+          "bytes": 210412
+        }
+      ]
+    },
+    {
+      "variantId": "row-db-chest",
+      "src": "assets/animations/row-db-chest.mp4",
+      "poster": "assets/animations/row-db-chest.jpg",
+      "fallback": "assets/animations/row-db-chest.webp",
+      "duration": 6.6,
+      "note": "",
+      "source": "men/back/Dumbbell Hammer Grip Incline Bench Row.mp4",
+      "sourceSha256": "58bcc9b849a7ac01a10ebf31d022337d9031ddc9a118a28ce2a82f41a18cecfd",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/row-db-chest.mp4",
+          "sha256": "c5fdcfbc62603cd99908c08ef34f3cecc40534aae85ba1654db74af7e3297a73",
+          "bytes": 125051
+        },
+        {
+          "path": "assets/animations/row-db-chest.jpg",
+          "sha256": "a4c1cbc8f23bcca08d2c5a401f3651ee83772dce60d3a3221c18d6db4c18a873",
+          "bytes": 20355
+        },
+        {
+          "path": "assets/animations/row-db-chest.webp",
+          "sha256": "20269a0b1912e9064db0c6e428031ef4b5c42c363cd909e6d04ef9e992537d24",
+          "bytes": 179522
+        }
+      ]
+    },
+    {
+      "variantId": "row-cable-seated",
+      "src": "assets/animations/row-cable-seated.mp4",
+      "poster": "assets/animations/row-cable-seated.jpg",
+      "fallback": "assets/animations/row-cable-seated.webp",
+      "duration": 6.6,
+      "note": "",
+      "source": "men/back/Cable Seated Row (parallel grip).mp4",
+      "sourceSha256": "eeeb198eb5b9bdfa63d0ed60b501c3a4959f61adbf4abf99b83cdec4052e2328",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/row-cable-seated.mp4",
+          "sha256": "24312b210d5cc5fded1515be4a23127737d10568aea6290b39043848dd6d70ef",
+          "bytes": 78804
+        },
+        {
+          "path": "assets/animations/row-cable-seated.jpg",
+          "sha256": "0f764fd6a24ea59ce1b5600d8b5249b7e3de9bb8ce2da1e2b229417cf9418927",
+          "bytes": 20704
+        },
+        {
+          "path": "assets/animations/row-cable-seated.webp",
+          "sha256": "8f8db3a4c709d4eb84cd78be0bf368d0e896cea3e3510ed4c41cdf6c1c3a8ee2",
+          "bytes": 153012
+        }
+      ]
+    },
+    {
+      "variantId": "latrow-db-single",
+      "src": "assets/animations/latrow-db-single.mp4",
+      "poster": "assets/animations/latrow-db-single.jpg",
+      "fallback": "assets/animations/latrow-db-single.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/back/Dumbbell Bent-over Row.mp4",
+      "sourceSha256": "9fa938ae3be92d9fee84f6b9154f5402ed209a97f182685c375e4257144f2b71",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/latrow-db-single.mp4",
+          "sha256": "000f267081270f4beaa6fd026b64341c01d3aa921955bd28402f51157a4db082",
+          "bytes": 120231
+        },
+        {
+          "path": "assets/animations/latrow-db-single.jpg",
+          "sha256": "321048a605d03a8c825aed38040874612291e0cd298e6a1b904445d4b72cb349",
+          "bytes": 20112
+        },
+        {
+          "path": "assets/animations/latrow-db-single.webp",
+          "sha256": "c41fa0ea70b47b14c4fffc62c49b9a85613f55039a55babd8cc5bffca92f4e8b",
+          "bytes": 176464
+        }
+      ]
+    },
+    {
+      "variantId": "rear-machine",
+      "src": "assets/animations/rear-machine.mp4",
+      "poster": "assets/animations/rear-machine.jpg",
+      "fallback": "assets/animations/rear-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Shoulders/Lever Seated Reverse Fly.mp4",
+      "sourceSha256": "46610fd85793d5dd395a9acbf1d778a3a2fd95537f65899b79d427b724f20601",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/rear-machine.mp4",
+          "sha256": "1d1c9341a72a50f4459520039c70658d7b46739fc2f5f60ad67ddf21452b5abe",
+          "bytes": 122230
+        },
+        {
+          "path": "assets/animations/rear-machine.jpg",
+          "sha256": "ff204852818a22455b0ffb1c02790f12527c6365378940b786862658adcece6a",
+          "bytes": 20421
+        },
+        {
+          "path": "assets/animations/rear-machine.webp",
+          "sha256": "1be5f480e5c8b081229b90e8e7a839813d6f29370f6f1dd4373096c2dc501de2",
+          "bytes": 199112
+        }
+      ]
+    },
+    {
+      "variantId": "rear-db-chest",
+      "src": "assets/animations/rear-db-chest.mp4",
+      "poster": "assets/animations/rear-db-chest.jpg",
+      "fallback": "assets/animations/rear-db-chest.webp",
+      "duration": 6.6,
+      "note": "",
+      "source": "men/Shoulders/Dumbbell Incline Rear Lateral Raise.mp4",
+      "sourceSha256": "262d3d4a320fcf2211b39425bbba6be38260d6710aae77c6d80ba53d078d32a2",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/rear-db-chest.mp4",
+          "sha256": "18d62e078d99350bf41b2162dfaca9f2571dceb49445d2ff756e663e106d2c5c",
+          "bytes": 111105
+        },
+        {
+          "path": "assets/animations/rear-db-chest.jpg",
+          "sha256": "e9e6819d03113c8871f26d5e7e8e092372cbef4a3b88d5b01bc0125518a76cf2",
+          "bytes": 17583
+        },
+        {
+          "path": "assets/animations/rear-db-chest.webp",
+          "sha256": "b5e6945262348b5459140fd1aaeb6823a3d7620c5e3da0a61cad848cdd3b8e77",
+          "bytes": 160394
+        }
+      ]
+    },
+    {
+      "variantId": "curl-incline-db",
+      "src": "assets/animations/curl-incline-db.mp4",
+      "poster": "assets/animations/curl-incline-db.jpg",
+      "fallback": "assets/animations/curl-incline-db.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/biceps/Dumbbell Incline Biceps Curl.mp4",
+      "sourceSha256": "9c1fc8a007caf17173d3ecdabd21484a2d361bf270ccf85d82d65144c0aa6fec",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/curl-incline-db.mp4",
+          "sha256": "c6142b49faad719bf5ef26bf15d4fb8a170d6dc72e3f24aa78bce6dd9678122f",
+          "bytes": 112061
+        },
+        {
+          "path": "assets/animations/curl-incline-db.jpg",
+          "sha256": "df549bbf3f00a82737570b959d2133c56f23338673979e3a1a53f91a4a9e8132",
+          "bytes": 17722
+        },
+        {
+          "path": "assets/animations/curl-incline-db.webp",
+          "sha256": "c6441851cc7fcc82ec4a7cfa540cde3347da08d316833fcb954be9c223baebe2",
+          "bytes": 129294
+        }
+      ]
+    },
+    {
+      "variantId": "curl-seated-db",
+      "src": "assets/animations/curl-seated-db.mp4",
+      "poster": "assets/animations/curl-seated-db.jpg",
+      "fallback": "assets/animations/curl-seated-db.webp",
+      "duration": 13.2,
+      "note": "",
+      "source": "men/biceps/Dumbbell Alternate Seated Biceps Curl.mp4",
+      "sourceSha256": "f605033042a8124e7873e1bb315b8f380a426937e69de94c128b581b3a098888",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/curl-seated-db.mp4",
+          "sha256": "4ea083e51af72a447f774e46319a0ecfc0b8d499a5d91daf8657d5ebe8d8df3e",
+          "bytes": 181898
+        },
+        {
+          "path": "assets/animations/curl-seated-db.jpg",
+          "sha256": "5c143a8c367b78c2da53a6db07aefc64647cb000dd4c3ee44928393673852932",
+          "bytes": 20737
+        },
+        {
+          "path": "assets/animations/curl-seated-db.webp",
+          "sha256": "0aae9e18e3433e8c0799837d97ec1b678468da8495b717e0da05e6748536d61e",
+          "bytes": 231128
+        }
+      ]
+    },
+    {
+      "variantId": "preacher-db-single",
+      "src": "assets/animations/preacher-db-single.mp4",
+      "poster": "assets/animations/preacher-db-single.jpg",
+      "fallback": "assets/animations/preacher-db-single.webp",
+      "duration": 6.6,
+      "note": "",
+      "source": "men/biceps/Dumbbell Seated Preacher Curl.mp4",
+      "sourceSha256": "d9664794ccc82a21e3e4fc945a0cfec95c7a42fca490a63da46a67b28e4ba184",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/preacher-db-single.mp4",
+          "sha256": "5d8dab8857f7c1f190134bf6c45948bc642b38f7f95c694cab9f7b3c22aa3b99",
+          "bytes": 59888
+        },
+        {
+          "path": "assets/animations/preacher-db-single.jpg",
+          "sha256": "49b79f8f8fa969009fd31f220a3d4c15a29ce33818e8731c111cf8e0b9d67da3",
+          "bytes": 18460
+        },
+        {
+          "path": "assets/animations/preacher-db-single.webp",
+          "sha256": "86f452036d035f64a09037b3fc30b100d3ba0ea773a9bb1aafeb6cd1bb3964f8",
+          "bytes": 94220
+        }
+      ]
+    },
+    {
+      "variantId": "preacher-machine",
+      "src": "assets/animations/preacher-machine.mp4",
+      "poster": "assets/animations/preacher-machine.jpg",
+      "fallback": "assets/animations/preacher-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/biceps/Lever Preacher Curl.mp4",
+      "sourceSha256": "2d2dfaace6ba18a10e4c7b86512ab16b49c2268463af6d70f59cc412d36eca28",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/preacher-machine.mp4",
+          "sha256": "5eaddef36190a67a06f74182cc361fd00f505e428de23c5ee01dd24f09e13959",
+          "bytes": 128294
+        },
+        {
+          "path": "assets/animations/preacher-machine.jpg",
+          "sha256": "96b14999d4270a05c8dc3127ced4bbc82a38e392508a8caa918a85c9854a787a",
+          "bytes": 22313
+        },
+        {
+          "path": "assets/animations/preacher-machine.webp",
+          "sha256": "40de723f789ffbd70624ae4ff4041e989b838253f6ec1080d786236aeabee188",
+          "bytes": 184678
+        }
+      ]
+    },
+    {
+      "variantId": "hack-sled",
+      "src": "assets/animations/hack-sled.mp4",
+      "poster": "assets/animations/hack-sled.jpg",
+      "fallback": "assets/animations/hack-sled.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Hips/Sled Hack Squat.mp4",
+      "sourceSha256": "8f9bbe0d29dcf007e6bbf2fe0dcf1cca1d9330c715a52cdc90d78ff2d9590f03",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/hack-sled.mp4",
+          "sha256": "09f1207dd24c18aa504ca02783314a1eda0b0ece3d72313591609d19c4995ae3",
+          "bytes": 157954
+        },
+        {
+          "path": "assets/animations/hack-sled.jpg",
+          "sha256": "c4a76353678b6122ad666c1018c84c9291a751a0ce2e0645b663ef1c2e37ea31",
+          "bytes": 27937
+        },
+        {
+          "path": "assets/animations/hack-sled.webp",
+          "sha256": "b635df0cef135b551482bf74cf72ec7d496886e88f136545f383bf3cb9d430c1",
+          "bytes": 308766
+        }
+      ]
+    },
+    {
+      "variantId": "hack-legpress",
+      "src": "assets/animations/hack-legpress.mp4",
+      "poster": "assets/animations/hack-legpress.jpg",
+      "fallback": "assets/animations/hack-legpress.webp",
+      "duration": 6.639967,
+      "note": "示范脚距较宽；按自身髋膝舒适选择站距。",
+      "source": "men/Hips/Sled 45 Degree Leg Wide Press.mp4",
+      "sourceSha256": "f1b085ed2693176c65e3c51807908c74c7dd96118e9b62af26a831249f9c0792",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/hack-legpress.mp4",
+          "sha256": "d12a8d46ae8a927badf29549cc8b10585e9b6b8f41a99cc49e02f183b18c219d",
+          "bytes": 127218
+        },
+        {
+          "path": "assets/animations/hack-legpress.jpg",
+          "sha256": "88e35034b9840859767157a3ab1f5e54058df8bc6911a8106b112b74a7d3a908",
+          "bytes": 21926
+        },
+        {
+          "path": "assets/animations/hack-legpress.webp",
+          "sha256": "75fb6bc6471af74d72e978a765740501f14f9d714d7b8ea4cd103a4fff994047",
+          "bytes": 218192
+        }
+      ]
+    },
+    {
+      "variantId": "hack-smith",
+      "src": "assets/animations/hack-smith.mp4",
+      "poster": "assets/animations/hack-smith.jpg",
+      "fallback": "assets/animations/hack-smith.webp",
+      "duration": 6.639967,
+      "note": "",
+      "source": "men/Hips/Smith Chair Squat.mp4",
+      "sourceSha256": "8ca50284c316c6cc8a69dd65aa1e1d3d3afc90fd85c6111233d743a5b99e1f7f",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/hack-smith.mp4",
+          "sha256": "638e64e36fd0877bc9c119f966aea55d27f349c50408638f98cbcbf9f0238876",
+          "bytes": 119089
+        },
+        {
+          "path": "assets/animations/hack-smith.jpg",
+          "sha256": "62db718c20d3e91922eceb8821abb6177e0888c9ee498ec64c2463b006958aeb",
+          "bytes": 21298
+        },
+        {
+          "path": "assets/animations/hack-smith.webp",
+          "sha256": "33ee9401a6631c8a8ac84c45d3096151410c7b47a412bbb7df5c108ca549e85a",
+          "bytes": 200650
+        }
+      ]
+    },
+    {
+      "variantId": "legcurl-seated",
+      "src": "assets/animations/legcurl-seated.mp4",
+      "poster": "assets/animations/legcurl-seated.jpg",
+      "fallback": "assets/animations/legcurl-seated.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Hips/Lever Seated Leg Curl.mp4",
+      "sourceSha256": "270f23601e5ef4d7ee08c1940f8be2b194490bb260468c225b4758ed4c3fcc8c",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/legcurl-seated.mp4",
+          "sha256": "3831df632286c510970a7344355bdae624a139a471ba0ccefb30a07fd24ac0f7",
+          "bytes": 153360
+        },
+        {
+          "path": "assets/animations/legcurl-seated.jpg",
+          "sha256": "aeb39d1888515425f6a6e9c2b22a49196a6e094271cb95517b258d7e9fb79f36",
+          "bytes": 22521
+        },
+        {
+          "path": "assets/animations/legcurl-seated.webp",
+          "sha256": "e59d3072c3b6892e2b89a656b1ce61c6e15bd447b5c3b42ed5f10e183853242a",
+          "bytes": 213744
+        }
+      ]
+    },
+    {
+      "variantId": "legcurl-prone",
+      "src": "assets/animations/legcurl-prone.mp4",
+      "poster": "assets/animations/legcurl-prone.jpg",
+      "fallback": "assets/animations/legcurl-prone.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Hips/Lever Lying Leg Curl.mp4",
+      "sourceSha256": "20225073d457c0fc0b8626cffd4ac1072325bc8384a211a3f0916b2d26c875dd",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/legcurl-prone.mp4",
+          "sha256": "a28be41d878b69c771f77a666b4f2bb20f22e190af2c2b02d08f7a9469fcce01",
+          "bytes": 104605
+        },
+        {
+          "path": "assets/animations/legcurl-prone.jpg",
+          "sha256": "3c2248450b7c997a42a0eb0ae8e7c5746be99a7334251c2333fc0102acb6c598",
+          "bytes": 21790
+        },
+        {
+          "path": "assets/animations/legcurl-prone.webp",
+          "sha256": "e7e4ec8127f2f0d8864650732cb6de0ad42433bc437205b5c690e115d343d691",
+          "bytes": 184736
+        }
+      ]
+    },
+    {
+      "variantId": "extension-machine",
+      "src": "assets/animations/extension-machine.mp4",
+      "poster": "assets/animations/extension-machine.jpg",
+      "fallback": "assets/animations/extension-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Hips/Lever Leg Extension.mp4",
+      "sourceSha256": "ae50bef981128f5ffb3adb0dbe6e567594fafc8c03abb8fa449d0e6834d2391c",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/extension-machine.mp4",
+          "sha256": "e3c94d4b73daf11cbca7594c90b0d2cc7fe66a425cdb0de02c18d2369660f442",
+          "bytes": 142518
+        },
+        {
+          "path": "assets/animations/extension-machine.jpg",
+          "sha256": "2e50c6f2de3c83c596487b078c995328e40c60a05ad9eb7bf1de575856a80091",
+          "bytes": 21529
+        },
+        {
+          "path": "assets/animations/extension-machine.webp",
+          "sha256": "89fbe2415d6ca66901f453aecc6e8fff86560d37f07985db96488f265d6b9009",
+          "bytes": 195166
+        }
+      ]
+    },
+    {
+      "variantId": "abduction-machine",
+      "src": "assets/animations/abduction-machine.mp4",
+      "poster": "assets/animations/abduction-machine.jpg",
+      "fallback": "assets/animations/abduction-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Hips/Lever Seated Hip Abduction.mp4",
+      "sourceSha256": "89da735038c3f5b4b63816142814db0291a2a34baddd82b1192f2cb6b8d32f2a",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/abduction-machine.mp4",
+          "sha256": "a6dd00288cc2a6136e06c9ca3da30c568009f551020427f51c4a937497bee301",
+          "bytes": 137898
+        },
+        {
+          "path": "assets/animations/abduction-machine.jpg",
+          "sha256": "9a91850d224f4dc11ebdb557a97ac7bad3761de3fecc771a21ed0a888b7e7fd7",
+          "bytes": 16470
+        },
+        {
+          "path": "assets/animations/abduction-machine.webp",
+          "sha256": "883ffcb6335c435a5ff00bd85188597f75c342ea54d707eb10744b57b78cce65",
+          "bytes": 187286
+        }
+      ]
+    },
+    {
+      "variantId": "calf-standing-machine",
+      "src": "assets/animations/calf-standing-machine.mp4",
+      "poster": "assets/animations/calf-standing-machine.jpg",
+      "fallback": "assets/animations/calf-standing-machine.webp",
+      "duration": 6.639967,
+      "note": "",
+      "source": "men/calves/Lever Standing Calf Raise.mp4",
+      "sourceSha256": "e58b11a05b5f715738440a3bcddf2e7a2efeda048a32a00d0a9008d5b27e1193",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/calf-standing-machine.mp4",
+          "sha256": "ddd1719d8d618031fc4c65395aa4f3c9fec1a7989caa771d3825084d0285d741",
+          "bytes": 97952
+        },
+        {
+          "path": "assets/animations/calf-standing-machine.jpg",
+          "sha256": "54178297ee79195edf5bacb3c2fd21149500e38d459b046d5f0a516dd46ee748",
+          "bytes": 17936
+        },
+        {
+          "path": "assets/animations/calf-standing-machine.webp",
+          "sha256": "bece4ca293210ff495510f0a02841ddde1164e87a59feeff790e6654ce329c22",
+          "bytes": 211460
+        }
+      ]
+    },
+    {
+      "variantId": "calf-legpress",
+      "src": "assets/animations/calf-legpress.mp4",
+      "poster": "assets/animations/calf-legpress.jpg",
+      "fallback": "assets/animations/calf-legpress.webp",
+      "duration": 6.639967,
+      "note": "",
+      "source": "men/calves/Sled 45 Degree Calf Press.mp4",
+      "sourceSha256": "04eb228aa6f460964c39fe2ef9507a1738558f54b4382207d662a77d25121bee",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/calf-legpress.mp4",
+          "sha256": "e6f20327c416af17257ab6bb8c9c8f1556aceb0898267c71aa501e63866d48f8",
+          "bytes": 82447
+        },
+        {
+          "path": "assets/animations/calf-legpress.jpg",
+          "sha256": "b91555f47042ee15f97e8384cf7a94154e440c53209fd2591c0f0797b25cc46e",
+          "bytes": 23481
+        },
+        {
+          "path": "assets/animations/calf-legpress.webp",
+          "sha256": "09cc01ed1c5a96d120d6dccf6a8833d34adbf2bf0315068847242d10999fba47",
+          "bytes": 204594
+        }
+      ]
+    },
+    {
+      "variantId": "calf-db-single",
+      "src": "assets/animations/calf-db-single.mp4",
+      "poster": "assets/animations/calf-db-single.jpg",
+      "fallback": "assets/animations/calf-db-single.webp",
+      "duration": 6.6,
+      "note": "",
+      "source": "men/calves/Dumbbell Single Leg Calf Raise.mp4",
+      "sourceSha256": "258975119f46d69807aadedf1310c87637dc42e4bf2c3973e55791be45e9ba5c",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/calf-db-single.mp4",
+          "sha256": "94801254b5092930d6e3bfc6ddf82d4696763184da8a2af694a8d54e9fa8cab7",
+          "bytes": 97325
+        },
+        {
+          "path": "assets/animations/calf-db-single.jpg",
+          "sha256": "6e519d819d591caed73b6925f2c459d10e766656ccb14142827f888e50d9a305",
+          "bytes": 19230
+        },
+        {
+          "path": "assets/animations/calf-db-single.webp",
+          "sha256": "a0a9d1c15e05e10754f1aa96116709b0f649b843a4c14a5206517febf154c2f9",
+          "bytes": 198640
+        }
+      ]
+    },
+    {
+      "variantId": "crunch-cable",
+      "src": "assets/animations/crunch-cable.mp4",
+      "poster": "assets/animations/crunch-cable.jpg",
+      "fallback": "assets/animations/crunch-cable.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/abs/Cable Kneeling Crunch.mp4",
+      "sourceSha256": "e747209f81cb6bfdda0e80f6f65ad7080bd05c5b517e6a7ce688a08d451f0ba7",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/crunch-cable.mp4",
+          "sha256": "cdc1387593fb4440c10ccd3f9e1133650d596c2d5d999348dc1305db7ef71bcf",
+          "bytes": 95384
+        },
+        {
+          "path": "assets/animations/crunch-cable.jpg",
+          "sha256": "a9c87c105a85e2cbf11bdaf0fb44a041c2c1b99c7d4398a83eec234a14b7b761",
+          "bytes": 18287
+        },
+        {
+          "path": "assets/animations/crunch-cable.webp",
+          "sha256": "29395b2c2c0d235de17deab32bbad3498f56b697b4c8c36936aa87f4ac2033ff",
+          "bytes": 155660
+        }
+      ]
+    },
+    {
+      "variantId": "crunch-machine",
+      "src": "assets/animations/crunch-machine.mp4",
+      "poster": "assets/animations/crunch-machine.jpg",
+      "fallback": "assets/animations/crunch-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/abs/Lever Seated Crunch.mp4",
+      "sourceSha256": "9b0c35f11dac6a78582383c9e3a66791f2634db2ae2fc30b6cd6b9fda01adaf2",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/crunch-machine.mp4",
+          "sha256": "a3dcad353fc4c1456f885cac218dd68a553b9530f239d8235abb8a95bba17654",
+          "bytes": 126658
+        },
+        {
+          "path": "assets/animations/crunch-machine.jpg",
+          "sha256": "a67f2a3fffd7b5328dac71824f74bdf60ecbccdbc1d6b8cae76c95aacea8b6b9",
+          "bytes": 21110
+        },
+        {
+          "path": "assets/animations/crunch-machine.webp",
+          "sha256": "754b83d183ba1dc4e98128ea38a69d6786d36387c2bb812ce421b8d589a8730e",
+          "bytes": 194366
+        }
+      ]
+    },
+    {
+      "variantId": "pushdown-rope",
+      "src": "assets/animations/pushdown-rope.mp4",
+      "poster": "assets/animations/pushdown-rope.jpg",
+      "fallback": "assets/animations/pushdown-rope.webp",
+      "duration": 6.57324,
+      "note": "",
+      "source": "men/Triceps/Cable Pushdown (rope attachment).mp4",
+      "sourceSha256": "8d61fd3ef8691a0105d521a19410b378260828e760ca65c119f561ed7cdad304",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/pushdown-rope.mp4",
+          "sha256": "0603d86d6743ae7d94d855de1dd8a55beced719c1433da2eefd0bfe02292acc0",
+          "bytes": 79178
+        },
+        {
+          "path": "assets/animations/pushdown-rope.jpg",
+          "sha256": "8923b4e20f2319bde6659fbadfff8394cd0e399b121f561b6f075ecbff24d5b4",
+          "bytes": 18919
+        },
+        {
+          "path": "assets/animations/pushdown-rope.webp",
+          "sha256": "dc525351ea9430c8a97f22557eb6c59870639aff7a6846210e1fa6ade670fd79",
+          "bytes": 157156
+        }
+      ]
+    },
+    {
+      "variantId": "pushdown-bar",
+      "src": "assets/animations/pushdown-bar.mp4",
+      "poster": "assets/animations/pushdown-bar.jpg",
+      "fallback": "assets/animations/pushdown-bar.webp",
+      "duration": 6.539867,
+      "note": "",
+      "source": "men/Triceps/Cable Triceps Pushdown.mp4",
+      "sourceSha256": "d3dd7d327782383d1d6abdf91c0a21abec43a278c46a81b1932994f447fcc337",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/pushdown-bar.mp4",
+          "sha256": "9f2a398388701bdc014a836dd5c47b32ce977cd96e0bf094f49c9da520b2f409",
+          "bytes": 87819
+        },
+        {
+          "path": "assets/animations/pushdown-bar.jpg",
+          "sha256": "d73d18582f5dfd028a6e21dcd5cb13b9ba87315e856a0d1d156464f66089b908",
+          "bytes": 17855
+        },
+        {
+          "path": "assets/animations/pushdown-bar.webp",
+          "sha256": "9d8bed29c940c0e7b255a6a53f5135193f5fb1bb70ca99fc184d60c1c2af7063",
+          "bytes": 159698
+        }
+      ]
+    },
+    {
+      "variantId": "pushdown-band",
+      "src": "assets/animations/pushdown-band.mp4",
+      "poster": "assets/animations/pushdown-band.jpg",
+      "fallback": "assets/animations/pushdown-band.webp",
+      "duration": 6.6,
+      "note": "",
+      "source": "men/Triceps/Band Triceps Pushdown.mp4",
+      "sourceSha256": "87ddcc22cbd5ee78c55386eae9757fa1fbb5e132102cc8bd0d8d895b79badd3e",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/pushdown-band.mp4",
+          "sha256": "19a595e106ef166b4e08cff8792bbc4ccff34db08f83971fdaab16e5d47d14b9",
+          "bytes": 87070
+        },
+        {
+          "path": "assets/animations/pushdown-band.jpg",
+          "sha256": "1423e55d481a6fee215ea0f36121899ee852c461dfa3121b67260ec9a7075092",
+          "bytes": 17721
+        },
+        {
+          "path": "assets/animations/pushdown-band.webp",
+          "sha256": "bc6040ec314d75080410a379f4a18325acb61f837d758e4da8a3f55f9e9654f9",
+          "bytes": 134382
+        }
+      ]
+    },
+    {
+      "variantId": "straight-cable-bar",
+      "src": "assets/animations/straight-cable-bar.mp4",
+      "poster": "assets/animations/straight-cable-bar.jpg",
+      "fallback": "assets/animations/straight-cable-bar.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/back/Cable Straight Arm Pulldown.mp4",
+      "sourceSha256": "ba035bad3738ee8259f6f6439e2e1e96cb08c7faf8286ab68b599980511dc24a",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/straight-cable-bar.mp4",
+          "sha256": "68b8cc791bd13e58e55109f9f27c57b4c666e171964913afeec2e1d490a4bc76",
+          "bytes": 107051
+        },
+        {
+          "path": "assets/animations/straight-cable-bar.jpg",
+          "sha256": "889d1af50c39eec4d0160d0d4d58cbadf3cc2269aa26eeec2213b2d8b9e219a2",
+          "bytes": 20793
+        },
+        {
+          "path": "assets/animations/straight-cable-bar.webp",
+          "sha256": "df5a6cd267aea8dd72bf7c10f6883cac52ba20d9724db155952f0bbb116c2963",
+          "bytes": 196206
+        }
+      ]
+    },
+    {
+      "variantId": "shrug-db",
+      "src": "assets/animations/shrug-db.mp4",
+      "poster": "assets/animations/shrug-db.jpg",
+      "fallback": "assets/animations/shrug-db.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Trapezius/Dumbbell Shrug.mp4",
+      "sourceSha256": "79167df756f3a09febe2786c71df09b55d9d94f948a05ff71ae55578202746d0",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/shrug-db.mp4",
+          "sha256": "93ac4b9d98024aeb8a87a607a780fd1fd51131655bd5b8f50c3b1a435f87bb09",
+          "bytes": 65468
+        },
+        {
+          "path": "assets/animations/shrug-db.jpg",
+          "sha256": "07b0c5b87cd7078f2a867eacf003f9b39ae6970af107550050503fb4f8264c1f",
+          "bytes": 14339
+        },
+        {
+          "path": "assets/animations/shrug-db.webp",
+          "sha256": "e7e2d80cdf7d9caecd86813f63332382534c57e1261dc4318a93fa46dd3606cd",
+          "bytes": 129104
+        }
+      ]
+    },
+    {
+      "variantId": "shrug-machine",
+      "src": "assets/animations/shrug-machine.mp4",
+      "poster": "assets/animations/shrug-machine.jpg",
+      "fallback": "assets/animations/shrug-machine.webp",
+      "duration": 6.639967,
+      "note": "",
+      "source": "men/Trapezius/Lever Shrug.mp4",
+      "sourceSha256": "6eb0ebd2a7ffcb218e32eb2c7a1839b4cd7c6225a1b1280036733a43502bc69a",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/shrug-machine.mp4",
+          "sha256": "8388aabfc4ca7956f95bed6b7e15055215c3ad277f0387663f9cad97d8662a2f",
+          "bytes": 82386
+        },
+        {
+          "path": "assets/animations/shrug-machine.jpg",
+          "sha256": "bfe7c476640fdbbef8e47bfa32a9fa293929ca4005fe3f24460160f1c8d1cb5b",
+          "bytes": 19287
+        },
+        {
+          "path": "assets/animations/shrug-machine.webp",
+          "sha256": "d7eaa03577e5e16ebfb421d4860d5e85c468fb2fd429c8e956865d848319d0f6",
+          "bytes": 169656
+        }
+      ]
+    },
+    {
+      "variantId": "kickback-machine",
+      "src": "assets/animations/kickback-machine.mp4",
+      "poster": "assets/animations/kickback-machine.jpg",
+      "fallback": "assets/animations/kickback-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Hips/Lever Standing Rear Kick.mp4",
+      "sourceSha256": "8563b3dcbc6f617ac526ba10c33120b8c354584af8c7df036e826098e77d4b53",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/kickback-machine.mp4",
+          "sha256": "27932c9f02914567bf31c66f19e542e29b14718917e8cef1685220479320bcfe",
+          "bytes": 99097
+        },
+        {
+          "path": "assets/animations/kickback-machine.jpg",
+          "sha256": "e2f0e0583473f9c3322e75bb81def43c4f6b65eb6c6709e1df6c47aceda13b1c",
+          "bytes": 17678
+        },
+        {
+          "path": "assets/animations/kickback-machine.webp",
+          "sha256": "bf3bcaa714205334a458d035590b82da7ae660ce0d5c0bc188b8ddf64f9fc270",
+          "bytes": 149596
+        }
+      ]
+    },
+    {
+      "variantId": "adduction-machine",
+      "src": "assets/animations/adduction-machine.mp4",
+      "poster": "assets/animations/adduction-machine.jpg",
+      "fallback": "assets/animations/adduction-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/Hips/Lever Seated Hip Adduction.mp4",
+      "sourceSha256": "dd07724755bf157c676f02c9a8724e222709cf7c65a830733709fd14c7370c52",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/adduction-machine.mp4",
+          "sha256": "9943b210f099ab0219dff6367331c7df7752b6f2091f8bab1de96dd27c497bf2",
+          "bytes": 132069
+        },
+        {
+          "path": "assets/animations/adduction-machine.jpg",
+          "sha256": "e22776585f6fb15afe2efcd5c399f63bb76a71162ace09642288e0ceceb5e08f",
+          "bytes": 18251
+        },
+        {
+          "path": "assets/animations/adduction-machine.webp",
+          "sha256": "8f7933a8f086237a04c231898fecfef2feead03fc4e56a2c9203ed794b19f962",
+          "bytes": 189750
+        }
+      ]
+    },
+    {
+      "variantId": "seatedcalf-machine",
+      "src": "assets/animations/seatedcalf-machine.mp4",
+      "poster": "assets/animations/seatedcalf-machine.jpg",
+      "fallback": "assets/animations/seatedcalf-machine.webp",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/calves/Lever Seated Calf Raise.mp4",
+      "sourceSha256": "fc2f82c34e312221c2fadc4edc3ed11bd354b9eff5497975ad5956cb6f830a2c",
+      "review": {
+        "method": "Inspected four temporal samples and complete apparatus/person framing; ambiguous candidates rejected.",
+        "matched": true
+      },
+      "files": [
+        {
+          "path": "assets/animations/seatedcalf-machine.mp4",
+          "sha256": "bba315381dfc05ac3a9eda143ef3246b12613cca947c65a4d8e84b96571a2cc8",
+          "bytes": 107848
+        },
+        {
+          "path": "assets/animations/seatedcalf-machine.jpg",
+          "sha256": "d6e882e65e4f7941ae8699c7d442713ef6bd956f0a466a41a954372de26f606f",
+          "bytes": 17555
+        },
+        {
+          "path": "assets/animations/seatedcalf-machine.webp",
+          "sha256": "743a097a49f051a469fe104a1c6ccf6c8658d0f51fc0b2f09063137ec0958820",
+          "bytes": 212752
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "variantId": "fly-cable-mid",
+      "source": "men/chest/Cable Standing Fly, Crossover fly.mp4",
+      "reason": "高位滑轮向下合拢，不能标作中位绳索夹胸。"
+    },
+    {
+      "variantId": "overhead-cable-high-probe",
+      "source": "men/Triceps/Cable Rope High Pulley Overhead Triceps Extension.mp4",
+      "reason": "高位滑轮俯身过头伸肘，与当前低位站姿版本不同。"
+    },
+    {
+      "variantId": "row-machine-chest",
+      "source": "men/back/Lever T-bar Row.mp4",
+      "reason": "没有胸托，不是胸托器械划船。"
+    },
+    {
+      "variantId": "latrow-cable-single",
+      "source": "men/back/Cable One Arm Twisting Seated Row.mp4",
+      "reason": "明确包含躯干旋转，与保持骨盆躯干稳定的背阔划船不同。"
+    },
+    {
+      "variantId": "rear-cable-single-probe",
+      "source": "men/Shoulders/Cable Crossover Reverse Fly.mp4",
+      "reason": "双臂交叉绳索飞鸟，不能标作扶稳单臂版本。"
+    },
+    {
+      "variantId": "hammer-db-probe",
+      "source": "men/biceps/Dumbbell Cross Body Hammer Curl.mp4",
+      "reason": "交叉锤式弯举路径不同，不冒充本计划普通锤式弯举。"
+    },
+    {
+      "variantId": "rdl-db-probe",
+      "source": "men/back/Dumbbell Stiff Leg Deadlift.mp4",
+      "reason": "文件为直腿硬拉；不将直腿硬拉冒充RDL。"
+    },
+    {
+      "variantId": "rdl-barbell-probe",
+      "source": "men/back/Barbell Straight Leg Deadlift.mp4",
+      "reason": "动作下探到地面且为直腿硬拉；不冒充髋主导RDL。"
+    },
+    {
+      "variantId": "kickback-band",
+      "source": "men/Hips/Band Standing Hip Extension.mp4",
+      "reason": "可见明显躯干前倾和腰髋位置变化，不作为本计划稳定骨盆版本的规范示范。"
+    },
+    {
+      "variantId": "seatedcalf-db-single",
+      "source": "men/calves/Dumbbell Seated Calf Raise.mp4",
+      "reason": "双膝各放一只哑铃同时提踵，不能标作单侧坐姿版本。"
+    }
+  ]
+}

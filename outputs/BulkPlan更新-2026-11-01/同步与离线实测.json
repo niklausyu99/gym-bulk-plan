@@ -1,0 +1,54 @@
+[
+  {
+    "case": "status-green",
+    "status": "已同步",
+    "class": "sync-indicator is-synced"
+  },
+  {
+    "case": "status-waiting",
+    "status": "等待同步"
+  },
+  {
+    "case": "automatic-online-resync",
+    "status": "已同步"
+  },
+  {
+    "case": "auth-expired",
+    "status": "同步需处理"
+  },
+  {
+    "case": "cache-ready-after-shared-profile",
+    "ready": true,
+    "elapsedMs": 374,
+    "paint": [
+      {
+        "name": "first-paint",
+        "time": 32
+      },
+      {
+        "name": "first-contentful-paint",
+        "time": 32
+      }
+    ],
+    "limitation": "Not a cold-load or controlled-bandwidth result. A separate server-limited test measures the full preparation."
+  },
+  {
+    "case": "cached-media",
+    "cached": true
+  },
+  {
+    "case": "offline-reopen",
+    "heading": "平板哑铃卧推",
+    "version": "0.5.0",
+    "range": {
+      "status": 206,
+      "bytes": 16,
+      "range": "bytes 3-18/126727"
+    },
+    "video": {
+      "time": 2.4785,
+      "paused": false
+    },
+    "errors": []
+  }
+]

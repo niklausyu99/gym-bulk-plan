@@ -6,7 +6,7 @@ const root=resolve(dirname(fileURLToPath(import.meta.url)),'..'),dist=resolve(ro
 mkdirSync(resolve(root,'work'),{recursive:true});
 await import('./build-content.mjs');
 await import('./build-offline.mjs');
-const sw=readFileSync(resolve(root,'sw.js'),'utf8'),files=[...JSON.parse(sw.match(/^const FILES=(.+);$/m)[1]),'sw.js'];
+const sw=readFileSync(resolve(root,'sw.js'),'utf8'),animations=JSON.parse(readFileSync(resolve(root,'content/animations.json'),'utf8')).reviewedVariants,files=[...new Set([...JSON.parse(sw.match(/^const FILES=(.+);$/m)[1]),'sw.js',...animations.flatMap(a=>a.files.map(f=>f.path))])];
 const marker=resolve(dist,'.bulkplan-build');
 // Rebuild only a directory explicitly created by this builder; never erase an unknown output.
 if(existsSync(dist)){if(!existsSync(marker))throw Error('dist exists without BulkPlan build marker; move it aside before building.');rmSync(dist,{recursive:true});}

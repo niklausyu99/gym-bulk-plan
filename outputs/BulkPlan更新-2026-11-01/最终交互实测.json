@@ -1,0 +1,210 @@
+[
+  {
+    "case": "added-set-visible",
+    "current": "3",
+    "tabs": 4
+  },
+  {
+    "case": "remove-added",
+    "sets": 3
+  },
+  {
+    "case": "equipment-selection",
+    "variant": "上斜哑铃卧推",
+    "selected": "上斜哑铃卧推\n✓ 本次已选\n固定轨迹不合身，或前两种无空位且能稳定起落重量时。\n自由轨迹和入位稳定要求增加",
+    "drawer": true
+  },
+  {
+    "case": "finished-once",
+    "sessions": 1,
+    "cursor": 1
+  },
+  {
+    "case": "edited-same-session",
+    "sessions": 1,
+    "id": true,
+    "groups": 4,
+    "cursor": 1,
+    "events": 1
+  },
+  {
+    "case": "independent-chicken",
+    "plan": {
+      "gym": true,
+      "blend": false,
+      "sides": [
+        "aglio",
+        "sweet"
+      ],
+      "addons": [],
+      "eaten": [
+        "chicken-0",
+        "chicken-1"
+      ],
+      "blendAmount": 1,
+      "chickenPortions": [
+        {
+          "eaten": true,
+          "nutrition": {
+            "k": 263,
+            "p": 48,
+            "c": 9,
+            "f": 6.4,
+            "fi": null
+          }
+        },
+        {
+          "eaten": true,
+          "nutrition": {
+            "k": 263,
+            "p": 48,
+            "c": 9,
+            "f": 6.4,
+            "fi": null
+          }
+        },
+        {
+          "eaten": false,
+          "nutrition": {
+            "k": 263,
+            "p": 48,
+            "c": 9,
+            "f": 6.4,
+            "fi": null
+          }
+        }
+      ],
+      "mealParts": {
+        "0": {
+          "chicken": false,
+          "side": true
+        },
+        "1": {
+          "chicken": false,
+          "side": true
+        }
+      },
+      "independentMeals": true
+    },
+    "core": "核心蛋白\n鸡胸肉\n已吃 2 份\n\n每份约160g · 约263 kcal · 蛋白48g\n\n第 1 份\n第 2 份\n第 3 份\n勾选今天已吃的份数，不需要配菜。\n加一份",
+    "chickenInsideSide": false
+  },
+  {
+    "case": "side-plus-chicken-snapshot",
+    "eaten": [
+      "chicken-0",
+      "chicken-1",
+      "meal-0"
+    ]
+  },
+  {
+    "case": "chart-font",
+    "font": {
+      "height": 16,
+      "viewBox": "0 0 318 220"
+    }
+  },
+  {
+    "case": "autoloop-wrap",
+    "before": {
+      "t": 0.7729,
+      "d": 6.583333
+    },
+    "after": {
+      "t": 1.299,
+      "paused": false,
+      "controls": false
+    }
+  },
+  {
+    "case": "large-text-320",
+    "overflow": {
+      "width": 320,
+      "scroll": 320
+    },
+    "hiddenLabels": [
+      {
+        "label": "Push\n胸 · 肩 · 三头",
+        "height": 103,
+        "scroll": 103
+      },
+      {
+        "label": "Pull\n下一项",
+        "height": 101,
+        "scroll": 101
+      },
+      {
+        "label": "腿臀\n腿 · 臀 · 小腿",
+        "height": 103,
+        "scroll": 103
+      },
+      {
+        "label": "休息\n恢复",
+        "height": 103,
+        "scroll": 103
+      }
+    ]
+  },
+  {
+    "case": "large-text-375",
+    "overflow": {
+      "width": 375,
+      "scroll": 375
+    },
+    "hiddenLabels": [
+      {
+        "label": "Push\n胸 · 肩 · 三头",
+        "height": 70,
+        "scroll": 70
+      },
+      {
+        "label": "Pull\n下一项",
+        "height": 68,
+        "scroll": 68
+      },
+      {
+        "label": "腿臀\n腿 · 臀 · 小腿",
+        "height": 70,
+        "scroll": 70
+      },
+      {
+        "label": "休息\n恢复",
+        "height": 70,
+        "scroll": 70
+      }
+    ]
+  },
+  {
+    "case": "large-text-390",
+    "overflow": {
+      "width": 390,
+      "scroll": 390
+    },
+    "hiddenLabels": [
+      {
+        "label": "Push\n胸 · 肩 · 三头",
+        "height": 70,
+        "scroll": 70
+      },
+      {
+        "label": "Pull\n下一项",
+        "height": 68,
+        "scroll": 68
+      },
+      {
+        "label": "腿臀\n腿 · 臀 · 小腿",
+        "height": 70,
+        "scroll": 70
+      },
+      {
+        "label": "休息\n恢复",
+        "height": 70,
+        "scroll": 70
+      }
+    ]
+  },
+  {
+    "case": "errors",
+    "errors": []
+  }
+]

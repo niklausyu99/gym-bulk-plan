@@ -1,0 +1,22 @@
+{
+  "tool": "built-in image_gen",
+  "useCase": "logo-brand",
+  "source": "new generation, then a single palette edit",
+  "initialPrompt": "Use case: logo-brand. Create ONE production-ready square app icon for BulkPlan, a modern daily gym strength-training and lean-bulk nutrition app. Full-bleed opaque near-black charcoal background #0B0D0B, edge-to-edge square canvas without rounded outer corners (iOS will mask it). One large centered athletic geometric lime mark #C9F84E. Design an original compact bold angular B / BP-inspired monogram using the visual construction of weight plates and an upright bar: two strong forward-leaning lobes, precise negative-space cutouts, balanced powerful silhouette, generous margins around the complete mark, all important geometry inside the central 68 percent. The mark should feel fast, strong and expertly designed, readable at 32 pixels, distinctive rather than a plain typeset B or a generic dumbbell illustration. Flat two-color graphic with crisp clean edges. No gradients, no glow, no shadows, no glossy 3D, no texture, no phone mockup, no frame, no border, no extra letters or words, no 'BulkPlan' caption, no watermarks. ONE icon only, not a contact sheet or a design presentation.",
+  "finalEditPrompt": "Edit this BulkPlan app icon. Preserve the exact existing angular athletic B monogram silhouette, weight-plate side marks, spacing, layout, canvas and scale. Change ONLY the color rendering to match the user's fitness palette: all bright mark pixels solid electric fit-lime #AFFA01, all background pixels pure black #000000. Make it a completely flat, clean two-color brand icon, no grain, no gradients, no shading or texture, with crisp antialiased edges. Preserve all existing negative-space cutouts. Single square opaque full-bleed app icon, no outer rounded corners, no text, no caption, no mockup, no added elements.",
+  "master": "outputs/BulkPlan更新-2026-11-01/BulkPlan-lime-icon-master.png",
+  "runtime": [
+    "assets/icons/bulkplan-lime-32.png",
+    "assets/icons/bulkplan-lime-180.png",
+    "assets/icons/bulkplan-lime-192.png",
+    "assets/icons/bulkplan-lime-512.png"
+  ],
+  "referenceSwatches": {
+    "black": "#000000",
+    "charcoal": "#1c1c1c",
+    "fitLime": "#affa01",
+    "softLime": "#cfed89",
+    "white": "#ffffff"
+  },
+  "note": "Reference pixel swatches guide the palette; printed hex labels in the user image do not match its visible colors. Runtime icon sizes derive from one generated master, not independently generated versions."
+}

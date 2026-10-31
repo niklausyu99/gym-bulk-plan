@@ -1,0 +1,19 @@
+{
+  "branch": "exercise-media",
+  "commit": "42f76c315671903cbf2ddfe6e9db030cbee54ec2",
+  "sourceMP4": 677,
+  "sourceBytes": 685746038,
+  "remoteMP4": 677,
+  "remoteTotalBlobs": 679,
+  "remoteBlobHashMismatches": 0,
+  "matchedVariants": 46,
+  "matchedSlots": 24,
+  "missingExactSlots": [
+    "hammer",
+    "rdl",
+    "thrust",
+    "pallof",
+    "lowfly"
+  ],
+  "inspection": "Four temporal source frames per candidate; apparatus, grip, laterality and framing checked. Extra large-frame checks for single-arm preacher and single-leg calf. Rejected candidates are preserved in content/animations.json; exact matches are omitted when absent."
+}
