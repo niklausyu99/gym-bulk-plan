@@ -1,5 +1,9 @@
 (()=>{'use strict';
-let status='检查中',ready=false,registration=null;
+let status='检查中',ready=false,registration=null,lastUpdateCheck=0,checkingUpdate=false;
+const checkUpdate=async()=>{if(!registration||!navigator.onLine||document.visibilityState==='hidden'||checkingUpdate||Date.now()-lastUpdateCheck<60000)return;checkingUpdate=true;lastUpdateCheck=Date.now();try{await registration.update();if(registration.waiting)showUpdate();}catch{}finally{checkingUpdate=false;}};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')checkUpdate();});
+window.addEventListener('pageshow',()=>checkUpdate());
+window.addEventListener('online',()=>checkUpdate());
 const local=['localhost','127.0.0.1','[::1]'].includes(location.hostname),standalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
 const paint=()=>{document.querySelectorAll('[data-offline-label]').forEach(el=>{el.textContent=!navigator.onLine?'当前离线':ready?'离线可用':'本机记录';el.classList.toggle('is-offline',!navigator.onLine);});document.querySelectorAll('[data-offline-detail]').forEach(el=>el.textContent=status);};
 const announce=()=>{window.BulkOffline={ready,status,standalone};paint();};
@@ -8,6 +12,6 @@ window.addEventListener('bulkplan-render',paint);window.addEventListener('online
 if(!('serviceWorker' in navigator)||!window.isSecureContext){status='离线暂不可用，请保持联网';announce();return;}
 if(local&&!new URLSearchParams(location.search).has('offline')){status='尚未准备离线内容，请保持联网';announce();return;}
 let refreshing=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(refreshing)return;if(navigator.serviceWorker.controller&&registration?.waiting==null&&ready){refreshing=true;location.reload();}});
-navigator.serviceWorker.register('sw.js',{scope:'./',updateViaCache:'none'}).then(async reg=>{registration=reg;if(reg.waiting)showUpdate();reg.addEventListener('updatefound',()=>{const worker=reg.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed'&&navigator.serviceWorker.controller)showUpdate();});});await navigator.serviceWorker.ready;ready=true;status='内容已保存，可离线打开';announce();}).catch(()=>{status='离线准备未完成，联网后重新打开再试';announce();});
+navigator.serviceWorker.register('sw.js',{scope:'./',updateViaCache:'none'}).then(async reg=>{registration=reg;if(reg.waiting)showUpdate();reg.addEventListener('updatefound',()=>{const worker=reg.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed'&&navigator.serviceWorker.controller)showUpdate();});});await navigator.serviceWorker.ready;ready=true;status='内容已保存，可离线打开';announce();checkUpdate();}).catch(()=>{status='离线准备未完成，联网后重新打开再试';announce();});
 announce();
 })();

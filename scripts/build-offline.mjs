@@ -6,7 +6,7 @@ import {runInNewContext} from 'node:vm';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const scene={window:{}};runInNewContext(readFileSync(resolve(root,'app/muscle-maps.js'),'utf8'),scene);
 const movementFiles=[...new Set(Object.values(scene.window.BulkMuscleMaps).map(m=>m.src))].sort();
-const files=['index.html','manifest.webmanifest',...readdirSync(resolve(root,'app')).filter(name=>/\.(js|css)$/.test(name)).sort().map(name=>'app/'+name),'assets/blend-layered-jar.webp','assets/icons/icon.svg','assets/icons/favicon-32.png','assets/icons/favicon-16.png','assets/icons/icon-192.png','assets/icons/icon-512.png','assets/icons/apple-touch-icon.png',...movementFiles];
+const files=['index.html','manifest.webmanifest',...readdirSync(resolve(root,'app')).filter(name=>/\.(js|css)$/.test(name)).sort().map(name=>'app/'+name),'assets/blend-layered-jar.webp','apple-touch-icon.png','assets/icons/brand-v3-192.png','assets/icons/brand-v3-512.png','assets/icons/touch-v3-180.png','assets/icons/favicon-v3-32.png','assets/icons/favicon-v3-16.png','assets/icons/icon.svg','assets/icons/favicon-32.png','assets/icons/favicon-16.png','assets/icons/icon-192.png','assets/icons/icon-512.png','assets/icons/apple-touch-icon.png',...movementFiles];
 const hash=createHash('sha256');for(const f of files)hash.update(f).update(readFileSync(resolve(root,f)));const version=hash.digest('hex').slice(0,12);
 const source=`'use strict';
 const PREFIX='bulkplan-shell-'+encodeURIComponent(new URL(self.registration.scope).pathname)+'-';
