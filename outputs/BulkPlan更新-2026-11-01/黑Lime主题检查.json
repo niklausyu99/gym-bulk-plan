@@ -84,12 +84,12 @@
         1024
       ],
       "rendered": [
-        290,
-        193.328125
+        316,
+        210.65625
       ],
       "fit": "contain",
       "maxHeight": "none",
-      "padding": "12px"
+      "padding": "0px"
     },
     "root": "#affa01",
     "ground": "rgb(0, 0, 0)",

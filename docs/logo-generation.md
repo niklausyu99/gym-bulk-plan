@@ -1,0 +1,9 @@
+# BulkPlan icon
+
+Created with the built-in image generation tool. The tool does not expose a model-version selector; GPT Image 2.5 was requested but cannot be verified.
+
+Warm ivory sculptural dumbbell on a forest green background. Resized for 512px/192px PWA icons, a 180px Apple touch icon, and 32px/16px favicons. The same artwork appears in the app header. Icon SVG is a compatibility wrapper containing the generated raster artwork.
+
+## Generation prompt
+
+Create a premium rendered iPhone app icon for a personal gym and nutrition app. ONE sculptural dumbbell as the sole subject, diagonally oriented lower-left to upper-right, in a beautiful restrained 3/4 perspective. The dumbbell has two thick softly rounded weight heads and a short substantial grip, physically coherent and immediately recognizable even at small sizes. Warm ivory satin ceramic material with subtle pearl finish, meticulously crafted rounded edges, soft realistic highlights and gentle ambient occlusion, tactile solid volume. Sophisticated soft studio lighting from upper left, elegant contact shadow underneath. Full-bleed deep desaturated forest green background (#244c42 family), subtly illuminated behind the subject, with slight studio depth. Centered composition; entire dumbbell safely within middle 68 percent of square, generous space around it. Premium native app icon quality, beautifully sculpted, calm and refined, comparable to a small luxury industrial design object. NO letters, NO B, NO monograms, NO typography, NO symbols or badges, NO charts, NO geometric flat vector art, NO thin outlines, NO neon, NO glow, NO chrome, NO busy details, NO additional props. Not a logo on a surface. Not a phone mockup. Render only the final square full-bleed icon artwork, no outer rounded mask or external margin. 1024x1024.

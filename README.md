@@ -14,7 +14,7 @@ Run `npm run build`. This generates the product content and offline resource lis
 
 BulkPlan 0.5.0 uses the user-requested black/charcoal/fit-lime design. Today’s workouts are selected by muscle group, with ranked equipment choices, editable order and explicit optional suggested combinations. Sets can be added, selected and deleted; saved sessions can be reopened without duplicating records or advancing the cycle again. Separate drafts and pending history edits persist.
 
-All 29 slots / 90 equipment variants retain written technique guidance and muscle-role diagrams. Exact-version animations are available for 46 variants across 24 slots. The user-provided 677 original MP4s are preserved on the `exercise-media` branch under `GYM Exercise Animations/`; they are not included in the application deployment. Runtime demonstrations are silent inline loops with a WebP fallback. Missing exact matches are omitted rather than substituted.
+All 31 slots / 92 equipment variants retain written technique guidance and muscle-role diagrams. Exact-version animations are available for 46 variants across 24 slots. The user-provided 677 original MP4s are preserved on the `exercise-media` branch under `GYM Exercise Animations/`; they are not included in the application deployment. Runtime demonstrations are silent inline loops with a WebP fallback. Missing exact matches are omitted rather than substituted.
 
 Chicken breast is recorded independently by portion, above the Side selection. Consumed food retains nutrient snapshots. Existing meal records migrate without changing their totals. The header reports verified synchronization, pending work or an actionable error; offline browsing and local data are distinct from cloud synchronization.
 

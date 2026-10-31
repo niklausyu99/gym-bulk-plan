@@ -13,7 +13,11 @@
     "rdl",
     "thrust",
     "pallof",
-    "lowfly"
+    "lowfly",
+    "wristcurl",
+    "wristextension"
   ],
-  "inspection": "Four temporal source frames per candidate; apparatus, grip, laterality and framing checked. Extra large-frame checks for single-arm preacher and single-leg calf. Rejected candidates are preserved in content/animations.json; exact matches are omitted when absent."
+  "inspection": "Four temporal source frames per candidate; apparatus, grip, laterality and framing checked. Extra large-frame checks for single-arm preacher and single-leg calf. Rejected candidates are preserved in content/animations.json; exact matches are omitted when absent.",
+  "totalSlots": 31,
+  "forearmReview": "Reviewed temporal samples of over-bench dumbbell, neutral-grip dumbbell and barbell reverse wrist curls; did not attach an uncertain grip or different apparatus to a dumbbell-specific version."
 }

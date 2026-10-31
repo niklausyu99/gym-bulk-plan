@@ -189,6 +189,12 @@
       "front": false,
       "pair": false,
       "d": "M1067 119 C1060 149 1034 169 1004 185 L1028 194 C1044 190 1060 191 1072 194 L1072 136 Z"
+    },
+    "forearmRegion": {
+      "front": true,
+      "pair": true,
+      "deep": true,
+      "d": "M307 338 C292 347 280 371 276 399 L273 418 L285 422 C293 401 305 374 317 347 Z"
     }
   },
   "maps": [
@@ -866,6 +872,26 @@
         "risk": "膝保持弯曲，避免弹跳借力"
       },
       "note": "背面一侧小腿用虚线展示比目鱼肌深层位置，另一侧保留表层腓肠肌；两侧不是不同的训练效果。"
+    },
+    {
+      "id": "forearm",
+      "exerciseIds": [
+        "wristcurl",
+        "wristextension"
+      ],
+      "primary": [
+        "forearmRegion"
+      ],
+      "assist": [],
+      "stable": [],
+      "risk": [],
+      "labels": {
+        "primary": "前臂腕屈／腕伸肌群所在区域（位置投影）",
+        "assist": "",
+        "stable": "",
+        "risk": ""
+      },
+      "note": "虚线填色为前臂区域位置透视投影，并非单块肌肉的精确边界。腕弯举练腕屈肌；反向腕弯举练腕伸肌，伸肌主要在前臂背侧，此正面投影仅用于定位。"
     }
   ],
   "personalMaps": [

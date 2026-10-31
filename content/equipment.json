@@ -4984,6 +4984,124 @@
           }
         }
       ]
+    },
+    {
+      "id": "wristcurl",
+      "preferred": "wristcurl-db",
+      "reason": "以可控的小重量在Pull训练结束后补充。两种腕部动作择一，可在不同Pull日轮换。",
+      "goal": "前臂腕屈肌群",
+      "limitations": "不是必须加练的项目；锤式弯举已覆盖部分前臂。1–2组为本计划的起始安排，不是公认最优剂量。",
+      "sources": [],
+      "variants": [
+        {
+          "id": "wristcurl-db",
+          "name": "坐姿哑铃腕弯举",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "wristcurl",
+          "rank": 0,
+          "conditional": false,
+          "when": "前臂确有补强需求且腕肘舒适时。",
+          "changes": "前臂支撑，只做腕关节动作",
+          "cues": [
+            "坐稳，前臂贴大腿或凳面，掌心向上，手腕伸出支撑边缘；只转动手腕，使用舒适幅度，不甩肘、不把哑铃滚到指尖。",
+            "抬起时呼气，回程约2秒；前臂始终贴稳",
+            "左右同时完成算一组，重量记录每只哑铃"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              15,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              2,
+              3
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          },
+          "teaching": {
+            "setup": "坐稳，前臂贴大腿或凳面，掌心向上，手腕伸出边缘。",
+            "effort": "前臂不动，手掌向前臂方向卷起。",
+            "finish": "到舒适可控的屈腕位置停住，不抬肘、不抬臂。",
+            "back": "约2秒下放，不强拉手腕，不让哑铃滚到指尖。",
+            "watch": "小重量、手腕受控；手腕或肘部疼痛即停止。不要追求力竭或强拉伸。",
+            "breath": "抬起时呼气，受控回程时吸气。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wristextension",
+      "preferred": "wristextension-db",
+      "reason": "以可控的小重量在Pull训练结束后补充。两种腕部动作择一，可在不同Pull日轮换。",
+      "goal": "前臂腕伸肌群",
+      "limitations": "不是必须加练的项目；锤式弯举已覆盖部分前臂。1–2组为本计划的起始安排，不是公认最优剂量。",
+      "sources": [],
+      "variants": [
+        {
+          "id": "wristextension-db",
+          "name": "坐姿哑铃反向腕弯举",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "wristextension",
+          "rank": 0,
+          "conditional": false,
+          "when": "前臂确有补强需求且腕肘舒适时。",
+          "changes": "前臂支撑，只做腕关节动作",
+          "cues": [
+            "坐稳，前臂贴大腿或凳面，掌心向下，手腕伸出支撑边缘；只转动手腕，使用舒适幅度，不甩肘、不把哑铃滚到指尖。",
+            "抬起时呼气，回程约2秒；前臂始终贴稳",
+            "左右同时完成算一组，重量记录每只哑铃"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 1,
+            "sets_max": 2,
+            "reps": [
+              15,
+              20
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 90,
+            "rir": [
+              2,
+              3
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          },
+          "teaching": {
+            "setup": "坐稳，前臂贴大腿或凳面，掌心向下，手腕伸出边缘。",
+            "effort": "前臂不动，手背向前臂方向抬起。",
+            "finish": "到舒适可控的伸腕位置停住，不甩肘。",
+            "back": "约2秒下放，腕部保持受控；使用比腕弯举更轻的重量也正常。",
+            "watch": "小重量、手腕受控；手腕或肘部疼痛即停止。不要追求力竭或强拉伸。",
+            "breath": "抬起时呼气，受控回程时吸气。"
+          }
+        }
+      ]
     }
   ]
 }

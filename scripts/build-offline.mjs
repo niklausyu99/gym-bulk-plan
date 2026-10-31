@@ -6,7 +6,7 @@ import {runInNewContext} from 'node:vm';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const scene={window:{}};runInNewContext(readFileSync(resolve(root,'app/muscle-maps.js'),'utf8'),scene);
 const movementFiles=[...new Set(Object.values(scene.window.BulkMuscleMaps).map(m=>m.src))].sort();
-const files=['index.html','manifest.webmanifest',...readdirSync(resolve(root,'app')).filter(name=>/\.(js|css)$/.test(name)).sort().map(name=>'app/'+name),'assets/blend-layered-jar.webp','assets/blend-thumb.webp','assets/icons/bulkplan-lime-32.png','assets/icons/bulkplan-lime-192.png','assets/icons/bulkplan-lime-512.png','assets/icons/bulkplan-lime-180.png',...movementFiles];
+const files=['index.html','manifest.webmanifest',...readdirSync(resolve(root,'app')).filter(name=>/\.(js|css)$/.test(name)).sort().map(name=>'app/'+name),'assets/blend-layered-jar.webp','assets/blend-thumb.webp','assets/icons/bulkplan-lime-32.png','assets/icons/bulkplan-lime-192.png','assets/icons/bulkplan-lime-512.png','assets/icons/bulkplan-lime-180.png','apple-touch-icon.png','assets/icons/apple-touch-icon.png',...movementFiles];
 const media=JSON.parse(readFileSync(resolve(root,'content/animations.json'),'utf8')).reviewedVariants.flatMap(a=>a.files.map(f=>f.path));
 const hash=createHash('sha256');for(const f of [...files,...media])hash.update(f).update(readFileSync(resolve(root,f)));const version=hash.digest('hex').slice(0,12);
 const source=`'use strict';

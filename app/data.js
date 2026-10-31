@@ -848,6 +848,56 @@ window.BULK_DATA = {
       "alternatives": [],
       "rest": 90,
       "kind": "extra"
+    },
+    {
+      "id": "wristcurl",
+      "day": "pull",
+      "name": "坐姿哑铃腕弯举",
+      "en": "Seated Dumbbell Wrist Curl",
+      "sets": 1,
+      "setsMax": 2,
+      "reps": [
+        15,
+        20
+      ],
+      "perSide": false,
+      "prescription": "1–2 × 15–20",
+      "targetText": "前臂腕屈肌群",
+      "cue": "坐稳，前臂贴大腿或凳面，掌心向上，手腕伸出支撑边缘；只转动手腕，使用舒适幅度，不甩肘、不把哑铃滚到指尖。 放在所有拉背与弯举之后，保留2–3次余力；次日RDL握力受影响就跳过。",
+      "primary": [
+        "forearms"
+      ],
+      "assist": [],
+      "stabilizers": [],
+      "watch": "小重量、手腕受控；手腕或肘部疼痛即停止。不要追求力竭或强拉伸。",
+      "alternatives": [],
+      "rest": 90,
+      "kind": "extra"
+    },
+    {
+      "id": "wristextension",
+      "day": "pull",
+      "name": "坐姿哑铃反向腕弯举",
+      "en": "Seated Dumbbell Wrist Extension",
+      "sets": 1,
+      "setsMax": 2,
+      "reps": [
+        15,
+        20
+      ],
+      "perSide": false,
+      "prescription": "1–2 × 15–20",
+      "targetText": "前臂腕伸肌群",
+      "cue": "坐稳，前臂贴大腿或凳面，掌心向下，手腕伸出支撑边缘；只转动手腕，使用舒适幅度，不甩肘、不把哑铃滚到指尖。 放在所有拉背与弯举之后，保留2–3次余力；次日RDL握力受影响就跳过。",
+      "primary": [
+        "forearms"
+      ],
+      "assist": [],
+      "stabilizers": [],
+      "watch": "小重量、手腕受控；手腕或肘部疼痛即停止。不要追求力竭或强拉伸。",
+      "alternatives": [],
+      "rest": 90,
+      "kind": "extra"
     }
   ],
   "sides": [
