@@ -29,3 +29,5 @@
 .mode-result{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
 @media(max-width:1100px){.nutrition-grid>.panel{grid-column:span 12}}
 @media(max-width:360px){.mode-result{grid-template-columns:1fr}}
+
+.brand .brand-icon{display:block;width:32px;height:32px;border-radius:8px;flex-shrink:0;object-fit:cover}
