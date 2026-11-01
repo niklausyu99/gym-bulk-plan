@@ -3742,6 +3742,273 @@ window.BULK_DATA = {
       "note": "按需购买，补货数量可按实际包装调整。"
     }
   ],
+  "supplements": {
+    "revision": "2026-11-01",
+    "nutrients": {
+      "calcium": [
+        "钙",
+        "mg"
+      ],
+      "magnesium": [
+        "镁",
+        "mg"
+      ],
+      "vitaminD": [
+        "维生素 D",
+        "μg"
+      ],
+      "vitaminA": [
+        "维生素 A",
+        "μg"
+      ],
+      "vitaminC": [
+        "维生素 C",
+        "mg"
+      ],
+      "vitaminE": [
+        "维生素 E",
+        "mg"
+      ],
+      "vitaminK": [
+        "维生素 K",
+        "μg"
+      ],
+      "thiamin": [
+        "维生素 B1",
+        "mg"
+      ],
+      "riboflavin": [
+        "维生素 B2",
+        "mg"
+      ],
+      "niacin": [
+        "烟酸",
+        "mg"
+      ],
+      "vitaminB6": [
+        "维生素 B6",
+        "mg"
+      ],
+      "folateDFE": [
+        "叶酸",
+        "μg DFE"
+      ],
+      "vitaminB12": [
+        "维生素 B12",
+        "μg"
+      ],
+      "biotin": [
+        "生物素",
+        "μg"
+      ],
+      "pantothenicAcid": [
+        "泛酸",
+        "mg"
+      ],
+      "iodine": [
+        "碘",
+        "μg"
+      ],
+      "zinc": [
+        "锌",
+        "mg"
+      ],
+      "selenium": [
+        "硒",
+        "μg"
+      ],
+      "copper": [
+        "铜",
+        "mg"
+      ],
+      "manganese": [
+        "锰",
+        "mg"
+      ],
+      "chromium": [
+        "铬",
+        "μg"
+      ],
+      "molybdenum": [
+        "钼",
+        "μg"
+      ],
+      "epa": [
+        "EPA",
+        "mg"
+      ],
+      "dha": [
+        "DHA",
+        "mg"
+      ],
+      "fishOil": [
+        "鱼油总量",
+        "mg"
+      ],
+      "creatinePowder": [
+        "肌酸粉用量",
+        "g"
+      ]
+    },
+    "products": [
+      {
+        "id": "multi",
+        "name": "Nature Made Multi For Him",
+        "short": "复合维生素",
+        "version": "普通片剂 · 非 50+ · Item 1789",
+        "unit": "片",
+        "target": 1,
+        "timing": "早餐或午餐随餐",
+        "hint": "每天 1 片，随水和正餐服用。",
+        "summary": "含钙 160 mg · 镁 100 mg · D₃ 25 μg",
+        "note": "按普通 Multi For Him 实物标签计算，含 22 种营养素，不含铁。叶酸每片 665 μg DFE，其中叶酸原料 400 μg，合计时只计一次。",
+        "source": {
+          "label": "Nature Made 官方标签",
+          "url": "https://www.naturemade.com/products/nature-made-mens-multi-tablets",
+          "labelUrl": "https://cdn.accentuate.io/1816206245959/1736492918012/NM-1789-PK001929-MULTI-FOR-HIM-back.jpg?v=1756999857510"
+        },
+        "perUnit": {
+          "vitaminA": 750,
+          "vitaminC": 180,
+          "vitaminD": 25,
+          "vitaminE": 22.5,
+          "vitaminK": 80,
+          "thiamin": 1.5,
+          "riboflavin": 1.7,
+          "niacin": 20,
+          "vitaminB6": 4,
+          "folateDFE": 665,
+          "vitaminB12": 18,
+          "biotin": 30,
+          "pantothenicAcid": 10,
+          "calcium": 160,
+          "iodine": 150,
+          "magnesium": 100,
+          "zinc": 15,
+          "selenium": 70,
+          "copper": 2,
+          "manganese": 4,
+          "chromium": 120,
+          "molybdenum": 75
+        }
+      },
+      {
+        "id": "omega3",
+        "name": "NOW Ultra Omega-3",
+        "short": "鱼油",
+        "version": "普通 Ultra Omega-3 · 每粒 EPA 500 / DHA 250 mg",
+        "unit": "粒",
+        "target": 2,
+        "timing": "两餐各 1 粒",
+        "hint": "随餐，可分两餐各 1 粒；只服用一粒时先记一粒。",
+        "summary": "每粒 EPA 500 mg · DHA 250 mg",
+        "note": "按普通牛明胶软胶囊标签。每粒鱼油 1000 mg，其中 EPA 500 mg、DHA 250 mg；每粒标示 10 kcal、脂肪 1 g。EPA 和 DHA 已包含在鱼油内，不重复计脂肪。",
+        "source": {
+          "label": "NOW 官方营养标签",
+          "url": "https://www.nowfoods.com/products/supplements/ultra-omega-3-fish-oil-bovine-gelatin-softgels"
+        },
+        "perUnit": {
+          "epa": 500,
+          "dha": 250,
+          "fishOil": 1000
+        },
+        "macros": {
+          "k": 10,
+          "f": 1
+        }
+      },
+      {
+        "id": "calcium",
+        "name": "VitaHealth Seaweed Calcium",
+        "short": "海藻钙",
+        "version": "MAL08051673X",
+        "unit": "粒",
+        "target": 1,
+        "timing": "晚餐后",
+        "hint": "每天 1 粒，饭后服用。",
+        "summary": "每粒元素钙 318.4 mg · 镁 22 mg",
+        "note": "海藻粉 995 mg 提供元素钙 318.4 mg 和镁 22 mg；995 mg 不是钙的重量。未标示额外维生素 D 或 K。",
+        "source": {
+          "label": "VitaHealth 马来西亚官方成分表",
+          "url": "https://www.vitahealth.com.my/product/seaweed-calcium/"
+        },
+        "perUnit": {
+          "calcium": 318.4,
+          "magnesium": 22
+        }
+      },
+      {
+        "id": "magnesium",
+        "name": "NOW Magnesium Glycinate",
+        "short": "甘氨酸镁",
+        "version": "普通片剂 · 非 BioPerine 胶囊",
+        "unit": "片",
+        "target": 1,
+        "timing": "晚餐后或睡前",
+        "hint": "每天 1 片，随餐或少量食物。可保留睡前习惯；胃不适时移到晚餐后。",
+        "summary": "每片元素镁 100 mg",
+        "note": "标签一份为 2 片，提供元素镁 200 mg；这里按你每天 1 片计算。睡前是方便记忆的安排，不代表吸收更好或一定改善睡眠。",
+        "source": {
+          "label": "NOW 官方营养标签",
+          "url": "https://www.nowfoods.com/products/supplements/magnesium-glycinate-tablets"
+        },
+        "perUnit": {
+          "magnesium": 100
+        }
+      },
+      {
+        "id": "creatine",
+        "name": "Creatine",
+        "short": "肌酸",
+        "version": "自带量勺 · 每勺 5 g",
+        "unit": "勺",
+        "target": 1,
+        "timing": "每天固定一个方便的时间",
+        "hint": "每天 1 勺，可随餐或加进 Blend；休息日照常。",
+        "summary": "1 勺 · 粉重 5 g",
+        "note": "5 g 为已确认的每勺粉重；品牌和配方未确认，暂不推算其他营养。若为纯一水肌酸，常用维持量为每日 3–5 g，不必额外安排加载期。加入 Blend 后仍只在这里勾选一次。",
+        "source": {
+          "label": "每勺粉重已确认；一水肌酸用法参考 AIS",
+          "url": "https://www.ausport.gov.au/ais/nutrition/supplements/group_a/performance-supplements2/creatine"
+        },
+        "perUnit": {
+          "creatinePowder": 5
+        }
+      }
+    ],
+    "guidance": [
+      {
+        "title": "不必全部间隔两小时",
+        "text": "按目前的剂量，没有必要把所有补充剂逐一错开两小时。复合维生素随第一餐、海藻钙随晚餐、镁放晚上，是方便坚持和照顾胃部感受的安排。"
+      },
+      {
+        "title": "先看总量，再考虑加量",
+        "text": "复合维生素本身也有钙和镁。全部按目前份量服用时，补充剂来源合计钙约 478 mg、镁 222 mg；食物中的钙镁另计。成人补充剂及药物来源的镁上限为每日 350 mg，不包含食物中的镁；上限不是目标量。"
+      },
+      {
+        "title": "随餐比精确到几点更实用",
+        "text": "复合维生素和鱼油随正餐；海藻钙饭后。鱼油可两餐各一粒，分开主要为了方便和耐受。肌酸重在每天规律服用，无需强求训练前后。"
+      },
+      {
+        "title": "用药改变时重新核对",
+        "text": "钙、镁会影响部分药物吸收：如甲状腺素、某些抗生素；具体间隔按药品要求。服用华法林时需注意复合维生素中的维生素 K，单纯错开时间不能解决。"
+      }
+    ],
+    "references": [
+      {
+        "label": "NIH · 钙的吸收、剂量与药物相互作用",
+        "url": "https://ods.od.nih.gov/factsheets/calcium-HealthProfessional/"
+      },
+      {
+        "label": "NIH · 镁的补充上限与相互作用",
+        "url": "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"
+      },
+      {
+        "label": "AIS · 一水肌酸的用量与服用安排",
+        "url": "https://www.ausport.gov.au/ais/nutrition/supplements/group_a/performance-supplements2/creatine"
+      }
+    ]
+  },
   "blendIngredients": [
     {
       "id": "milk",

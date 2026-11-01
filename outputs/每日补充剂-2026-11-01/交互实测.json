@@ -1,0 +1,39 @@
+[
+  {
+    "case": "direct route, five products, no prechecked intake or invented history"
+  },
+  {
+    "case": "one/two softgels update actual nutrients and calories; focus survives redraw"
+  },
+  {
+    "case": "all five: Ca478.4/Mg222/D25/EPA1000/DHA500/creatinepowder5, no protein from creatine"
+  },
+  {
+    "case": "accidental marking can be reversed; totals remove the exact product contribution"
+  },
+  {
+    "case": "past-day correction and history entry preserve distinct dates and reopen exact daily record"
+  },
+  {
+    "case": "daily food summary includes known supplement calories; backup validation accepts saved state"
+  },
+  {
+    "case": "reload retains intake; no user account or personal cloud touched"
+  },
+  {
+    "case": "mobile 320 no horizontal overflow; actions and disclosures at least44px"
+  },
+  {
+    "case": "mobile 375 no horizontal overflow; actions and disclosures at least44px"
+  },
+  {
+    "case": "mobile 390 no horizontal overflow; actions and disclosures at least44px"
+  },
+  {
+    "case": "mobile 430 no horizontal overflow; actions and disclosures at least44px"
+  },
+  {
+    "case": "browser console",
+    "errors": []
+  }
+]

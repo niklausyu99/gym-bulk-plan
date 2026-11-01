@@ -27,3 +27,7 @@ Open https://niklausyu99.github.io/gym-bulk-plan/ on iPhone Safari. GitHub Actio
 Personal records belong in the private niklausyu99/bulkplan-private-data repository, never the public app repository. Connect in More → Records and backup using a fine-grained token restricted to that private repository, with Contents read/write. The app checks repository privacy before each read/write, saves offline locally, and uses conditional file-SHA writes. Concurrent edits require an explicit whole-version choice; export both first. Tokens are not included in data backups or source. Optional keep-connected stores the token in this browser; disconnect removes it.
 
 Existing local preview records do not migrate across origins automatically. Export there, import on the hosted app, then connect. A created private repository alone does not mean personal records have already uploaded.
+
+## Daily supplements
+
+Nutrition → Supplements records actual daily use for the five configured products. Fish oil supports one or two softgels; other daily doses are reversible checks. Each dated record preserves its ingredient amounts and label source. Supplement-derived micronutrients are shown separately from food, whose micronutrients are not fully covered. Only explicitly labelled fish-oil energy and fat join the daily food totals. Records participate in backups and private sync, including first-connect conflict detection. Reference labels, elemental-mineral conversions and timing evidence are in `outputs/每日补充剂-2026-11-01/服用安排与营养依据.md`.
