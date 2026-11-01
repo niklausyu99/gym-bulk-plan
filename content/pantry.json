@@ -289,7 +289,7 @@
     },
     {
       "id": "choco-bun",
-      "name": "Gardenia 巧克力奶油包",
+      "name": "Gardenia 巧克力面包",
       "group": "snacks",
       "unit": "包",
       "pack": 1,
@@ -298,7 +298,20 @@
       "step": 1,
       "regular": false,
       "icon": "bread",
-      "note": ""
+      "note": "Quick Bites Coklat · 每包50g"
+    },
+    {
+      "id": "twiggies-choco",
+      "name": "Gardenia Twiggies 巧克力蛋糕",
+      "group": "snacks",
+      "unit": "条",
+      "pack": 2,
+      "target": 4,
+      "threshold": 2,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "Choc-A-Lot · 每包2条，共76g；库存按条记。"
     },
     {
       "id": "crackers",

@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="app/muscle-map.css">
 <link rel="stylesheet" href="app/equipment.css">
 <link rel="stylesheet" href="app/workout.css">
-<link rel="stylesheet" href="app/theme.css"><link rel="stylesheet" href="app/pantry.css"><link rel="stylesheet" href="app/supplements.css"><link rel="stylesheet" href="app/food-icons.css">
+<link rel="stylesheet" href="app/theme.css"><link rel="stylesheet" href="app/pantry.css"><link rel="stylesheet" href="app/supplements.css"><link rel="stylesheet" href="app/food-icons.css"><link rel="stylesheet" href="app/nutrition-summary.css">
 <script src="app/data.js" defer></script>
 <script src="app/food-icons.js" defer></script>
 <script src="app/blend.js" defer></script>
@@ -39,7 +39,7 @@
 <script src="app/session-edit.js" defer></script>
 <script src="app/workout.js" defer></script><script src="app/workout-view.js" defer></script><script src="app/meal-view.js" defer></script><script src="app/history.js" defer></script><script src="app/storage.js" defer></script><script src="app/animation-data.js" defer></script><script src="app/animation-view.js" defer></script><script src="app/equipment-view.js" defer></script>
 <script src="app/recipe.js" defer></script><script src="app/pairing-view.js" defer></script><script src="app/food-view.js" defer></script><script src="app/pantry-view.js" defer></script>
-<script src="app/sync.js" defer></script><script src="app/sync-view.js" defer></script><script src="app/custom-exercise-view.js" defer></script><script src="app/micronutrient-view.js" defer></script><script src="app/supplement-view.js" defer></script><script src="app/main.js" defer></script>
+<script src="app/sync.js" defer></script><script src="app/sync-view.js" defer></script><script src="app/custom-exercise-view.js" defer></script><script src="app/micronutrient-view.js" defer></script><script src="app/supplement-view.js" defer></script><script src="app/nutrition-summary.js" defer></script><script src="app/main.js" defer></script>
 <script src="app/zoom.js" defer></script>
 <script src="app/pwa.js" defer></script>
 </head>
@@ -52,6 +52,8 @@
 <dialog id="details" aria-labelledby="dialog-title"><div class="dialog-top"><span>BulkPlan</span><button class="close-dialog" type="button" aria-label="关闭详情">关闭 <span aria-hidden="true">×</span></button></div><div id="dialog-content"></div></dialog>
 <dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-message"><h2 id="confirm-title">确认操作</h2><p id="confirm-message"></p><div class="confirm-actions"><button id="confirm-cancel" class="btn secondary" type="button">取消</button><button id="confirm-continue" class="btn" type="button">继续</button></div></dialog>
 <dialog id="image-zoom" aria-labelledby="zoom-title"><header><h2 id="zoom-title">图片大图</h2><button type="button" id="zoom-close">关闭 ×</button></header><div id="zoom-canvas"><img id="zoom-image" alt=""></div><footer><button type="button" id="zoom-minus" aria-label="缩小图片">−</button><button type="button" id="zoom-reset">100%</button><button type="button" id="zoom-plus" aria-label="放大图片">＋</button><span>双指缩放 · 拖动查看</span></footer></dialog>
+<button id="nutrition-fab" class="nutrition-fab" type="button" aria-label="打开今日营养" aria-haspopup="dialog" aria-controls="nutrition-summary" aria-expanded="false" hidden></button>
+<dialog id="nutrition-summary" aria-labelledby="nutrition-summary-title"><header class="nutrition-summary-header"><div><small id="nutrition-summary-date"></small><h2 id="nutrition-summary-title">今日营养</h2></div><button id="nutrition-summary-close" type="button" aria-label="收起今日营养">收起 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></header><div id="nutrition-summary-content"></div></dialog>
 <input id="import-file" type="file" accept="application/json,.json" hidden>
 <noscript>BulkPlan 需要启用 JavaScript。</noscript>
 </body>

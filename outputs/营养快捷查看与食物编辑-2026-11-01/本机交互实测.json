@@ -1,0 +1,32 @@
+[
+  {
+    "case": "shared sheet: actual/planned,6micros; close/Back/Escape preserve route, focus and reading position"
+  },
+  {
+    "case": "shortcut hides while entering food fields; returns after blur"
+  },
+  {
+    "case": "correct package art; Twiggies 1/2 pieces; edit in place preserves eaten/index/other food and updates actual total; cancel changes nothing"
+  },
+  {
+    "case": "rice237g restores exact prior amount; manual outside-food record editable without replacement"
+  },
+  {
+    "case": "shared across Home, Nutrition and Food & Shopping; training screen stays clear"
+  },
+  {
+    "case": "320x568: button clears navigation/status dock; sheet fits without horizontal overflow"
+  },
+  {
+    "case": "390x844: button clears navigation/status dock; sheet fits without horizontal overflow"
+  },
+  {
+    "case": "430x932: button clears navigation/status dock; sheet fits without horizontal overflow"
+  },
+  {
+    "case": "844x390: button clears navigation/status dock; sheet fits without horizontal overflow"
+  },
+  {
+    "case": "saved entries survive reload; valid backup and no console errors"
+  }
+]

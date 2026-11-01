@@ -1,0 +1,57 @@
+{
+  "mode": "built-in imagegen",
+  "model": "tool did not expose a model identifier",
+  "source": "/Users/wyh/.codex/generated_images/01a18612-0641-7ce3-bb7a-6767953d929c/exec-cdab455d-dac9-4aa2-9fd6-bc8c935c61be.png",
+  "assets": [
+    {
+      "id": "quick-bites-choco",
+      "path": "assets/food-icons-natural/quick-bites-choco.webp",
+      "sha256": "4ccc02fab603ef29d3c31d7d347611d2cdacc505a6521deeb1ca2ba8b99f7645",
+      "bytes": 11616,
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    },
+    {
+      "id": "twiggies-choco",
+      "path": "assets/food-icons-natural/twiggies-choco.webp",
+      "sha256": "b6a2da322da3053dbeefbe7f174841b50d7ce5788e9f28b7591eda720f86a1a7",
+      "bytes": 16846,
+      "width": 256,
+      "height": 256,
+      "alpha": true
+    }
+  ],
+  "crop": [
+    {
+      "id": "quick-bites-choco",
+      "sheet": 18,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        364,
+        27,
+        323,
+        827
+      ],
+      "bytes": 11616,
+      "transparentPixels": 48980,
+      "sourceDescription": "Gardenia Quick Bites Coklat brown packet"
+    },
+    {
+      "id": "twiggies-choco",
+      "sheet": 18,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        994,
+        68,
+        527,
+        781
+      ],
+      "bytes": 16846,
+      "transparentPixels": 36631,
+      "sourceDescription": "Gardenia Twiggies Choc-A-Lot blue two-piece packet"
+    }
+  ]
+}

@@ -1252,7 +1252,7 @@ window.BULK_DATA = {
     },
     {
       "id": "choco-bun",
-      "name": "Gardenia 巧克力奶油包",
+      "name": "Gardenia 巧克力面包",
       "group": "snacks",
       "unit": "包",
       "amount": 1,
@@ -1261,30 +1261,99 @@ window.BULK_DATA = {
       "pantryId": "choco-bun",
       "variants": [
         {
-          "id": "delicia-50",
-          "name": "Delicia Coklat · 50g",
+          "id": "quickbites-50",
+          "name": "Quick Bites Coklat · 50g",
+          "basis": "g",
           "per100": {
             "k": 348,
             "p": 7.8,
-            "c": 49.4,
+            "c": 51.4,
             "f": 12.8,
             "fi": 1.4
           },
           "source": {
-            "kind": "historical",
-            "label": "历史标签估算",
-            "url": "https://malaysiafoodinformation.wordpress.com/2014/02/11/gardenia-delicia-chocolate-bread/",
-            "note": "2014年50g包装转录；当前配方未核实，不能套用QuickBites等其他版本。"
-          },
-          "basis": "g"
+            "kind": "estimate",
+            "label": "同类巧克力面包估算 · 非当前包装标签",
+            "url": "https://www.carbmanager.com/food-detail/md%3A28e3ead7e33ab6c805f3c8fa575b4ca0/coklat",
+            "note": "Quick Bites Coklat每包50g；当前包装完整营养表未核实。暂用Gardenia Coklat 50g数据库记录作同类估算：174kcal、蛋白3.9g、碳水25.7g、脂肪6.4g、纤维0.7g。"
+          }
         }
       ],
-      "note": "每包50g；约175 kcal。当前包装若有不同，以实物为准。",
+      "note": "Quick Bites Coklat，每包50g。热量暂估约175 kcal；当前包装营养表未核实，属于同类面包估算。",
       "uses": [
         "k",
         "c"
       ],
-      "gramsPerUnit": 50
+      "gramsPerUnit": 50,
+      "aliases": [
+        "Quick Bites",
+        "QuickBites",
+        "Coklat"
+      ],
+      "variantAliases": {
+        "delicia-50": "quickbites-50"
+      },
+      "productSource": {
+        "label": "马来西亚厂家产品规格",
+        "url": "https://gardenia.com.my/quickbites/"
+      },
+      "calorieStep": 1
+    },
+    {
+      "id": "twiggies-choco",
+      "name": "Gardenia Twiggies 巧克力蛋糕",
+      "aliases": [
+        "Twiggies",
+        "Choc-A-Lot",
+        "Coklat"
+      ],
+      "group": "snacks",
+      "unit": "条",
+      "amount": 2,
+      "step": 1,
+      "max": 20,
+      "pantryId": "twiggies-choco",
+      "gramsPerUnit": 38,
+      "portionPresets": [
+        {
+          "amount": 1,
+          "label": "1条 · 38g"
+        },
+        {
+          "amount": 2,
+          "label": "1包 · 2条／76g"
+        }
+      ],
+      "variants": [
+        {
+          "id": "choc-a-lot-76",
+          "name": "Choc-A-Lot · 76g／2条",
+          "basis": "g",
+          "per100": {
+            "k": 402.6315789473684,
+            "p": 5.526315789473685,
+            "c": 55.26315789473685,
+            "f": 17.63157894736842,
+            "fi": 2.631578947368421
+          },
+          "source": {
+            "kind": "regional-estimate",
+            "label": "同款新加坡厂家标签参考 · 马来西亚配方待核实",
+            "url": "https://www.gardenia.com.sg/gardenia-twiggies-choc-a-lot-chocolate-76g-2pcs/",
+            "note": "马来西亚官网确认76g（2×38g）。营养按新加坡官网每38g标签：153kcal、蛋白2.1g、碳水21g、脂肪6.7g、纤维1g；马来西亚现包装配方是否相同未确认。"
+          }
+        }
+      ],
+      "productSource": {
+        "label": "马来西亚厂家产品规格",
+        "url": "https://gardenia.com.my/twiggies/"
+      },
+      "note": "一包2条，共76g；按实际吃的条数记。每条约153 kcal、整包约306 kcal；营养暂用同款新加坡厂家标签参考，马来西亚实物标签若不同，以实物为准。",
+      "uses": [
+        "k",
+        "c"
+      ],
+      "calorieStep": 1
     },
     {
       "id": "wholemeal",
@@ -3615,7 +3684,7 @@ window.BULK_DATA = {
     },
     {
       "id": "choco-bun",
-      "name": "Gardenia 巧克力奶油包",
+      "name": "Gardenia 巧克力面包",
       "group": "snacks",
       "unit": "包",
       "pack": 1,
@@ -3624,7 +3693,20 @@ window.BULK_DATA = {
       "step": 1,
       "regular": false,
       "icon": "bread",
-      "note": ""
+      "note": "Quick Bites Coklat · 每包50g"
+    },
+    {
+      "id": "twiggies-choco",
+      "name": "Gardenia Twiggies 巧克力蛋糕",
+      "group": "snacks",
+      "unit": "条",
+      "pack": 2,
+      "target": 4,
+      "threshold": 2,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "Choc-A-Lot · 每包2条，共76g；库存按条记。"
     },
     {
       "id": "crackers",
@@ -6042,7 +6124,7 @@ window.BULK_DATA = {
         "height": 256
       },
       "choco-bun": {
-        "src": "assets/food-icons-natural/choco-bun.webp",
+        "src": "assets/food-icons-natural/quick-bites-choco.webp",
         "width": 256,
         "height": 256
       },
@@ -6273,6 +6355,11 @@ window.BULK_DATA = {
       },
       "egg-fried-rice": {
         "src": "assets/food-icons-natural/egg-fried-rice.webp",
+        "width": 256,
+        "height": 256
+      },
+      "twiggies-choco": {
+        "src": "assets/food-icons-natural/twiggies-choco.webp",
         "width": 256,
         "height": 256
       }
