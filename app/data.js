@@ -2834,6 +2834,76 @@ window.BULK_DATA = {
       "aliases": [
         "tempeh"
       ]
+    },
+    {
+      "id": "grapes",
+      "name": "青葡萄",
+      "group": "fruit",
+      "unit": "粒",
+      "amount": 10,
+      "step": 5,
+      "max": 60,
+      "pantryId": "grapes",
+      "variants": [
+        {
+          "id": "default",
+          "name": "青葡萄",
+          "per100": {
+            "k": 69,
+            "p": 0.72,
+            "c": 18.1,
+            "f": 0.16,
+            "fi": 0.9
+          },
+          "source": {
+            "kind": "database",
+            "label": "标准食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/174683/nutrients",
+            "description": "USDA FoodData Central · Grapes, red or green (European type, such as Thompson seedless), raw"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "按可食部分估算，不含额外加糖。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 5
+    },
+    {
+      "id": "pineapple",
+      "name": "菠萝",
+      "group": "fruit",
+      "unit": "g",
+      "amount": 100,
+      "step": 50,
+      "max": 600,
+      "pantryId": "pineapple",
+      "variants": [
+        {
+          "id": "default",
+          "name": "菠萝",
+          "per100": {
+            "k": 50,
+            "p": 0.54,
+            "c": 13.1,
+            "f": 0.12,
+            "fi": 1.4
+          },
+          "source": {
+            "kind": "database",
+            "label": "标准食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/169124/nutrients",
+            "description": "USDA FoodData Central · Pineapple, raw, all varieties"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "按可食部分估算，不含额外加糖。",
+      "uses": [
+        "c"
+      ],
+      "library": "more"
     }
   ],
   "foodPairings": [
@@ -3742,6 +3812,1806 @@ window.BULK_DATA = {
       "note": "按需购买，补货数量可按实际包装调整。"
     }
   ],
+  "micronutrients": {
+    "version": 1,
+    "referenceGroup": "male-19-30",
+    "catalog": {
+      "milk": {
+        "ndb": "01211",
+        "per100g": {
+          "calcium": 113,
+          "iron": 0.03,
+          "magnesium": 10,
+          "zinc": 0.37,
+          "copper": 0.025,
+          "manganese": 0.004,
+          "selenium": 3.7,
+          "retinol": 45,
+          "vitaminA": 46,
+          "vitaminE": 0.07,
+          "vitaminD": 2,
+          "vitaminC": 0,
+          "thiamin": 0.046,
+          "riboflavin": 0.169,
+          "niacin": 0.089,
+          "pantothenicAcid": 0.373,
+          "vitaminB6": 0.036,
+          "vitaminB12": 0.45,
+          "vitaminK": 0.3,
+          "folicAcid": 0,
+          "folateDFE": 5
+        },
+        "description": "Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "banana": {
+        "ndb": "09040",
+        "per100g": {
+          "calcium": 5,
+          "iron": 0.26,
+          "magnesium": 27,
+          "zinc": 0.15,
+          "copper": 0.078,
+          "manganese": 0.27,
+          "selenium": 1,
+          "retinol": 0,
+          "vitaminA": 3,
+          "vitaminE": 0.1,
+          "vitaminD": 0,
+          "vitaminC": 8.7,
+          "thiamin": 0.031,
+          "riboflavin": 0.073,
+          "niacin": 0.665,
+          "pantothenicAcid": 0.334,
+          "vitaminB6": 0.367,
+          "vitaminB12": 0,
+          "vitaminK": 0.5,
+          "folicAcid": 0,
+          "folateDFE": 20
+        },
+        "description": "Bananas, raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "oats": {
+        "ndb": "08120",
+        "per100g": {
+          "calcium": 52,
+          "iron": 4.25,
+          "magnesium": 138,
+          "zinc": 3.64,
+          "copper": 0.391,
+          "manganese": 3.63,
+          "selenium": 28.9,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.42,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.46,
+          "riboflavin": 0.155,
+          "niacin": 1.125,
+          "pantothenicAcid": 1.12,
+          "vitaminB6": 0.1,
+          "vitaminB12": 0,
+          "vitaminK": 2,
+          "folicAcid": 0,
+          "folateDFE": 32
+        },
+        "description": "Cereals, oats, regular and quick, not fortified, dry",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "peanut": {
+        "ndb": "16398",
+        "per100g": {
+          "calcium": 49,
+          "iron": 1.74,
+          "magnesium": 168,
+          "zinc": 2.51,
+          "copper": 0.422,
+          "manganese": 1.665,
+          "selenium": 4.1,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 9.1,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.15,
+          "riboflavin": 0.192,
+          "niacin": 13.112,
+          "pantothenicAcid": 1.137,
+          "vitaminB6": 0.441,
+          "vitaminB12": 0,
+          "vitaminK": 0.3,
+          "folicAcid": 0,
+          "folateDFE": 87
+        },
+        "description": "Peanut butter, smooth style, without salt",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "pineapple": {
+        "ndb": "09266",
+        "per100g": {
+          "calcium": 13,
+          "iron": 0.29,
+          "magnesium": 12,
+          "zinc": 0.12,
+          "copper": 0.11,
+          "manganese": 0.927,
+          "selenium": 0.1,
+          "retinol": 0,
+          "vitaminA": 3,
+          "vitaminE": 0.02,
+          "vitaminD": 0,
+          "vitaminC": 47.8,
+          "thiamin": 0.079,
+          "riboflavin": 0.032,
+          "niacin": 0.5,
+          "pantothenicAcid": 0.213,
+          "vitaminB6": 0.112,
+          "vitaminB12": 0,
+          "vitaminK": 0.7,
+          "folicAcid": 0,
+          "folateDFE": 18
+        },
+        "description": "Pineapple, raw, all varieties",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "blueberry": {
+        "ndb": "09050",
+        "per100g": {
+          "calcium": 6,
+          "iron": 0.28,
+          "magnesium": 6,
+          "zinc": 0.16,
+          "copper": 0.057,
+          "manganese": 0.336,
+          "selenium": 0.1,
+          "retinol": 0,
+          "vitaminA": 3,
+          "vitaminE": 0.57,
+          "vitaminD": 0,
+          "vitaminC": 9.7,
+          "thiamin": 0.037,
+          "riboflavin": 0.041,
+          "niacin": 0.418,
+          "pantothenicAcid": 0.124,
+          "vitaminB6": 0.052,
+          "vitaminB12": 0,
+          "vitaminK": 19.3,
+          "folicAcid": 0,
+          "folateDFE": 6
+        },
+        "description": "Blueberries, raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "grapes": {
+        "ndb": "09132",
+        "per100g": {
+          "calcium": 10,
+          "iron": 0.36,
+          "magnesium": 7,
+          "zinc": 0.07,
+          "copper": 0.127,
+          "manganese": 0.071,
+          "selenium": 0.1,
+          "retinol": 0,
+          "vitaminA": 3,
+          "vitaminE": 0.19,
+          "vitaminD": 0,
+          "vitaminC": 3.2,
+          "thiamin": 0.069,
+          "riboflavin": 0.07,
+          "niacin": 0.188,
+          "pantothenicAcid": 0.05,
+          "vitaminB6": 0.086,
+          "vitaminB12": 0,
+          "vitaminK": 14.6,
+          "folicAcid": 0,
+          "folateDFE": 2
+        },
+        "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "almonds": {
+        "ndb": "12061",
+        "per100g": {
+          "calcium": 269,
+          "iron": 3.71,
+          "magnesium": 270,
+          "zinc": 3.12,
+          "copper": 1.031,
+          "manganese": 2.179,
+          "selenium": 4.1,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 25.63,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.205,
+          "riboflavin": 1.138,
+          "niacin": 3.618,
+          "pantothenicAcid": 0.471,
+          "vitaminB6": 0.137,
+          "vitaminB12": 0,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 44
+        },
+        "description": "Nuts, almonds",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "yogurt": {
+        "ndb": "01116",
+        "per100g": {
+          "calcium": 121,
+          "iron": 0.05,
+          "magnesium": 12,
+          "zinc": 0.59,
+          "copper": 0.009,
+          "manganese": 0.004,
+          "selenium": 2.2,
+          "retinol": 27,
+          "vitaminA": 27,
+          "vitaminE": 0.06,
+          "vitaminD": 2,
+          "vitaminC": 0.5,
+          "thiamin": 0.029,
+          "riboflavin": 0.142,
+          "niacin": 0.075,
+          "pantothenicAcid": 0.389,
+          "vitaminB6": 0.032,
+          "vitaminB12": 0.37,
+          "vitaminK": 0.2,
+          "folicAcid": 0,
+          "folateDFE": 7
+        },
+        "description": "Yogurt, plain, whole milk, 8 grams protein per 8 ounce",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "chocolate": {
+        "ndb": "19904",
+        "per100g": {
+          "calcium": 73,
+          "iron": 11.9,
+          "magnesium": 228,
+          "zinc": 3.31,
+          "copper": 1.766,
+          "manganese": 1.948,
+          "selenium": 6.8,
+          "vitaminA": 2,
+          "vitaminE": 0.59,
+          "thiamin": 0.034,
+          "riboflavin": 0.078,
+          "niacin": 1.054,
+          "pantothenicAcid": 0.418,
+          "vitaminB6": 0.038,
+          "vitaminB12": 0.28,
+          "vitaminK": 7.3
+        },
+        "description": "Chocolate, dark, 70-85% cacao solids",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "rice": {
+        "ndb": "20545",
+        "per100g": {
+          "calcium": 10,
+          "iron": 0.2,
+          "magnesium": 12,
+          "zinc": 0.49,
+          "copper": 0.069,
+          "manganese": 0.472,
+          "selenium": 7.5,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.04,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.02,
+          "riboflavin": 0.013,
+          "niacin": 0.4,
+          "pantothenicAcid": 0.39,
+          "vitaminB6": 0.093,
+          "vitaminB12": 0,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 3
+        },
+        "description": "Rice, white, long-grain, regular, cooked, unenriched, with salt",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "bread": {
+        "ndb": "18069",
+        "per100g": {
+          "calcium": 144,
+          "iron": 3.61,
+          "magnesium": 23,
+          "zinc": 0.74,
+          "copper": 0.101,
+          "manganese": 0.536,
+          "selenium": 22,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.22,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.533,
+          "riboflavin": 0.243,
+          "niacin": 4.78,
+          "pantothenicAcid": 0.536,
+          "vitaminB6": 0.087,
+          "vitaminB12": 0,
+          "vitaminK": 0.2,
+          "folicAcid": 86,
+          "folateDFE": 171
+        },
+        "description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "wholemeal": {
+        "ndb": "18075",
+        "per100g": {
+          "calcium": 161,
+          "iron": 2.47,
+          "magnesium": 75,
+          "zinc": 1.77,
+          "copper": 0.227,
+          "manganese": 2.174,
+          "selenium": 25.7,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 2.66,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.394,
+          "riboflavin": 0.167,
+          "niacin": 4.438,
+          "pantothenicAcid": 0.646,
+          "vitaminB6": 0.215,
+          "vitaminB12": 0,
+          "vitaminK": 7.8,
+          "folicAcid": 0,
+          "folateDFE": 42
+        },
+        "description": "Bread, whole-wheat, commercially prepared",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "sweet-potato": {
+        "ndb": "11510",
+        "per100g": {
+          "calcium": 27,
+          "iron": 0.72,
+          "magnesium": 18,
+          "zinc": 0.2,
+          "copper": 0.094,
+          "manganese": 0.266,
+          "selenium": 0.2,
+          "retinol": 0,
+          "vitaminA": 787,
+          "vitaminE": 0.94,
+          "vitaminD": 0,
+          "vitaminC": 12.8,
+          "thiamin": 0.056,
+          "riboflavin": 0.047,
+          "niacin": 0.538,
+          "pantothenicAcid": 0.581,
+          "vitaminB6": 0.165,
+          "vitaminB12": 0,
+          "vitaminK": 2.1,
+          "folicAcid": 0,
+          "folateDFE": 6
+        },
+        "description": "Sweet potato, cooked, boiled, without skin",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "sweet-potato|baked": {
+        "ndb": "11508",
+        "per100g": {
+          "calcium": 38,
+          "iron": 0.69,
+          "magnesium": 27,
+          "zinc": 0.32,
+          "copper": 0.161,
+          "manganese": 0.497,
+          "selenium": 0.2,
+          "retinol": 0,
+          "vitaminA": 961,
+          "vitaminE": 0.71,
+          "vitaminD": 0,
+          "vitaminC": 19.6,
+          "thiamin": 0.107,
+          "riboflavin": 0.106,
+          "niacin": 1.487,
+          "pantothenicAcid": 0.884,
+          "vitaminB6": 0.286,
+          "vitaminB12": 0,
+          "vitaminK": 2.3,
+          "folicAcid": 0,
+          "folateDFE": 6
+        },
+        "description": "Sweet potato, cooked, baked in skin, flesh, without salt",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "corn": {
+        "ndb": "11168",
+        "per100g": {
+          "calcium": 3,
+          "iron": 0.45,
+          "magnesium": 26,
+          "zinc": 0.62,
+          "copper": 0.049,
+          "manganese": 0.167,
+          "selenium": 0.2,
+          "retinol": 0,
+          "vitaminA": 13,
+          "vitaminE": 0.09,
+          "vitaminD": 0,
+          "vitaminC": 5.5,
+          "thiamin": 0.093,
+          "riboflavin": 0.057,
+          "niacin": 1.683,
+          "pantothenicAcid": 0.792,
+          "vitaminB6": 0.139,
+          "vitaminB12": 0,
+          "vitaminK": 0.4,
+          "folicAcid": 0,
+          "folateDFE": 23
+        },
+        "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "raisins": {
+        "ndb": "09298",
+        "per100g": {
+          "calcium": 50,
+          "iron": 1.88,
+          "magnesium": 32,
+          "zinc": 0.22,
+          "copper": 0.318,
+          "manganese": 0.299,
+          "selenium": 0.6,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.12,
+          "vitaminD": 0,
+          "vitaminC": 2.3,
+          "thiamin": 0.106,
+          "riboflavin": 0.125,
+          "niacin": 0.766,
+          "pantothenicAcid": 0.095,
+          "vitaminB6": 0.174,
+          "vitaminB12": 0,
+          "vitaminK": 3.5,
+          "folicAcid": 0,
+          "folateDFE": 5
+        },
+        "description": "Raisins, seedless",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "cheese|cheddar": {
+        "ndb": "01009",
+        "per100g": {
+          "calcium": 710,
+          "iron": 0.14,
+          "magnesium": 27,
+          "zinc": 3.64,
+          "copper": 0.03,
+          "manganese": 0.027,
+          "selenium": 28.5,
+          "retinol": 330,
+          "vitaminA": 330,
+          "vitaminE": 0.71,
+          "vitaminD": 24,
+          "vitaminC": 0,
+          "thiamin": 0.029,
+          "riboflavin": 0.428,
+          "niacin": 0.059,
+          "pantothenicAcid": 0.41,
+          "vitaminB6": 0.066,
+          "vitaminB12": 1.1,
+          "vitaminK": 2.4,
+          "folicAcid": 0,
+          "folateDFE": 27
+        },
+        "description": "Cheese, cheddar",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "chicken": {
+        "ndb": "05064",
+        "per100g": {
+          "calcium": 15,
+          "iron": 1.04,
+          "magnesium": 29,
+          "zinc": 1,
+          "copper": 0.049,
+          "manganese": 0.017,
+          "selenium": 27.6,
+          "retinol": 6,
+          "vitaminA": 6,
+          "vitaminE": 0.27,
+          "vitaminD": 5,
+          "vitaminC": 0,
+          "thiamin": 0.07,
+          "riboflavin": 0.114,
+          "niacin": 13.712,
+          "pantothenicAcid": 0.965,
+          "vitaminB6": 0.6,
+          "vitaminB12": 0.34,
+          "vitaminK": 0.3,
+          "folicAcid": 0,
+          "folateDFE": 4
+        },
+        "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "condensed-milk": {
+        "ndb": "01095",
+        "per100g": {
+          "calcium": 284,
+          "iron": 0.19,
+          "magnesium": 26,
+          "zinc": 0.94,
+          "copper": 0.015,
+          "manganese": 0.006,
+          "selenium": 14.8,
+          "retinol": 73,
+          "vitaminA": 74,
+          "vitaminE": 0.16,
+          "vitaminD": 6,
+          "vitaminC": 2.6,
+          "thiamin": 0.09,
+          "riboflavin": 0.416,
+          "niacin": 0.21,
+          "pantothenicAcid": 0.75,
+          "vitaminB6": 0.051,
+          "vitaminB12": 0.44,
+          "vitaminK": 0.6,
+          "folicAcid": 0,
+          "folateDFE": 11
+        },
+        "description": "Milk, canned, condensed, sweetened",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "wrap|usda-174081": {
+        "ndb": "28295",
+        "per100g": {
+          "calcium": 244,
+          "iron": 2.63,
+          "magnesium": 85,
+          "zinc": 1.92,
+          "copper": 0.266,
+          "selenium": 37,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.9,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.823,
+          "riboflavin": 0.289,
+          "niacin": 4.858,
+          "vitaminB6": 0.312,
+          "vitaminB12": 0,
+          "vitaminK": 4.5,
+          "folicAcid": 0,
+          "folateDFE": 138
+        },
+        "description": "Tortillas, ready-to-bake or -fry, whole wheat",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "pita|usda-174915": {
+        "ndb": "18041",
+        "per100g": {
+          "calcium": 86,
+          "iron": 2.62,
+          "magnesium": 26,
+          "zinc": 0.84,
+          "copper": 0.168,
+          "manganese": 0.481,
+          "selenium": 27.1,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.3,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.599,
+          "riboflavin": 0.327,
+          "niacin": 4.632,
+          "pantothenicAcid": 0.397,
+          "vitaminB6": 0.034,
+          "vitaminB12": 0,
+          "vitaminK": 0.2,
+          "folicAcid": 83,
+          "folateDFE": 165
+        },
+        "description": "Bread, pita, white, enriched",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "english-muffin|usda-175063": {
+        "ndb": "18437",
+        "per100g": {
+          "calcium": 52,
+          "iron": 2.5,
+          "magnesium": 21,
+          "zinc": 0.7,
+          "copper": 0.129,
+          "manganese": 0.357,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminC": 0,
+          "thiamin": 0.442,
+          "riboflavin": 0.281,
+          "niacin": 3.884,
+          "pantothenicAcid": 0.446,
+          "vitaminB6": 0.043,
+          "vitaminB12": 0.04,
+          "folicAcid": 37,
+          "folateDFE": 100
+        },
+        "description": "English muffins, plain, enriched, without calcium propionate(includes sourdough)",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "raisin-bread|usda-172680": {
+        "ndb": "18047",
+        "per100g": {
+          "calcium": 66,
+          "iron": 2.9,
+          "magnesium": 26,
+          "zinc": 0.72,
+          "copper": 0.198,
+          "manganese": 0.501,
+          "selenium": 20,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.28,
+          "vitaminD": 0,
+          "vitaminC": 0.1,
+          "thiamin": 0.339,
+          "riboflavin": 0.398,
+          "niacin": 3.466,
+          "pantothenicAcid": 0.387,
+          "vitaminB6": 0.069,
+          "vitaminB12": 0,
+          "vitaminK": 1.7,
+          "folicAcid": 72,
+          "folateDFE": 156
+        },
+        "description": "Bread, raisin, enriched",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "rice-ball|usda-168932": {
+        "ndb": "20453",
+        "per100g": {
+          "calcium": 1,
+          "iron": 0.2,
+          "magnesium": 8,
+          "zinc": 0.4,
+          "copper": 0.072,
+          "manganese": 0.357,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.02,
+          "riboflavin": 0.016,
+          "niacin": 0.4,
+          "pantothenicAcid": 0.397,
+          "vitaminB6": 0.059,
+          "vitaminB12": 0,
+          "folicAcid": 0,
+          "folateDFE": 2
+        },
+        "description": "Rice, white, short-grain, cooked, unenriched",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "potato|usda-170438": {
+        "ndb": "11365",
+        "per100g": {
+          "calcium": 5,
+          "iron": 0.31,
+          "magnesium": 22,
+          "zinc": 0.3,
+          "copper": 0.188,
+          "manganese": 0.138,
+          "selenium": 0.3,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.01,
+          "vitaminD": 0,
+          "vitaminC": 13,
+          "thiamin": 0.106,
+          "riboflavin": 0.02,
+          "niacin": 1.439,
+          "pantothenicAcid": 0.52,
+          "vitaminB6": 0.299,
+          "vitaminB12": 0,
+          "vitaminK": 2.2,
+          "folicAcid": 0,
+          "folateDFE": 10
+        },
+        "description": "Potatoes, boiled, cooked in skin, flesh, without salt",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "potato|usda-170093": {
+        "ndb": "11674",
+        "per100g": {
+          "calcium": 15,
+          "iron": 1.08,
+          "magnesium": 28,
+          "zinc": 0.36,
+          "copper": 0.118,
+          "manganese": 0.219,
+          "selenium": 0.4,
+          "retinol": 0,
+          "vitaminA": 1,
+          "vitaminE": 0.04,
+          "vitaminD": 0,
+          "vitaminC": 9.6,
+          "thiamin": 0.064,
+          "riboflavin": 0.048,
+          "niacin": 1.41,
+          "pantothenicAcid": 0.376,
+          "vitaminB6": 0.311,
+          "vitaminB12": 0,
+          "vitaminK": 2,
+          "folicAcid": 0,
+          "folateDFE": 28
+        },
+        "description": "Potatoes, baked, flesh and skin, without salt",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "pumpkin|usda-168449": {
+        "ndb": "11423",
+        "per100g": {
+          "calcium": 15,
+          "iron": 0.57,
+          "magnesium": 9,
+          "zinc": 0.23,
+          "copper": 0.091,
+          "manganese": 0.089,
+          "selenium": 0.2,
+          "retinol": 0,
+          "vitaminA": 288,
+          "vitaminE": 0.8,
+          "vitaminD": 0,
+          "vitaminC": 4.7,
+          "thiamin": 0.031,
+          "riboflavin": 0.078,
+          "niacin": 0.413,
+          "pantothenicAcid": 0.201,
+          "vitaminB6": 0.044,
+          "vitaminB12": 0,
+          "vitaminK": 0.8,
+          "folicAcid": 0,
+          "folateDFE": 9
+        },
+        "description": "Pumpkin, cooked, boiled, drained, without salt",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "corn-flakes|usda-174648": {
+        "ndb": "08506",
+        "per100g": {
+          "calcium": 2,
+          "iron": 19.4,
+          "magnesium": 7,
+          "zinc": 0.2,
+          "copper": 0.075,
+          "manganese": 0.095,
+          "selenium": 2.2,
+          "retinol": 962,
+          "vitaminA": 981,
+          "vitaminE": 0.02,
+          "vitaminD": 286,
+          "vitaminC": 65,
+          "thiamin": 4.483,
+          "riboflavin": 1.74,
+          "niacin": 21.033,
+          "pantothenicAcid": 0.099,
+          "vitaminB6": 1.907,
+          "vitaminB12": 5.36,
+          "vitaminK": 0
+        },
+        "description": "Cereals ready-to-eat, RALSTON Corn Flakes",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "rice-cakes|usda-170250": {
+        "ndb": "19816",
+        "per100g": {
+          "calcium": 11,
+          "iron": 1.49,
+          "magnesium": 131,
+          "zinc": 3,
+          "copper": 0.445,
+          "manganese": 3.73,
+          "selenium": 24.6,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 1.24,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.061,
+          "riboflavin": 0.165,
+          "niacin": 7.806,
+          "pantothenicAcid": 1,
+          "vitaminB6": 0.15,
+          "vitaminB12": 0,
+          "vitaminK": 1.9,
+          "folicAcid": 0,
+          "folateDFE": 21
+        },
+        "description": "Snacks, rice cakes, brown rice, plain, unsalted",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "rice-cakes|usda-169679": {
+        "ndb": "19413",
+        "per100g": {
+          "calcium": 9,
+          "iron": 1.17,
+          "magnesium": 114,
+          "zinc": 2.22,
+          "copper": 0.42,
+          "manganese": 5.08,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminC": 0,
+          "thiamin": 0.08,
+          "riboflavin": 0.104,
+          "niacin": 6.435,
+          "pantothenicAcid": 0.93,
+          "vitaminB6": 0.14,
+          "vitaminB12": 0,
+          "folicAcid": 0,
+          "folateDFE": 19
+        },
+        "description": "Snacks, rice cakes, brown rice, corn",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "apple|usda-171688": {
+        "ndb": "09003",
+        "per100g": {
+          "calcium": 6,
+          "iron": 0.12,
+          "magnesium": 5,
+          "zinc": 0.04,
+          "copper": 0.027,
+          "manganese": 0.035,
+          "selenium": 0,
+          "retinol": 0,
+          "vitaminA": 3,
+          "vitaminE": 0.18,
+          "vitaminD": 0,
+          "vitaminC": 4.6,
+          "thiamin": 0.017,
+          "riboflavin": 0.026,
+          "niacin": 0.091,
+          "pantothenicAcid": 0.061,
+          "vitaminB6": 0.041,
+          "vitaminB12": 0,
+          "vitaminK": 2.2,
+          "folicAcid": 0,
+          "folateDFE": 3
+        },
+        "description": "Apples, raw, with skin",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "orange|usda-169097": {
+        "ndb": "09200",
+        "per100g": {
+          "calcium": 40,
+          "iron": 0.1,
+          "magnesium": 10,
+          "zinc": 0.07,
+          "copper": 0.045,
+          "manganese": 0.025,
+          "selenium": 0.5,
+          "retinol": 0,
+          "vitaminA": 11,
+          "vitaminE": 0.18,
+          "vitaminD": 0,
+          "vitaminC": 53.2,
+          "thiamin": 0.087,
+          "riboflavin": 0.04,
+          "niacin": 0.282,
+          "pantothenicAcid": 0.25,
+          "vitaminB6": 0.06,
+          "vitaminB12": 0,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 30
+        },
+        "description": "Oranges, raw, all commercial varieties",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "pear|usda-169118": {
+        "ndb": "09252",
+        "per100g": {
+          "calcium": 9,
+          "iron": 0.18,
+          "magnesium": 7,
+          "zinc": 0.1,
+          "copper": 0.082,
+          "manganese": 0.048,
+          "selenium": 0.1,
+          "retinol": 0,
+          "vitaminA": 1,
+          "vitaminE": 0.12,
+          "vitaminD": 0,
+          "vitaminC": 4.3,
+          "thiamin": 0.012,
+          "riboflavin": 0.026,
+          "niacin": 0.161,
+          "pantothenicAcid": 0.049,
+          "vitaminB6": 0.029,
+          "vitaminB12": 0,
+          "vitaminK": 4.4,
+          "folicAcid": 0,
+          "folateDFE": 7
+        },
+        "description": "Pears, raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "mango|usda-169910": {
+        "ndb": "09176",
+        "per100g": {
+          "calcium": 11,
+          "iron": 0.16,
+          "magnesium": 10,
+          "zinc": 0.09,
+          "copper": 0.111,
+          "manganese": 0.063,
+          "selenium": 0.6,
+          "retinol": 0,
+          "vitaminA": 54,
+          "vitaminE": 0.9,
+          "vitaminD": 0,
+          "vitaminC": 36.4,
+          "thiamin": 0.028,
+          "riboflavin": 0.038,
+          "niacin": 0.669,
+          "pantothenicAcid": 0.197,
+          "vitaminB6": 0.119,
+          "vitaminB12": 0,
+          "vitaminK": 4.2,
+          "folicAcid": 0,
+          "folateDFE": 43
+        },
+        "description": "Mangos, raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "dates|usda-171726": {
+        "ndb": "09087",
+        "per100g": {
+          "calcium": 39,
+          "iron": 1.02,
+          "magnesium": 43,
+          "zinc": 0.29,
+          "copper": 0.206,
+          "manganese": 0.262,
+          "selenium": 3,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.05,
+          "vitaminD": 0,
+          "vitaminC": 0.4,
+          "thiamin": 0.052,
+          "riboflavin": 0.066,
+          "niacin": 1.274,
+          "pantothenicAcid": 0.589,
+          "vitaminB6": 0.165,
+          "vitaminB12": 0,
+          "vitaminK": 2.7,
+          "folicAcid": 0,
+          "folateDFE": 19
+        },
+        "description": "Dates, deglet noor",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "dried-apricot|usda-173941": {
+        "ndb": "09032",
+        "per100g": {
+          "calcium": 55,
+          "iron": 2.66,
+          "magnesium": 32,
+          "zinc": 0.39,
+          "copper": 0.343,
+          "manganese": 0.235,
+          "selenium": 2.2,
+          "retinol": 0,
+          "vitaminA": 180,
+          "vitaminE": 4.33,
+          "vitaminD": 0,
+          "vitaminC": 1,
+          "thiamin": 0.015,
+          "riboflavin": 0.074,
+          "niacin": 2.589,
+          "pantothenicAcid": 0.516,
+          "vitaminB6": 0.143,
+          "vitaminB12": 0,
+          "vitaminK": 3.1,
+          "folicAcid": 0,
+          "folateDFE": 10
+        },
+        "description": "Apricots, dried, sulfured, uncooked",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "popcorn|usda-170246": {
+        "ndb": "19806",
+        "per100g": {
+          "calcium": 10,
+          "iron": 2.66,
+          "magnesium": 131,
+          "zinc": 3.44,
+          "copper": 0.42,
+          "manganese": 0.943,
+          "selenium": 9.9,
+          "retinol": 0,
+          "vitaminA": 1,
+          "vitaminC": 0,
+          "thiamin": 0.203,
+          "riboflavin": 0.283,
+          "niacin": 1.944,
+          "pantothenicAcid": 0.42,
+          "vitaminB6": 0.245,
+          "vitaminB12": 0,
+          "folicAcid": 0,
+          "folateDFE": 23
+        },
+        "description": "Snacks, popcorn, air-popped (Unsalted)",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "granola|usda-171646": {
+        "ndb": "08037",
+        "per100g": {
+          "calcium": 76,
+          "iron": 3.95,
+          "magnesium": 168,
+          "zinc": 4.17,
+          "copper": 0.647,
+          "manganese": 3.996,
+          "selenium": 25.4,
+          "retinol": 0,
+          "vitaminA": 1,
+          "vitaminE": 11.1,
+          "vitaminD": 0,
+          "vitaminC": 1.2,
+          "thiamin": 0.548,
+          "riboflavin": 0.354,
+          "niacin": 2.739,
+          "pantothenicAcid": 0.752,
+          "vitaminB6": 0.37,
+          "vitaminB12": 0,
+          "vitaminK": 5.3,
+          "folicAcid": 0,
+          "folateDFE": 84
+        },
+        "description": "Cereals ready-to-eat, granola, homemade",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "cottage-cheese|usda-172182": {
+        "ndb": "01015",
+        "per100g": {
+          "calcium": 111,
+          "iron": 0.13,
+          "magnesium": 9,
+          "zinc": 0.51,
+          "copper": 0.033,
+          "manganese": 0.015,
+          "selenium": 11.9,
+          "retinol": 68,
+          "vitaminA": 68,
+          "vitaminE": 0.08,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.02,
+          "riboflavin": 0.251,
+          "niacin": 0.103,
+          "pantothenicAcid": 0.524,
+          "vitaminB6": 0.057,
+          "vitaminB12": 0.47,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 8
+        },
+        "description": "Cheese, cottage, lowfat, 2% milkfat",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "cottage-cheese|usda-172179": {
+        "ndb": "01012",
+        "per100g": {
+          "calcium": 83,
+          "iron": 0.07,
+          "magnesium": 8,
+          "zinc": 0.4,
+          "copper": 0.029,
+          "manganese": 0.002,
+          "selenium": 9.7,
+          "retinol": 36,
+          "vitaminA": 37,
+          "vitaminE": 0.08,
+          "vitaminD": 3,
+          "vitaminC": 0,
+          "thiamin": 0.027,
+          "riboflavin": 0.163,
+          "niacin": 0.099,
+          "pantothenicAcid": 0.557,
+          "vitaminB6": 0.046,
+          "vitaminB12": 0.43,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 12
+        },
+        "description": "Cheese, cottage, creamed, large or small curd",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "tempeh|usda-172467": {
+        "ndb": "16174",
+        "per100g": {
+          "calcium": 96,
+          "iron": 2.13,
+          "magnesium": 77,
+          "zinc": 1.57,
+          "copper": 0.54,
+          "manganese": 1.285,
+          "selenium": 0,
+          "vitaminD": 0,
+          "thiamin": 0.054,
+          "riboflavin": 0.357,
+          "niacin": 2.135,
+          "pantothenicAcid": 0.453,
+          "vitaminB6": 0.199,
+          "vitaminB12": 0.14,
+          "folicAcid": 0,
+          "folateDFE": 21
+        },
+        "description": "Tempeh, cooked",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "ice": {
+        "per100g": {},
+        "kind": "water",
+        "description": "Plain water ice"
+      }
+    },
+    "references": {
+      "calcium": {
+        "target": 1000,
+        "upper": 2500,
+        "scope": "total"
+      },
+      "magnesium": {
+        "target": 400,
+        "upper": 350,
+        "scope": "supplements"
+      },
+      "vitaminD": {
+        "target": 15,
+        "upper": 100,
+        "scope": "total"
+      },
+      "vitaminC": {
+        "target": 90,
+        "upper": 2000,
+        "scope": "total"
+      },
+      "zinc": {
+        "target": 11,
+        "upper": 40,
+        "scope": "total"
+      },
+      "selenium": {
+        "target": 55,
+        "upper": 400,
+        "scope": "total"
+      },
+      "vitaminB6": {
+        "target": 1.3,
+        "upper": 12,
+        "scope": "total",
+        "upperAuthority": "EFSA 2023",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2023.8006"
+      },
+      "iodine": {
+        "target": 150,
+        "upper": 1100,
+        "scope": "total"
+      },
+      "vitaminA": {
+        "target": 900,
+        "upper": 3000,
+        "scope": "retinol"
+      },
+      "vitaminE": {
+        "target": 15,
+        "upper": 1000,
+        "scope": "synthetic"
+      },
+      "vitaminK": {
+        "target": 120,
+        "upper": null
+      },
+      "thiamin": {
+        "target": 1.2,
+        "upper": null
+      },
+      "riboflavin": {
+        "target": 1.3,
+        "upper": null
+      },
+      "niacin": {
+        "target": null,
+        "upper": 35,
+        "scope": "synthetic"
+      },
+      "folateDFE": {
+        "target": 400,
+        "upper": 1000,
+        "scope": "folicAcid"
+      },
+      "vitaminB12": {
+        "target": 2.4,
+        "upper": null
+      },
+      "biotin": {
+        "target": 30,
+        "upper": null
+      },
+      "pantothenicAcid": {
+        "target": 5,
+        "upper": null
+      },
+      "copper": {
+        "target": 0.9,
+        "upper": 10,
+        "scope": "total"
+      },
+      "manganese": {
+        "target": 2.3,
+        "upper": 11,
+        "scope": "total"
+      },
+      "chromium": {
+        "target": 35,
+        "upper": null
+      },
+      "molybdenum": {
+        "target": 45,
+        "upper": 2000,
+        "scope": "total"
+      },
+      "iron": {
+        "target": 8,
+        "upper": 45,
+        "scope": "total"
+      }
+    },
+    "sources": [
+      {
+        "label": "DRI vitamins",
+        "url": "https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/dietary-reference-intakes/tables/reference-values-vitamins.html"
+      },
+      {
+        "label": "DRI elements",
+        "url": "https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/dietary-reference-intakes/tables/reference-values-elements.html"
+      },
+      {
+        "label": "NIH magnesium",
+        "url": "https://ods.od.nih.gov/factsheets/magnesium-HealthProfessional/"
+      },
+      {
+        "label": "EFSA B6 (2023)",
+        "url": "https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2023.8006"
+      }
+    ]
+  },
+  "foodIcons": {
+    "version": 1,
+    "family": "lime-matte-v1",
+    "palette": [
+      "#CFEA8A",
+      "#E2F2B8",
+      "#A9C568",
+      "#708C40"
+    ],
+    "assets": {
+      "milk": {
+        "src": "assets/food-icons/milk.webp",
+        "width": 256,
+        "height": 256
+      },
+      "banana": {
+        "src": "assets/food-icons/banana.webp",
+        "width": 256,
+        "height": 256
+      },
+      "whey": {
+        "src": "assets/food-icons/whey.webp",
+        "width": 256,
+        "height": 256
+      },
+      "oats": {
+        "src": "assets/food-icons/oats.webp",
+        "width": 256,
+        "height": 256
+      },
+      "peanut": {
+        "src": "assets/food-icons/peanut.webp",
+        "width": 256,
+        "height": 256
+      },
+      "pineapple": {
+        "src": "assets/food-icons/pineapple.webp",
+        "width": 256,
+        "height": 256
+      },
+      "blueberry": {
+        "src": "assets/food-icons/blueberry.webp",
+        "width": 256,
+        "height": 256
+      },
+      "grapes": {
+        "src": "assets/food-icons/grapes.webp",
+        "width": 256,
+        "height": 256
+      },
+      "almonds": {
+        "src": "assets/food-icons/almonds.webp",
+        "width": 256,
+        "height": 256
+      },
+      "yogurt": {
+        "src": "assets/food-icons/yogurt.webp",
+        "width": 256,
+        "height": 256
+      },
+      "chocolate": {
+        "src": "assets/food-icons/chocolate.webp",
+        "width": 256,
+        "height": 256
+      },
+      "milo": {
+        "src": "assets/food-icons/milo.webp",
+        "width": 256,
+        "height": 256
+      },
+      "chicken-box": {
+        "src": "assets/food-icons/chicken-box.webp",
+        "width": 256,
+        "height": 256
+      },
+      "rice": {
+        "src": "assets/food-icons/rice.webp",
+        "width": 256,
+        "height": 256
+      },
+      "white-bread": {
+        "src": "assets/food-icons/white-bread.webp",
+        "width": 256,
+        "height": 256
+      },
+      "wholemeal": {
+        "src": "assets/food-icons/wholemeal.webp",
+        "width": 256,
+        "height": 256
+      },
+      "sweet-potato": {
+        "src": "assets/food-icons/sweet-potato.webp",
+        "width": 256,
+        "height": 256
+      },
+      "corn": {
+        "src": "assets/food-icons/corn.webp",
+        "width": 256,
+        "height": 256
+      },
+      "raisins": {
+        "src": "assets/food-icons/raisins.webp",
+        "width": 256,
+        "height": 256
+      },
+      "soy-milk": {
+        "src": "assets/food-icons/soy-milk.webp",
+        "width": 256,
+        "height": 256
+      },
+      "cheese": {
+        "src": "assets/food-icons/cheese.webp",
+        "width": 256,
+        "height": 256
+      },
+      "nuts": {
+        "src": "assets/food-icons/nuts.webp",
+        "width": 256,
+        "height": 256
+      },
+      "choco-bun": {
+        "src": "assets/food-icons/choco-bun.webp",
+        "width": 256,
+        "height": 256
+      },
+      "crackers": {
+        "src": "assets/food-icons/crackers.webp",
+        "width": 256,
+        "height": 256
+      },
+      "condensed-milk": {
+        "src": "assets/food-icons/condensed-milk.webp",
+        "width": 256,
+        "height": 256
+      },
+      "maggi-curry": {
+        "src": "assets/food-icons/maggi-curry.webp",
+        "width": 256,
+        "height": 256
+      },
+      "mamee-chicken": {
+        "src": "assets/food-icons/mamee-chicken.webp",
+        "width": 256,
+        "height": 256
+      },
+      "side-aglio": {
+        "src": "assets/food-icons/side-aglio.webp",
+        "width": 256,
+        "height": 256
+      },
+      "side-sweet": {
+        "src": "assets/food-icons/side-sweet.webp",
+        "width": 256,
+        "height": 256
+      },
+      "side-us": {
+        "src": "assets/food-icons/side-us.webp",
+        "width": 256,
+        "height": 256
+      },
+      "side-tomato": {
+        "src": "assets/food-icons/side-tomato.webp",
+        "width": 256,
+        "height": 256
+      },
+      "side-veg": {
+        "src": "assets/food-icons/side-veg.webp",
+        "width": 256,
+        "height": 256
+      },
+      "side-mushroom": {
+        "src": "assets/food-icons/side-mushroom.webp",
+        "width": 256,
+        "height": 256
+      },
+      "wrap": {
+        "src": "assets/food-icons/wrap.webp",
+        "width": 256,
+        "height": 256
+      },
+      "pita": {
+        "src": "assets/food-icons/pita.webp",
+        "width": 256,
+        "height": 256
+      },
+      "english-muffin": {
+        "src": "assets/food-icons/english-muffin.webp",
+        "width": 256,
+        "height": 256
+      },
+      "raisin-bread": {
+        "src": "assets/food-icons/raisin-bread.webp",
+        "width": 256,
+        "height": 256
+      },
+      "red-bean-bun": {
+        "src": "assets/food-icons/red-bean-bun.webp",
+        "width": 256,
+        "height": 256
+      },
+      "mantou": {
+        "src": "assets/food-icons/mantou.webp",
+        "width": 256,
+        "height": 256
+      },
+      "rice-ball": {
+        "src": "assets/food-icons/rice-ball.webp",
+        "width": 256,
+        "height": 256
+      },
+      "potato": {
+        "src": "assets/food-icons/potato.webp",
+        "width": 256,
+        "height": 256
+      },
+      "pumpkin": {
+        "src": "assets/food-icons/pumpkin.webp",
+        "width": 256,
+        "height": 256
+      },
+      "nestum": {
+        "src": "assets/food-icons/nestum.webp",
+        "width": 256,
+        "height": 256
+      },
+      "weet-bix": {
+        "src": "assets/food-icons/weet-bix.webp",
+        "width": 256,
+        "height": 256
+      },
+      "corn-flakes": {
+        "src": "assets/food-icons/corn-flakes.webp",
+        "width": 256,
+        "height": 256
+      },
+      "rice-cakes": {
+        "src": "assets/food-icons/rice-cakes.webp",
+        "width": 256,
+        "height": 256
+      },
+      "apple": {
+        "src": "assets/food-icons/apple.webp",
+        "width": 256,
+        "height": 256
+      },
+      "orange": {
+        "src": "assets/food-icons/orange.webp",
+        "width": 256,
+        "height": 256
+      },
+      "pear": {
+        "src": "assets/food-icons/pear.webp",
+        "width": 256,
+        "height": 256
+      },
+      "mango": {
+        "src": "assets/food-icons/mango.webp",
+        "width": 256,
+        "height": 256
+      },
+      "dates": {
+        "src": "assets/food-icons/dates.webp",
+        "width": 256,
+        "height": 256
+      },
+      "dried-apricot": {
+        "src": "assets/food-icons/dried-apricot.webp",
+        "width": 256,
+        "height": 256
+      },
+      "popcorn": {
+        "src": "assets/food-icons/popcorn.webp",
+        "width": 256,
+        "height": 256
+      },
+      "roasted-chickpeas": {
+        "src": "assets/food-icons/roasted-chickpeas.webp",
+        "width": 256,
+        "height": 256
+      },
+      "granola": {
+        "src": "assets/food-icons/granola.webp",
+        "width": 256,
+        "height": 256
+      },
+      "cottage-cheese": {
+        "src": "assets/food-icons/cottage-cheese.webp",
+        "width": 256,
+        "height": 256
+      },
+      "skyr": {
+        "src": "assets/food-icons/skyr.webp",
+        "width": 256,
+        "height": 256
+      },
+      "kefir": {
+        "src": "assets/food-icons/kefir.webp",
+        "width": 256,
+        "height": 256
+      },
+      "tempeh": {
+        "src": "assets/food-icons/tempeh.webp",
+        "width": 256,
+        "height": 256
+      },
+      "ice": {
+        "src": "assets/food-icons/ice.webp",
+        "width": 256,
+        "height": 256
+      },
+      "rice-cooked": {
+        "src": "assets/food-icons/rice-cooked.webp",
+        "width": 256,
+        "height": 256
+      },
+      "greek-yogurt": {
+        "src": "assets/food-icons/greek-yogurt.webp",
+        "width": 256,
+        "height": 256
+      },
+      "milo-drink": {
+        "src": "assets/food-icons/milo-drink.webp",
+        "width": 256,
+        "height": 256
+      },
+      "milo-crackers": {
+        "src": "assets/food-icons/milo-crackers.webp",
+        "width": 256,
+        "height": 256
+      },
+      "pantry-jar": {
+        "src": "assets/food-icons/pantry-jar.webp",
+        "width": 256,
+        "height": 256
+      }
+    },
+    "aliases": {
+      "food": {
+        "rice": "rice-cooked",
+        "bread": "white-bread"
+      },
+      "pantry": {},
+      "blend": {}
+    }
+  },
   "supplements": {
     "revision": "2026-11-01",
     "nutrients": {
@@ -3861,7 +5731,7 @@ window.BULK_DATA = {
         "timing": "早餐或午餐随餐",
         "hint": "每天 1 片，随水和正餐服用。",
         "summary": "含钙 160 mg · 镁 100 mg · D₃ 25 μg",
-        "note": "按普通 Multi For Him 实物标签计算，含 22 种营养素，不含铁。叶酸每片 665 μg DFE，其中叶酸原料 400 μg，合计时只计一次。",
+        "note": "按普通 Multi For Him 实物标签计算，含 22 种营养素，不含铁。没有标示膳食纤维，不作为纤维来源。叶酸每片 665 μg DFE，其中叶酸原料 400 μg，合计时只计一次。",
         "source": {
           "label": "Nature Made 官方标签",
           "url": "https://www.naturemade.com/products/nature-made-mens-multi-tablets",

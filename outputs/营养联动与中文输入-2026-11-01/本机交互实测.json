@@ -1,0 +1,30 @@
+[
+  {
+    "case": "Chinese composition keeps same input node and a/ab only once; commit filters grapes; grapes added50g=34.5kcal"
+  },
+  {
+    "case": "pineapple in More; selecting it does not automatically mark eaten"
+  },
+  {
+    "case": "same daily food and supplement totals; only eaten grapes count; pending pineapple excluded; magnesium UL compares supplement100mg"
+  },
+  {
+    "case": "Chinese composition on pantry and movement search is stable"
+  },
+  {
+    "case": "token help explains private repository, Contents RW and expiry; no token requested or read"
+  },
+  {
+    "case": "unified nutrition fits mobile 320"
+  },
+  {
+    "case": "unified nutrition fits mobile 390"
+  },
+  {
+    "case": "unified nutrition fits mobile 430"
+  },
+  {
+    "case": "valid backup and clean browser console",
+    "errors": []
+  }
+]

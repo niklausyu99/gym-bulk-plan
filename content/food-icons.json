@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "family": "lime-matte-v1",
+  "palette": [
+    "#CFEA8A",
+    "#E2F2B8",
+    "#A9C568",
+    "#708C40"
+  ],
+  "assets": {
+    "milk": {
+      "src": "assets/food-icons/milk.webp",
+      "width": 256,
+      "height": 256
+    },
+    "banana": {
+      "src": "assets/food-icons/banana.webp",
+      "width": 256,
+      "height": 256
+    },
+    "whey": {
+      "src": "assets/food-icons/whey.webp",
+      "width": 256,
+      "height": 256
+    },
+    "oats": {
+      "src": "assets/food-icons/oats.webp",
+      "width": 256,
+      "height": 256
+    },
+    "peanut": {
+      "src": "assets/food-icons/peanut.webp",
+      "width": 256,
+      "height": 256
+    },
+    "pineapple": {
+      "src": "assets/food-icons/pineapple.webp",
+      "width": 256,
+      "height": 256
+    },
+    "blueberry": {
+      "src": "assets/food-icons/blueberry.webp",
+      "width": 256,
+      "height": 256
+    },
+    "grapes": {
+      "src": "assets/food-icons/grapes.webp",
+      "width": 256,
+      "height": 256
+    },
+    "almonds": {
+      "src": "assets/food-icons/almonds.webp",
+      "width": 256,
+      "height": 256
+    },
+    "yogurt": {
+      "src": "assets/food-icons/yogurt.webp",
+      "width": 256,
+      "height": 256
+    },
+    "chocolate": {
+      "src": "assets/food-icons/chocolate.webp",
+      "width": 256,
+      "height": 256
+    },
+    "milo": {
+      "src": "assets/food-icons/milo.webp",
+      "width": 256,
+      "height": 256
+    },
+    "chicken-box": {
+      "src": "assets/food-icons/chicken-box.webp",
+      "width": 256,
+      "height": 256
+    },
+    "rice": {
+      "src": "assets/food-icons/rice.webp",
+      "width": 256,
+      "height": 256
+    },
+    "white-bread": {
+      "src": "assets/food-icons/white-bread.webp",
+      "width": 256,
+      "height": 256
+    },
+    "wholemeal": {
+      "src": "assets/food-icons/wholemeal.webp",
+      "width": 256,
+      "height": 256
+    },
+    "sweet-potato": {
+      "src": "assets/food-icons/sweet-potato.webp",
+      "width": 256,
+      "height": 256
+    },
+    "corn": {
+      "src": "assets/food-icons/corn.webp",
+      "width": 256,
+      "height": 256
+    },
+    "raisins": {
+      "src": "assets/food-icons/raisins.webp",
+      "width": 256,
+      "height": 256
+    },
+    "soy-milk": {
+      "src": "assets/food-icons/soy-milk.webp",
+      "width": 256,
+      "height": 256
+    },
+    "cheese": {
+      "src": "assets/food-icons/cheese.webp",
+      "width": 256,
+      "height": 256
+    },
+    "nuts": {
+      "src": "assets/food-icons/nuts.webp",
+      "width": 256,
+      "height": 256
+    },
+    "choco-bun": {
+      "src": "assets/food-icons/choco-bun.webp",
+      "width": 256,
+      "height": 256
+    },
+    "crackers": {
+      "src": "assets/food-icons/crackers.webp",
+      "width": 256,
+      "height": 256
+    },
+    "condensed-milk": {
+      "src": "assets/food-icons/condensed-milk.webp",
+      "width": 256,
+      "height": 256
+    },
+    "maggi-curry": {
+      "src": "assets/food-icons/maggi-curry.webp",
+      "width": 256,
+      "height": 256
+    },
+    "mamee-chicken": {
+      "src": "assets/food-icons/mamee-chicken.webp",
+      "width": 256,
+      "height": 256
+    },
+    "side-aglio": {
+      "src": "assets/food-icons/side-aglio.webp",
+      "width": 256,
+      "height": 256
+    },
+    "side-sweet": {
+      "src": "assets/food-icons/side-sweet.webp",
+      "width": 256,
+      "height": 256
+    },
+    "side-us": {
+      "src": "assets/food-icons/side-us.webp",
+      "width": 256,
+      "height": 256
+    },
+    "side-tomato": {
+      "src": "assets/food-icons/side-tomato.webp",
+      "width": 256,
+      "height": 256
+    },
+    "side-veg": {
+      "src": "assets/food-icons/side-veg.webp",
+      "width": 256,
+      "height": 256
+    },
+    "side-mushroom": {
+      "src": "assets/food-icons/side-mushroom.webp",
+      "width": 256,
+      "height": 256
+    },
+    "wrap": {
+      "src": "assets/food-icons/wrap.webp",
+      "width": 256,
+      "height": 256
+    },
+    "pita": {
+      "src": "assets/food-icons/pita.webp",
+      "width": 256,
+      "height": 256
+    },
+    "english-muffin": {
+      "src": "assets/food-icons/english-muffin.webp",
+      "width": 256,
+      "height": 256
+    },
+    "raisin-bread": {
+      "src": "assets/food-icons/raisin-bread.webp",
+      "width": 256,
+      "height": 256
+    },
+    "red-bean-bun": {
+      "src": "assets/food-icons/red-bean-bun.webp",
+      "width": 256,
+      "height": 256
+    },
+    "mantou": {
+      "src": "assets/food-icons/mantou.webp",
+      "width": 256,
+      "height": 256
+    },
+    "rice-ball": {
+      "src": "assets/food-icons/rice-ball.webp",
+      "width": 256,
+      "height": 256
+    },
+    "potato": {
+      "src": "assets/food-icons/potato.webp",
+      "width": 256,
+      "height": 256
+    },
+    "pumpkin": {
+      "src": "assets/food-icons/pumpkin.webp",
+      "width": 256,
+      "height": 256
+    },
+    "nestum": {
+      "src": "assets/food-icons/nestum.webp",
+      "width": 256,
+      "height": 256
+    },
+    "weet-bix": {
+      "src": "assets/food-icons/weet-bix.webp",
+      "width": 256,
+      "height": 256
+    },
+    "corn-flakes": {
+      "src": "assets/food-icons/corn-flakes.webp",
+      "width": 256,
+      "height": 256
+    },
+    "rice-cakes": {
+      "src": "assets/food-icons/rice-cakes.webp",
+      "width": 256,
+      "height": 256
+    },
+    "apple": {
+      "src": "assets/food-icons/apple.webp",
+      "width": 256,
+      "height": 256
+    },
+    "orange": {
+      "src": "assets/food-icons/orange.webp",
+      "width": 256,
+      "height": 256
+    },
+    "pear": {
+      "src": "assets/food-icons/pear.webp",
+      "width": 256,
+      "height": 256
+    },
+    "mango": {
+      "src": "assets/food-icons/mango.webp",
+      "width": 256,
+      "height": 256
+    },
+    "dates": {
+      "src": "assets/food-icons/dates.webp",
+      "width": 256,
+      "height": 256
+    },
+    "dried-apricot": {
+      "src": "assets/food-icons/dried-apricot.webp",
+      "width": 256,
+      "height": 256
+    },
+    "popcorn": {
+      "src": "assets/food-icons/popcorn.webp",
+      "width": 256,
+      "height": 256
+    },
+    "roasted-chickpeas": {
+      "src": "assets/food-icons/roasted-chickpeas.webp",
+      "width": 256,
+      "height": 256
+    },
+    "granola": {
+      "src": "assets/food-icons/granola.webp",
+      "width": 256,
+      "height": 256
+    },
+    "cottage-cheese": {
+      "src": "assets/food-icons/cottage-cheese.webp",
+      "width": 256,
+      "height": 256
+    },
+    "skyr": {
+      "src": "assets/food-icons/skyr.webp",
+      "width": 256,
+      "height": 256
+    },
+    "kefir": {
+      "src": "assets/food-icons/kefir.webp",
+      "width": 256,
+      "height": 256
+    },
+    "tempeh": {
+      "src": "assets/food-icons/tempeh.webp",
+      "width": 256,
+      "height": 256
+    },
+    "ice": {
+      "src": "assets/food-icons/ice.webp",
+      "width": 256,
+      "height": 256
+    },
+    "rice-cooked": {
+      "src": "assets/food-icons/rice-cooked.webp",
+      "width": 256,
+      "height": 256
+    },
+    "greek-yogurt": {
+      "src": "assets/food-icons/greek-yogurt.webp",
+      "width": 256,
+      "height": 256
+    },
+    "milo-drink": {
+      "src": "assets/food-icons/milo-drink.webp",
+      "width": 256,
+      "height": 256
+    },
+    "milo-crackers": {
+      "src": "assets/food-icons/milo-crackers.webp",
+      "width": 256,
+      "height": 256
+    },
+    "pantry-jar": {
+      "src": "assets/food-icons/pantry-jar.webp",
+      "width": 256,
+      "height": 256
+    }
+  },
+  "aliases": {
+    "food": {
+      "rice": "rice-cooked",
+      "bread": "white-bread"
+    },
+    "pantry": {},
+    "blend": {}
+  }
+}

@@ -31,3 +31,7 @@ Existing local preview records do not migrate across origins automatically. Expo
 ## Daily supplements
 
 Nutrition → Supplements records actual daily use for the five configured products. Fish oil supports one or two softgels; other daily doses are reversible checks. Each dated record preserves its ingredient amounts and label source. Supplement-derived micronutrients are shown separately from food, whose micronutrients are not fully covered. Only explicitly labelled fish-oil energy and fat join the daily food totals. Records participate in backups and private sync, including first-connect conflict detection. Reference labels, elemental-mineral conversions and timing evidence are in `outputs/每日补充剂-2026-11-01/服用安排与营养依据.md`.
+
+## Food art, combined micronutrients and composition input
+
+A shared family of65 transparent256px WebP food icons covers pantry, recipes and food choices; originals, prompts and crop evidence stay outside the runtime. Grapes are a usual food and pineapple an optional library food. The daily micronutrient view sums actually eaten foods, the recorded Blend and supplements, with source-specific limits and explicit missing branded-food data. It uses male19–30 DRI references and the labelled EFSA2023 B6 limit. It cannot establish that an incomplete food log is safe or diagnose deficiencies. Chinese composition defers input processing and full renders until commitment. Token setup links to GitHub's fine-grained token form and explains private-repository-only Contents access.

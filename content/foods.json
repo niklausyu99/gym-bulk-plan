@@ -1792,6 +1792,76 @@
       "aliases": [
         "tempeh"
       ]
+    },
+    {
+      "id": "grapes",
+      "name": "青葡萄",
+      "group": "fruit",
+      "unit": "粒",
+      "amount": 10,
+      "step": 5,
+      "max": 60,
+      "pantryId": "grapes",
+      "variants": [
+        {
+          "id": "default",
+          "name": "青葡萄",
+          "per100": {
+            "k": 69.0,
+            "p": 0.72,
+            "c": 18.1,
+            "f": 0.16,
+            "fi": 0.9
+          },
+          "source": {
+            "kind": "database",
+            "label": "标准食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/174683/nutrients",
+            "description": "USDA FoodData Central · Grapes, red or green (European type, such as Thompson seedless), raw"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "按可食部分估算，不含额外加糖。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 5
+    },
+    {
+      "id": "pineapple",
+      "name": "菠萝",
+      "group": "fruit",
+      "unit": "g",
+      "amount": 100,
+      "step": 50,
+      "max": 600,
+      "pantryId": "pineapple",
+      "variants": [
+        {
+          "id": "default",
+          "name": "菠萝",
+          "per100": {
+            "k": 50.0,
+            "p": 0.54,
+            "c": 13.1,
+            "f": 0.12,
+            "fi": 1.4
+          },
+          "source": {
+            "kind": "database",
+            "label": "标准食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/169124/nutrients",
+            "description": "USDA FoodData Central · Pineapple, raw, all varieties"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "按可食部分估算，不含额外加糖。",
+      "uses": [
+        "c"
+      ],
+      "library": "more"
     }
   ],
   "condensedMilk": {

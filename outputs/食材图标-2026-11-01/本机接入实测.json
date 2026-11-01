@@ -1,0 +1,33 @@
+[
+  {
+    "case": "all65 WebP decoded256x256; all59 pantry items use exact raster icons; no stock changes",
+    "count": 65,
+    "bad": [],
+    "version": "0.9.0",
+    "rows": 59,
+    "images": 59,
+    "stock": null
+  },
+  {
+    "case": "all13 Blend ingredients share the same icons, including ice; milk stock sheet uses same asset"
+  },
+  {
+    "case": "all48 food choices have icons; raw rice and cooked rice distinguished; selected food dialog uses matching icon"
+  },
+  {
+    "case": "mobile 320 pantry/stock/recipe no overflow and icon/text do not overlap"
+  },
+  {
+    "case": "mobile 375 pantry/stock/recipe no overflow and icon/text do not overlap"
+  },
+  {
+    "case": "mobile 390 pantry/stock/recipe no overflow and icon/text do not overlap"
+  },
+  {
+    "case": "mobile 430 pantry/stock/recipe no overflow and icon/text do not overlap"
+  },
+  {
+    "case": "console errors",
+    "errors": []
+  }
+]

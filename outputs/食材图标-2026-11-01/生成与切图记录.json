@@ -1,0 +1,1371 @@
+{
+  "mode": "built-in image_gen",
+  "model": "not exposed by built-in tool; GPT IMAGE 2.5 could not be explicitly selected or verified",
+  "palette": [
+    "#CFEA8A",
+    "#E2F2B8",
+    "#A9C568",
+    "#708C40"
+  ],
+  "runtimeCount": 65,
+  "runtimeFormat": "WebP with alpha",
+  "runtimeDimensions": [
+    256,
+    256
+  ],
+  "encoding": {
+    "quality": 90,
+    "alphaQuality": 100
+  },
+  "totalBytes": 1027366,
+  "largestBytes": 22426,
+  "corrections": [
+    "Sheet4 bean bun whole-bean filling rejected; smooth-paste replacement from sheet6 selected.",
+    "Sheet3 row2 adjoining trays rejected; standalone replacements from sheets7,8,9 selected."
+  ],
+  "generation": [
+    {
+      "sheet": 1,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "milk",
+          "a whole-milk carton with folded top and a small milk-drop emblem"
+        ],
+        [
+          "banana",
+          "a partly peeled curved banana with three unmistakable peel flaps"
+        ],
+        [
+          "whey",
+          "a wide whey-protein tub with a scoop of powder leaning beside it, no lettering"
+        ],
+        [
+          "oats",
+          "a shallow bowl filled with clearly visible flat rolled oat flakes"
+        ],
+        [
+          "peanut",
+          "an open peanut-butter jar with a small spoon carrying a thick smooth swirl and one peanut shell"
+        ],
+        [
+          "pineapple",
+          "a pineapple with a spiky crown and one triangular cut wedge"
+        ],
+        [
+          "blueberry",
+          "five blueberries with visible five-point crown indentations"
+        ],
+        [
+          "grapes",
+          "a compact hanging bunch of round grapes with a curling stem and one leaf"
+        ],
+        [
+          "almonds",
+          "three pointed ridged almond kernels"
+        ],
+        [
+          "yogurt",
+          "a short yogurt pot, foil lid partly peeled back and a small spoon"
+        ],
+        [
+          "chocolate",
+          "a diagonally angled chocolate bar with a 2-by-3 grid of raised chocolate squares"
+        ],
+        [
+          "milo",
+          "a squat cylindrical malt powder tin with an open lid and a small mound of fine powder, no lettering"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nCompose a precisely aligned contact sheet, THREE equal columns and FOUR equal rows, portrait canvas 1536x2048 or larger, each cell square. Exactly TWELVE separate icons, one centred in each cell with at least 18% clear transparent padding to all four cell edges, no object crosses a cell boundary. Invisible grid, do not draw lines. Read row-major left-to-right, top-to-bottom:\n1. a whole-milk carton with folded top and a small milk-drop emblem\n2. a partly peeled curved banana with three unmistakable peel flaps\n3. a wide whey-protein tub with a scoop of powder leaning beside it, no lettering\n4. a shallow bowl filled with clearly visible flat rolled oat flakes\n5. an open peanut-butter jar with a small spoon carrying a thick smooth swirl and one peanut shell\n6. a pineapple with a spiky crown and one triangular cut wedge\n7. five blueberries with visible five-point crown indentations\n8. a compact hanging bunch of round grapes with a curling stem and one leaf\n9. three pointed ridged almond kernels\n10. a short yogurt pot, foil lid partly peeled back and a small spoon\n11. a diagonally angled chocolate bar with a 2-by-3 grid of raised chocolate squares\n12. a squat cylindrical malt powder tin with an open lid and a small mound of fine powder, no lettering\nPrioritize unmistakable food recognition and consistent pale-lime material. This sheet will be cut into twelve square app assets.",
+      "source": "work/food-icons/sheet-01.png",
+      "sha256": "162c991893eb40269bd9e0e3fd020b152ce15280119ea6608001b671ae77faaf"
+    },
+    {
+      "sheet": 2,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "chicken-box",
+          "a rectangular meal-prep container filled with neatly sliced grilled chicken breast, clear open top, no sides"
+        ],
+        [
+          "rice",
+          "an open sack of dry uncooked rice with a little mound of long grains spilling out"
+        ],
+        [
+          "white-bread",
+          "two square white sandwich bread slices, smooth fine crumb and thin crust"
+        ],
+        [
+          "wholemeal",
+          "two square wholemeal bread slices, visibly seeded grain-dotted crumb and darker lime crust"
+        ],
+        [
+          "sweet-potato",
+          "one elongated sweet potato and one cut half revealing smooth dense flesh"
+        ],
+        [
+          "corn",
+          "a corn cob with neatly arranged kernels, partially peeled husk"
+        ],
+        [
+          "raisins",
+          "a small pile of irregular deeply wrinkled raisins, no leaves"
+        ],
+        [
+          "soy-milk",
+          "a soy drink carton with a soybean-shaped emblem and three loose soybeans beside it, no letters"
+        ],
+        [
+          "cheese",
+          "a triangular cheese wedge with distinct round holes"
+        ],
+        [
+          "nuts",
+          "a small mixed group of a curved cashew, a ridged walnut half and almonds"
+        ],
+        [
+          "choco-bun",
+          "a soft oval cream bun split open to show a thick darker-lime chocolate cream filling"
+        ],
+        [
+          "crackers",
+          "three stacked square cream crackers with scalloped edges and a regular grid of pinholes"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nThe provided image is STYLE REFERENCE ONLY. Generate an entirely NEW sheet with the new foods below. Match the reference's pale-lime matte sculpted food icons, lighting and viewpoint, not its original subjects. THREE columns and FOUR rows of equal square cells, portrait 1536x2048 or larger, invisible grid. Exactly twelve icons, one centred per cell, same visual size with 18% transparent padding, no crossing cell boundaries, no printed grid or labels. Row-major order:\n1. a rectangular meal-prep container filled with neatly sliced grilled chicken breast, clear open top, no sides\n2. an open sack of dry uncooked rice with a little mound of long grains spilling out\n3. two square white sandwich bread slices, smooth fine crumb and thin crust\n4. two square wholemeal bread slices, visibly seeded grain-dotted crumb and darker lime crust\n5. one elongated sweet potato and one cut half revealing smooth dense flesh\n6. a corn cob with neatly arranged kernels, partially peeled husk\n7. a small pile of irregular deeply wrinkled raisins, no leaves\n8. a soy drink carton with a soybean-shaped emblem and three loose soybeans beside it, no letters\n9. a triangular cheese wedge with distinct round holes\n10. a small mixed group of a curved cashew, a ridged walnut half and almonds\n11. a soft oval cream bun split open to show a thick darker-lime chocolate cream filling\n12. three stacked square cream crackers with scalloped edges and a regular grid of pinholes",
+      "source": "work/food-icons/sheet-02.png",
+      "sha256": "9ae104f142092da7f31141f9129f947955a7199b33bd97c9964bfd54da61acbe"
+    },
+    {
+      "sheet": 3,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "condensed-milk",
+          "an opened short tin can of thick condensed milk, a spoon lifting a viscous ribbon"
+        ],
+        [
+          "maggi-curry",
+          "an unbranded open instant noodle packet leaning behind a shallow bowl of curly curry noodles, no letters"
+        ],
+        [
+          "mamee-chicken",
+          "a tall tapered instant-noodle paper cup with half-peeled foil lid, visible curly noodles and small chicken pieces, no letters"
+        ],
+        [
+          "side-aglio",
+          "a shallow rectangular food tray with a nest of plain spaghetti and clearly visible thin garlic slices"
+        ],
+        [
+          "side-sweet",
+          "a shallow rectangular food tray filled with roasted sweet potato wedges"
+        ],
+        [
+          "side-us",
+          "a shallow rectangular food tray filled with roasted round potato halves with scored tops"
+        ],
+        [
+          "side-tomato",
+          "a shallow rectangular food tray filled with spiral fusilli pasta coated in thick darker-lime tomato sauce with one tomato wedge"
+        ],
+        [
+          "side-veg",
+          "a shallow rectangular food tray filled with broccoli florets, carrot rounds and vegetable strips"
+        ],
+        [
+          "side-mushroom",
+          "a low round soup bowl filled with creamy mushroom soup and several distinct sliced mushroom caps"
+        ],
+        [
+          "wrap",
+          "a thin round wholemeal tortilla flatbread with a second one loosely rolled behind it"
+        ],
+        [
+          "pita",
+          "a round pita bread cut in half, showing the hollow pocket clearly"
+        ],
+        [
+          "english-muffin",
+          "a round English muffin split into two horizontal halves showing its porous airy crumb"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nProvided sheet is STYLE REFERENCE ONLY. Create an entirely NEW matching contact sheet of foods below. THREE columns FOUR rows, equal square cells, portrait canvas 1536x2048 or larger. Exactly twelve icons, one per cell, row-major order. Centre all subjects in their own cells with 20% transparent safety margins, full object silhouettes, no cross-cell overlap, no frame, no text. Preserve the pale-lime matte material and soft upper-left light from reference. Different meals need unmistakably different food shapes, not identical generic boxes.\n1. an opened short tin can of thick condensed milk, a spoon lifting a viscous ribbon\n2. an unbranded open instant noodle packet leaning behind a shallow bowl of curly curry noodles, no letters\n3. a tall tapered instant-noodle paper cup with half-peeled foil lid, visible curly noodles and small chicken pieces, no letters\n4. a shallow rectangular food tray with a nest of plain spaghetti and clearly visible thin garlic slices\n5. a shallow rectangular food tray filled with roasted sweet potato wedges\n6. a shallow rectangular food tray filled with roasted round potato halves with scored tops\n7. a shallow rectangular food tray filled with spiral fusilli pasta coated in thick darker-lime tomato sauce with one tomato wedge\n8. a shallow rectangular food tray filled with broccoli florets, carrot rounds and vegetable strips\n9. a low round soup bowl filled with creamy mushroom soup and several distinct sliced mushroom caps\n10. a thin round wholemeal tortilla flatbread with a second one loosely rolled behind it\n11. a round pita bread cut in half, showing the hollow pocket clearly\n12. a round English muffin split into two horizontal halves showing its porous airy crumb",
+      "source": "work/food-icons/sheet-03.png",
+      "sha256": "275af5bf6b6b784d181b9438fec1c9b4290406a980687c879a2486a9d1a68514"
+    },
+    {
+      "sheet": 4,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "raisin-bread",
+          "two square raisin bread slices with several unmistakable darker-lime raisin spots embedded in the crumb"
+        ],
+        [
+          "red-bean-bun",
+          "a round steamed bun torn in half revealing a dense darker-lime red-bean paste filling"
+        ],
+        [
+          "mantou",
+          "two smooth plain Chinese steamed mantou buns, one squat rounded rectangular and one sliced open, no filling"
+        ],
+        [
+          "rice-ball",
+          "one triangular Japanese rice ball with rice grain texture and a dark forest-lime seaweed strip around its lower half"
+        ],
+        [
+          "potato",
+          "one round potato with small eyes and one cut potato half, no sprout"
+        ],
+        [
+          "pumpkin",
+          "a thick crescent pumpkin wedge with ribbed skin, hollow seed cavity and visible seeds"
+        ],
+        [
+          "nestum",
+          "a small bowl of fine instant cereal powder with a short measuring spoon, powder has very fine texture not rolled flakes"
+        ],
+        [
+          "weet-bix",
+          "two rectangular wholegrain breakfast wheat biscuits with visibly fibrous shredded-grain surface"
+        ],
+        [
+          "corn-flakes",
+          "a small bowl of large crisp curled corn flakes, thin broad irregular flakes not oats"
+        ],
+        [
+          "rice-cakes",
+          "three round puffed rice cakes stacked askew, airy bubbly individual grains clearly visible"
+        ],
+        [
+          "apple",
+          "one round apple with short stem and small leaf plus one crisp apple wedge"
+        ],
+        [
+          "orange",
+          "one orange with dimpled peel plus a cut half showing clear radial citrus segments"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nProvided image is STYLE REFERENCE ONLY. New matching sheet: THREE columns and FOUR rows, equal square cells, portrait 1536x2048 or larger, twelve separate icons. IMPORTANT objects must occupy ONLY 60% of each cell, generous 20% empty transparent border on EACH side, no icon may touch a cell edge. Invisible grid, no cell backgrounds, no text or numbers. Exact row-major subjects:\n1. two square raisin bread slices with several unmistakable darker-lime raisin spots embedded in the crumb\n2. a round steamed bun torn in half revealing a dense darker-lime red-bean paste filling\n3. two smooth plain Chinese steamed mantou buns, one squat rounded rectangular and one sliced open, no filling\n4. one triangular Japanese rice ball with rice grain texture and a dark forest-lime seaweed strip around its lower half\n5. one round potato with small eyes and one cut potato half, no sprout\n6. a thick crescent pumpkin wedge with ribbed skin, hollow seed cavity and visible seeds\n7. a small bowl of fine instant cereal powder with a short measuring spoon, powder has very fine texture not rolled flakes\n8. two rectangular wholegrain breakfast wheat biscuits with visibly fibrous shredded-grain surface\n9. a small bowl of large crisp curled corn flakes, thin broad irregular flakes not oats\n10. three round puffed rice cakes stacked askew, airy bubbly individual grains clearly visible\n11. one round apple with short stem and small leaf plus one crisp apple wedge\n12. one orange with dimpled peel plus a cut half showing clear radial citrus segments\nKeep reference's cohesive pale-lime sculpted icon family, clean simplified forms, not photorealistic, not multicolour. The distinct bread/cereal textures must be readable without text.",
+      "source": "work/food-icons/sheet-04.png",
+      "sha256": "2063a7f969aa926fdc7611bbc2083feabe5586defbd3b54689ae0aa5d5d00670"
+    },
+    {
+      "sheet": 5,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "pear",
+          "a pear with a narrow neck and broad rounded bottom, short stem and leaf, with one pear wedge"
+        ],
+        [
+          "mango",
+          "one oval mango and a scored mango cheek cut into a clearly raised checkerboard of cubes"
+        ],
+        [
+          "dates",
+          "three elongated wrinkled dates with a deeply grooved surface, one split showing a long pit"
+        ],
+        [
+          "dried-apricot",
+          "a small pile of flattened round dried apricot halves with shallow centre indentations, no pits or leaves"
+        ],
+        [
+          "popcorn",
+          "a small open snack bowl overflowing with distinct irregular popped corn puffs"
+        ],
+        [
+          "roasted-chickpeas",
+          "a small bowl of round roasted chickpeas, each pea with a small beak and groove"
+        ],
+        [
+          "granola",
+          "a small bowl of irregular crunchy granola clusters containing oat flakes and nuts, distinct chunky clusters"
+        ],
+        [
+          "cottage-cheese",
+          "a small open bowl of visibly lumpy moist cottage cheese curds with a spoon"
+        ],
+        [
+          "skyr",
+          "a tall cylindrical cultured-dairy tub with a partially peeled lid and dense smooth yogurt peak, no text"
+        ],
+        [
+          "kefir",
+          "a narrow-neck kefir bottle with round screw cap and a small drinking glass beside it, no letters"
+        ],
+        [
+          "tempeh",
+          "one rectangular block of tempeh plus two slices with densely packed visible soybean cross-sections"
+        ],
+        [
+          "ice",
+          "three clear translucent ice cubes with softly rounded edges and pale-lime highlights, no water puddle"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nThe input is STYLE REFERENCE ONLY. Generate a NEW matching contact sheet, THREE equal columns FOUR equal rows on a portrait canvas, exactly twelve separate icons. Match the reference restrained pale-lime matte forms and consistent soft studio light. Every icon centred in its own square cell with generous transparent empty spacing all around; no overlapping, no text, no backgrounds. Simplified yet recognisable at 48px. Exact row-major order:\n1. a pear with a narrow neck and broad rounded bottom, short stem and leaf, with one pear wedge\n2. one oval mango and a scored mango cheek cut into a clearly raised checkerboard of cubes\n3. three elongated wrinkled dates with a deeply grooved surface, one split showing a long pit\n4. a small pile of flattened round dried apricot halves with shallow centre indentations, no pits or leaves\n5. a small open snack bowl overflowing with distinct irregular popped corn puffs\n6. a small bowl of round roasted chickpeas, each pea with a small beak and groove\n7. a small bowl of irregular crunchy granola clusters containing oat flakes and nuts, distinct chunky clusters\n8. a small open bowl of visibly lumpy moist cottage cheese curds with a spoon\n9. a tall cylindrical cultured-dairy tub with a partially peeled lid and dense smooth yogurt peak, no text\n10. a narrow-neck kefir bottle with round screw cap and a small drinking glass beside it, no letters\n11. one rectangular block of tempeh plus two slices with densely packed visible soybean cross-sections\n12. three clear translucent ice cubes with softly rounded edges and pale-lime highlights, no water puddle\nDistinguish the irregular popcorn puffs, small beaked chickpeas and chunky granola; distinguish cottage cheese curds from smooth skyr and liquid kefir. Ice must be visible on dark UI with pale-lime edges.",
+      "source": "work/food-icons/sheet-05.png",
+      "sha256": "9c2d51bddc2abd1a59a1dc455ec05079239bbad0d3b40a802d74669cb0926e58"
+    },
+    {
+      "sheet": 6,
+      "columns": 3,
+      "rows": 2,
+      "subjects": [
+        [
+          "rice-cooked",
+          "a small bowl heaped with fluffy cooked white rice with clearly visible individual rice grains"
+        ],
+        [
+          "greek-yogurt",
+          "a wide low yogurt bowl holding thick strained Greek yogurt with a prominent dense swirl and a spoon"
+        ],
+        [
+          "milo-drink",
+          "a ceramic mug filled with smooth hot malt drink, a subtle curl of steam, no letters"
+        ],
+        [
+          "milo-crackers",
+          "one ceramic mug filled with hot malt drink beside a neatly arranged fan of four square perforated cream crackers"
+        ],
+        [
+          "red-bean-bun",
+          "a round white Chinese steamed bean-paste bun split into two halves. Interior is dense SMOOTH uniform dark-lime bean PASTE, absolutely NO individual beans, no spheres, no peas, no whole seeds. Smooth paste filling with a soft porous steamed-bread shell"
+        ],
+        [
+          "pantry-jar",
+          "a simple closed squat kitchen storage jar with a broad screw lid and a small blank inset label, no lettering"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nUse the provided image as STYLE REFERENCE ONLY. Create a NEW matching contact sheet, exactly THREE equal columns and TWO equal rows, landscape 1536x1024 or larger. Each of SIX icons centred in a square cell and fully visible with wide transparent margins. Nothing overlaps or touches neighboring icons. No text, no drawn borders, no background. Reference's pale-lime matte sculpted material, upper-left studio light, consistent front three-quarter viewpoint. Exact row-major order:\n1. a small bowl heaped with fluffy cooked white rice with clearly visible individual rice grains\n2. a wide low yogurt bowl holding thick strained Greek yogurt with a prominent dense swirl and a spoon\n3. a ceramic mug filled with smooth hot malt drink, a subtle curl of steam, no letters\n4. one ceramic mug filled with hot malt drink beside a neatly arranged fan of four square perforated cream crackers\n5. a round white Chinese steamed bean-paste bun split into two halves. Interior is dense SMOOTH uniform dark-lime bean PASTE, absolutely NO individual beans, no spheres, no peas, no whole seeds. Smooth paste filling with a soft porous steamed-bread shell\n6. a simple closed squat kitchen storage jar with a broad screw lid and a small blank inset label, no lettering\nHot drinks are opaque creamy malt beverage in a mug, not coffee beans or coffee accessories. Bun filling must be smooth paste, not whole beans. All fully transparent outside each icon.",
+      "source": "work/food-icons/sheet-06.png",
+      "sha256": "6fa0dfcce2e37a178029f7ab3145dcba3c0b184d1b5fbd0430753e3b047f117f"
+    },
+    {
+      "sheet": 7,
+      "columns": 1,
+      "rows": 1,
+      "subjects": [
+        [
+          "side-aglio",
+          "a shallow rectangular food tray with a nest of plain spaghetti and clearly visible thin garlic slices"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nONE SINGLE ISOLATED FOOD ICON, square canvas. Subject: a shallow rectangular food tray with a nest of plain spaghetti and clearly visible thin garlic slices. Match the reference exactly in material, palette, viewpoint and soft light. Whole container fully visible, centred, maximum75% canvas width/height with transparent margin. No other dishes or objects, no backdrop, no floating crumbs outside container. This is one standalone icon, NOT a contact sheet.",
+      "source": "work/food-icons/sheet-07.png",
+      "sha256": "5716915a854c04ffde755a4ae209944032d7c7654d97eb88beb6bca2f21a7c45"
+    },
+    {
+      "sheet": 8,
+      "columns": 1,
+      "rows": 1,
+      "subjects": [
+        [
+          "side-sweet",
+          "a shallow rectangular food tray filled with roasted sweet potato wedges"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nONE SINGLE ISOLATED FOOD ICON, square canvas. Subject: a shallow rectangular food tray filled with roasted sweet potato wedges. Match the reference exactly in material, palette, viewpoint and soft light. Whole container fully visible, centred, maximum75% canvas width/height with transparent margin. No other dishes or objects, no backdrop, no floating crumbs outside container. This is one standalone icon, NOT a contact sheet.",
+      "source": "work/food-icons/sheet-08.png",
+      "sha256": "28ce79aa7f9c94a1a3557c95f402feb7a4bf5c7eff5463d000dd96919670ea7b"
+    },
+    {
+      "sheet": 9,
+      "columns": 1,
+      "rows": 1,
+      "subjects": [
+        [
+          "side-us",
+          "a shallow rectangular food tray filled with roasted round potato halves with scored tops"
+        ]
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: BulkPlan mobile food identification icons. Create one cohesive premium matte sculpted 2.5D icon family. Restrained light lime-green monochrome palette: main body #CFEA8A, light planes #E2F2B8, medium #A9C568, shadows #708C40. These are food-shaped pictograms, NOT natural multicolour food illustrations. Smooth matte enamel/clay forms with subtle clean tonal shading, crisp readable silhouettes, rounded refined edges, consistent soft upper-left light, front three-quarter view. Readable as app icons at 48px: simplify tiny details, strong recognisable object geometry. No black outlines, no neon, no gradients in the background, no text, no letters, no brand logos, no labels, no numbers, no borders, no drop-shadow ground plane. Truly transparent alpha background everywhere outside the objects, NOT checkerboard painted into image. Every food subject stays fully intact with ample transparent margin. All icons equal visual weight and scale.\nONE SINGLE ISOLATED FOOD ICON, square canvas. Subject: a shallow rectangular food tray filled with roasted round potato halves with scored tops. Match the reference exactly in material, palette, viewpoint and soft light. Whole container fully visible, centred, maximum75% canvas width/height with transparent margin. No other dishes or objects, no backdrop, no floating crumbs outside container. This is one standalone icon, NOT a contact sheet.",
+      "source": "work/food-icons/sheet-09.png",
+      "sha256": "a41d3d666331c59735b68df6573a623d97435ff4ae1cb93c9b145724803e75c2"
+    }
+  ],
+  "assets": [
+    {
+      "id": "milk",
+      "sheet": 1,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        77,
+        36,
+        214,
+        326
+      ],
+      "bytes": 9742,
+      "transparentPixels": 37782,
+      "sourceDescription": "a whole-milk carton with folded top and a small milk-drop emblem"
+    },
+    {
+      "id": "banana",
+      "sheet": 1,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        409,
+        53,
+        267,
+        307
+      ],
+      "bytes": 20546,
+      "transparentPixels": 39042,
+      "sourceDescription": "a partly peeled curved banana with three unmistakable peel flaps"
+    },
+    {
+      "id": "whey",
+      "sheet": 1,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        773,
+        51,
+        300,
+        315
+      ],
+      "bytes": 13092,
+      "transparentPixels": 32608,
+      "sourceDescription": "a wide whey-protein tub with a scoop of powder leaning beside it, no lettering"
+    },
+    {
+      "id": "oats",
+      "sheet": 1,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        32,
+        438,
+        303,
+        248
+      ],
+      "bytes": 18976,
+      "transparentPixels": 35081,
+      "sourceDescription": "a shallow bowl filled with clearly visible flat rolled oat flakes"
+    },
+    {
+      "id": "peanut",
+      "sheet": 1,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        381,
+        406,
+        315,
+        298
+      ],
+      "bytes": 21218,
+      "transparentPixels": 32723,
+      "sourceDescription": "an open peanut-butter jar with a small spoon carrying a thick smooth swirl and one peanut shell"
+    },
+    {
+      "id": "pineapple",
+      "sheet": 1,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        794,
+        384,
+        262,
+        331
+      ],
+      "bytes": 21478,
+      "transparentPixels": 37231,
+      "sourceDescription": "a pineapple with a spiky crown and one triangular cut wedge"
+    },
+    {
+      "id": "blueberry",
+      "sheet": 1,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        37,
+        774,
+        294,
+        260
+      ],
+      "bytes": 17342,
+      "transparentPixels": 36664,
+      "sourceDescription": "five blueberries with visible five-point crown indentations"
+    },
+    {
+      "id": "grapes",
+      "sheet": 1,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        423,
+        734,
+        261,
+        319
+      ],
+      "bytes": 22116,
+      "transparentPixels": 36728,
+      "sourceDescription": "a compact hanging bunch of round grapes with a curling stem and one leaf"
+    },
+    {
+      "id": "almonds",
+      "sheet": 1,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        782,
+        783,
+        268,
+        242
+      ],
+      "bytes": 18096,
+      "transparentPixels": 34490,
+      "sourceDescription": "three pointed ridged almond kernels"
+    },
+    {
+      "id": "yogurt",
+      "sheet": 1,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        52,
+        1082,
+        290,
+        320
+      ],
+      "bytes": 17966,
+      "transparentPixels": 35351,
+      "sourceDescription": "a short yogurt pot, foil lid partly peeled back and a small spoon"
+    },
+    {
+      "id": "chocolate",
+      "sheet": 1,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        397,
+        1085,
+        281,
+        326
+      ],
+      "bytes": 17310,
+      "transparentPixels": 37082,
+      "sourceDescription": "a diagonally angled chocolate bar with a 2-by-3 grid of raised chocolate squares"
+    },
+    {
+      "id": "milo",
+      "sheet": 1,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        770,
+        1082,
+        290,
+        316
+      ],
+      "bytes": 13770,
+      "transparentPixels": 31768,
+      "sourceDescription": "a squat cylindrical malt powder tin with an open lid and a small mound of fine powder, no lettering"
+    },
+    {
+      "id": "chicken-box",
+      "sheet": 2,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        32,
+        84,
+        349,
+        275
+      ],
+      "bytes": 15962,
+      "transparentPixels": 39169,
+      "sourceDescription": "a rectangular meal-prep container filled with neatly sliced grilled chicken breast, clear open top, no sides"
+    },
+    {
+      "id": "rice",
+      "sheet": 2,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        392,
+        60,
+        319,
+        305
+      ],
+      "bytes": 18974,
+      "transparentPixels": 33914,
+      "sourceDescription": "an open sack of dry uncooked rice with a little mound of long grains spilling out"
+    },
+    {
+      "id": "white-bread",
+      "sheet": 2,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        741,
+        71,
+        313,
+        290
+      ],
+      "bytes": 15820,
+      "transparentPixels": 33607,
+      "sourceDescription": "two square white sandwich bread slices, smooth fine crumb and thin crust"
+    },
+    {
+      "id": "wholemeal",
+      "sheet": 2,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        38,
+        395,
+        321,
+        306
+      ],
+      "bytes": 21804,
+      "transparentPixels": 32425,
+      "sourceDescription": "two square wholemeal bread slices, visibly seeded grain-dotted crumb and darker lime crust"
+    },
+    {
+      "id": "sweet-potato",
+      "sheet": 2,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        390,
+        406,
+        312,
+        287
+      ],
+      "bytes": 13748,
+      "transparentPixels": 35145,
+      "sourceDescription": "one elongated sweet potato and one cut half revealing smooth dense flesh"
+    },
+    {
+      "id": "corn",
+      "sheet": 2,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        766,
+        388,
+        279,
+        328
+      ],
+      "bytes": 16188,
+      "transparentPixels": 39585,
+      "sourceDescription": "a corn cob with neatly arranged kernels, partially peeled husk"
+    },
+    {
+      "id": "raisins",
+      "sheet": 2,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        33,
+        776,
+        342,
+        254
+      ],
+      "bytes": 18760,
+      "transparentPixels": 42123,
+      "sourceDescription": "a small pile of irregular deeply wrinkled raisins, no leaves"
+    },
+    {
+      "id": "soy-milk",
+      "sheet": 2,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        430,
+        726,
+        271,
+        310
+      ],
+      "bytes": 12564,
+      "transparentPixels": 36243,
+      "sourceDescription": "a soy drink carton with a soybean-shaped emblem and three loose soybeans beside it, no letters"
+    },
+    {
+      "id": "cheese",
+      "sheet": 2,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        754,
+        764,
+        293,
+        268
+      ],
+      "bytes": 12184,
+      "transparentPixels": 32252,
+      "sourceDescription": "a triangular cheese wedge with distinct round holes"
+    },
+    {
+      "id": "nuts",
+      "sheet": 2,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        35,
+        1094,
+        324,
+        270
+      ],
+      "bytes": 17720,
+      "transparentPixels": 36987,
+      "sourceDescription": "a small mixed group of a curved cashew, a ridged walnut half and almonds"
+    },
+    {
+      "id": "choco-bun",
+      "sheet": 2,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        403,
+        1089,
+        307,
+        287
+      ],
+      "bytes": 15204,
+      "transparentPixels": 30540,
+      "sourceDescription": "a soft oval cream bun split open to show a thick darker-lime chocolate cream filling"
+    },
+    {
+      "id": "crackers",
+      "sheet": 2,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        749,
+        1082,
+        310,
+        310
+      ],
+      "bytes": 15764,
+      "transparentPixels": 32419,
+      "sourceDescription": "three stacked square cream crackers with scalloped edges and a regular grid of pinholes"
+    },
+    {
+      "id": "condensed-milk",
+      "sheet": 3,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        57,
+        46,
+        307,
+        336
+      ],
+      "bytes": 15832,
+      "transparentPixels": 38966,
+      "sourceDescription": "an opened short tin can of thick condensed milk, a spoon lifting a viscous ribbon"
+    },
+    {
+      "id": "maggi-curry",
+      "sheet": 3,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        372,
+        47,
+        367,
+        336
+      ],
+      "bytes": 17730,
+      "transparentPixels": 38674,
+      "sourceDescription": "an unbranded open instant noodle packet leaning behind a shallow bowl of curly curry noodles, no letters"
+    },
+    {
+      "id": "mamee-chicken",
+      "sheet": 3,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        787,
+        53,
+        255,
+        328
+      ],
+      "bytes": 12690,
+      "transparentPixels": 39965,
+      "sourceDescription": "a tall tapered instant-noodle paper cup with half-peeled foil lid, visible curly noodles and small chicken pieces, no letters"
+    },
+    {
+      "id": "side-tomato",
+      "sheet": 3,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        12,
+        768,
+        363,
+        281
+      ],
+      "bytes": 16220,
+      "transparentPixels": 40327,
+      "sourceDescription": "a shallow rectangular food tray filled with spiral fusilli pasta coated in thick darker-lime tomato sauce with one tomato wedge"
+    },
+    {
+      "id": "side-veg",
+      "sheet": 3,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        375,
+        768,
+        364,
+        285
+      ],
+      "bytes": 17422,
+      "transparentPixels": 39900,
+      "sourceDescription": "a shallow rectangular food tray filled with broccoli florets, carrot rounds and vegetable strips"
+    },
+    {
+      "id": "side-mushroom",
+      "sheet": 3,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        744,
+        779,
+        330,
+        271
+      ],
+      "bytes": 14544,
+      "transparentPixels": 36237,
+      "sourceDescription": "a low round soup bowl filled with creamy mushroom soup and several distinct sliced mushroom caps"
+    },
+    {
+      "id": "wrap",
+      "sheet": 3,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        21,
+        1103,
+        359,
+        288
+      ],
+      "bytes": 17588,
+      "transparentPixels": 39149,
+      "sourceDescription": "a thin round wholemeal tortilla flatbread with a second one loosely rolled behind it"
+    },
+    {
+      "id": "pita",
+      "sheet": 3,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        393,
+        1110,
+        327,
+        271
+      ],
+      "bytes": 17620,
+      "transparentPixels": 36299,
+      "sourceDescription": "a round pita bread cut in half, showing the hollow pocket clearly"
+    },
+    {
+      "id": "english-muffin",
+      "sheet": 3,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        764,
+        1100,
+        298,
+        297
+      ],
+      "bytes": 21320,
+      "transparentPixels": 30226,
+      "sourceDescription": "a round English muffin split into two horizontal halves showing its porous airy crumb"
+    },
+    {
+      "id": "raisin-bread",
+      "sheet": 4,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        37,
+        65,
+        321,
+        284
+      ],
+      "bytes": 19964,
+      "transparentPixels": 33277,
+      "sourceDescription": "two square raisin bread slices with several unmistakable darker-lime raisin spots embedded in the crumb"
+    },
+    {
+      "id": "mantou",
+      "sheet": 4,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        748,
+        80,
+        317,
+        272
+      ],
+      "bytes": 13254,
+      "transparentPixels": 37236,
+      "sourceDescription": "two smooth plain Chinese steamed mantou buns, one squat rounded rectangular and one sliced open, no filling"
+    },
+    {
+      "id": "rice-ball",
+      "sheet": 4,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        39,
+        407,
+        299,
+        283
+      ],
+      "bytes": 18562,
+      "transparentPixels": 34204,
+      "sourceDescription": "one triangular Japanese rice ball with rice grain texture and a dark forest-lime seaweed strip around its lower half"
+    },
+    {
+      "id": "potato",
+      "sheet": 4,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        378,
+        412,
+        321,
+        275
+      ],
+      "bytes": 14536,
+      "transparentPixels": 36008,
+      "sourceDescription": "one round potato with small eyes and one cut potato half, no sprout"
+    },
+    {
+      "id": "pumpkin",
+      "sheet": 4,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        745,
+        411,
+        315,
+        273
+      ],
+      "bytes": 16018,
+      "transparentPixels": 34388,
+      "sourceDescription": "a thick crescent pumpkin wedge with ribbed skin, hollow seed cavity and visible seeds"
+    },
+    {
+      "id": "nestum",
+      "sheet": 4,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        32,
+        759,
+        315,
+        271
+      ],
+      "bytes": 16478,
+      "transparentPixels": 36852,
+      "sourceDescription": "a small bowl of fine instant cereal powder with a short measuring spoon, powder has very fine texture not rolled flakes"
+    },
+    {
+      "id": "weet-bix",
+      "sheet": 4,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        377,
+        742,
+        329,
+        286
+      ],
+      "bytes": 22426,
+      "transparentPixels": 38709,
+      "sourceDescription": "two rectangular wholegrain breakfast wheat biscuits with visibly fibrous shredded-grain surface"
+    },
+    {
+      "id": "corn-flakes",
+      "sheet": 4,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        745,
+        750,
+        318,
+        271
+      ],
+      "bytes": 16644,
+      "transparentPixels": 35450,
+      "sourceDescription": "a small bowl of large crisp curled corn flakes, thin broad irregular flakes not oats"
+    },
+    {
+      "id": "rice-cakes",
+      "sheet": 4,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        38,
+        1083,
+        301,
+        289
+      ],
+      "bytes": 19792,
+      "transparentPixels": 28839,
+      "sourceDescription": "three round puffed rice cakes stacked askew, airy bubbly individual grains clearly visible"
+    },
+    {
+      "id": "apple",
+      "sheet": 4,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        392,
+        1067,
+        300,
+        314
+      ],
+      "bytes": 14384,
+      "transparentPixels": 33275,
+      "sourceDescription": "one round apple with short stem and small leaf plus one crisp apple wedge"
+    },
+    {
+      "id": "orange",
+      "sheet": 4,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        738,
+        1065,
+        327,
+        312
+      ],
+      "bytes": 18670,
+      "transparentPixels": 34407,
+      "sourceDescription": "one orange with dimpled peel plus a cut half showing clear radial citrus segments"
+    },
+    {
+      "id": "pear",
+      "sheet": 5,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        55,
+        52,
+        289,
+        316
+      ],
+      "bytes": 13456,
+      "transparentPixels": 37394,
+      "sourceDescription": "a pear with a narrow neck and broad rounded bottom, short stem and leaf, with one pear wedge"
+    },
+    {
+      "id": "mango",
+      "sheet": 5,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        393,
+        73,
+        304,
+        290
+      ],
+      "bytes": 16264,
+      "transparentPixels": 30982,
+      "sourceDescription": "one oval mango and a scored mango cheek cut into a clearly raised checkerboard of cubes"
+    },
+    {
+      "id": "dates",
+      "sheet": 5,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        764,
+        98,
+        283,
+        263
+      ],
+      "bytes": 18176,
+      "transparentPixels": 33508,
+      "sourceDescription": "three elongated wrinkled dates with a deeply grooved surface, one split showing a long pit"
+    },
+    {
+      "id": "dried-apricot",
+      "sheet": 5,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        44,
+        436,
+        307,
+        261
+      ],
+      "bytes": 14556,
+      "transparentPixels": 37125,
+      "sourceDescription": "a small pile of flattened round dried apricot halves with shallow centre indentations, no pits or leaves"
+    },
+    {
+      "id": "popcorn",
+      "sheet": 5,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        396,
+        404,
+        299,
+        308
+      ],
+      "bytes": 18720,
+      "transparentPixels": 31433,
+      "sourceDescription": "a small open snack bowl overflowing with distinct irregular popped corn puffs"
+    },
+    {
+      "id": "roasted-chickpeas",
+      "sheet": 5,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        747,
+        429,
+        308,
+        281
+      ],
+      "bytes": 15826,
+      "transparentPixels": 33563,
+      "sourceDescription": "a small bowl of round roasted chickpeas, each pea with a small beak and groove"
+    },
+    {
+      "id": "granola",
+      "sheet": 5,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        40,
+        747,
+        315,
+        292
+      ],
+      "bytes": 19152,
+      "transparentPixels": 32826,
+      "sourceDescription": "a small bowl of irregular crunchy granola clusters containing oat flakes and nuts, distinct chunky clusters"
+    },
+    {
+      "id": "cottage-cheese",
+      "sheet": 5,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        398,
+        746,
+        314,
+        291
+      ],
+      "bytes": 15506,
+      "transparentPixels": 37738,
+      "sourceDescription": "a small open bowl of visibly lumpy moist cottage cheese curds with a spoon"
+    },
+    {
+      "id": "skyr",
+      "sheet": 5,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        771,
+        733,
+        280,
+        313
+      ],
+      "bytes": 12168,
+      "transparentPixels": 34870,
+      "sourceDescription": "a tall cylindrical cultured-dairy tub with a partially peeled lid and dense smooth yogurt peak, no text"
+    },
+    {
+      "id": "kefir",
+      "sheet": 5,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        75,
+        1061,
+        275,
+        332
+      ],
+      "bytes": 12898,
+      "transparentPixels": 36623,
+      "sourceDescription": "a narrow-neck kefir bottle with round screw cap and a small drinking glass beside it, no letters"
+    },
+    {
+      "id": "tempeh",
+      "sheet": 5,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        399,
+        1093,
+        301,
+        297
+      ],
+      "bytes": 19048,
+      "transparentPixels": 29517,
+      "sourceDescription": "one rectangular block of tempeh plus two slices with densely packed visible soybean cross-sections"
+    },
+    {
+      "id": "ice",
+      "sheet": 5,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        755,
+        1098,
+        292,
+        279
+      ],
+      "bytes": 18654,
+      "transparentPixels": 32634,
+      "sourceDescription": "three clear translucent ice cubes with softly rounded edges and pale-lime highlights, no water puddle"
+    },
+    {
+      "id": "rice-cooked",
+      "sheet": 6,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        60,
+        80,
+        418,
+        378
+      ],
+      "bytes": 10226,
+      "transparentPixels": 35401,
+      "sourceDescription": "a small bowl heaped with fluffy cooked white rice with clearly visible individual rice grains"
+    },
+    {
+      "id": "greek-yogurt",
+      "sheet": 6,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        555,
+        95,
+        470,
+        370
+      ],
+      "bytes": 7852,
+      "transparentPixels": 41958,
+      "sourceDescription": "a wide low yogurt bowl holding thick strained Greek yogurt with a prominent dense swirl and a spoon"
+    },
+    {
+      "id": "milo-drink",
+      "sheet": 6,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        1103,
+        31,
+        404,
+        443
+      ],
+      "bytes": 8450,
+      "transparentPixels": 38542,
+      "sourceDescription": "a ceramic mug filled with smooth hot malt drink, a subtle curl of steam, no letters"
+    },
+    {
+      "id": "milo-crackers",
+      "sheet": 6,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        29,
+        488,
+        476,
+        493
+      ],
+      "bytes": 11778,
+      "transparentPixels": 38399,
+      "sourceDescription": "one ceramic mug filled with hot malt drink beside a neatly arranged fan of four square perforated cream crackers"
+    },
+    {
+      "id": "red-bean-bun",
+      "sheet": 6,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        535,
+        602,
+        489,
+        325
+      ],
+      "bytes": 9422,
+      "transparentPixels": 42201,
+      "sourceDescription": "a round white Chinese steamed bean-paste bun split into two halves. Interior is dense SMOOTH uniform dark-lime bean PASTE, absolutely NO individual beans, no spheres, no peas, no whole seeds. Smooth paste filling with a soft porous steamed-bread shell"
+    },
+    {
+      "id": "pantry-jar",
+      "sheet": 6,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        1092,
+        549,
+        370,
+        416
+      ],
+      "bytes": 6660,
+      "transparentPixels": 29281,
+      "sourceDescription": "a simple closed squat kitchen storage jar with a broad screw lid and a small blank inset label, no lettering"
+    },
+    {
+      "id": "side-aglio",
+      "sheet": 7,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        69,
+        325,
+        1116,
+        740
+      ],
+      "bytes": 10526,
+      "transparentPixels": 45324,
+      "sourceDescription": "a shallow rectangular food tray with a nest of plain spaghetti and clearly visible thin garlic slices"
+    },
+    {
+      "id": "side-sweet",
+      "sheet": 8,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        35,
+        263,
+        1196,
+        794
+      ],
+      "bytes": 9556,
+      "transparentPixels": 45847,
+      "sourceDescription": "a shallow rectangular food tray filled with roasted sweet potato wedges"
+    },
+    {
+      "id": "side-us",
+      "sheet": 9,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        78,
+        304,
+        1108,
+        757
+      ],
+      "bytes": 10434,
+      "transparentPixels": 44377,
+      "sourceDescription": "a shallow rectangular food tray filled with roasted round potato halves with scored tops"
+    }
+  ]
+}
