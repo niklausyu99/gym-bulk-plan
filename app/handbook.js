@@ -80,7 +80,7 @@ window.BulkHandbook = {
     },
     {
       "title": "餐盒与配菜",
-      "body": "完整餐盒由约160 g鸡胸和一份配菜组成。鸡胸肉在今日安排顶部独立记录；勾选已吃的第1份、第2份，需要时可加份。配菜单独勾选，也可以不配任何东西；不吃鸡胸时，另外安排鱼、蛋、豆腐或其他蛋白来源。鸡胸参考值约263 kcal、蛋白质48 g、碳水9 g、脂肪6.4 g。\n\n主食型配菜：Aglio Olio Pasta、Italian Tomato Pasta、Sweet Potato、US Potato。训练日至少一餐优先选择主食型。\n\n轻配菜：Mixed Vege、Mushroom Soup，适合换口味；需要时另加主食。\n\n不选Garlic Chickpea、Pumpkin Soup、Tomato Soup。Italian Tomato Pasta可以选。\n\n餐盒营养为估算，实际以包装标签为准。配菜单吃的数值，暂按整盒减去鸡胸参考值估算；不是独立的配菜营养标签。纤维未知时不按零计算。已吃记录保留当时的搭配和数值。"
+      "body": "完整餐盒由约160 g鸡胸和一份配菜组成。鸡胸肉在今日安排顶部独立记录；勾选已吃的第1份、第2份，需要时可加份。配菜单独勾选，也可以不配任何东西；不吃鸡胸时，可按实际份量选高蛋白酸奶、牛奶或无糖豆奶补充蛋白。鸡胸参考值约263 kcal、蛋白质48 g、碳水9 g、脂肪6.4 g。\n\n主食型配菜：Aglio Olio Pasta、Italian Tomato Pasta、Sweet Potato、US Potato。训练日至少一餐优先选择主食型。\n\n轻配菜：Mixed Vege、Mushroom Soup，适合换口味；需要时另加主食。\n\n不选Garlic Chickpea、Pumpkin Soup、Tomato Soup。Italian Tomato Pasta可以选。\n\n餐盒营养为估算，实际以包装标签为准。配菜单吃的数值，暂按整盒减去鸡胸参考值估算；不是独立的配菜营养标签。纤维未知时不按零计算。已吃记录保留当时的搭配和数值。"
     },
     {
       "title": "按当天情况安排",
