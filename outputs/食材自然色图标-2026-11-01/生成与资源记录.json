@@ -1,0 +1,1967 @@
+{
+  "version": "0.10.0",
+  "family": "natural-matte-v2",
+  "mode": "builtin-imagegen",
+  "model": "The built-in tool does not expose an exact model selector or model identifier.",
+  "transparentBackground": true,
+  "sourceAtlases": [
+    {
+      "sheet": 11,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "milk",
+          "natural color milk"
+        ],
+        [
+          "banana",
+          "natural color banana"
+        ],
+        [
+          "whey",
+          "natural color whey"
+        ],
+        [
+          "oats",
+          "natural color oats"
+        ],
+        [
+          "peanut",
+          "natural color peanut"
+        ],
+        [
+          "pineapple",
+          "natural color pineapple"
+        ],
+        [
+          "blueberry",
+          "natural color blueberry"
+        ],
+        [
+          "grapes",
+          "natural color grapes"
+        ],
+        [
+          "almonds",
+          "natural color almonds"
+        ],
+        [
+          "yogurt",
+          "natural color yogurt"
+        ],
+        [
+          "chocolate",
+          "natural color chocolate"
+        ],
+        [
+          "milo",
+          "natural color milo"
+        ]
+      ],
+      "prompt": "EDIT the supplied contact sheet. Change ONLY object surface/material colors from monochrome lime to believable NATURAL FOOD COLORS. Preserve the exact original subjects, 3-column grid, cell order, silhouettes, shapes, counts, sizes, viewing angle, matte sculpted 2.5D style and soft upper-left lighting. Each icon stays separate and complete with generous transparent margin. NO uniform green/yellow tint, no green ambient illumination. Neutral studio light and natural tonal shadows. Keep true transparent alpha background; the black preview is transparency, NOT a new black rectangle. Remove stray tiny fragments outside objects. No text, labels, logos, checkerboard, borders, new props, or painted backgrounds. Containers may be neutral ivory, cream or soft white; food should carry its own recognizable natural colors. Production assets for a dark gym app.\nFOUR rows THREE columns. Row1: milk carton white with muted blue trim and white milk-drop symbol; ripe banana yellow peel with pale cream fruit; whey tub neutral off-white with charcoal lid, cream protein powder and neutral measuring scoop. Row2: rolled oats beige in ivory bowl; peanut butter warm tan in clear glass jar, brown peanut shell, neutral wooden spoon; pineapple ochre-brown skin, natural dark-green crown and golden-yellow cut flesh. Row3: blueberries deep dusty blue-purple with pale waxy bloom; seedless green grapes translucent light green with natural dark green leaf and brown stem; almond kernels warm medium brown with fine darker ridges. Row4: yogurt white in an ivory pot, silver-white foil and neutral spoon; dark chocolate rich dark cocoa brown; Milo tin dark forest-green outside with pale label-free band, tan malt powder inside and neutral metallic lid.",
+      "path": "/Users/wyh/.codex/generated_images/01a18612-0641-7ce3-bb7a-6767953d929c/exec-799fa017-9527-4321-9592-f559b7e25aca.png"
+    },
+    {
+      "sheet": 12,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "chicken-box",
+          "natural color chicken-box"
+        ],
+        [
+          "rice",
+          "natural color rice"
+        ],
+        [
+          "white-bread",
+          "natural color white-bread"
+        ],
+        [
+          "wholemeal",
+          "natural color wholemeal"
+        ],
+        [
+          "sweet-potato",
+          "natural color sweet-potato"
+        ],
+        [
+          "corn",
+          "natural color corn"
+        ],
+        [
+          "raisins",
+          "natural color raisins"
+        ],
+        [
+          "soy-milk",
+          "natural color soy-milk"
+        ],
+        [
+          "cheese",
+          "natural color cheese"
+        ],
+        [
+          "nuts",
+          "natural color nuts"
+        ],
+        [
+          "choco-bun",
+          "natural color choco-bun"
+        ],
+        [
+          "crackers",
+          "natural color crackers"
+        ]
+      ],
+      "prompt": "EDIT the supplied contact sheet. Change ONLY object surface/material colors from monochrome lime to believable NATURAL FOOD COLORS. Preserve the exact original subjects, 3-column grid, cell order, silhouettes, shapes, counts, sizes, viewing angle, matte sculpted 2.5D style and soft upper-left lighting. Each icon stays separate and complete with generous transparent margin. NO uniform green/yellow tint, no green ambient illumination. Neutral studio light and natural tonal shadows. Keep true transparent alpha background; the black preview is transparency, NOT a new black rectangle. Remove stray tiny fragments outside objects. No text, labels, logos, checkerboard, borders, new props, or painted backgrounds. Containers may be neutral ivory, cream or soft white; food should carry its own recognizable natural colors. Production assets for a dark gym app.\nFOUR rows THREE columns. Row1: cooked sliced chicken golden-tan outside and cream-white interior in ivory tray; uncooked white rice off-white inside a natural beige burlap sack; white sandwich bread cream-white crumb and golden-brown crust. Row2: wholemeal bread light brown crumb and brown crust/seeds; sweet potato reddish-purple skin and orange cut flesh; corn warm yellow kernels with natural green husk. Row3: raisins deep brown-purple; soy drink carton cream with muted beige accents and pale tan soybeans; cheese wedge warm golden-yellow with darker golden holes. Row4: mixed nuts natural tan/brown walnut/cashew/almond tones; soft bun golden-brown crust and cream crumb with DARK BROWN chocolate cream filling; cream crackers pale golden beige with toasted brown edges.",
+      "path": "/Users/wyh/.codex/generated_images/01a18612-0641-7ce3-bb7a-6767953d929c/exec-17d991f8-f129-40e3-bc9b-42e1586b76ec.png"
+    },
+    {
+      "sheet": 13,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "condensed-milk",
+          "natural color condensed-milk"
+        ],
+        [
+          "maggi-curry",
+          "natural color maggi-curry"
+        ],
+        [
+          "mamee-chicken",
+          "natural color mamee-chicken"
+        ],
+        [
+          "side-aglio",
+          "natural color side-aglio"
+        ],
+        [
+          "side-sweet",
+          "natural color side-sweet"
+        ],
+        [
+          "side-us",
+          "natural color side-us"
+        ],
+        [
+          "side-tomato",
+          "natural color side-tomato"
+        ],
+        [
+          "side-veg",
+          "natural color side-veg"
+        ],
+        [
+          "side-mushroom",
+          "natural color side-mushroom"
+        ],
+        [
+          "wrap",
+          "natural color wrap"
+        ],
+        [
+          "pita",
+          "natural color pita"
+        ],
+        [
+          "english-muffin",
+          "natural color english-muffin"
+        ]
+      ],
+      "prompt": "EDIT the supplied contact sheet. Change ONLY object surface/material colors from monochrome lime to believable NATURAL FOOD COLORS. Preserve the exact original subjects, 3-column grid, cell order, silhouettes, shapes, counts, sizes, viewing angle, matte sculpted 2.5D style and soft upper-left lighting. Each icon stays separate and complete with generous transparent margin. NO uniform green/yellow tint, no green ambient illumination. Neutral studio light and natural tonal shadows. Keep true transparent alpha background; the black preview is transparency, NOT a new black rectangle. Remove stray tiny fragments outside objects. No text, labels, logos, checkerboard, borders, new props, or painted backgrounds. Containers may be neutral ivory, cream or soft white; food should carry its own recognizable natural colors. Production assets for a dark gym app.\nFOUR rows THREE columns. Row1: condensed milk pale ivory pouring from neutral silver tin; instant curry noodles golden noodles and amber broth in ivory bowl with a plain muted red-and-cream noodle packet behind; chicken cup noodles yellow noodles, pale cooked chicken and neutral cream paper cup with white foil. Row2: aglio olio spaghetti pale golden pasta and ivory garlic in light cream tray; roasted sweet potato wedges orange flesh with reddish brown skin in light cream tray; roasted potato halves golden flesh with tan skin in light cream tray. Row3: spiral tomato pasta warm tomato red sauce, beige pasta and fresh red tomato wedge in ivory tray; broccoli natural dark green, carrots orange, vegetable strips green in cream tray; creamy mushroom soup beige broth and natural taupe mushroom slices in ivory bowl. Row4: wholemeal tortilla tan flatbread; pita golden beige crust with cream interior; English muffin toasted golden surface and cream porous crumb.",
+      "path": "/Users/wyh/.codex/generated_images/01a18612-0641-7ce3-bb7a-6767953d929c/exec-e3a4423c-fc97-4b57-a4b4-d3d60620ef74.png",
+      "skipIds": [
+        "side-us"
+      ]
+    },
+    {
+      "sheet": 14,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "raisin-bread",
+          "natural color raisin-bread"
+        ],
+        [
+          "red-bean-bun",
+          "natural color red-bean-bun"
+        ],
+        [
+          "mantou",
+          "natural color mantou"
+        ],
+        [
+          "rice-ball",
+          "natural color rice-ball"
+        ],
+        [
+          "potato",
+          "natural color potato"
+        ],
+        [
+          "pumpkin",
+          "natural color pumpkin"
+        ],
+        [
+          "nestum",
+          "natural color nestum"
+        ],
+        [
+          "weet-bix",
+          "natural color weet-bix"
+        ],
+        [
+          "corn-flakes",
+          "natural color corn-flakes"
+        ],
+        [
+          "rice-cakes",
+          "natural color rice-cakes"
+        ],
+        [
+          "apple",
+          "natural color apple"
+        ],
+        [
+          "orange",
+          "natural color orange"
+        ]
+      ],
+      "prompt": "EDIT the supplied contact sheet. Change ONLY object surface/material colors from monochrome lime to believable NATURAL FOOD COLORS. Preserve the exact original subjects, 3-column grid, cell order, silhouettes, shapes, counts, sizes, viewing angle, matte sculpted 2.5D style and soft upper-left lighting. Each icon stays separate and complete with generous transparent margin. NO uniform green/yellow tint, no green ambient illumination. Neutral studio light and natural tonal shadows. Keep true transparent alpha background; the black preview is transparency, NOT a new black rectangle. Remove stray tiny fragments outside objects. No text, labels, logos, checkerboard, borders, new props, or painted backgrounds. Containers may be neutral ivory, cream or soft white; food should carry its own recognizable natural colors. Production assets for a dark gym app.\nFOUR rows THREE columns. Row1: raisin bread cream crumb, brown crust and DARK BROWN raisins; steamed red-bean bun WHITE soft bread with dense smooth REDDISH DARK BROWN bean-paste filling, NO whole beans and NO green filling; plain mantou steamed buns WHITE with cream porous cut crumb. Row2: rice ball WHITE rice and very dark forest-green seaweed strip; potato tan brown skin and pale cream cut flesh; pumpkin wedge deep ORANGE flesh, dark green skin and cream seeds. Row3: fine instant cereal cream-beige powder in ivory bowl with neutral scoop; wholewheat breakfast biscuits tan/light brown fibrous grain texture; golden cornflakes in ivory bowl. Row4: puffed rice cakes pale off-white with toasted beige spots; APPLE natural RED skin and pale cream flesh with natural green leaf; ORANGE natural orange peel and orange juicy segmented cut half with natural green leaf.",
+      "path": "/Users/wyh/.codex/generated_images/01a18612-0641-7ce3-bb7a-6767953d929c/exec-1bcf1fc2-44a3-45c4-b384-a22b2f53da04.png"
+    },
+    {
+      "sheet": 15,
+      "columns": 3,
+      "rows": 4,
+      "subjects": [
+        [
+          "pear",
+          "natural color pear"
+        ],
+        [
+          "mango",
+          "natural color mango"
+        ],
+        [
+          "dates",
+          "natural color dates"
+        ],
+        [
+          "dried-apricot",
+          "natural color dried-apricot"
+        ],
+        [
+          "popcorn",
+          "natural color popcorn"
+        ],
+        [
+          "roasted-chickpeas",
+          "natural color roasted-chickpeas"
+        ],
+        [
+          "granola",
+          "natural color granola"
+        ],
+        [
+          "cottage-cheese",
+          "natural color cottage-cheese"
+        ],
+        [
+          "skyr",
+          "natural color skyr"
+        ],
+        [
+          "kefir",
+          "natural color kefir"
+        ],
+        [
+          "tempeh",
+          "natural color tempeh"
+        ],
+        [
+          "ice",
+          "natural color ice"
+        ]
+      ],
+      "prompt": "EDIT the supplied contact sheet. Change ONLY object surface/material colors from monochrome lime to believable NATURAL FOOD COLORS. Preserve the exact original subjects, 3-column grid, cell order, silhouettes, shapes, counts, sizes, viewing angle, matte sculpted 2.5D style and soft upper-left lighting. Each icon stays separate and complete with generous transparent margin. NO uniform green/yellow tint, no green ambient illumination. Neutral studio light and natural tonal shadows. Keep true transparent alpha background; the black preview is transparency, NOT a new black rectangle. Remove stray tiny fragments outside objects. No text, labels, logos, checkerboard, borders, new props, or painted backgrounds. Containers may be neutral ivory, cream or soft white; food should carry its own recognizable natural colors. Production assets for a dark gym app.\nFOUR rows THREE columns. Row1: pear natural yellow-green skin and cream-white cut flesh with brown seed, natural leaf; mango yellow-red skin and rich golden-orange cubed flesh; dates dark reddish-brown wrinkled flesh and tan stone. Row2: dried apricots amber orange; popcorn warm white/cream with tiny toasted golden patches in ivory bowl; roasted chickpeas golden tan/beige in ivory bowl. Row3: granola clusters medium honey-brown with natural beige oats and brown nuts in cream bowl; cottage cheese bright WHITE soft curds in ivory bowl with neutral spoon; skyr smooth WHITE yogurt in neutral white tub with a very subtle muted blue edge and silver-white foil. Row4: kefir WHITE fermented milk in clear glass bottle and clear glass, blue-white cap; tempeh light beige matrix with visible cream/yellow soybean cross sections; ice translucent CLEAR water ice with cool gray-blue edges, NEVER green.",
+      "path": "/Users/wyh/.codex/generated_images/01a18612-0641-7ce3-bb7a-6767953d929c/exec-e2f40b6f-42cf-49c5-8659-6fffa42077bc.png",
+      "skipIds": [
+        "kefir",
+        "tempeh"
+      ]
+    },
+    {
+      "sheet": 16,
+      "columns": 3,
+      "rows": 3,
+      "subjects": [
+        [
+          "rice-cooked",
+          "natural color rice-cooked"
+        ],
+        [
+          "greek-yogurt",
+          "natural color greek-yogurt"
+        ],
+        [
+          "milo-drink",
+          "natural color milo-drink"
+        ],
+        [
+          "milo-crackers",
+          "natural color milo-crackers"
+        ],
+        [
+          "pantry-jar",
+          "natural color pantry-jar"
+        ],
+        [
+          "honey",
+          "natural color honey"
+        ],
+        [
+          "minced-meat",
+          "natural color minced-meat"
+        ],
+        [
+          "garlic-mince",
+          "natural color garlic-mince"
+        ],
+        [
+          "egg-fried-rice",
+          "natural color egg-fried-rice"
+        ]
+      ],
+      "prompt": "EDIT the supplied contact sheet. Change ONLY object surface/material colors from monochrome lime to believable NATURAL FOOD COLORS. Preserve the exact original subjects, 3-column grid, cell order, silhouettes, shapes, counts, sizes, viewing angle, matte sculpted 2.5D style and soft upper-left lighting. Each icon stays separate and complete with generous transparent margin. NO uniform green/yellow tint, no green ambient illumination. Neutral studio light and natural tonal shadows. Keep true transparent alpha background; the black preview is transparency, NOT a new black rectangle. Remove stray tiny fragments outside objects. No text, labels, logos, checkerboard, borders, new props, or painted backgrounds. Containers may be neutral ivory, cream or soft white; food should carry its own recognizable natural colors. Production assets for a dark gym app.\nTHREE rows THREE columns, exactly NINE icons. Row1: cooked WHITE rice in neutral ivory bowl; strained Greek yogurt creamy WHITE in ivory bowl with neutral spoon; hot MILO malt drink cocoa BROWN in neutral ivory mug with white steam. Row2: hot brown malt drink in ivory mug plus GOLDEN BEIGE cream crackers; generic kitchen jar clear neutral GLASS with charcoal-gray lid and blank CREAM label; HONEY rich GOLDEN AMBER inside transparent glass jar with natural warm wooden dipper and golden honey droplet. Row3: RAW minced PORK natural soft PINK-RED with small WHITE fat flecks in neutral light-cream tray, no green raw meat; COOKED minced pork warm golden BROWN with ivory garlic slices in ivory bowl, no green meat; egg fried rice cream-white rice grains with YELLOW scrambled egg pieces in ivory bowl.",
+      "path": "/Users/wyh/.codex/generated_images/01a18612-0641-7ce3-bb7a-6767953d929c/exec-1152a5d5-2d58-466e-9ad5-a906b1cca153.png"
+    },
+    {
+      "sheet": 17,
+      "columns": 2,
+      "rows": 2,
+      "subjects": [
+        [
+          "side-us",
+          "roasted potatoes"
+        ],
+        [
+          "kefir",
+          "white kefir in clear glass"
+        ],
+        [
+          "tempeh",
+          "natural beige soy tempeh"
+        ]
+      ],
+      "prompt": "Edit this source image into NATURAL COLOR food icons. Keep the exact 2x2 positions with THREE icons and the bottom-right cell EMPTY transparent. Preserve object silhouettes, quantities, matte sculpted style, view angle and upper-left light. IMPORTANT reduce each complete icon to occupy ONLY65% of its cell, with generous transparent margins on every side. Do not crop any bowl, glass base, tray corner or tempeh slice. Top left: roasted potato halves, golden-yellow flesh, tan brown skin, cream-white tray. Top right: kefir WHITE milk in a CLEAR GLASS bottle and clear glass, cool pale-blue cap. Bottom left: tempeh light-beige/cream matrix, pale yellow soybean cross-sections. Bottom right remains EMPTY. No green tint on food or containers. No text, no labels, no new items. Pure transparent alpha background, no floor or painted shadows outside object. Neutral soft light and natural gentle shading, premium coherent food icon set. This is a precise recolor and uncropped reframing.",
+      "path": "/Users/wyh/.codex/generated_images/01a18612-0641-7ce3-bb7a-6767953d929c/exec-78cf8ffb-1f93-46b6-851b-7d76f3e6f439.png"
+    }
+  ],
+  "selection": {
+    "count": 69,
+    "totalBytes": 1147400,
+    "replacedClippedCandidates": [
+      "side-us",
+      "kefir",
+      "tempeh"
+    ]
+  },
+  "cropChecks": [
+    {
+      "id": "milk",
+      "sheet": 11,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        78,
+        27,
+        210,
+        316
+      ],
+      "bytes": 8728,
+      "transparentPixels": 38295,
+      "sourceDescription": "natural color milk"
+    },
+    {
+      "id": "banana",
+      "sheet": 11,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        402,
+        25,
+        279,
+        321
+      ],
+      "bytes": 17180,
+      "transparentPixels": 41487,
+      "sourceDescription": "natural color banana"
+    },
+    {
+      "id": "whey",
+      "sheet": 11,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        761,
+        26,
+        307,
+        324
+      ],
+      "bytes": 11118,
+      "transparentPixels": 33347,
+      "sourceDescription": "natural color whey"
+    },
+    {
+      "id": "oats",
+      "sheet": 11,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        29,
+        422,
+        318,
+        265
+      ],
+      "bytes": 17958,
+      "transparentPixels": 35290,
+      "sourceDescription": "natural color oats"
+    },
+    {
+      "id": "peanut",
+      "sheet": 11,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        392,
+        401,
+        322,
+        308
+      ],
+      "bytes": 18036,
+      "transparentPixels": 33934,
+      "sourceDescription": "natural color peanut"
+    },
+    {
+      "id": "pineapple",
+      "sheet": 11,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        786,
+        387,
+        269,
+        330
+      ],
+      "bytes": 22260,
+      "transparentPixels": 37994,
+      "sourceDescription": "natural color pineapple"
+    },
+    {
+      "id": "blueberry",
+      "sheet": 11,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        26,
+        766,
+        329,
+        286
+      ],
+      "bytes": 15452,
+      "transparentPixels": 39396,
+      "sourceDescription": "natural color blueberry"
+    },
+    {
+      "id": "grapes",
+      "sheet": 11,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        410,
+        750,
+        271,
+        330
+      ],
+      "bytes": 17534,
+      "transparentPixels": 39107,
+      "sourceDescription": "natural color grapes"
+    },
+    {
+      "id": "almonds",
+      "sheet": 11,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        759,
+        766,
+        317,
+        287
+      ],
+      "bytes": 18608,
+      "transparentPixels": 35630,
+      "sourceDescription": "natural color almonds"
+    },
+    {
+      "id": "yogurt",
+      "sheet": 11,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        36,
+        1082,
+        296,
+        334
+      ],
+      "bytes": 14086,
+      "transparentPixels": 38682,
+      "sourceDescription": "natural color yogurt"
+    },
+    {
+      "id": "chocolate",
+      "sheet": 11,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        397,
+        1101,
+        280,
+        316
+      ],
+      "bytes": 10156,
+      "transparentPixels": 41274,
+      "sourceDescription": "natural color chocolate"
+    },
+    {
+      "id": "milo",
+      "sheet": 11,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        766,
+        1096,
+        297,
+        318
+      ],
+      "bytes": 12978,
+      "transparentPixels": 31427,
+      "sourceDescription": "natural color milo"
+    },
+    {
+      "id": "chicken-box",
+      "sheet": 12,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        20,
+        62,
+        328,
+        259
+      ],
+      "bytes": 15578,
+      "transparentPixels": 40031,
+      "sourceDescription": "natural color chicken-box"
+    },
+    {
+      "id": "rice",
+      "sheet": 12,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        395,
+        33,
+        320,
+        312
+      ],
+      "bytes": 21394,
+      "transparentPixels": 33732,
+      "sourceDescription": "natural color rice"
+    },
+    {
+      "id": "white-bread",
+      "sheet": 12,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        752,
+        41,
+        327,
+        300
+      ],
+      "bytes": 18520,
+      "transparentPixels": 34119,
+      "sourceDescription": "natural color white-bread"
+    },
+    {
+      "id": "wholemeal",
+      "sheet": 12,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        22,
+        398,
+        324,
+        315
+      ],
+      "bytes": 23704,
+      "transparentPixels": 31905,
+      "sourceDescription": "natural color wholemeal"
+    },
+    {
+      "id": "sweet-potato",
+      "sheet": 12,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        387,
+        404,
+        333,
+        305
+      ],
+      "bytes": 15188,
+      "transparentPixels": 35898,
+      "sourceDescription": "natural color sweet-potato"
+    },
+    {
+      "id": "corn",
+      "sheet": 12,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        774,
+        391,
+        285,
+        333
+      ],
+      "bytes": 16856,
+      "transparentPixels": 39496,
+      "sourceDescription": "natural color corn"
+    },
+    {
+      "id": "raisins",
+      "sheet": 12,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        22,
+        789,
+        333,
+        243
+      ],
+      "bytes": 16976,
+      "transparentPixels": 42965,
+      "sourceDescription": "natural color raisins"
+    },
+    {
+      "id": "soy-milk",
+      "sheet": 12,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        416,
+        746,
+        280,
+        319
+      ],
+      "bytes": 11192,
+      "transparentPixels": 37171,
+      "sourceDescription": "natural color soy-milk"
+    },
+    {
+      "id": "cheese",
+      "sheet": 12,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        761,
+        764,
+        307,
+        288
+      ],
+      "bytes": 13700,
+      "transparentPixels": 32338,
+      "sourceDescription": "natural color cheese"
+    },
+    {
+      "id": "nuts",
+      "sheet": 12,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        18,
+        1110,
+        325,
+        281
+      ],
+      "bytes": 18910,
+      "transparentPixels": 35551,
+      "sourceDescription": "natural color nuts"
+    },
+    {
+      "id": "choco-bun",
+      "sheet": 12,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        384,
+        1098,
+        335,
+        310
+      ],
+      "bytes": 16652,
+      "transparentPixels": 30813,
+      "sourceDescription": "natural color choco-bun"
+    },
+    {
+      "id": "crackers",
+      "sheet": 12,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        754,
+        1084,
+        321,
+        329
+      ],
+      "bytes": 17998,
+      "transparentPixels": 33241,
+      "sourceDescription": "natural color crackers"
+    },
+    {
+      "id": "condensed-milk",
+      "sheet": 13,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        37,
+        27,
+        297,
+        323
+      ],
+      "bytes": 13224,
+      "transparentPixels": 38961,
+      "sourceDescription": "natural color condensed-milk"
+    },
+    {
+      "id": "maggi-curry",
+      "sheet": 13,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        397,
+        38,
+        331,
+        307
+      ],
+      "bytes": 16800,
+      "transparentPixels": 39131,
+      "sourceDescription": "natural color maggi-curry"
+    },
+    {
+      "id": "mamee-chicken",
+      "sheet": 13,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        812,
+        27,
+        250,
+        324
+      ],
+      "bytes": 13054,
+      "transparentPixels": 39938,
+      "sourceDescription": "natural color mamee-chicken"
+    },
+    {
+      "id": "side-aglio",
+      "sheet": 13,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        21,
+        451,
+        328,
+        230
+      ],
+      "bytes": 16492,
+      "transparentPixels": 43017,
+      "sourceDescription": "natural color side-aglio"
+    },
+    {
+      "id": "side-sweet",
+      "sheet": 13,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        393,
+        450,
+        331,
+        235
+      ],
+      "bytes": 15754,
+      "transparentPixels": 43314,
+      "sourceDescription": "natural color side-sweet"
+    },
+    {
+      "id": "side-tomato",
+      "sheet": 13,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        18,
+        778,
+        336,
+        266
+      ],
+      "bytes": 19726,
+      "transparentPixels": 39302,
+      "sourceDescription": "natural color side-tomato"
+    },
+    {
+      "id": "side-veg",
+      "sheet": 13,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        392,
+        779,
+        330,
+        264
+      ],
+      "bytes": 19288,
+      "transparentPixels": 38875,
+      "sourceDescription": "natural color side-veg"
+    },
+    {
+      "id": "side-mushroom",
+      "sheet": 13,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        764,
+        777,
+        322,
+        268
+      ],
+      "bytes": 15428,
+      "transparentPixels": 35202,
+      "sourceDescription": "natural color side-mushroom"
+    },
+    {
+      "id": "wrap",
+      "sheet": 13,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        21,
+        1125,
+        331,
+        271
+      ],
+      "bytes": 20198,
+      "transparentPixels": 38179,
+      "sourceDescription": "natural color wrap"
+    },
+    {
+      "id": "pita",
+      "sheet": 13,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        396,
+        1118,
+        328,
+        278
+      ],
+      "bytes": 19490,
+      "transparentPixels": 35634,
+      "sourceDescription": "natural color pita"
+    },
+    {
+      "id": "english-muffin",
+      "sheet": 13,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        769,
+        1090,
+        317,
+        331
+      ],
+      "bytes": 23274,
+      "transparentPixels": 30350,
+      "sourceDescription": "natural color english-muffin"
+    },
+    {
+      "id": "raisin-bread",
+      "sheet": 14,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        26,
+        44,
+        316,
+        279
+      ],
+      "bytes": 20720,
+      "transparentPixels": 33490,
+      "sourceDescription": "natural color raisin-bread"
+    },
+    {
+      "id": "red-bean-bun",
+      "sheet": 14,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        395,
+        79,
+        317,
+        214
+      ],
+      "bytes": 13156,
+      "transparentPixels": 42363,
+      "sourceDescription": "natural color red-bean-bun"
+    },
+    {
+      "id": "mantou",
+      "sheet": 14,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        766,
+        48,
+        313,
+        271
+      ],
+      "bytes": 11576,
+      "transparentPixels": 37747,
+      "sourceDescription": "natural color mantou"
+    },
+    {
+      "id": "rice-ball",
+      "sheet": 14,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        27,
+        408,
+        315,
+        295
+      ],
+      "bytes": 17118,
+      "transparentPixels": 35556,
+      "sourceDescription": "natural color rice-ball"
+    },
+    {
+      "id": "potato",
+      "sheet": 14,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        396,
+        419,
+        315,
+        271
+      ],
+      "bytes": 12794,
+      "transparentPixels": 37228,
+      "sourceDescription": "natural color potato"
+    },
+    {
+      "id": "pumpkin",
+      "sheet": 14,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        765,
+        417,
+        314,
+        274
+      ],
+      "bytes": 16236,
+      "transparentPixels": 34860,
+      "sourceDescription": "natural color pumpkin"
+    },
+    {
+      "id": "nestum",
+      "sheet": 14,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        26,
+        788,
+        316,
+        276
+      ],
+      "bytes": 15692,
+      "transparentPixels": 37534,
+      "sourceDescription": "natural color nestum"
+    },
+    {
+      "id": "weet-bix",
+      "sheet": 14,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        396,
+        784,
+        315,
+        282
+      ],
+      "bytes": 20888,
+      "transparentPixels": 39546,
+      "sourceDescription": "natural color weet-bix"
+    },
+    {
+      "id": "corn-flakes",
+      "sheet": 14,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        763,
+        789,
+        316,
+        274
+      ],
+      "bytes": 15710,
+      "transparentPixels": 35691,
+      "sourceDescription": "natural color corn-flakes"
+    },
+    {
+      "id": "rice-cakes",
+      "sheet": 14,
+      "row": 4,
+      "column": 1,
+      "crop": [
+        29,
+        1098,
+        313,
+        303
+      ],
+      "bytes": 22082,
+      "transparentPixels": 28963,
+      "sourceDescription": "natural color rice-cakes"
+    },
+    {
+      "id": "apple",
+      "sheet": 14,
+      "row": 4,
+      "column": 2,
+      "crop": [
+        398,
+        1089,
+        305,
+        319
+      ],
+      "bytes": 17294,
+      "transparentPixels": 33731,
+      "sourceDescription": "natural color apple"
+    },
+    {
+      "id": "orange",
+      "sheet": 14,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        761,
+        1094,
+        320,
+        309
+      ],
+      "bytes": 19244,
+      "transparentPixels": 34299,
+      "sourceDescription": "natural color orange"
+    },
+    {
+      "id": "pear",
+      "sheet": 15,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        36,
+        25,
+        296,
+        321
+      ],
+      "bytes": 17452,
+      "transparentPixels": 37530,
+      "sourceDescription": "natural color pear"
+    },
+    {
+      "id": "mango",
+      "sheet": 15,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        391,
+        34,
+        320,
+        305
+      ],
+      "bytes": 17814,
+      "transparentPixels": 31385,
+      "sourceDescription": "natural color mango"
+    },
+    {
+      "id": "dates",
+      "sheet": 15,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        763,
+        37,
+        316,
+        298
+      ],
+      "bytes": 22956,
+      "transparentPixels": 33429,
+      "sourceDescription": "natural color dates"
+    },
+    {
+      "id": "dried-apricot",
+      "sheet": 15,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        22,
+        418,
+        324,
+        275
+      ],
+      "bytes": 18218,
+      "transparentPixels": 38288,
+      "sourceDescription": "natural color dried-apricot"
+    },
+    {
+      "id": "popcorn",
+      "sheet": 15,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        395,
+        398,
+        313,
+        315
+      ],
+      "bytes": 19716,
+      "transparentPixels": 31076,
+      "sourceDescription": "natural color popcorn"
+    },
+    {
+      "id": "roasted-chickpeas",
+      "sheet": 15,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        763,
+        411,
+        317,
+        289
+      ],
+      "bytes": 17432,
+      "transparentPixels": 34023,
+      "sourceDescription": "natural color roasted-chickpeas"
+    },
+    {
+      "id": "granola",
+      "sheet": 15,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        24,
+        779,
+        321,
+        297
+      ],
+      "bytes": 21868,
+      "transparentPixels": 32676,
+      "sourceDescription": "natural color granola"
+    },
+    {
+      "id": "cottage-cheese",
+      "sheet": 15,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        395,
+        777,
+        321,
+        299
+      ],
+      "bytes": 16410,
+      "transparentPixels": 37159,
+      "sourceDescription": "natural color cottage-cheese"
+    },
+    {
+      "id": "skyr",
+      "sheet": 15,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        780,
+        767,
+        283,
+        319
+      ],
+      "bytes": 11238,
+      "transparentPixels": 35610,
+      "sourceDescription": "natural color skyr"
+    },
+    {
+      "id": "ice",
+      "sheet": 15,
+      "row": 4,
+      "column": 3,
+      "crop": [
+        762,
+        1143,
+        317,
+        303
+      ],
+      "bytes": 21158,
+      "transparentPixels": 32889,
+      "sourceDescription": "natural color ice"
+    },
+    {
+      "id": "rice-cooked",
+      "sheet": 16,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        32,
+        47,
+        357,
+        322
+      ],
+      "bytes": 13846,
+      "transparentPixels": 35151,
+      "sourceDescription": "natural color rice-cooked"
+    },
+    {
+      "id": "greek-yogurt",
+      "sheet": 16,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        450,
+        68,
+        359,
+        282
+      ],
+      "bytes": 11872,
+      "transparentPixels": 41314,
+      "sourceDescription": "natural color greek-yogurt"
+    },
+    {
+      "id": "milo-drink",
+      "sheet": 16,
+      "row": 1,
+      "column": 3,
+      "crop": [
+        882,
+        32,
+        327,
+        356
+      ],
+      "bytes": 13068,
+      "transparentPixels": 37561,
+      "sourceDescription": "natural color milo-drink"
+    },
+    {
+      "id": "milo-crackers",
+      "sheet": 16,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        36,
+        448,
+        348,
+        360
+      ],
+      "bytes": 17880,
+      "transparentPixels": 37617,
+      "sourceDescription": "natural color milo-crackers"
+    },
+    {
+      "id": "pantry-jar",
+      "sheet": 16,
+      "row": 2,
+      "column": 2,
+      "crop": [
+        471,
+        448,
+        313,
+        358
+      ],
+      "bytes": 11812,
+      "transparentPixels": 29186,
+      "sourceDescription": "natural color pantry-jar"
+    },
+    {
+      "id": "honey",
+      "sheet": 16,
+      "row": 2,
+      "column": 3,
+      "crop": [
+        894,
+        449,
+        304,
+        358
+      ],
+      "bytes": 17234,
+      "transparentPixels": 36066,
+      "sourceDescription": "natural color honey"
+    },
+    {
+      "id": "minced-meat",
+      "sheet": 16,
+      "row": 3,
+      "column": 1,
+      "crop": [
+        31,
+        916,
+        359,
+        261
+      ],
+      "bytes": 14354,
+      "transparentPixels": 43784,
+      "sourceDescription": "natural color minced-meat"
+    },
+    {
+      "id": "garlic-mince",
+      "sheet": 16,
+      "row": 3,
+      "column": 2,
+      "crop": [
+        449,
+        900,
+        358,
+        292
+      ],
+      "bytes": 18516,
+      "transparentPixels": 36578,
+      "sourceDescription": "natural color garlic-mince"
+    },
+    {
+      "id": "egg-fried-rice",
+      "sheet": 16,
+      "row": 3,
+      "column": 3,
+      "crop": [
+        867,
+        903,
+        359,
+        286
+      ],
+      "bytes": 16308,
+      "transparentPixels": 37024,
+      "sourceDescription": "natural color egg-fried-rice"
+    },
+    {
+      "id": "side-us",
+      "sheet": 17,
+      "row": 1,
+      "column": 1,
+      "crop": [
+        72,
+        202,
+        569,
+        400
+      ],
+      "bytes": 13962,
+      "transparentPixels": 44066,
+      "sourceDescription": "roasted potatoes"
+    },
+    {
+      "id": "kefir",
+      "sheet": 17,
+      "row": 1,
+      "column": 2,
+      "crop": [
+        725,
+        97,
+        443,
+        537
+      ],
+      "bytes": 10136,
+      "transparentPixels": 37957,
+      "sourceDescription": "white kefir in clear glass"
+    },
+    {
+      "id": "tempeh",
+      "sheet": 17,
+      "row": 2,
+      "column": 1,
+      "crop": [
+        84,
+        699,
+        502,
+        493
+      ],
+      "bytes": 18150,
+      "transparentPixels": 30485,
+      "sourceDescription": "natural beige soy tempeh"
+    }
+  ],
+  "files": [
+    {
+      "id": "milk",
+      "src": "assets/food-icons-natural/milk.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 8728,
+      "sha256": "dc5f0ec3a786bcc1fb67829bcc7c5fe2ef4ca0dd45cc3bee15bffa2a2f51e49b"
+    },
+    {
+      "id": "banana",
+      "src": "assets/food-icons-natural/banana.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17180,
+      "sha256": "41185a7d8eb3f26d8cef335fff5b46af1cb1393a381b56df47931e293eea1f70"
+    },
+    {
+      "id": "whey",
+      "src": "assets/food-icons-natural/whey.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 11118,
+      "sha256": "787d4059aa168e40836c9925eef9db902d994e7f7b3a943972ce99a86d6f248c"
+    },
+    {
+      "id": "oats",
+      "src": "assets/food-icons-natural/oats.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17958,
+      "sha256": "22fc901b351dc6d24ae545c84dc072dc61c9dd6e595a16471e6667d3cb28f518"
+    },
+    {
+      "id": "peanut",
+      "src": "assets/food-icons-natural/peanut.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 18036,
+      "sha256": "72e5f53f4b7638f375f13e9d4c690f620fb8beb2bf12f6463c1fa7a45912c37e"
+    },
+    {
+      "id": "pineapple",
+      "src": "assets/food-icons-natural/pineapple.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 22260,
+      "sha256": "2a336e5db5a9b5653af489e827486580752501639259b1e57c88cb091217bc62"
+    },
+    {
+      "id": "blueberry",
+      "src": "assets/food-icons-natural/blueberry.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 15452,
+      "sha256": "8b89e5e5036eee08ce04c0213ee2b21660be7145c282c26a7a7ff46106ac76f5"
+    },
+    {
+      "id": "grapes",
+      "src": "assets/food-icons-natural/grapes.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17534,
+      "sha256": "37c2834fdbd3afb8ba5c1a43176eddb83e22be24d189913ea07fd07f1da1adb3"
+    },
+    {
+      "id": "almonds",
+      "src": "assets/food-icons-natural/almonds.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 18608,
+      "sha256": "733850d56a2b0976c05642810b85dc1d03857821d4c2a263e39f1cb5a1b639c6"
+    },
+    {
+      "id": "yogurt",
+      "src": "assets/food-icons-natural/yogurt.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 14086,
+      "sha256": "eccd332a012d205118370cbe4d85f1554cec267ddaf19661016c3b3f1d50e5fd"
+    },
+    {
+      "id": "chocolate",
+      "src": "assets/food-icons-natural/chocolate.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 10156,
+      "sha256": "ebd442b4b30f66888bd0a40a768b1086083145cab2c6ea0a59c7db299148ff58"
+    },
+    {
+      "id": "milo",
+      "src": "assets/food-icons-natural/milo.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 12978,
+      "sha256": "90634f547400e5ac10d3f3432313bf92b8a088b16d1d6d3b5045daaeb55c4bec"
+    },
+    {
+      "id": "chicken-box",
+      "src": "assets/food-icons-natural/chicken-box.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 15578,
+      "sha256": "8a3ebf65e89676827b67ed6cd06285144221c56cd73668b4e056351a7f52f933"
+    },
+    {
+      "id": "rice",
+      "src": "assets/food-icons-natural/rice.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 21394,
+      "sha256": "2b0e2124c8f079f578c234b9562d8c24656aa93f13724dd0c69aae52e3c4ec4d"
+    },
+    {
+      "id": "white-bread",
+      "src": "assets/food-icons-natural/white-bread.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 18520,
+      "sha256": "ccd0031e733e7b27142d544ef860ea9398c61a3c6e5345d128c647c454ec55ed"
+    },
+    {
+      "id": "wholemeal",
+      "src": "assets/food-icons-natural/wholemeal.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 23704,
+      "sha256": "0f6294aa63f05b1fb48e97ebc1a13c4fedaaeac3aa1f786a05dac55cf67106f8"
+    },
+    {
+      "id": "sweet-potato",
+      "src": "assets/food-icons-natural/sweet-potato.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 15188,
+      "sha256": "04437cc1cc067598c4f15f8ddbecdea4a8b995c2d76c13d29471045850ba367e"
+    },
+    {
+      "id": "corn",
+      "src": "assets/food-icons-natural/corn.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 16856,
+      "sha256": "5cefa0c4bc511dafea53c10f2f1a244db2453545c424f292b713cdd452937b4d"
+    },
+    {
+      "id": "raisins",
+      "src": "assets/food-icons-natural/raisins.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 16976,
+      "sha256": "0d1a64adf5032477eb55718d2058952b39be66db8bbc61371c78124d114d2d78"
+    },
+    {
+      "id": "soy-milk",
+      "src": "assets/food-icons-natural/soy-milk.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 11192,
+      "sha256": "a642902fb907570a2182515f3248177a0cb1050fd63854aa0a616b35e10e4356"
+    },
+    {
+      "id": "cheese",
+      "src": "assets/food-icons-natural/cheese.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 13700,
+      "sha256": "31122b73438982961db43d822918d02af13294b469b079130989b3e4847245e6"
+    },
+    {
+      "id": "nuts",
+      "src": "assets/food-icons-natural/nuts.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 18910,
+      "sha256": "78d2b67e84f91b18e5328205b4be19b1165c6de3b78f5e316d1a15b379313281"
+    },
+    {
+      "id": "choco-bun",
+      "src": "assets/food-icons-natural/choco-bun.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 16652,
+      "sha256": "00ccc1112b94da43beff093c33f204bf82250f29722f18018064b0c02e0c0d24"
+    },
+    {
+      "id": "crackers",
+      "src": "assets/food-icons-natural/crackers.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17998,
+      "sha256": "acdcfd28802dcfb34f05ff5cf8ef42fddef39c2b5b1cd90fd546bd48f5aa0ade"
+    },
+    {
+      "id": "condensed-milk",
+      "src": "assets/food-icons-natural/condensed-milk.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 13224,
+      "sha256": "9abf16677c4b2241dba51d58edb3bf2fedb1a222ed29227fc3e046cf62adfeea"
+    },
+    {
+      "id": "maggi-curry",
+      "src": "assets/food-icons-natural/maggi-curry.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 16800,
+      "sha256": "da6b2ebf8a6c5e51e18ffc229674d0a5ab97f5da7b2da07a6f858487c7ac9026"
+    },
+    {
+      "id": "mamee-chicken",
+      "src": "assets/food-icons-natural/mamee-chicken.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 13054,
+      "sha256": "36fe982cb267928007c1c6b8fafaa5f3cf92c0298e3a7e310868303e8b9ab8e5"
+    },
+    {
+      "id": "side-aglio",
+      "src": "assets/food-icons-natural/side-aglio.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 16492,
+      "sha256": "5df6abea52e3187dd6041640be76e1ca7f470f20362d2d8f3a803ba023681724"
+    },
+    {
+      "id": "side-sweet",
+      "src": "assets/food-icons-natural/side-sweet.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 15754,
+      "sha256": "82d70258ce8205e2f2af2188a1c9c78e48d6523d5d6374b6c83065411f05b002"
+    },
+    {
+      "id": "side-us",
+      "src": "assets/food-icons-natural/side-us.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 13962,
+      "sha256": "6b236c8e52e8c52ef519513c26b5617868c99ebd5ec328220a516d8da595cd6e"
+    },
+    {
+      "id": "side-tomato",
+      "src": "assets/food-icons-natural/side-tomato.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 19726,
+      "sha256": "d05ff1937151051e82f53d581c20c03c74272afafc0affc9be752a794f920f00"
+    },
+    {
+      "id": "side-veg",
+      "src": "assets/food-icons-natural/side-veg.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 19288,
+      "sha256": "63f22c26102a1c1e49c5c58705c197762ed208b0dd5d49803bdfe241539dfb56"
+    },
+    {
+      "id": "side-mushroom",
+      "src": "assets/food-icons-natural/side-mushroom.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 15428,
+      "sha256": "bceb508487b903a74517254530c1c7a64dcc7eed078f1129af935d3645a7e4cf"
+    },
+    {
+      "id": "wrap",
+      "src": "assets/food-icons-natural/wrap.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 20198,
+      "sha256": "d7ac1b98a8d14924be71adee09b5677efb47afe42dd06df9295328036ca3ab2a"
+    },
+    {
+      "id": "pita",
+      "src": "assets/food-icons-natural/pita.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 19490,
+      "sha256": "09d85d3658b76eceea4fad3d2aae3b0279cb5624ee095d1a9a20e8e64369e1b7"
+    },
+    {
+      "id": "english-muffin",
+      "src": "assets/food-icons-natural/english-muffin.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 23274,
+      "sha256": "6fa309f02b40f3cb24b45057d293b744eec68c2cc38aa1094d5e113ecef410b9"
+    },
+    {
+      "id": "raisin-bread",
+      "src": "assets/food-icons-natural/raisin-bread.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 20720,
+      "sha256": "c9ef4c1c8992eee345980901bc51dd284984bfdaf36f047718367186b2ec4ed6"
+    },
+    {
+      "id": "red-bean-bun",
+      "src": "assets/food-icons-natural/red-bean-bun.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 13156,
+      "sha256": "d43a3df3448251a0ffc035e5b80eb80b7f3922edfd88a1127f718bbb29732977"
+    },
+    {
+      "id": "mantou",
+      "src": "assets/food-icons-natural/mantou.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 11576,
+      "sha256": "8b4dd4106079697e2f39b8619da4084bf749fcd34b15cd44f5d9a624d12f5118"
+    },
+    {
+      "id": "rice-ball",
+      "src": "assets/food-icons-natural/rice-ball.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17118,
+      "sha256": "6d89702e019dcb91e0850c2361676fa66007ac84e7368068873f0cb9c335fd62"
+    },
+    {
+      "id": "potato",
+      "src": "assets/food-icons-natural/potato.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 12794,
+      "sha256": "0ae99df50115ecb0b044fcaa459c153bfa6da573ac2cac2a666f16811f517e7e"
+    },
+    {
+      "id": "pumpkin",
+      "src": "assets/food-icons-natural/pumpkin.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 16236,
+      "sha256": "b52173ba6f4178d7a11c4078b717be52b62555a5f753c98e6a2e8e1b8d2dea4a"
+    },
+    {
+      "id": "nestum",
+      "src": "assets/food-icons-natural/nestum.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 15692,
+      "sha256": "7f400fb996848c7eaa591009ace242282167af2ca2ad1a79cf5d6a4e10e28436"
+    },
+    {
+      "id": "weet-bix",
+      "src": "assets/food-icons-natural/weet-bix.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 20888,
+      "sha256": "a5c0b0216c3ff02d7ecb7c6bdc890b8a35ede2f55c097695c1e45a10cad824e0"
+    },
+    {
+      "id": "corn-flakes",
+      "src": "assets/food-icons-natural/corn-flakes.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 15710,
+      "sha256": "36bce7e7df86f279ebcd7fd27e00a96d84ea81b0f58ff8a5feceef5939c126c1"
+    },
+    {
+      "id": "rice-cakes",
+      "src": "assets/food-icons-natural/rice-cakes.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 22082,
+      "sha256": "77230dc94adeb6ce33d6d1c8369fec619db7ff11a49f053d03a398e0bb0efebe"
+    },
+    {
+      "id": "apple",
+      "src": "assets/food-icons-natural/apple.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17294,
+      "sha256": "53b2b3b63c5130257073d798e38396e7b0db08f92e558206d774f9c17207589d"
+    },
+    {
+      "id": "orange",
+      "src": "assets/food-icons-natural/orange.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 19244,
+      "sha256": "710a0fca877f99dab887f8cd69b662d4cf3e0549c61a1527c219e649aab0dc30"
+    },
+    {
+      "id": "pear",
+      "src": "assets/food-icons-natural/pear.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17452,
+      "sha256": "af07858bf77ecd09802af1eec69169a44b79406ede08c3c2d7a4fbc086c8aea2"
+    },
+    {
+      "id": "mango",
+      "src": "assets/food-icons-natural/mango.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17814,
+      "sha256": "94152cc68b4aca403902c0d457307100c505bb9fba03503d235cd519025517ff"
+    },
+    {
+      "id": "dates",
+      "src": "assets/food-icons-natural/dates.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 22956,
+      "sha256": "9faa1ed6d95bd3bf83fb537cc9da91653c864b38c9e8843b76a7b009a2d32505"
+    },
+    {
+      "id": "dried-apricot",
+      "src": "assets/food-icons-natural/dried-apricot.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 18218,
+      "sha256": "d318620bc46a5981512335729ce1f6b441ba7cf02e4e3f28b4b2fd8149230d3b"
+    },
+    {
+      "id": "popcorn",
+      "src": "assets/food-icons-natural/popcorn.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 19716,
+      "sha256": "d565ca06d1bbf48860a3d6d70aa1cd2bf0346d46b12ddc1ab0d78ed9da76c77b"
+    },
+    {
+      "id": "roasted-chickpeas",
+      "src": "assets/food-icons-natural/roasted-chickpeas.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17432,
+      "sha256": "bfc3a39d4c76dd3364df03cf1a1525c2fa62a967887f04a23a4ae1044ac1f029"
+    },
+    {
+      "id": "granola",
+      "src": "assets/food-icons-natural/granola.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 21868,
+      "sha256": "f4ac80886da361bbff1448330baf124b41a649b7b80e06d72b152db6f21fdb63"
+    },
+    {
+      "id": "cottage-cheese",
+      "src": "assets/food-icons-natural/cottage-cheese.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 16410,
+      "sha256": "e800e72e047ebdbab30a2decd62c3ad2a0916927139f467489a9d38b5f83744f"
+    },
+    {
+      "id": "skyr",
+      "src": "assets/food-icons-natural/skyr.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 11238,
+      "sha256": "f35cdf644ef1bb2644e0b7c29d12b0137d263dc96b3237b616d4cedcabbe6860"
+    },
+    {
+      "id": "kefir",
+      "src": "assets/food-icons-natural/kefir.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 10136,
+      "sha256": "7c858c3a7522f181524e4db4d0f8f13b3ea4e2a4e588dd040d038101958cc662"
+    },
+    {
+      "id": "tempeh",
+      "src": "assets/food-icons-natural/tempeh.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 18150,
+      "sha256": "8d8f45eb8db891c30c2e4e7d44a344371abe6ec742a909ca7108726e31bf8b0e"
+    },
+    {
+      "id": "ice",
+      "src": "assets/food-icons-natural/ice.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 21158,
+      "sha256": "5935466d5edc24b2b7fd7009ed4eceb499d2ff52ab8642b44f079a10f167748c"
+    },
+    {
+      "id": "rice-cooked",
+      "src": "assets/food-icons-natural/rice-cooked.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 13846,
+      "sha256": "68c277260eb245b38a9fe14809bdd8043c731ff3d77174938946190c5e427baf"
+    },
+    {
+      "id": "greek-yogurt",
+      "src": "assets/food-icons-natural/greek-yogurt.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 11872,
+      "sha256": "0306031a126f92348e0ee98368991298c4bc20901558c1a88666789a17e0864c"
+    },
+    {
+      "id": "milo-drink",
+      "src": "assets/food-icons-natural/milo-drink.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 13068,
+      "sha256": "a4fbb68a261dc9a488c0fbd3552481ea1d6dad697e4d0b3de213d79266f359e2"
+    },
+    {
+      "id": "milo-crackers",
+      "src": "assets/food-icons-natural/milo-crackers.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17880,
+      "sha256": "9c0adbefc7b32700ebcad3ed0c14e760534707f7adeeb4c8f9b2f051933251e6"
+    },
+    {
+      "id": "pantry-jar",
+      "src": "assets/food-icons-natural/pantry-jar.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 11812,
+      "sha256": "7a65129e78df811d41919f5ea696e1e6ac83e223f7f4e2afe7d5bbff3e76f8d7"
+    },
+    {
+      "id": "honey",
+      "src": "assets/food-icons-natural/honey.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 17234,
+      "sha256": "081b76c801bda8884a5a0761efba7daef025a1730d266f533e937cc874c00828"
+    },
+    {
+      "id": "minced-meat",
+      "src": "assets/food-icons-natural/minced-meat.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 14354,
+      "sha256": "2cffc7ac846cb50ca2ba556eeaaf41b1a97e56f2ee3ae7d2c6c7b46849280cbe"
+    },
+    {
+      "id": "garlic-mince",
+      "src": "assets/food-icons-natural/garlic-mince.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 18516,
+      "sha256": "3b3563913ff423661d68ff077a91757b10f21a35fc167dd53a561c567a41d384"
+    },
+    {
+      "id": "egg-fried-rice",
+      "src": "assets/food-icons-natural/egg-fried-rice.webp",
+      "width": 256,
+      "height": 256,
+      "bytes": 16308,
+      "sha256": "bc6afd3efc42bd932994b99425d74217fbb4f41a52395e1f5f1290491be73965"
+    }
+  ]
+}

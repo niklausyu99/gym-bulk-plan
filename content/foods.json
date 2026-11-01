@@ -3,37 +3,38 @@
   "foods": [
     {
       "id": "rice",
-      "name": "白饭",
+      "name": "白饭（熟重）",
       "group": "carbs",
       "unit": "g",
       "amount": 200,
       "step": 50,
-      "max": 600,
+      "max": 2000,
       "pantryId": "rice",
       "variants": [
         {
           "id": "default",
-          "name": "白饭",
+          "name": "白饭（熟重）",
           "per100": {
-            "k": 130.0,
-            "p": 2.5,
-            "c": 28.5,
-            "f": 0.5,
-            "fi": null
+            "k": 130,
+            "p": 2.69,
+            "c": 28.17,
+            "f": 0.28,
+            "fi": 0.4
           },
           "source": {
-            "kind": "historical",
-            "label": "常用份量估算",
-            "url": "https://fdc.nal.usda.gov/",
-            "note": "按普通食物份量估算，未绑定具体品牌标签；纤维资料不全。实际包装不同请按包装记录。"
+            "kind": "database",
+            "label": "USDA SR28 食物估算",
+            "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+            "description": "NDB 20445 · Rice, white, long-grain, regular, unenriched, cooked without salt"
           },
           "basis": "g"
         }
       ],
-      "note": "不含另外添加的油、糖或抹酱。",
+      "note": "称煮熟后实际吃掉的米饭，不是生米。默认不加油；加水量会影响每100g的热量密度。",
       "uses": [
         "c"
-      ]
+      ],
+      "weightBasis": "cooked"
     },
     {
       "id": "banana",
@@ -49,7 +50,7 @@
           "id": "default",
           "name": "香蕉",
           "per100": {
-            "k": 89.0,
+            "k": 89,
             "p": 1.09,
             "c": 22.8,
             "f": 0.33,
@@ -85,8 +86,8 @@
           "name": "白切片面包",
           "per100": {
             "k": 266.6666666666667,
-            "p": 10.0,
-            "c": 50.0,
+            "p": 10,
+            "c": 50,
             "f": 3.3333333333333335,
             "fi": null
           },
@@ -123,7 +124,7 @@
             "p": 3.2508,
             "c": 4.9536,
             "f": 3.354,
-            "fi": 0.0
+            "fi": 0
           },
           "source": {
             "kind": "database",
@@ -188,9 +189,9 @@
           "name": "坚果",
           "per100": {
             "k": 583.3333333333334,
-            "p": 20.0,
-            "c": 20.0,
-            "f": 50.0,
+            "p": 20,
+            "c": 20,
+            "f": 50,
             "fi": null
           },
           "source": {
@@ -543,7 +544,7 @@
             "p": 22.2,
             "c": 22.3,
             "f": 51.4,
-            "fi": 5.0
+            "fi": 5
           },
           "source": {
             "kind": "database",
@@ -807,7 +808,7 @@
           "id": "usda-174081",
           "name": "全麦卷饼皮",
           "per100": {
-            "k": 310.0,
+            "k": 310,
             "p": 9.76,
             "c": 45.89,
             "f": 9.76,
@@ -847,7 +848,7 @@
           "id": "usda-174915",
           "name": "原味白皮塔饼",
           "per100": {
-            "k": 275.0,
+            "k": 275,
             "p": 9.1,
             "c": 55.7,
             "f": 1.2,
@@ -886,9 +887,9 @@
           "id": "usda-175063",
           "name": "原味 English muffin",
           "per100": {
-            "k": 235.0,
+            "k": 235,
             "p": 7.7,
-            "c": 46.0,
+            "c": 46,
             "f": 1.8,
             "fi": 2.7
           },
@@ -925,7 +926,7 @@
           "id": "usda-172680",
           "name": "普通葡萄干面包",
           "per100": {
-            "k": 274.0,
+            "k": 274,
             "p": 7.9,
             "c": 52.3,
             "f": 4.4,
@@ -1033,7 +1034,7 @@
           "id": "usda-168932",
           "name": "原味无馅 · 熟短粒白饭",
           "per100": {
-            "k": 130.0,
+            "k": 130,
             "p": 2.36,
             "c": 28.73,
             "f": 0.19,
@@ -1072,7 +1073,7 @@
           "id": "usda-170438",
           "name": "水煮 · 熟可食重",
           "per100": {
-            "k": 87.0,
+            "k": 87,
             "p": 1.87,
             "c": 20.13,
             "f": 0.1,
@@ -1090,7 +1091,7 @@
           "id": "usda-170093",
           "name": "烤 · 带皮熟可食重",
           "per100": {
-            "k": 93.0,
+            "k": 93,
             "p": 2.5,
             "c": 21.15,
             "f": 0.13,
@@ -1125,7 +1126,7 @@
           "id": "usda-168449",
           "name": "清蒸／水煮熟南瓜参考",
           "per100": {
-            "k": 20.0,
+            "k": 20,
             "p": 0.72,
             "c": 4.9,
             "f": 0.07,
@@ -1237,7 +1238,7 @@
           "id": "usda-174648",
           "name": "普通原味玉米片参考",
           "per100": {
-            "k": 384.0,
+            "k": 384,
             "p": 5.9,
             "c": 88.01,
             "f": 0.91,
@@ -1272,7 +1273,7 @@
           "id": "usda-170250",
           "name": "原味膨化糙米饼",
           "per100": {
-            "k": 387.0,
+            "k": 387,
             "p": 8.2,
             "c": 81.5,
             "f": 2.8,
@@ -1290,7 +1291,7 @@
           "id": "usda-169679",
           "name": "糙米玉米膨化饼",
           "per100": {
-            "k": 385.0,
+            "k": 385,
             "p": 8.4,
             "c": 81.2,
             "f": 3.2,
@@ -1326,7 +1327,7 @@
           "id": "usda-171688",
           "name": "带皮生苹果",
           "per100": {
-            "k": 52.0,
+            "k": 52,
             "p": 0.26,
             "c": 13.81,
             "f": 0.17,
@@ -1362,7 +1363,7 @@
           "id": "usda-169097",
           "name": "橙果肉",
           "per100": {
-            "k": 47.0,
+            "k": 47,
             "p": 0.94,
             "c": 11.75,
             "f": 0.12,
@@ -1398,7 +1399,7 @@
           "id": "usda-169118",
           "name": "生梨可食部分",
           "per100": {
-            "k": 57.0,
+            "k": 57,
             "p": 0.36,
             "c": 15.23,
             "f": 0.14,
@@ -1434,7 +1435,7 @@
           "id": "usda-169910",
           "name": "生芒果果肉",
           "per100": {
-            "k": 60.0,
+            "k": 60,
             "p": 0.82,
             "c": 14.98,
             "f": 0.38,
@@ -1469,11 +1470,11 @@
           "id": "usda-171726",
           "name": "Deglet Noor干椰枣参考",
           "per100": {
-            "k": 282.0,
+            "k": 282,
             "p": 2.45,
             "c": 75.03,
             "f": 0.39,
-            "fi": 8.0
+            "fi": 8
           },
           "basis": "g",
           "source": {
@@ -1504,7 +1505,7 @@
           "id": "usda-173941",
           "name": "未加糖干杏参考",
           "per100": {
-            "k": 241.0,
+            "k": 241,
             "p": 3.39,
             "c": 62.64,
             "f": 0.51,
@@ -1539,8 +1540,8 @@
           "id": "usda-170246",
           "name": "无盐空气爆米花成品",
           "per100": {
-            "k": 382.0,
-            "p": 12.0,
+            "k": 382,
+            "p": 12,
             "c": 77.9,
             "f": 4.2,
             "fi": 15.1
@@ -1609,7 +1610,7 @@
           "id": "usda-171646",
           "name": "燕麦脆通用配方参考",
           "per100": {
-            "k": 489.0,
+            "k": 489,
             "p": 13.67,
             "c": 53.88,
             "f": 24.31,
@@ -1644,11 +1645,11 @@
           "id": "usda-172182",
           "name": "低脂2% Cottage cheese参考",
           "per100": {
-            "k": 81.0,
+            "k": 81,
             "p": 10.45,
             "c": 4.76,
             "f": 2.27,
-            "fi": 0.0
+            "fi": 0
           },
           "basis": "g",
           "source": {
@@ -1662,11 +1663,11 @@
           "id": "usda-172179",
           "name": "全脂 Cottage cheese参考",
           "per100": {
-            "k": 98.0,
+            "k": 98,
             "p": 11.12,
             "c": 3.38,
             "f": 4.3,
-            "fi": 0.0
+            "fi": 0
           },
           "basis": "g",
           "source": {
@@ -1770,7 +1771,7 @@
           "id": "usda-172467",
           "name": "熟天贝 · 不额外加油",
           "per100": {
-            "k": 195.0,
+            "k": 195,
             "p": 19.91,
             "c": 7.62,
             "f": 11.38,
@@ -1807,7 +1808,7 @@
           "id": "default",
           "name": "青葡萄",
           "per100": {
-            "k": 69.0,
+            "k": 69,
             "p": 0.72,
             "c": 18.1,
             "f": 0.16,
@@ -1842,7 +1843,7 @@
           "id": "default",
           "name": "菠萝",
           "per100": {
-            "k": 50.0,
+            "k": 50,
             "p": 0.54,
             "c": 13.1,
             "f": 0.12,
@@ -1862,6 +1863,99 @@
         "c"
       ],
       "library": "more"
+    },
+    {
+      "id": "egg-fried-rice",
+      "name": "蛋炒饭",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 200,
+      "step": 50,
+      "max": 2000,
+      "pantryId": "rice",
+      "weightBasis": "cooked",
+      "uses": [
+        "c"
+      ],
+      "note": "称炒好后实际吃的克重。每100g数值由下方参考做法和出锅总重计算，不是所有蛋炒饭都相同。",
+      "cooking": {
+        "kind": "fried-rice",
+        "defaults": {
+          "riceGrams": 250,
+          "eggGrams": 50,
+          "oilGrams": 5,
+          "garlicGrams": 0,
+          "lightSoyGrams": 5,
+          "yieldGrams": 300
+        }
+      },
+      "variants": [
+        {
+          "id": "home",
+          "name": "家常参考做法",
+          "per100": {
+            "k": 147.78333333333327,
+            "p": 4.470666666666666,
+            "c": 23.67716666666667,
+            "f": 3.4944999999999995,
+            "fi": 0.3466666666666667
+          },
+          "source": {
+            "kind": "calculated",
+            "label": "按参考做法估算",
+            "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+            "note": "默认熟饭250g＋鸡蛋去壳约50g＋油5g＋生抽5g，出锅总熟重暂按300g估算，可按实际做法修改。"
+          },
+          "basis": "g"
+        }
+      ]
+    },
+    {
+      "id": "minced-meat",
+      "name": "蒜炒猪肉碎",
+      "group": "energy",
+      "unit": "g",
+      "amount": 100,
+      "step": 50,
+      "max": 1000,
+      "pantryId": "minced-meat",
+      "weightBasis": "raw-meat",
+      "uses": [
+        "p"
+      ],
+      "note": "每份按100g下锅前生猪肉记录，不是炒好的熟肉克重。默认每100g生肉加5g油；猪肉碎肥瘦比未知，先用普通猪肉碎（脂肪约21g/100g）估算，更瘦的版本热量会低。盐、味精与加水不明显增加热量，但盐、味精及酱料会增加钠。",
+      "cooking": {
+        "kind": "mince",
+        "defaults": {
+          "oilGrams": 5,
+          "garlicGrams": 3,
+          "oysterGrams": 5,
+          "lightSoyGrams": 5,
+          "darkSoyGrams": 2,
+          "sugarGrams": 1
+        }
+      },
+      "variants": [
+        {
+          "id": "ground-pork",
+          "ingredientId": "ground-pork",
+          "name": "普通猪肉碎（生肉脂肪约21g/100g参考）",
+          "per100": {
+            "k": 321.8,
+            "p": 17.708099999999998,
+            "c": 2.8827,
+            "f": 26.2574,
+            "fi": 0.134
+          },
+          "source": {
+            "kind": "database",
+            "label": "USDA SR28 食物估算",
+            "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+            "description": "NDB 10219 · Pork, fresh, ground, raw"
+          },
+          "basis": "g"
+        }
+      ]
     }
   ],
   "condensedMilk": {
@@ -1998,5 +2092,194 @@
       ],
       "action": "food"
     }
-  ]
+  ],
+  "cookingIngredients": {
+    "rice": {
+      "name": "熟白饭",
+      "per100": {
+        "k": 130,
+        "p": 2.69,
+        "c": 28.17,
+        "f": 0.28,
+        "fi": 0.4
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 20445 · cooked white rice"
+      },
+      "ndb": "20445"
+    },
+    "egg": {
+      "name": "鸡蛋（去壳生重）",
+      "per100": {
+        "k": 143,
+        "p": 12.56,
+        "c": 0.72,
+        "f": 9.51,
+        "fi": 0
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 01123 · Egg, whole, raw, fresh"
+      },
+      "ndb": "01123"
+    },
+    "oil": {
+      "name": "烹调油",
+      "per100": {
+        "k": 884,
+        "p": 0,
+        "c": 0,
+        "f": 100,
+        "fi": 0
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 04055 · Oil, palm"
+      },
+      "ndb": "04055"
+    },
+    "garlic": {
+      "name": "蒜",
+      "per100": {
+        "k": 149,
+        "p": 6.36,
+        "c": 33.06,
+        "f": 0.5,
+        "fi": 2.1
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 11215 · Garlic, raw"
+      },
+      "ndb": "11215"
+    },
+    "oyster-sauce": {
+      "name": "蚝油",
+      "per100": {
+        "k": 51,
+        "p": 1.35,
+        "c": 10.92,
+        "f": 0.25,
+        "fi": 0.3
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 06176 · Sauce, oyster, ready-to-serve"
+      },
+      "ndb": "06176"
+    },
+    "light-soy": {
+      "name": "生抽",
+      "per100": {
+        "k": 53,
+        "p": 8.14,
+        "c": 4.93,
+        "f": 0.57,
+        "fi": 0.8
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 16123 · Soy sauce made from soy and wheat (shoyu)"
+      },
+      "ndb": "16123"
+    },
+    "dark-soy": {
+      "name": "老抽",
+      "per100": {
+        "k": 53,
+        "p": 8.14,
+        "c": 4.93,
+        "f": 0.57,
+        "fi": 0.8
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 16123 · Soy sauce generic proxy; dark soy brand varies"
+      },
+      "ndb": "16123"
+    },
+    "sugar": {
+      "name": "糖",
+      "per100": {
+        "k": 387,
+        "p": 0,
+        "c": 99.98,
+        "f": 0,
+        "fi": 0
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 19335 · Sugars, granulated"
+      },
+      "ndb": "19335"
+    },
+    "ground-pork": {
+      "name": "猪肉碎",
+      "per100": {
+        "k": 263,
+        "p": 16.88,
+        "c": 0,
+        "f": 21.19,
+        "fi": 0
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 10219 · Pork, fresh, ground, raw"
+      },
+      "ndb": "10219"
+    },
+    "ground-beef-90": {
+      "name": "牛肉碎（90%瘦）",
+      "per100": {
+        "k": 176,
+        "p": 20,
+        "c": 0,
+        "f": 10,
+        "fi": 0
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 23562 · Beef, ground, 90% lean / 10% fat, raw"
+      },
+      "ndb": "23562"
+    },
+    "ground-chicken": {
+      "name": "鸡肉碎",
+      "per100": {
+        "k": 143,
+        "p": 17.44,
+        "c": 0.04,
+        "f": 8.1,
+        "fi": 0
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 05332 · Chicken, ground, raw"
+      },
+      "ndb": "05332"
+    }
+  }
 }

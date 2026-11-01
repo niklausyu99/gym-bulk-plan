@@ -15,7 +15,7 @@ for line in (work/'NUT_DATA.txt').read_text().splitlines():
 base='https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/'
 def profile(ndb):
  return {'ndb':ndb,'per100g':values[ndb],'description':desc[ndb],'source':{'label':'USDA SR28 (2016)','url':base},'kind':'estimate'}
-mapping={'milk':'01211','banana':'09040','oats':'08120','peanut':'16398','pineapple':'09266','blueberry':'09050','grapes':'09132','almonds':'12061','yogurt':'01116','chocolate':'19904','rice':'20545','bread':'18069','wholemeal':'18075','sweet-potato':'11510','sweet-potato|baked':'11508','corn':'11168','raisins':'09298','cheese|cheddar':'01009','chicken':'05064','condensed-milk':'01095'}
+mapping={'milk':'01211','banana':'09040','oats':'08120','peanut':'16398','pineapple':'09266','blueberry':'09050','grapes':'09132','almonds':'12061','yogurt':'01116','chocolate':'19904','rice':'20445','bread':'18069','wholemeal':'18075','sweet-potato':'11510','sweet-potato|baked':'11508','corn':'11168','raisins':'09298','cheese|cheddar':'01009','chicken':'05064','condensed-milk':'01095'}
 foods=json.loads((root/'content/foods.json').read_text())['foods']
 for f in foods:
  for v in f['variants']:
@@ -25,6 +25,8 @@ for f in foods:
   found=reverse.get(norm(text))
   if not found and '(' in text:found=reverse.get(norm(text.split('(')[0].strip()))
   if found:mapping[f['id']+'|'+v['id']]=found
+mapping['honey']='19296'
+for key,c in json.loads((root/'content/foods.json').read_text()).get('cookingIngredients',{}).items():mapping[key]=c['ndb']
 catalog={key:profile(ndb) for key,ndb in mapping.items()}
 # Plain ice adds no quantified micronutrients. No generic replacement for whey, Milo or prepared meals.
 catalog['ice']={'per100g':{},'kind':'water','description':'Plain water ice'}

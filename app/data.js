@@ -1045,37 +1045,38 @@ window.BULK_DATA = {
   "foods": [
     {
       "id": "rice",
-      "name": "白饭",
+      "name": "白饭（熟重）",
       "group": "carbs",
       "unit": "g",
       "amount": 200,
       "step": 50,
-      "max": 600,
+      "max": 2000,
       "pantryId": "rice",
       "variants": [
         {
           "id": "default",
-          "name": "白饭",
+          "name": "白饭（熟重）",
           "per100": {
             "k": 130,
-            "p": 2.5,
-            "c": 28.5,
-            "f": 0.5,
-            "fi": null
+            "p": 2.69,
+            "c": 28.17,
+            "f": 0.28,
+            "fi": 0.4
           },
           "source": {
-            "kind": "historical",
-            "label": "常用份量估算",
-            "url": "https://fdc.nal.usda.gov/",
-            "note": "按普通食物份量估算，未绑定具体品牌标签；纤维资料不全。实际包装不同请按包装记录。"
+            "kind": "database",
+            "label": "USDA SR28 食物估算",
+            "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+            "description": "NDB 20445 · Rice, white, long-grain, regular, unenriched, cooked without salt"
           },
           "basis": "g"
         }
       ],
-      "note": "不含另外添加的油、糖或抹酱。",
+      "note": "称煮熟后实际吃掉的米饭，不是生米。默认不加油；加水量会影响每100g的热量密度。",
       "uses": [
         "c"
-      ]
+      ],
+      "weightBasis": "cooked"
     },
     {
       "id": "banana",
@@ -2904,6 +2905,99 @@ window.BULK_DATA = {
         "c"
       ],
       "library": "more"
+    },
+    {
+      "id": "egg-fried-rice",
+      "name": "蛋炒饭",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 200,
+      "step": 50,
+      "max": 2000,
+      "pantryId": "rice",
+      "weightBasis": "cooked",
+      "uses": [
+        "c"
+      ],
+      "note": "称炒好后实际吃的克重。每100g数值由下方参考做法和出锅总重计算，不是所有蛋炒饭都相同。",
+      "cooking": {
+        "kind": "fried-rice",
+        "defaults": {
+          "riceGrams": 250,
+          "eggGrams": 50,
+          "oilGrams": 5,
+          "garlicGrams": 0,
+          "lightSoyGrams": 5,
+          "yieldGrams": 300
+        }
+      },
+      "variants": [
+        {
+          "id": "home",
+          "name": "家常参考做法",
+          "per100": {
+            "k": 147.78333333333327,
+            "p": 4.470666666666666,
+            "c": 23.67716666666667,
+            "f": 3.4944999999999995,
+            "fi": 0.3466666666666667
+          },
+          "source": {
+            "kind": "calculated",
+            "label": "按参考做法估算",
+            "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+            "note": "默认熟饭250g＋鸡蛋去壳约50g＋油5g＋生抽5g，出锅总熟重暂按300g估算，可按实际做法修改。"
+          },
+          "basis": "g"
+        }
+      ]
+    },
+    {
+      "id": "minced-meat",
+      "name": "蒜炒猪肉碎",
+      "group": "energy",
+      "unit": "g",
+      "amount": 100,
+      "step": 50,
+      "max": 1000,
+      "pantryId": "minced-meat",
+      "weightBasis": "raw-meat",
+      "uses": [
+        "p"
+      ],
+      "note": "每份按100g下锅前生猪肉记录，不是炒好的熟肉克重。默认每100g生肉加5g油；猪肉碎肥瘦比未知，先用普通猪肉碎（脂肪约21g/100g）估算，更瘦的版本热量会低。盐、味精与加水不明显增加热量，但盐、味精及酱料会增加钠。",
+      "cooking": {
+        "kind": "mince",
+        "defaults": {
+          "oilGrams": 5,
+          "garlicGrams": 3,
+          "oysterGrams": 5,
+          "lightSoyGrams": 5,
+          "darkSoyGrams": 2,
+          "sugarGrams": 1
+        }
+      },
+      "variants": [
+        {
+          "id": "ground-pork",
+          "ingredientId": "ground-pork",
+          "name": "普通猪肉碎（生肉脂肪约21g/100g参考）",
+          "per100": {
+            "k": 321.8,
+            "p": 17.708099999999998,
+            "c": 2.8827,
+            "f": 26.2574,
+            "fi": 0.134
+          },
+          "source": {
+            "kind": "database",
+            "label": "USDA SR28 食物估算",
+            "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+            "description": "NDB 10219 · Pork, fresh, ground, raw"
+          },
+          "basis": "g"
+        }
+      ]
     }
   ],
   "foodPairings": [
@@ -3041,6 +3135,195 @@ window.BULK_DATA = {
         "url": "https://fdc.nal.usda.gov/",
         "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
       }
+    },
+    "cookingIngredients": {
+      "rice": {
+        "name": "熟白饭",
+        "per100": {
+          "k": 130,
+          "p": 2.69,
+          "c": 28.17,
+          "f": 0.28,
+          "fi": 0.4
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 20445 · cooked white rice"
+        },
+        "ndb": "20445"
+      },
+      "egg": {
+        "name": "鸡蛋（去壳生重）",
+        "per100": {
+          "k": 143,
+          "p": 12.56,
+          "c": 0.72,
+          "f": 9.51,
+          "fi": 0
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 01123 · Egg, whole, raw, fresh"
+        },
+        "ndb": "01123"
+      },
+      "oil": {
+        "name": "烹调油",
+        "per100": {
+          "k": 884,
+          "p": 0,
+          "c": 0,
+          "f": 100,
+          "fi": 0
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 04055 · Oil, palm"
+        },
+        "ndb": "04055"
+      },
+      "garlic": {
+        "name": "蒜",
+        "per100": {
+          "k": 149,
+          "p": 6.36,
+          "c": 33.06,
+          "f": 0.5,
+          "fi": 2.1
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 11215 · Garlic, raw"
+        },
+        "ndb": "11215"
+      },
+      "oyster-sauce": {
+        "name": "蚝油",
+        "per100": {
+          "k": 51,
+          "p": 1.35,
+          "c": 10.92,
+          "f": 0.25,
+          "fi": 0.3
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 06176 · Sauce, oyster, ready-to-serve"
+        },
+        "ndb": "06176"
+      },
+      "light-soy": {
+        "name": "生抽",
+        "per100": {
+          "k": 53,
+          "p": 8.14,
+          "c": 4.93,
+          "f": 0.57,
+          "fi": 0.8
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 16123 · Soy sauce made from soy and wheat (shoyu)"
+        },
+        "ndb": "16123"
+      },
+      "dark-soy": {
+        "name": "老抽",
+        "per100": {
+          "k": 53,
+          "p": 8.14,
+          "c": 4.93,
+          "f": 0.57,
+          "fi": 0.8
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 16123 · Soy sauce generic proxy; dark soy brand varies"
+        },
+        "ndb": "16123"
+      },
+      "sugar": {
+        "name": "糖",
+        "per100": {
+          "k": 387,
+          "p": 0,
+          "c": 99.98,
+          "f": 0,
+          "fi": 0
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 19335 · Sugars, granulated"
+        },
+        "ndb": "19335"
+      },
+      "ground-pork": {
+        "name": "猪肉碎",
+        "per100": {
+          "k": 263,
+          "p": 16.88,
+          "c": 0,
+          "f": 21.19,
+          "fi": 0
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 10219 · Pork, fresh, ground, raw"
+        },
+        "ndb": "10219"
+      },
+      "ground-beef-90": {
+        "name": "牛肉碎（90%瘦）",
+        "per100": {
+          "k": 176,
+          "p": 20,
+          "c": 0,
+          "f": 10,
+          "fi": 0
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 23562 · Beef, ground, 90% lean / 10% fat, raw"
+        },
+        "ndb": "23562"
+      },
+      "ground-chicken": {
+        "name": "鸡肉碎",
+        "per100": {
+          "k": 143,
+          "p": 17.44,
+          "c": 0.04,
+          "f": 8.1,
+          "fi": 0
+        },
+        "source": {
+          "kind": "database",
+          "label": "USDA SR28 食物估算",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+          "description": "NDB 05332 · Chicken, ground, raw"
+        },
+        "ndb": "05332"
+      }
     }
   },
   "pantryItems": [
@@ -3150,7 +3433,7 @@ window.BULK_DATA = {
     },
     {
       "id": "almonds",
-      "name": "杏仁",
+      "name": "坚果杏仁（Almond）",
       "group": "blend",
       "unit": "g",
       "pack": 200,
@@ -3810,6 +4093,32 @@ window.BULK_DATA = {
       "regular": false,
       "icon": "cup",
       "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "honey",
+      "name": "蜂蜜",
+      "group": "blend",
+      "unit": "g",
+      "pack": 250,
+      "target": 250,
+      "threshold": 30,
+      "step": 5,
+      "regular": false,
+      "icon": "jar",
+      "note": "按需采购，不自动加入待购。"
+    },
+    {
+      "id": "minced-meat",
+      "name": "猪肉碎",
+      "group": "meals",
+      "unit": "g",
+      "pack": 200,
+      "target": 200,
+      "threshold": 100,
+      "step": 100,
+      "regular": false,
+      "icon": "jar",
+      "note": "常用200g包装参考；每份取100g生肉。库存按实际剩余盘点，不会预先计入200g。"
     }
   ],
   "micronutrients": {
@@ -4132,7 +4441,7 @@ window.BULK_DATA = {
         "kind": "estimate"
       },
       "rice": {
-        "ndb": "20545",
+        "ndb": "20445",
         "per100g": {
           "calcium": 10,
           "iron": 0.2,
@@ -4156,7 +4465,7 @@ window.BULK_DATA = {
           "folicAcid": 0,
           "folateDFE": 3
         },
-        "description": "Rice, white, long-grain, regular, cooked, unenriched, with salt",
+        "description": "Rice, white, long-grain, regular, unenriched, cooked without salt",
         "source": {
           "label": "USDA SR28 (2016)",
           "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
@@ -5130,6 +5439,352 @@ window.BULK_DATA = {
         },
         "kind": "estimate"
       },
+      "honey": {
+        "ndb": "19296",
+        "per100g": {
+          "calcium": 6,
+          "iron": 0.42,
+          "magnesium": 2,
+          "zinc": 0.22,
+          "copper": 0.036,
+          "manganese": 0.08,
+          "selenium": 0.8,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0,
+          "vitaminD": 0,
+          "vitaminC": 0.5,
+          "thiamin": 0,
+          "riboflavin": 0.038,
+          "niacin": 0.121,
+          "pantothenicAcid": 0.068,
+          "vitaminB6": 0.024,
+          "vitaminB12": 0,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 2
+        },
+        "description": "Honey",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "egg": {
+        "ndb": "01123",
+        "per100g": {
+          "calcium": 56,
+          "iron": 1.75,
+          "magnesium": 12,
+          "zinc": 1.29,
+          "copper": 0.072,
+          "manganese": 0.028,
+          "selenium": 30.7,
+          "retinol": 160,
+          "vitaminA": 160,
+          "vitaminE": 1.05,
+          "vitaminD": 82,
+          "vitaminC": 0,
+          "thiamin": 0.04,
+          "riboflavin": 0.457,
+          "niacin": 0.075,
+          "pantothenicAcid": 1.533,
+          "vitaminB6": 0.17,
+          "vitaminB12": 0.89,
+          "vitaminK": 0.3,
+          "folicAcid": 0,
+          "folateDFE": 47
+        },
+        "description": "Egg, whole, raw, fresh",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "oil": {
+        "ndb": "04055",
+        "per100g": {
+          "calcium": 0,
+          "iron": 0.01,
+          "magnesium": 0,
+          "zinc": 0,
+          "copper": 0,
+          "selenium": 0,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 15.94,
+          "vitaminC": 0,
+          "thiamin": 0,
+          "riboflavin": 0,
+          "niacin": 0,
+          "pantothenicAcid": 0,
+          "vitaminB6": 0,
+          "vitaminB12": 0,
+          "vitaminK": 8,
+          "folicAcid": 0,
+          "folateDFE": 0
+        },
+        "description": "Oil, palm",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "garlic": {
+        "ndb": "11215",
+        "per100g": {
+          "calcium": 181,
+          "iron": 1.7,
+          "magnesium": 25,
+          "zinc": 1.16,
+          "copper": 0.299,
+          "manganese": 1.672,
+          "selenium": 14.2,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.08,
+          "vitaminD": 0,
+          "vitaminC": 31.2,
+          "thiamin": 0.2,
+          "riboflavin": 0.11,
+          "niacin": 0.7,
+          "pantothenicAcid": 0.596,
+          "vitaminB6": 1.235,
+          "vitaminB12": 0,
+          "vitaminK": 1.7,
+          "folicAcid": 0,
+          "folateDFE": 3
+        },
+        "description": "Garlic, raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "oyster-sauce": {
+        "ndb": "06176",
+        "per100g": {
+          "calcium": 32,
+          "iron": 0.18,
+          "magnesium": 4,
+          "zinc": 0.09,
+          "copper": 0.147,
+          "manganese": 0.053,
+          "selenium": 4.4,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0,
+          "vitaminD": 0,
+          "vitaminC": 0.1,
+          "thiamin": 0.01,
+          "riboflavin": 0.124,
+          "niacin": 1.474,
+          "pantothenicAcid": 0.016,
+          "vitaminB6": 0.016,
+          "vitaminB12": 0.41,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 15
+        },
+        "description": "Sauce, oyster, ready-to-serve",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "light-soy": {
+        "ndb": "16123",
+        "per100g": {
+          "calcium": 33,
+          "iron": 1.45,
+          "magnesium": 74,
+          "zinc": 0.87,
+          "copper": 0.043,
+          "manganese": 1.018,
+          "selenium": 0.5,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.033,
+          "riboflavin": 0.165,
+          "niacin": 2.196,
+          "pantothenicAcid": 0.297,
+          "vitaminB6": 0.148,
+          "vitaminB12": 0,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 14
+        },
+        "description": "Soy sauce made from soy and wheat (shoyu)",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "dark-soy": {
+        "ndb": "16123",
+        "per100g": {
+          "calcium": 33,
+          "iron": 1.45,
+          "magnesium": 74,
+          "zinc": 0.87,
+          "copper": 0.043,
+          "manganese": 1.018,
+          "selenium": 0.5,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0.033,
+          "riboflavin": 0.165,
+          "niacin": 2.196,
+          "pantothenicAcid": 0.297,
+          "vitaminB6": 0.148,
+          "vitaminB12": 0,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 14
+        },
+        "description": "Soy sauce made from soy and wheat (shoyu)",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "sugar": {
+        "ndb": "19335",
+        "per100g": {
+          "calcium": 1,
+          "iron": 0.05,
+          "magnesium": 0,
+          "zinc": 0.01,
+          "copper": 0.007,
+          "manganese": 0.004,
+          "selenium": 0.6,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0,
+          "vitaminD": 0,
+          "vitaminC": 0,
+          "thiamin": 0,
+          "riboflavin": 0.019,
+          "niacin": 0,
+          "pantothenicAcid": 0,
+          "vitaminB6": 0,
+          "vitaminB12": 0,
+          "vitaminK": 0,
+          "folicAcid": 0,
+          "folateDFE": 0
+        },
+        "description": "Sugars, granulated",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "ground-pork": {
+        "ndb": "10219",
+        "per100g": {
+          "calcium": 14,
+          "iron": 0.88,
+          "magnesium": 19,
+          "zinc": 2.2,
+          "copper": 0.045,
+          "manganese": 0.01,
+          "selenium": 24.6,
+          "retinol": 2,
+          "vitaminA": 2,
+          "vitaminC": 0.7,
+          "thiamin": 0.732,
+          "riboflavin": 0.235,
+          "niacin": 4.338,
+          "pantothenicAcid": 0.668,
+          "vitaminB6": 0.383,
+          "vitaminB12": 0.7,
+          "folicAcid": 0,
+          "folateDFE": 5
+        },
+        "description": "Pork, fresh, ground, raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "ground-beef-90": {
+        "ndb": "23562",
+        "per100g": {
+          "calcium": 12,
+          "iron": 2.24,
+          "magnesium": 20,
+          "zinc": 4.79,
+          "copper": 0.072,
+          "manganese": 0.01,
+          "selenium": 16.6,
+          "retinol": 4,
+          "vitaminA": 4,
+          "vitaminE": 0.17,
+          "vitaminD": 3,
+          "vitaminC": 0,
+          "thiamin": 0.042,
+          "riboflavin": 0.151,
+          "niacin": 5.072,
+          "pantothenicAcid": 0.601,
+          "vitaminB6": 0.369,
+          "vitaminB12": 2.21,
+          "vitaminK": 0.8,
+          "folicAcid": 0,
+          "folateDFE": 6
+        },
+        "description": "Beef, ground, 90% lean meat / 10% fat, raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
+      "ground-chicken": {
+        "ndb": "05332",
+        "per100g": {
+          "calcium": 6,
+          "iron": 0.82,
+          "magnesium": 21,
+          "zinc": 1.47,
+          "copper": 0.065,
+          "manganese": 0.016,
+          "selenium": 10.2,
+          "retinol": 0,
+          "vitaminA": 0,
+          "vitaminE": 0.27,
+          "vitaminC": 0,
+          "thiamin": 0.109,
+          "riboflavin": 0.241,
+          "niacin": 5.575,
+          "pantothenicAcid": 1.092,
+          "vitaminB6": 0.512,
+          "vitaminB12": 0.56,
+          "vitaminK": 0.8,
+          "folicAcid": 0,
+          "folateDFE": 1
+        },
+        "description": "Chicken, ground, raw",
+        "source": {
+          "label": "USDA SR28 (2016)",
+          "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+        },
+        "kind": "estimate"
+      },
       "ice": {
         "per100g": {},
         "kind": "water",
@@ -5137,6 +5792,11 @@ window.BULK_DATA = {
       }
     },
     "references": {
+      "iron": {
+        "target": 8,
+        "upper": 45,
+        "scope": "total"
+      },
       "calcium": {
         "target": 1000,
         "upper": 2500,
@@ -5241,11 +5901,6 @@ window.BULK_DATA = {
         "target": 45,
         "upper": 2000,
         "scope": "total"
-      },
-      "iron": {
-        "target": 8,
-        "upper": 45,
-        "scope": "total"
       }
     },
     "sources": [
@@ -5268,337 +5923,356 @@ window.BULK_DATA = {
     ]
   },
   "foodIcons": {
-    "version": 1,
-    "family": "lime-matte-v1",
+    "version": 2,
+    "family": "natural-matte-v2",
     "palette": [
-      "#CFEA8A",
-      "#E2F2B8",
-      "#A9C568",
-      "#708C40"
+      "natural food colors",
+      "neutral ivory containers",
+      "soft neutral studio light"
     ],
     "assets": {
       "milk": {
-        "src": "assets/food-icons/milk.webp",
+        "src": "assets/food-icons-natural/milk.webp",
         "width": 256,
         "height": 256
       },
       "banana": {
-        "src": "assets/food-icons/banana.webp",
+        "src": "assets/food-icons-natural/banana.webp",
         "width": 256,
         "height": 256
       },
       "whey": {
-        "src": "assets/food-icons/whey.webp",
+        "src": "assets/food-icons-natural/whey.webp",
         "width": 256,
         "height": 256
       },
       "oats": {
-        "src": "assets/food-icons/oats.webp",
+        "src": "assets/food-icons-natural/oats.webp",
         "width": 256,
         "height": 256
       },
       "peanut": {
-        "src": "assets/food-icons/peanut.webp",
+        "src": "assets/food-icons-natural/peanut.webp",
         "width": 256,
         "height": 256
       },
       "pineapple": {
-        "src": "assets/food-icons/pineapple.webp",
+        "src": "assets/food-icons-natural/pineapple.webp",
         "width": 256,
         "height": 256
       },
       "blueberry": {
-        "src": "assets/food-icons/blueberry.webp",
+        "src": "assets/food-icons-natural/blueberry.webp",
         "width": 256,
         "height": 256
       },
       "grapes": {
-        "src": "assets/food-icons/grapes.webp",
+        "src": "assets/food-icons-natural/grapes.webp",
         "width": 256,
         "height": 256
       },
       "almonds": {
-        "src": "assets/food-icons/almonds.webp",
+        "src": "assets/food-icons-natural/almonds.webp",
         "width": 256,
         "height": 256
       },
       "yogurt": {
-        "src": "assets/food-icons/yogurt.webp",
+        "src": "assets/food-icons-natural/yogurt.webp",
         "width": 256,
         "height": 256
       },
       "chocolate": {
-        "src": "assets/food-icons/chocolate.webp",
+        "src": "assets/food-icons-natural/chocolate.webp",
         "width": 256,
         "height": 256
       },
       "milo": {
-        "src": "assets/food-icons/milo.webp",
+        "src": "assets/food-icons-natural/milo.webp",
         "width": 256,
         "height": 256
       },
       "chicken-box": {
-        "src": "assets/food-icons/chicken-box.webp",
+        "src": "assets/food-icons-natural/chicken-box.webp",
         "width": 256,
         "height": 256
       },
       "rice": {
-        "src": "assets/food-icons/rice.webp",
+        "src": "assets/food-icons-natural/rice.webp",
         "width": 256,
         "height": 256
       },
       "white-bread": {
-        "src": "assets/food-icons/white-bread.webp",
+        "src": "assets/food-icons-natural/white-bread.webp",
         "width": 256,
         "height": 256
       },
       "wholemeal": {
-        "src": "assets/food-icons/wholemeal.webp",
+        "src": "assets/food-icons-natural/wholemeal.webp",
         "width": 256,
         "height": 256
       },
       "sweet-potato": {
-        "src": "assets/food-icons/sweet-potato.webp",
+        "src": "assets/food-icons-natural/sweet-potato.webp",
         "width": 256,
         "height": 256
       },
       "corn": {
-        "src": "assets/food-icons/corn.webp",
+        "src": "assets/food-icons-natural/corn.webp",
         "width": 256,
         "height": 256
       },
       "raisins": {
-        "src": "assets/food-icons/raisins.webp",
+        "src": "assets/food-icons-natural/raisins.webp",
         "width": 256,
         "height": 256
       },
       "soy-milk": {
-        "src": "assets/food-icons/soy-milk.webp",
+        "src": "assets/food-icons-natural/soy-milk.webp",
         "width": 256,
         "height": 256
       },
       "cheese": {
-        "src": "assets/food-icons/cheese.webp",
+        "src": "assets/food-icons-natural/cheese.webp",
         "width": 256,
         "height": 256
       },
       "nuts": {
-        "src": "assets/food-icons/nuts.webp",
+        "src": "assets/food-icons-natural/nuts.webp",
         "width": 256,
         "height": 256
       },
       "choco-bun": {
-        "src": "assets/food-icons/choco-bun.webp",
+        "src": "assets/food-icons-natural/choco-bun.webp",
         "width": 256,
         "height": 256
       },
       "crackers": {
-        "src": "assets/food-icons/crackers.webp",
+        "src": "assets/food-icons-natural/crackers.webp",
         "width": 256,
         "height": 256
       },
       "condensed-milk": {
-        "src": "assets/food-icons/condensed-milk.webp",
+        "src": "assets/food-icons-natural/condensed-milk.webp",
         "width": 256,
         "height": 256
       },
       "maggi-curry": {
-        "src": "assets/food-icons/maggi-curry.webp",
+        "src": "assets/food-icons-natural/maggi-curry.webp",
         "width": 256,
         "height": 256
       },
       "mamee-chicken": {
-        "src": "assets/food-icons/mamee-chicken.webp",
+        "src": "assets/food-icons-natural/mamee-chicken.webp",
         "width": 256,
         "height": 256
       },
       "side-aglio": {
-        "src": "assets/food-icons/side-aglio.webp",
+        "src": "assets/food-icons-natural/side-aglio.webp",
         "width": 256,
         "height": 256
       },
       "side-sweet": {
-        "src": "assets/food-icons/side-sweet.webp",
+        "src": "assets/food-icons-natural/side-sweet.webp",
         "width": 256,
         "height": 256
       },
       "side-us": {
-        "src": "assets/food-icons/side-us.webp",
+        "src": "assets/food-icons-natural/side-us.webp",
         "width": 256,
         "height": 256
       },
       "side-tomato": {
-        "src": "assets/food-icons/side-tomato.webp",
+        "src": "assets/food-icons-natural/side-tomato.webp",
         "width": 256,
         "height": 256
       },
       "side-veg": {
-        "src": "assets/food-icons/side-veg.webp",
+        "src": "assets/food-icons-natural/side-veg.webp",
         "width": 256,
         "height": 256
       },
       "side-mushroom": {
-        "src": "assets/food-icons/side-mushroom.webp",
+        "src": "assets/food-icons-natural/side-mushroom.webp",
         "width": 256,
         "height": 256
       },
       "wrap": {
-        "src": "assets/food-icons/wrap.webp",
+        "src": "assets/food-icons-natural/wrap.webp",
         "width": 256,
         "height": 256
       },
       "pita": {
-        "src": "assets/food-icons/pita.webp",
+        "src": "assets/food-icons-natural/pita.webp",
         "width": 256,
         "height": 256
       },
       "english-muffin": {
-        "src": "assets/food-icons/english-muffin.webp",
+        "src": "assets/food-icons-natural/english-muffin.webp",
         "width": 256,
         "height": 256
       },
       "raisin-bread": {
-        "src": "assets/food-icons/raisin-bread.webp",
+        "src": "assets/food-icons-natural/raisin-bread.webp",
         "width": 256,
         "height": 256
       },
       "red-bean-bun": {
-        "src": "assets/food-icons/red-bean-bun.webp",
+        "src": "assets/food-icons-natural/red-bean-bun.webp",
         "width": 256,
         "height": 256
       },
       "mantou": {
-        "src": "assets/food-icons/mantou.webp",
+        "src": "assets/food-icons-natural/mantou.webp",
         "width": 256,
         "height": 256
       },
       "rice-ball": {
-        "src": "assets/food-icons/rice-ball.webp",
+        "src": "assets/food-icons-natural/rice-ball.webp",
         "width": 256,
         "height": 256
       },
       "potato": {
-        "src": "assets/food-icons/potato.webp",
+        "src": "assets/food-icons-natural/potato.webp",
         "width": 256,
         "height": 256
       },
       "pumpkin": {
-        "src": "assets/food-icons/pumpkin.webp",
+        "src": "assets/food-icons-natural/pumpkin.webp",
         "width": 256,
         "height": 256
       },
       "nestum": {
-        "src": "assets/food-icons/nestum.webp",
+        "src": "assets/food-icons-natural/nestum.webp",
         "width": 256,
         "height": 256
       },
       "weet-bix": {
-        "src": "assets/food-icons/weet-bix.webp",
+        "src": "assets/food-icons-natural/weet-bix.webp",
         "width": 256,
         "height": 256
       },
       "corn-flakes": {
-        "src": "assets/food-icons/corn-flakes.webp",
+        "src": "assets/food-icons-natural/corn-flakes.webp",
         "width": 256,
         "height": 256
       },
       "rice-cakes": {
-        "src": "assets/food-icons/rice-cakes.webp",
+        "src": "assets/food-icons-natural/rice-cakes.webp",
         "width": 256,
         "height": 256
       },
       "apple": {
-        "src": "assets/food-icons/apple.webp",
+        "src": "assets/food-icons-natural/apple.webp",
         "width": 256,
         "height": 256
       },
       "orange": {
-        "src": "assets/food-icons/orange.webp",
+        "src": "assets/food-icons-natural/orange.webp",
         "width": 256,
         "height": 256
       },
       "pear": {
-        "src": "assets/food-icons/pear.webp",
+        "src": "assets/food-icons-natural/pear.webp",
         "width": 256,
         "height": 256
       },
       "mango": {
-        "src": "assets/food-icons/mango.webp",
+        "src": "assets/food-icons-natural/mango.webp",
         "width": 256,
         "height": 256
       },
       "dates": {
-        "src": "assets/food-icons/dates.webp",
+        "src": "assets/food-icons-natural/dates.webp",
         "width": 256,
         "height": 256
       },
       "dried-apricot": {
-        "src": "assets/food-icons/dried-apricot.webp",
+        "src": "assets/food-icons-natural/dried-apricot.webp",
         "width": 256,
         "height": 256
       },
       "popcorn": {
-        "src": "assets/food-icons/popcorn.webp",
+        "src": "assets/food-icons-natural/popcorn.webp",
         "width": 256,
         "height": 256
       },
       "roasted-chickpeas": {
-        "src": "assets/food-icons/roasted-chickpeas.webp",
+        "src": "assets/food-icons-natural/roasted-chickpeas.webp",
         "width": 256,
         "height": 256
       },
       "granola": {
-        "src": "assets/food-icons/granola.webp",
+        "src": "assets/food-icons-natural/granola.webp",
         "width": 256,
         "height": 256
       },
       "cottage-cheese": {
-        "src": "assets/food-icons/cottage-cheese.webp",
+        "src": "assets/food-icons-natural/cottage-cheese.webp",
         "width": 256,
         "height": 256
       },
       "skyr": {
-        "src": "assets/food-icons/skyr.webp",
+        "src": "assets/food-icons-natural/skyr.webp",
         "width": 256,
         "height": 256
       },
       "kefir": {
-        "src": "assets/food-icons/kefir.webp",
+        "src": "assets/food-icons-natural/kefir.webp",
         "width": 256,
         "height": 256
       },
       "tempeh": {
-        "src": "assets/food-icons/tempeh.webp",
+        "src": "assets/food-icons-natural/tempeh.webp",
         "width": 256,
         "height": 256
       },
       "ice": {
-        "src": "assets/food-icons/ice.webp",
+        "src": "assets/food-icons-natural/ice.webp",
         "width": 256,
         "height": 256
       },
       "rice-cooked": {
-        "src": "assets/food-icons/rice-cooked.webp",
+        "src": "assets/food-icons-natural/rice-cooked.webp",
         "width": 256,
         "height": 256
       },
       "greek-yogurt": {
-        "src": "assets/food-icons/greek-yogurt.webp",
+        "src": "assets/food-icons-natural/greek-yogurt.webp",
         "width": 256,
         "height": 256
       },
       "milo-drink": {
-        "src": "assets/food-icons/milo-drink.webp",
+        "src": "assets/food-icons-natural/milo-drink.webp",
         "width": 256,
         "height": 256
       },
       "milo-crackers": {
-        "src": "assets/food-icons/milo-crackers.webp",
+        "src": "assets/food-icons-natural/milo-crackers.webp",
         "width": 256,
         "height": 256
       },
       "pantry-jar": {
-        "src": "assets/food-icons/pantry-jar.webp",
+        "src": "assets/food-icons-natural/pantry-jar.webp",
+        "width": 256,
+        "height": 256
+      },
+      "honey": {
+        "src": "assets/food-icons-natural/honey.webp",
+        "width": 256,
+        "height": 256
+      },
+      "minced-meat": {
+        "src": "assets/food-icons-natural/minced-meat.webp",
+        "width": 256,
+        "height": 256
+      },
+      "garlic-mince": {
+        "src": "assets/food-icons-natural/garlic-mince.webp",
+        "width": 256,
+        "height": 256
+      },
+      "egg-fried-rice": {
+        "src": "assets/food-icons-natural/egg-fried-rice.webp",
         "width": 256,
         "height": 256
       }
@@ -5606,7 +6280,8 @@ window.BULK_DATA = {
     "aliases": {
       "food": {
         "rice": "rice-cooked",
-        "bread": "white-bread"
+        "bread": "white-bread",
+        "minced-meat": "garlic-mince"
       },
       "pantry": {},
       "blend": {}
@@ -6059,11 +6734,11 @@ window.BULK_DATA = {
     },
     {
       "id": "almonds",
-      "name": "杏仁",
+      "name": "坚果杏仁（Almond）",
       "group": "optional",
       "grams": 14.4,
       "portion": "约12粒",
-      "assumption": "按约14 g估算，计算使用14.4 g",
+      "assumption": "坚果类 Almond，不是南北杏或苦杏仁。约12粒，计算按14.4g可食重。",
       "defaultIncluded": true,
       "per100g": {
         "k": 579,
@@ -6143,6 +6818,28 @@ window.BULK_DATA = {
         "label": "厂家标签",
         "url": "https://www.milo.com.my/products",
         "description": "马来西亚原味MILO粉，每100 g营养标签"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "蜂蜜",
+      "group": "optional",
+      "grams": 4,
+      "portion": "4 g",
+      "assumption": "少量调味，可选3、4或5g；不同品牌以标签为准。",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 304,
+        "p": 0.3,
+        "c": 82.4,
+        "f": 0,
+        "fi": 0.2
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 19296 · Honey"
       }
     },
     {

@@ -1,0 +1,27 @@
+[
+  {
+    "case": "Almond explicit, whey1scoop and oats25g preserved, honey3/5g selection persists"
+  },
+  {
+    "case": "rice237g calculates308.1kcal; fried rice cooked weight/1or2eggs/oil/yield scale once; chosen recipe remembered"
+  },
+  {
+    "case": "pork100g raw + garlic/sauces; oil can reduce0; old snapshots unchanged; planning does not mark eaten"
+  },
+  {
+    "case": "pork purchase pack200g; stock remains unknown until counted; honey optional and not autoqueued"
+  },
+  {
+    "case": "mobile 320 cooking controls no overflow"
+  },
+  {
+    "case": "mobile 390 cooking controls no overflow"
+  },
+  {
+    "case": "mobile 430 cooking controls no overflow"
+  },
+  {
+    "case": "valid backup and browser console",
+    "errors": []
+  }
+]

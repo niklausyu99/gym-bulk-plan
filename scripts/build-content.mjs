@@ -10,7 +10,7 @@ const recipeTable='| 食材 | 份量 | 分类 |\n|---|---|---|\n'+ingredients.ma
 const summary='完整配方约'+Math.round(full.k/10)*10+' kcal、蛋白质'+Math.round(full.p)+' g、碳水'+Math.round(full.c)+' g、脂肪'+Math.round(full.f)+' g、纤维'+Math.round(full.fi)+' g。';
 const sections=file=>{const text=readFileSync(resolve(root,file),'utf8').replace('{{BLEND_RECIPE}}',recipeTable).replace('{{BLEND_NUTRITION}}',summary).replace('{{BLEND_FIBRE}}',String(Math.round(full.fi))),parts=text.split(/^#{1,2} (.+)\r?\n/gm),out=[];for(let i=1;i<parts.length;i+=2)out.push({title:parts[i].trim(),body:parts[i+1].trim()});return out;};
 const plan=JSON.parse(readFileSync(resolve(root,'content/plan.json'),'utf8'));
-const foodData=JSON.parse(readFileSync(resolve(root,'content/foods.json'),'utf8'));plan.foods=foodData.foods;plan.foodPairings=foodData.pairings;plan.drinkDefaults=foodData.drinkDefaults;plan.foodComponents={condensedMilk:foodData.condensedMilk};plan.pantryItems=JSON.parse(readFileSync(resolve(root,'content/pantry.json'),'utf8')).items;
+const foodData=JSON.parse(readFileSync(resolve(root,'content/foods.json'),'utf8'));plan.foods=foodData.foods;plan.foodPairings=foodData.pairings;plan.drinkDefaults=foodData.drinkDefaults;plan.foodComponents={condensedMilk:foodData.condensedMilk,cookingIngredients:foodData.cookingIngredients};plan.pantryItems=JSON.parse(readFileSync(resolve(root,'content/pantry.json'),'utf8')).items;
 plan.micronutrients=JSON.parse(readFileSync(resolve(root,'content/micronutrients.json'),'utf8'));
 plan.foodIcons=JSON.parse(readFileSync(resolve(root,'content/food-icons.json'),'utf8'));
 plan.supplements=JSON.parse(readFileSync(resolve(root,'content/supplements.json'),'utf8'));

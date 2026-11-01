@@ -318,7 +318,7 @@
       "kind": "estimate"
     },
     "rice": {
-      "ndb": "20545",
+      "ndb": "20445",
       "per100g": {
         "calcium": 10.0,
         "iron": 0.2,
@@ -342,7 +342,7 @@
         "folicAcid": 0.0,
         "folateDFE": 3.0
       },
-      "description": "Rice, white, long-grain, regular, cooked, unenriched, with salt",
+      "description": "Rice, white, long-grain, regular, unenriched, cooked without salt",
       "source": {
         "label": "USDA SR28 (2016)",
         "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
@@ -1316,6 +1316,352 @@
       },
       "kind": "estimate"
     },
+    "honey": {
+      "ndb": "19296",
+      "per100g": {
+        "calcium": 6.0,
+        "iron": 0.42,
+        "magnesium": 2.0,
+        "zinc": 0.22,
+        "copper": 0.036,
+        "manganese": 0.08,
+        "selenium": 0.8,
+        "retinol": 0.0,
+        "vitaminA": 0.0,
+        "vitaminE": 0.0,
+        "vitaminD": 0.0,
+        "vitaminC": 0.5,
+        "thiamin": 0.0,
+        "riboflavin": 0.038,
+        "niacin": 0.121,
+        "pantothenicAcid": 0.068,
+        "vitaminB6": 0.024,
+        "vitaminB12": 0.0,
+        "vitaminK": 0.0,
+        "folicAcid": 0.0,
+        "folateDFE": 2.0
+      },
+      "description": "Honey",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "egg": {
+      "ndb": "01123",
+      "per100g": {
+        "calcium": 56.0,
+        "iron": 1.75,
+        "magnesium": 12.0,
+        "zinc": 1.29,
+        "copper": 0.072,
+        "manganese": 0.028,
+        "selenium": 30.7,
+        "retinol": 160.0,
+        "vitaminA": 160.0,
+        "vitaminE": 1.05,
+        "vitaminD": 82.0,
+        "vitaminC": 0.0,
+        "thiamin": 0.04,
+        "riboflavin": 0.457,
+        "niacin": 0.075,
+        "pantothenicAcid": 1.533,
+        "vitaminB6": 0.17,
+        "vitaminB12": 0.89,
+        "vitaminK": 0.3,
+        "folicAcid": 0.0,
+        "folateDFE": 47.0
+      },
+      "description": "Egg, whole, raw, fresh",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "oil": {
+      "ndb": "04055",
+      "per100g": {
+        "calcium": 0.0,
+        "iron": 0.01,
+        "magnesium": 0.0,
+        "zinc": 0.0,
+        "copper": 0.0,
+        "selenium": 0.0,
+        "retinol": 0.0,
+        "vitaminA": 0.0,
+        "vitaminE": 15.94,
+        "vitaminC": 0.0,
+        "thiamin": 0.0,
+        "riboflavin": 0.0,
+        "niacin": 0.0,
+        "pantothenicAcid": 0.0,
+        "vitaminB6": 0.0,
+        "vitaminB12": 0.0,
+        "vitaminK": 8.0,
+        "folicAcid": 0.0,
+        "folateDFE": 0.0
+      },
+      "description": "Oil, palm",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "garlic": {
+      "ndb": "11215",
+      "per100g": {
+        "calcium": 181.0,
+        "iron": 1.7,
+        "magnesium": 25.0,
+        "zinc": 1.16,
+        "copper": 0.299,
+        "manganese": 1.672,
+        "selenium": 14.2,
+        "retinol": 0.0,
+        "vitaminA": 0.0,
+        "vitaminE": 0.08,
+        "vitaminD": 0.0,
+        "vitaminC": 31.2,
+        "thiamin": 0.2,
+        "riboflavin": 0.11,
+        "niacin": 0.7,
+        "pantothenicAcid": 0.596,
+        "vitaminB6": 1.235,
+        "vitaminB12": 0.0,
+        "vitaminK": 1.7,
+        "folicAcid": 0.0,
+        "folateDFE": 3.0
+      },
+      "description": "Garlic, raw",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "oyster-sauce": {
+      "ndb": "06176",
+      "per100g": {
+        "calcium": 32.0,
+        "iron": 0.18,
+        "magnesium": 4.0,
+        "zinc": 0.09,
+        "copper": 0.147,
+        "manganese": 0.053,
+        "selenium": 4.4,
+        "retinol": 0.0,
+        "vitaminA": 0.0,
+        "vitaminE": 0.0,
+        "vitaminD": 0.0,
+        "vitaminC": 0.1,
+        "thiamin": 0.01,
+        "riboflavin": 0.124,
+        "niacin": 1.474,
+        "pantothenicAcid": 0.016,
+        "vitaminB6": 0.016,
+        "vitaminB12": 0.41,
+        "vitaminK": 0.0,
+        "folicAcid": 0.0,
+        "folateDFE": 15.0
+      },
+      "description": "Sauce, oyster, ready-to-serve",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "light-soy": {
+      "ndb": "16123",
+      "per100g": {
+        "calcium": 33.0,
+        "iron": 1.45,
+        "magnesium": 74.0,
+        "zinc": 0.87,
+        "copper": 0.043,
+        "manganese": 1.018,
+        "selenium": 0.5,
+        "retinol": 0.0,
+        "vitaminA": 0.0,
+        "vitaminE": 0.0,
+        "vitaminD": 0.0,
+        "vitaminC": 0.0,
+        "thiamin": 0.033,
+        "riboflavin": 0.165,
+        "niacin": 2.196,
+        "pantothenicAcid": 0.297,
+        "vitaminB6": 0.148,
+        "vitaminB12": 0.0,
+        "vitaminK": 0.0,
+        "folicAcid": 0.0,
+        "folateDFE": 14.0
+      },
+      "description": "Soy sauce made from soy and wheat (shoyu)",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "dark-soy": {
+      "ndb": "16123",
+      "per100g": {
+        "calcium": 33.0,
+        "iron": 1.45,
+        "magnesium": 74.0,
+        "zinc": 0.87,
+        "copper": 0.043,
+        "manganese": 1.018,
+        "selenium": 0.5,
+        "retinol": 0.0,
+        "vitaminA": 0.0,
+        "vitaminE": 0.0,
+        "vitaminD": 0.0,
+        "vitaminC": 0.0,
+        "thiamin": 0.033,
+        "riboflavin": 0.165,
+        "niacin": 2.196,
+        "pantothenicAcid": 0.297,
+        "vitaminB6": 0.148,
+        "vitaminB12": 0.0,
+        "vitaminK": 0.0,
+        "folicAcid": 0.0,
+        "folateDFE": 14.0
+      },
+      "description": "Soy sauce made from soy and wheat (shoyu)",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "sugar": {
+      "ndb": "19335",
+      "per100g": {
+        "calcium": 1.0,
+        "iron": 0.05,
+        "magnesium": 0.0,
+        "zinc": 0.01,
+        "copper": 0.007,
+        "manganese": 0.004,
+        "selenium": 0.6,
+        "retinol": 0.0,
+        "vitaminA": 0.0,
+        "vitaminE": 0.0,
+        "vitaminD": 0.0,
+        "vitaminC": 0.0,
+        "thiamin": 0.0,
+        "riboflavin": 0.019,
+        "niacin": 0.0,
+        "pantothenicAcid": 0.0,
+        "vitaminB6": 0.0,
+        "vitaminB12": 0.0,
+        "vitaminK": 0.0,
+        "folicAcid": 0.0,
+        "folateDFE": 0.0
+      },
+      "description": "Sugars, granulated",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "ground-pork": {
+      "ndb": "10219",
+      "per100g": {
+        "calcium": 14.0,
+        "iron": 0.88,
+        "magnesium": 19.0,
+        "zinc": 2.2,
+        "copper": 0.045,
+        "manganese": 0.01,
+        "selenium": 24.6,
+        "retinol": 2.0,
+        "vitaminA": 2.0,
+        "vitaminC": 0.7,
+        "thiamin": 0.732,
+        "riboflavin": 0.235,
+        "niacin": 4.338,
+        "pantothenicAcid": 0.668,
+        "vitaminB6": 0.383,
+        "vitaminB12": 0.7,
+        "folicAcid": 0.0,
+        "folateDFE": 5.0
+      },
+      "description": "Pork, fresh, ground, raw",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "ground-beef-90": {
+      "ndb": "23562",
+      "per100g": {
+        "calcium": 12.0,
+        "iron": 2.24,
+        "magnesium": 20.0,
+        "zinc": 4.79,
+        "copper": 0.072,
+        "manganese": 0.01,
+        "selenium": 16.6,
+        "retinol": 4.0,
+        "vitaminA": 4.0,
+        "vitaminE": 0.17,
+        "vitaminD": 3.0,
+        "vitaminC": 0.0,
+        "thiamin": 0.042,
+        "riboflavin": 0.151,
+        "niacin": 5.072,
+        "pantothenicAcid": 0.601,
+        "vitaminB6": 0.369,
+        "vitaminB12": 2.21,
+        "vitaminK": 0.8,
+        "folicAcid": 0.0,
+        "folateDFE": 6.0
+      },
+      "description": "Beef, ground, 90% lean meat / 10% fat, raw",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
+    "ground-chicken": {
+      "ndb": "05332",
+      "per100g": {
+        "calcium": 6.0,
+        "iron": 0.82,
+        "magnesium": 21.0,
+        "zinc": 1.47,
+        "copper": 0.065,
+        "manganese": 0.016,
+        "selenium": 10.2,
+        "retinol": 0.0,
+        "vitaminA": 0.0,
+        "vitaminE": 0.27,
+        "vitaminC": 0.0,
+        "thiamin": 0.109,
+        "riboflavin": 0.241,
+        "niacin": 5.575,
+        "pantothenicAcid": 1.092,
+        "vitaminB6": 0.512,
+        "vitaminB12": 0.56,
+        "vitaminK": 0.8,
+        "folicAcid": 0.0,
+        "folateDFE": 1.0
+      },
+      "description": "Chicken, ground, raw",
+      "source": {
+        "label": "USDA SR28 (2016)",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/"
+      },
+      "kind": "estimate"
+    },
     "ice": {
       "per100g": {},
       "kind": "water",
@@ -1323,6 +1669,11 @@
     }
   },
   "references": {
+    "iron": {
+      "target": 8,
+      "upper": 45,
+      "scope": "total"
+    },
     "calcium": {
       "target": 1000,
       "upper": 2500,
@@ -1426,11 +1777,6 @@
     "molybdenum": {
       "target": 45,
       "upper": 2000,
-      "scope": "total"
-    },
-    "iron": {
-      "target": 8,
-      "upper": 45,
       "scope": "total"
     }
   },

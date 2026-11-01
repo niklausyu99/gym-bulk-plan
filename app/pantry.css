@@ -14,3 +14,4 @@
 .food-search input{background:var(--control);border:1px solid var(--control-line);border-radius:12px;padding:12px}
 
 .pairing-card>.pairing-portions{font-size:12px;color:var(--navy);margin-bottom:12px}
+.food-portion>label{display:block;font-size:14px;font-weight:600}.food-cooking{border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0 20px}.food-cooking summary{min-height:44px;font-size:14px;font-weight:600;cursor:pointer;align-content:center}.food-egg-preset{display:flex;gap:10px;margin-bottom:8px}.food-egg-preset .btn{flex:1;min-height:44px}.food-cooking .active{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}.food-per100:not(:empty){display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:14px;margin-top:18px;font-size:13px}.food-per100>span{font-size:12px;line-height:1.7;color:var(--muted)}

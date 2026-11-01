@@ -7,8 +7,8 @@ from pathlib import Path
 
 manifest = Path(sys.argv[1] if len(sys.argv)>1 else 'work/food-icons/generation.json')
 root = Path(__file__).resolve().parent.parent
-output = root/'assets/food-icons'
-output.mkdir(exist_ok=True)
+output = root/(sys.argv[2] if len(sys.argv)>2 else 'assets/food-icons')
+output.mkdir(parents=True,exist_ok=True)
 records = json.loads(manifest.read_text())
 selected = {}
 report = []
@@ -42,6 +42,7 @@ for sheet in records:
             index=row*cols+col
             if index>=len(sheet['subjects']):continue
             id,description=sheet['subjects'][index]
+            if id in sheet.get('skipIds',[]):continue
             # The first bean bun contained whole beans; its smooth-paste replacement is sheet6.
             if id=='red-bean-bun' and sheet['sheet']==4:continue
             left,right=xs[col:col+2]
@@ -64,7 +65,7 @@ for sheet in records:
             a=decoded[3::4]
             if len(a)!=256*256 or not 0.2<a.count(0)/len(a)<0.95:raise RuntimeError(f'Unexpected alpha: {id}')
             if any(a[y*256+x]>8 for y in range(256) for x in range(256) if x<12 or x>=244 or y<12 or y>=244):raise RuntimeError(f'Icon too near edge: {id}')
-            selected[id]={'src':'assets/food-icons/'+id+'.webp','width':256,'height':256}
+            selected[id]={'src':str(dest.relative_to(root)),'width':256,'height':256}
             report.append({'id':id,'sheet':sheet['sheet'],'row':row+1,'column':col+1,'crop':[x0,y0,bw,bh],'bytes':dest.stat().st_size,'transparentPixels':a.count(0),'sourceDescription':description})
 (root/'work/food-icons/assets.json').write_text(json.dumps(selected,indent=2)+'\n')
 (root/'work/food-icons/crop-report.json').write_text(json.dumps(report,indent=2)+'\n')

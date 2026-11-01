@@ -181,11 +181,11 @@
     },
     {
       "id": "almonds",
-      "name": "杏仁",
+      "name": "坚果杏仁（Almond）",
       "group": "optional",
       "grams": 14.4,
       "portion": "约12粒",
-      "assumption": "按约14 g估算，计算使用14.4 g",
+      "assumption": "坚果类 Almond，不是南北杏或苦杏仁。约12粒，计算按14.4g可食重。",
       "defaultIncluded": true,
       "per100g": {
         "k": 579,
@@ -265,6 +265,28 @@
         "label": "厂家标签",
         "url": "https://www.milo.com.my/products",
         "description": "马来西亚原味MILO粉，每100 g营养标签"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "蜂蜜",
+      "group": "optional",
+      "grams": 4,
+      "portion": "4 g",
+      "assumption": "少量调味，可选3、4或5g；不同品牌以标签为准。",
+      "defaultIncluded": true,
+      "per100g": {
+        "k": 304.0,
+        "p": 0.3,
+        "c": 82.4,
+        "f": 0.0,
+        "fi": 0.2
+      },
+      "source": {
+        "kind": "database",
+        "label": "USDA SR28 食物估算",
+        "url": "https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/methods-and-application-of-food-composition-laboratory/mafcl-site-pages/sr11-sr28/",
+        "description": "NDB 19296 · Honey"
       }
     },
     {

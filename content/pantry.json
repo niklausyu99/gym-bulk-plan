@@ -107,7 +107,7 @@
     },
     {
       "id": "almonds",
-      "name": "杏仁",
+      "name": "坚果杏仁（Almond）",
       "group": "blend",
       "unit": "g",
       "pack": 200,
@@ -767,6 +767,32 @@
       "regular": false,
       "icon": "cup",
       "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "honey",
+      "name": "蜂蜜",
+      "group": "blend",
+      "unit": "g",
+      "pack": 250,
+      "target": 250,
+      "threshold": 30,
+      "step": 5,
+      "regular": false,
+      "icon": "jar",
+      "note": "按需采购，不自动加入待购。"
+    },
+    {
+      "id": "minced-meat",
+      "name": "猪肉碎",
+      "group": "meals",
+      "unit": "g",
+      "pack": 200,
+      "target": 200,
+      "threshold": 100,
+      "step": 100,
+      "regular": false,
+      "icon": "jar",
+      "note": "常用200g包装参考；每份取100g生肉。库存按实际剩余盘点，不会预先计入200g。"
     }
   ]
 }

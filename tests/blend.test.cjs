@@ -4,7 +4,7 @@ const ingredients=require('../content/blend-ingredients.json').ingredients;
 const fresh=()=>B.defaultRecipe(ingredients),near=(a,b)=>assert(Math.abs(a-b)<1e-8,`${a} != ${b}`);
 const plan=()=>({...C.defaultPlan(true),blend:true,sides:['aglio'],blendRecipe:fresh()});
 test('完整配方默认包含青葡萄和菠萝，保留Whey一勺、燕麦25g，移除Glutamine',()=>{
- const r=fresh();assert.equal(r.included.length,13);
+ const r=fresh();assert.equal(r.included.length,14);
  for(const id of ['pineapple','grapes','oats','peanut'])assert(r.included.includes(id));
  assert.equal(ingredients.find(i=>i.id==='whey').grams,40);
  assert.equal(ingredients.find(i=>i.id==='oats').grams,25);
@@ -12,7 +12,7 @@ test('完整配方默认包含青葡萄和菠萝，保留Whey一勺、燕麦25g�
 });
 test('逐食材计算完整配方，取消葡萄准确扣除34.5kcal和9.05g碳水，可恢复',()=>{
  const r=fresh(),full=B.nutrition(ingredients,r);
- near(full.k,947.406);near(full.p,54.226);near(full.c,111.5294);near(full.f,35.295);near(full.fi,13.533);
+ near(full.k,959.566);near(full.p,54.238);near(full.c,114.8254);near(full.f,35.295);near(full.fi,13.541);
  r.included=r.included.filter(i=>i!=='grapes');const without=B.nutrition(ingredients,r);
  near(full.k-without.k,34.5);near(full.c-without.c,9.05);near(full.fi-without.fi,.45);
  r.included.push('grapes');assert.deepEqual(B.nutrition(ingredients,r),full);
@@ -35,7 +35,7 @@ test('半杯应用到全部五项；酸奶1/2汤匙独立于是否启用',()=>{
 });
 test('新一天配方独立，不继承昨天缺货状态',()=>{
  const yesterday=fresh();yesterday.included.pop();yesterday.portions.yogurt=15;
- const next=fresh();assert.equal(next.included.length,13);assert.deepEqual(next.portions,{});
+ const next=fresh();assert.equal(next.included.length,14);assert.deepEqual(next.portions,{});
 });
 test('已喝摄入冻结食材与营养，不随后续配方或食品数据变化',()=>{
  const p=plan();p.blendAmount=.5;p.blendSnapshot=B.capture(ingredients,p);p.eaten=['blend'];
@@ -52,7 +52,7 @@ test('原已喝记录保留旧摄入，不捏造具体食材份量；未喝和�
  near(B.nutritionForPlan(ingredients,p).k,565);assert.equal(p.blendSnapshot.legacy,true);
  assert(!JSON.stringify(p.blendSnapshot.items).includes('1.5'));
  assert.equal(B.preserveConsumedLegacy(s),false);assert(C.validateState(s));
- near(B.nutritionForPlan(ingredients,plan()).k,947.406);
+ near(B.nutritionForPlan(ingredients,plan()).k,959.566);
 });
 test('新配方、已喝快照可备份恢复；无效食材、份量和营养被拒绝',()=>{
  const s=C.emptyState();const p=plan();p.blendRecipe.included=p.blendRecipe.included.filter(id=>id!=='grapes');
