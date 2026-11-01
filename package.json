@@ -1,6 +1,6 @@
 {
   "name": "bulkplan",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "private": true,
   "description": "iPhone-first personal PPL and lean-bulk planner",
   "scripts": {

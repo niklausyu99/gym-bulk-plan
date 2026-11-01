@@ -1,0 +1,452 @@
+{
+  "catalog_files": 677,
+  "placements": 95,
+  "unique_variants": 92,
+  "accepted_unique": 51,
+  "covered_placements": 52,
+  "missing": [
+    {
+      "variant_id": "incline-smith",
+      "name": "低上斜史密斯卧推",
+      "slots": [
+        "incline"
+      ],
+      "preferred_for": [
+        "incline"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "flat-smith",
+      "name": "平板史密斯卧推",
+      "slots": [
+        "flat"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "fly-cable-mid",
+      "name": "站姿中位双绳索夹胸",
+      "slots": [
+        "fly"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "fly-cable-single",
+      "name": "单臂中位绳索夹胸",
+      "slots": [
+        "fly"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "lowfly-cable",
+      "name": "低至高双绳索夹胸",
+      "slots": [
+        "fly",
+        "lowfly"
+      ],
+      "preferred_for": [
+        "lowfly"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "pulldown-assisted-pullup",
+      "name": "辅助引体向上（中立握）",
+      "slots": [
+        "pulldown"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "latrow-cable-single",
+      "name": "扶稳式单臂绳索背阔划船",
+      "slots": [
+        "latrow"
+      ],
+      "preferred_for": [
+        "latrow"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "latrow-machine-single",
+      "name": "单臂胸托低位划船机（收肘）",
+      "slots": [
+        "latrow"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "straight-cable-rope",
+      "name": "绳柄直臂绳索下压",
+      "slots": [
+        "latrow",
+        "straight"
+      ],
+      "preferred_for": [
+        "straight"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "rear-cable-single",
+      "name": "扶稳式单臂绳索后束飞鸟",
+      "slots": [
+        "rear"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "curl-behind-cable-single",
+      "name": "扶稳式单臂身后绳索弯举",
+      "slots": [
+        "curl"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "hammer-db",
+      "name": "坐姿双哑铃锤式弯举",
+      "slots": [
+        "hammer"
+      ],
+      "preferred_for": [
+        "hammer"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "hammer-cable-rope",
+      "name": "低位绳索绳柄锤式弯举",
+      "slots": [
+        "hammer"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "hammer-cable-single",
+      "name": "单臂绳索中立握弯举",
+      "slots": [
+        "hammer"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "rdl-barbell",
+      "name": "杠铃罗马尼亚硬拉",
+      "slots": [
+        "rdl"
+      ],
+      "preferred_for": [
+        "rdl"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "rdl-db",
+      "name": "双哑铃罗马尼亚硬拉",
+      "slots": [
+        "rdl"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "thrust-smith",
+      "name": "史密斯臀推",
+      "slots": [
+        "thrust"
+      ],
+      "preferred_for": [
+        "thrust"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "thrust-machine",
+      "name": "臀推机",
+      "slots": [
+        "thrust"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "thrust-barbell",
+      "name": "杠铃臀推",
+      "slots": [
+        "thrust"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "legcurl-cable-single",
+      "name": "扶稳站姿单腿绳索腿弯举",
+      "slots": [
+        "legcurl"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "extension-machine-single",
+      "name": "单腿腿伸展机",
+      "slots": [
+        "extension"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "extension-cable-single",
+      "name": "坐姿单腿绳索腿伸展",
+      "slots": [
+        "extension"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "abduction-cable-single",
+      "name": "扶稳站姿绳索髋外展",
+      "slots": [
+        "abduction"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "abduction-band-seated",
+      "name": "坐姿环形弹力带髋外展",
+      "slots": [
+        "abduction"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "crunch-weighted-floor",
+      "name": "地面抱片卷腹",
+      "slots": [
+        "crunch"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "pallof-cable-standing",
+      "name": "站姿绳索 Pallof 抗旋转推举",
+      "slots": [
+        "pallof"
+      ],
+      "preferred_for": [
+        "pallof"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "pallof-band-standing",
+      "name": "站姿弹力带 Pallof 抗旋转推举",
+      "slots": [
+        "pallof"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "pallof-cable-kneeling",
+      "name": "高跪姿绳索 Pallof 抗旋转推举",
+      "slots": [
+        "pallof"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "lowfly-cable-single",
+      "name": "低至高单臂绳索夹胸",
+      "slots": [
+        "lowfly"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "lowfly-incline-machine",
+      "name": "可调上斜夹胸机",
+      "slots": [
+        "lowfly"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "straight-pullover-machine",
+      "name": "肘垫式器械 Pullover",
+      "slots": [
+        "straight"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "shrug-smith",
+      "name": "史密斯耸肩",
+      "slots": [
+        "shrug"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "preacher-cable-single",
+      "name": "单臂绳索牧师椅弯举",
+      "slots": [
+        "preacher"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "kickback-cable",
+      "name": "扶稳单腿绳索臀部后踢",
+      "slots": [
+        "kickback"
+      ],
+      "preferred_for": [
+        "kickback"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "kickback-band",
+      "name": "扶稳站姿弹力带后踢",
+      "slots": [
+        "kickback"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "adduction-cable-single",
+      "name": "扶稳站姿绳索髋内收",
+      "slots": [
+        "adduction"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "adduction-side-lying",
+      "name": "侧卧下侧腿髋内收",
+      "slots": [
+        "adduction"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "seatedcalf-smith",
+      "name": "史密斯坐姿提踵",
+      "slots": [
+        "seatedcalf"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "seatedcalf-db-single",
+      "name": "单腿哑铃坐姿提踵",
+      "slots": [
+        "seatedcalf"
+      ],
+      "preferred_for": [],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "wristcurl-db",
+      "name": "坐姿哑铃腕弯举",
+      "slots": [
+        "wristcurl"
+      ],
+      "preferred_for": [
+        "wristcurl"
+      ],
+      "status": "未找到通过核对的对应演示"
+    },
+    {
+      "variant_id": "wristextension-db",
+      "name": "坐姿哑铃反向腕弯举",
+      "slots": [
+        "wristextension"
+      ],
+      "preferred_for": [
+        "wristextension"
+      ],
+      "status": "未找到通过核对的对应演示"
+    }
+  ],
+  "newly_matched": [
+    {
+      "variantId": "row-machine-chest",
+      "source": "men/back/Lever Reverse T-Bar Row.mp4",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "胸部持续贴住前方倾斜支撑垫，双脚踩平台，肘向后拉；不同于此前无胸托的T杠候选。"
+      }
+    },
+    {
+      "variantId": "rdl-smith",
+      "source": "men/back/Smith Deadlift - Deadlift.mp4",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "七个连续时间样本：膝微屈角度基本保持，髋向后折叠，杠贴近腿，下至小腿后反向站起；没有蹲起或每次触地重置。"
+      }
+    },
+    {
+      "variantId": "curl-standing-db-supinated",
+      "source": "men/biceps/Dumbbell Biceps Curl.mp4",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "站姿双哑铃，掌心朝前/上，双臂同步屈肘，身体无明显后仰。"
+      }
+    },
+    {
+      "variantId": "hammer-incline-db",
+      "source": "men/biceps/Dumbbell Incline Hammer Curl.mp4",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "上斜靠背，双手掌心相对，双臂屈肘，保持中立握；不冒充现有直立坐姿版本。"
+      }
+    },
+    {
+      "variantId": "hammer-crossbody-db",
+      "source": "men/biceps/Dumbbell Cross Body Hammer Curl.mp4",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "七个时间样本：站姿、拇指朝上、两手交替，哑铃斜向对侧上胸；和用户描述的Side Curls一致，未套用于直立普通锤式版本。"
+      }
+    }
+  ],
+  "personal_left_shoulder": "重用已核对的单臂绳索侧平举，以明确的左侧呈现；视频、回退动图、放大视图同步。独立版本计数不重复累加。",
+  "pending_names": [],
+  "not_claimed": "本轮清点677个文件目录，检查11个候选的多时间样本；没有声称已逐个完整观看677段。相近动作不作为通过。"
+}

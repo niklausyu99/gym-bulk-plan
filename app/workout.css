@@ -8,3 +8,5 @@
 
 /* Each equipment version is an independent addition to today's workout. */
 .plan-variants{display:grid;gap:12px}.plan-variant{padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.plan-variant.is-added{border-color:var(--accent)}.plan-variant-title{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.plan-variant-title h4{font-size:16px;line-height:1.5;margin:0;overflow-wrap:anywhere}.plan-variant-title .chip{flex-shrink:0;font-size:12px}.plan-variant p{margin:10px 0}.plan-variant-actions{display:flex;justify-content:space-between;align-items:center;gap:12px}.selected-workout .selected-exercise-name{padding:0;min-height:44px;text-align:left;font-size:inherit;font-weight:700;white-space:normal}.selected-workout>li>div{min-width:0}.selected-workout small{display:block}.preview-choice{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.preview-choice .btn{flex:1 1 180px}
+
+.animation-stage.is-mirrored>video,.animation-stage.is-mirrored>img{transform:scaleX(-1)}

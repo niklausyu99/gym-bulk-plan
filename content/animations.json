@@ -1428,6 +1428,166 @@
           "bytes": 212752
         }
       ]
+    },
+    {
+      "variantId": "row-machine-chest",
+      "src": "assets/animations/row-machine-chest.mp4",
+      "poster": "assets/animations/row-machine-chest.jpg",
+      "fallback": "assets/animations/row-machine-chest.gif",
+      "duration": 6.573233,
+      "note": "示范为胸托T杠划船机；握把和胸垫位置按现场设备调整。",
+      "source": "men/back/Lever Reverse T-Bar Row.mp4",
+      "sourceSha256": "016c5f4608f12c62933053a2f42ceda92bb6a3ad6961727fd3380d08c7b53e7d",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "胸部持续贴住前方倾斜支撑垫，双脚踩平台，肘向后拉；不同于此前无胸托的T杠候选。"
+      },
+      "files": [
+        {
+          "path": "assets/animations/row-machine-chest.mp4",
+          "sha256": "1b569e2730144ef690ac0536995ee5550644b80fd6826de150ba5481aa8304ff",
+          "bytes": 115304
+        },
+        {
+          "path": "assets/animations/row-machine-chest.jpg",
+          "sha256": "ed3c0aa718c41e02491be740d674dc24776bad86b1199ad1277bd93f16a4123f",
+          "bytes": 20939
+        },
+        {
+          "path": "assets/animations/row-machine-chest.gif",
+          "sha256": "7449b4d69a4298e3ac89a4dfc46d0488102d784a1df3c8e62518da82c9fa8f82",
+          "bytes": 397593
+        }
+      ]
+    },
+    {
+      "variantId": "rdl-smith",
+      "src": "assets/animations/rdl-smith.mp4",
+      "poster": "assets/animations/rdl-smith.jpg",
+      "fallback": "assets/animations/rdl-smith.gif",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/back/Smith Deadlift - Deadlift.mp4",
+      "sourceSha256": "1629c76cfe9b017e0f1f89791c64838ef4252a6ea5d9036598da5e023990329c",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "七个连续时间样本：膝微屈角度基本保持，髋向后折叠，杠贴近腿，下至小腿后反向站起；没有蹲起或每次触地重置。"
+      },
+      "files": [
+        {
+          "path": "assets/animations/rdl-smith.mp4",
+          "sha256": "16b8afaa66e615172a4dd6ecad29e42d5e2bc18cb828fc40b7c178e6ee0ce400",
+          "bytes": 147468
+        },
+        {
+          "path": "assets/animations/rdl-smith.jpg",
+          "sha256": "518637980395f21857755faa4a7f3311f37f5a1182b6b50dc8365323017d56c7",
+          "bytes": 20986
+        },
+        {
+          "path": "assets/animations/rdl-smith.gif",
+          "sha256": "186563acc366bae11889f455eee070d7b13d37c7919c3694fa2db75cea277bf4",
+          "bytes": 574385
+        }
+      ]
+    },
+    {
+      "variantId": "curl-standing-db-supinated",
+      "src": "assets/animations/curl-standing-db-supinated.mp4",
+      "poster": "assets/animations/curl-standing-db-supinated.jpg",
+      "fallback": "assets/animations/curl-standing-db-supinated.gif",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/biceps/Dumbbell Biceps Curl.mp4",
+      "sourceSha256": "a0b63b72251ff8ee8bad80e274ca90481f00503a0f245c9013ea8351d4a70378",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "站姿双哑铃，掌心朝前/上，双臂同步屈肘，身体无明显后仰。"
+      },
+      "files": [
+        {
+          "path": "assets/animations/curl-standing-db-supinated.mp4",
+          "sha256": "518be3d37291194c69816e5b2dd2753058ea8d7adf4d781bd7f5c3db864af924",
+          "bytes": 103837
+        },
+        {
+          "path": "assets/animations/curl-standing-db-supinated.jpg",
+          "sha256": "cf575d872b3f479845584c0c95dfbe2b5c9649bfd89f4e281c85d34f310a77b0",
+          "bytes": 15782
+        },
+        {
+          "path": "assets/animations/curl-standing-db-supinated.gif",
+          "sha256": "d11adb0148b39cc66a36cb604e14199233f946c0d051e925327ade33846660af",
+          "bytes": 285352
+        }
+      ]
+    },
+    {
+      "variantId": "hammer-incline-db",
+      "src": "assets/animations/hammer-incline-db.mp4",
+      "poster": "assets/animations/hammer-incline-db.jpg",
+      "fallback": "assets/animations/hammer-incline-db.gif",
+      "duration": 6.573233,
+      "note": "",
+      "source": "men/biceps/Dumbbell Incline Hammer Curl.mp4",
+      "sourceSha256": "6aa44639a947d99ead7bbcf98d2282eee41bb9e651d1b5580a1827688659afdb",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "上斜靠背，双手掌心相对，双臂屈肘，保持中立握；不冒充现有直立坐姿版本。"
+      },
+      "files": [
+        {
+          "path": "assets/animations/hammer-incline-db.mp4",
+          "sha256": "fe44ec1249a19986fd0adeaaca83c82b0c5e06823481d98890e0c6d485845773",
+          "bytes": 111535
+        },
+        {
+          "path": "assets/animations/hammer-incline-db.jpg",
+          "sha256": "d33bcd19c3faffc102760e0ad6950fbd3cbb4be1541bca4b8422e31fec3c70e9",
+          "bytes": 17962
+        },
+        {
+          "path": "assets/animations/hammer-incline-db.gif",
+          "sha256": "3b088b808e8159aeb0b8341b615edde36735c31d666044d477f6c4e80daa4757",
+          "bytes": 258759
+        }
+      ]
+    },
+    {
+      "variantId": "hammer-crossbody-db",
+      "src": "assets/animations/hammer-crossbody-db.mp4",
+      "poster": "assets/animations/hammer-crossbody-db.jpg",
+      "fallback": "assets/animations/hammer-crossbody-db.gif",
+      "duration": 6.6066,
+      "note": "",
+      "source": "men/biceps/Dumbbell Cross Body Hammer Curl.mp4",
+      "sourceSha256": "3bdfcc1971118adfa33c678d9f0c05541734f4a12c1d762e07f8a7d7dc0fda03",
+      "review": {
+        "method": "Inspected multiple temporal samples, complete person/apparatus framing and exact variant-specific setup.",
+        "matched": true,
+        "observed": "七个时间样本：站姿、拇指朝上、两手交替，哑铃斜向对侧上胸；和用户描述的Side Curls一致，未套用于直立普通锤式版本。"
+      },
+      "files": [
+        {
+          "path": "assets/animations/hammer-crossbody-db.mp4",
+          "sha256": "f3a6bc983d9cfdbad58d8e4ef7fe0a1f1c865a03bf5fb896200bb666af9771a7",
+          "bytes": 116747
+        },
+        {
+          "path": "assets/animations/hammer-crossbody-db.jpg",
+          "sha256": "ca2001673096f69ebac1abd629ea739bfba6470e83bc498a2652de8450039dbd",
+          "bytes": 15560
+        },
+        {
+          "path": "assets/animations/hammer-crossbody-db.gif",
+          "sha256": "a52354dd33ffe7631cec36c7e32ca3577b5b3bd746a3ce16b4ebdc1bba27bf18",
+          "bytes": 247370
+        }
+      ]
     }
   ],
   "rejected": [

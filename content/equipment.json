@@ -1786,6 +1786,10 @@
         {
           "title": "Kassiano 等 2025：上斜与牧师椅弯举的局部肌厚",
           "url": "https://pubmed.ncbi.nlm.nih.gov/39809454/"
+        },
+        {
+          "title": "PureGym：Dumbbell Curls 动作说明",
+          "url": "https://www.puregym.com/exercises/arms-and-shoulders/bicep-curl/dumbbell-bicep-curls/"
         }
       ],
       "variants": [
@@ -1984,6 +1988,61 @@
             "watch": "上臂贴垫，控制下放，不突然反弹伸肘。",
             "breath": "发力时呼气，受控回程时吸气；躯干保持稳定，避免长时间憋气。"
           }
+        },
+        {
+          "id": "curl-standing-db-supinated",
+          "name": "站姿双哑铃弯举（旋后握）",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "curl",
+          "rank": 4,
+          "conditional": false,
+          "when": "希望采用标准站姿弯举，且能保持躯干和上臂稳定时。",
+          "changes": "肩部接近躯干中立位置；不使用上斜靠背。",
+          "cues": [
+            "站稳，掌心向前，双手各持一只哑铃。",
+            "上臂自然靠近身体，屈肘抬起，不甩腰。",
+            "手腕不折，约2秒受控下放。"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 3,
+            "sets_max": 3,
+            "reps": [
+              8,
+              12
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          },
+          "teaching": {
+            "setup": "双脚站稳，膝自然放松。双手各持一只哑铃，掌心向前，上臂靠近身体。",
+            "effort": "保持躯干和上臂稳定，屈肘抬起哑铃，掌心朝前上方。",
+            "finish": "抬到无需前送肘部或耸肩的位置，手腕保持自然。",
+            "back": "约2秒伸肘回到起点，保持控制，不反弹。",
+            "watch": "不要后仰、甩腰或向前摆上臂；做不到时降低重量。",
+            "breath": "屈肘抬起时呼气，受控下放时吸气。"
+          },
+          "aliases": [
+            "Supinated Curls",
+            "Standing Supinated Dumbbell Curls",
+            "Isolation Curls",
+            "Standing Isolation Curls"
+          ]
         }
       ]
     },
@@ -2001,6 +2060,10 @@
         {
           "title": "Haugen 等 2023：自由重量与器械系统综述及荟萃分析",
           "url": "https://pubmed.ncbi.nlm.nih.gov/37582807/"
+        },
+        {
+          "title": "Muscle & Strength：Cross Body Hammer Curl",
+          "url": "https://www.muscleandstrength.com/exercises/hammer-curl-across-the-body.html"
         }
       ],
       "variants": [
@@ -2051,7 +2114,11 @@
             "back": "约2秒伸肘降回，握法与上臂位置保持稳定。",
             "watch": "中立握，不让肘部随重量大幅移动。",
             "breath": "发力时呼气，受控回程时吸气；躯干保持稳定，避免长时间憋气。"
-          }
+          },
+          "aliases": [
+            "Hammer Curls",
+            "Seated Hammer Curls"
+          ]
         },
         {
           "id": "hammer-cable-rope",
@@ -2150,6 +2217,112 @@
             "watch": "中立握，不让肘部随重量大幅移动。",
             "breath": "发力时呼气，受控回程时吸气；躯干保持稳定，避免长时间憋气。"
           }
+        },
+        {
+          "id": "hammer-incline-db",
+          "name": "上斜双哑铃锤式弯举",
+          "category": "dumbbell",
+          "laterality": "bilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "both",
+          "family": "hammer",
+          "rank": 3,
+          "conditional": false,
+          "when": "肩略后伸无不适，且希望借靠背减少躯干摆动时。",
+          "changes": "相对直立坐姿，上臂略在躯干后方；保持中立握。",
+          "cues": [
+            "椅背约45–60°，背部贴稳，手心相对。",
+            "上臂自然垂下，拇指朝上，屈肘抬起。",
+            "不前摆上臂，受控下放。"
+          ],
+          "hint": "重量填每只哑铃，不相加。同时双侧每次完整动作记 1 次；双侧不翻倍计组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_bilateral_set",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          },
+          "teaching": {
+            "setup": "椅背约45–60°作舒适起点，背部贴稳。双手各持一只哑铃，手心相对，上臂自然垂下。",
+            "effort": "拇指持续向上，屈肘抬起哑铃，不主动前送上臂。",
+            "finish": "到无需耸肩或摆动上臂的位置停住，手腕不折。",
+            "back": "约2秒伸肘回程，手心仍相对，不强行拉伸肩前侧。",
+            "watch": "肩前侧不舒服时改用直立版本；不要甩肩或把中立握转成掌心向上。",
+            "breath": "屈肘抬起时呼气，受控下放时吸气。"
+          },
+          "aliases": [
+            "Incline Hammer Curls"
+          ]
+        },
+        {
+          "id": "hammer-crossbody-db",
+          "name": "交叉锤式弯举",
+          "category": "dumbbell",
+          "laterality": "unilateral",
+          "basis": "db_each",
+          "conventions": [
+            "each_dumbbell_kg"
+          ],
+          "sideAxis": "working_limb",
+          "family": "hammer",
+          "rank": 4,
+          "conditional": false,
+          "when": "希望单侧交替、中立握并向对侧上胸方向弯起时。",
+          "changes": "路径斜向身体中线；不是直上直下的普通锤式弯举。",
+          "cues": [
+            "站稳，手心朝身体内侧，拇指向上。",
+            "左手斜向右上胸、右手斜向左上胸弯起。",
+            "逐侧完成，躯干不转，不把左右相加成一次。"
+          ],
+          "hint": "重量记该手哑铃重量。左右重量、次数和余力分别记录；两侧各完成规定次数算本动作一组。",
+          "prescription": {
+            "sets_min": 2,
+            "sets_max": 2,
+            "reps": [
+              10,
+              15
+            ],
+            "reps_unit": "per_side",
+            "rest_seconds": 105,
+            "rir": [
+              1,
+              2
+            ],
+            "new_variant_rir": [
+              2,
+              3
+            ],
+            "sets_replace_not_add": true
+          },
+          "teaching": {
+            "setup": "站稳，双手各持哑铃自然垂于身侧，手心相对、拇指向上。先做一侧，另一侧保持自然。",
+            "effort": "屈肘让哑铃斜向对侧上胸弯起：左手朝右上胸，右手朝左上胸；保持中立握。",
+            "finish": "到无需抬肩或转身的位置停住，不强求哑铃碰到胸口。",
+            "back": "约2秒沿原路下放，逐侧或交替完成；左右分别记录次数。",
+            "watch": "不要旋转躯干、甩肩或后仰；保持手腕自然，别转成掌心向上的普通弯举。",
+            "breath": "弯起时呼气，受控下放时吸气。"
+          },
+          "aliases": [
+            "Cross-body Hammer Curls",
+            "Side Curls",
+            "Cross-body Curls"
+          ]
         }
       ]
     },

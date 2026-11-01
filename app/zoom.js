@@ -1,10 +1,10 @@
 (()=>{'use strict';
 const dialog=document.querySelector('#image-zoom'),canvas=document.querySelector('#zoom-canvas'),img=document.querySelector('#zoom-image'),label=document.querySelector('#zoom-reset');
-const points=new Map();let scale=1,x=0,y=0,baseScale=1,startDistance=0,pan=null;
+const points=new Map();let scale=1,x=0,y=0,baseScale=1,startDistance=0,pan=null,mirrored=false;
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
-const paint=()=>{x=clamp(x,-canvas.clientWidth*(scale-1)/2,canvas.clientWidth*(scale-1)/2);y=clamp(y,-canvas.clientHeight*(scale-1)/2,canvas.clientHeight*(scale-1)/2);img.style.transform=`translate(${x}px,${y}px) scale(${scale})`;label.textContent=Math.round(scale*100)+'%';document.querySelector('#zoom-minus').disabled=scale<=1;document.querySelector('#zoom-plus').disabled=scale>=3;};
+const paint=()=>{x=clamp(x,-canvas.clientWidth*(scale-1)/2,canvas.clientWidth*(scale-1)/2);y=clamp(y,-canvas.clientHeight*(scale-1)/2,canvas.clientHeight*(scale-1)/2);img.style.transform=`translate(${x}px,${y}px) scale(${mirrored?-scale:scale},${scale})`;label.textContent=Math.round(scale*100)+'%';document.querySelector('#zoom-minus').disabled=scale<=1;document.querySelector('#zoom-plus').disabled=scale>=3;};
 const zoom=value=>{scale=clamp(value,1,3);if(scale===1){x=0;y=0;}paint();};
-window.BulkZoom={open(src,alt,title='图片大图'){img.src=src;img.alt=alt;document.querySelector('#zoom-title').textContent=title;dialog.showModal();points.clear();pan=null;zoom(1);}};
+window.BulkZoom={open(src,alt,title='图片大图',{mirror=false}={}){mirrored=mirror;img.src=src;img.alt=alt;document.querySelector('#zoom-title').textContent=title;dialog.showModal();points.clear();pan=null;zoom(1);}};
 document.querySelector('#zoom-close').addEventListener('click',()=>dialog.close());document.querySelector('#zoom-minus').addEventListener('click',()=>zoom(scale-.5));document.querySelector('#zoom-plus').addEventListener('click',()=>zoom(scale+.5));label.addEventListener('click',()=>zoom(1));
 canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);points.set(e.pointerId,{x:e.clientX,y:e.clientY});if(points.size===1)pan={pointer:e.pointerId,x:e.clientX,y:e.clientY,baseX:x,baseY:y};if(points.size===2){const [a,b]=[...points.values()];startDistance=Math.hypot(a.x-b.x,a.y-b.y);baseScale=scale;}});
 canvas.addEventListener('pointermove',e=>{if(!points.has(e.pointerId))return;points.set(e.pointerId,{x:e.clientX,y:e.clientY});if(points.size===2){const [a,b]=[...points.values()];if(startDistance>0)scale=clamp(baseScale*Math.hypot(a.x-b.x,a.y-b.y)/startDistance,1,3);paint();}else if(pan&&pan.pointer===e.pointerId&&scale>1){x=pan.baseX+e.clientX-pan.x;y=pan.baseY+e.clientY-pan.y;paint();}});

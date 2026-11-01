@@ -20,7 +20,7 @@ Design for the iPhone first, with 16px content margins and touch targets at leas
 
 ## 5. Layout & Composition
 
-Today starts with the next workout or existing draft. Training supports one set at a time. Nutrition starts with actual day/Blend choices. Progress uses real records. More supplies the action library, product handbook, installation and backup. Do not add a landing-page hero or marketing funnel inside daily use.
+Today starts with the next workout or existing draft. Training supports one set at a time. The user freely chooses Push, Pull, Legs or Rest; completion advances only the default rolling sequence, without calendar-based training predictions or a next-item badge. Selected exercise names open their exact record. Every recording card can stay collapsed. The selection header owns the lime record action; counts are secondary, and each recording card has one teaching entrance. The session summary has stronger contrast than individual entries. Nutrition starts with actual day/Blend choices. Progress uses real records. More supplies the action library, product handbook, installation and backup. Do not add a landing-page hero or marketing funnel inside daily use.
 
 ## 6. Components
 

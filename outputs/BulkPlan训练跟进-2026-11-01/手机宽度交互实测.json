@@ -1,0 +1,189 @@
+[
+  {
+    "case": "name opens exact record before draft",
+    "id": "flat"
+  },
+  {
+    "case": "first and later entries stay collapsed after render",
+    "open": 0
+  },
+  {
+    "case": "manual day switch preserves draft and default sequence",
+    "cursor": 0,
+    "parked": 7
+  },
+  {
+    "case": "crossbody has separate side readings and exact autoplay",
+    "key": "hammer-crossbody-db",
+    "source": "assets/animations/hammer-crossbody-db.mp4",
+    "controls": false,
+    "advancing": true
+  },
+  {
+    "case": "mobile 320",
+    "w": 320,
+    "scroll": 320,
+    "buttons": [
+      {
+        "w": 160,
+        "h": 48
+      },
+      {
+        "w": 56,
+        "h": 44
+      },
+      {
+        "w": 52,
+        "h": 44
+      },
+      {
+        "w": 160,
+        "h": 44
+      },
+      {
+        "w": 56,
+        "h": 44
+      },
+      {
+        "w": 52,
+        "h": 44
+      }
+    ],
+    "summary": "rgb(175, 250, 1)"
+  },
+  {
+    "case": "mobile 375",
+    "w": 375,
+    "scroll": 375,
+    "buttons": [
+      {
+        "w": 215,
+        "h": 44
+      },
+      {
+        "w": 56,
+        "h": 44
+      },
+      {
+        "w": 52,
+        "h": 44
+      },
+      {
+        "w": 215,
+        "h": 44
+      },
+      {
+        "w": 56,
+        "h": 44
+      },
+      {
+        "w": 52,
+        "h": 44
+      }
+    ],
+    "summary": "rgb(175, 250, 1)"
+  },
+  {
+    "case": "mobile 390",
+    "w": 390,
+    "scroll": 390,
+    "buttons": [
+      {
+        "w": 230,
+        "h": 44
+      },
+      {
+        "w": 56,
+        "h": 44
+      },
+      {
+        "w": 52,
+        "h": 44
+      },
+      {
+        "w": 230,
+        "h": 44
+      },
+      {
+        "w": 56,
+        "h": 44
+      },
+      {
+        "w": 52,
+        "h": 44
+      }
+    ],
+    "summary": "rgb(175, 250, 1)"
+  },
+  {
+    "case": "mobile 430",
+    "w": 430,
+    "scroll": 430,
+    "buttons": [
+      {
+        "w": 270,
+        "h": 44
+      },
+      {
+        "w": 56,
+        "h": 44
+      },
+      {
+        "w": 52,
+        "h": 44
+      },
+      {
+        "w": 270,
+        "h": 44
+      },
+      {
+        "w": 56,
+        "h": 44
+      },
+      {
+        "w": 52,
+        "h": 44
+      }
+    ],
+    "summary": "rgb(175, 250, 1)"
+  },
+  {
+    "case": "media row-machine-chest",
+    "key": "row-machine-chest",
+    "ready": 4,
+    "poster": "http://127.0.0.1:8765/assets/animations/row-machine-chest.jpg"
+  },
+  {
+    "case": "media rdl-smith",
+    "key": "rdl-smith",
+    "ready": 4,
+    "poster": "http://127.0.0.1:8765/assets/animations/rdl-smith.jpg"
+  },
+  {
+    "case": "media curl-standing-db-supinated",
+    "key": "curl-standing-db-supinated",
+    "ready": 4,
+    "poster": "http://127.0.0.1:8765/assets/animations/curl-standing-db-supinated.jpg"
+  },
+  {
+    "case": "media hammer-incline-db",
+    "key": "hammer-incline-db",
+    "ready": 4,
+    "poster": "http://127.0.0.1:8765/assets/animations/hammer-incline-db.jpg"
+  },
+  {
+    "case": "media hammer-crossbody-db",
+    "key": "hammer-crossbody-db",
+    "ready": 4,
+    "poster": "http://127.0.0.1:8765/assets/animations/hammer-crossbody-db.jpg"
+  },
+  {
+    "case": "browser errors",
+    "errors": []
+  },
+  {
+    "case": "left shoulder inline and enlarged both use left side",
+    "mirror": true,
+    "errors": []
+  }
+]
