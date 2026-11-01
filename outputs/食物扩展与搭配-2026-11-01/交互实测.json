@@ -1,0 +1,34 @@
+[
+  {
+    "case": "26 options searchable; excluded foods absent; shopping only on request; selected portion enters plan"
+  },
+  {
+    "case": "pairing cancel safe; invalid quantity blocked; save separate foods; eaten can be selected individually; older snapshots unchanged"
+  },
+  {
+    "case": "corn pairing does not bind or mark chicken eaten"
+  },
+  {
+    "case": "pantry filters keep horizontal position across repeated selections; homemade ice absent",
+    "pantryLeft": 547
+  },
+  {
+    "case": "refresh retains all nutrition snapshots, portion choices and shopping queue"
+  },
+  {
+    "case": "mobile 320 food cards, portions and pairing dialog do not overflow"
+  },
+  {
+    "case": "mobile 375 food cards, portions and pairing dialog do not overflow"
+  },
+  {
+    "case": "mobile 390 food cards, portions and pairing dialog do not overflow"
+  },
+  {
+    "case": "mobile 430 food cards, portions and pairing dialog do not overflow"
+  },
+  {
+    "case": "browser console",
+    "errors": []
+  }
+]

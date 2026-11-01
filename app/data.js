@@ -1833,6 +1833,1120 @@ window.BULK_DATA = {
         "c"
       ],
       "gramsPerUnit": 60
+    },
+    {
+      "id": "wrap",
+      "name": "全麦卷饼皮",
+      "group": "carbs",
+      "unit": "张",
+      "amount": 1,
+      "step": 1,
+      "max": 8,
+      "library": "more",
+      "pantryId": "wrap",
+      "variants": [
+        {
+          "id": "usda-174081",
+          "name": "全麦卷饼皮",
+          "per100": {
+            "k": 310,
+            "p": 9.76,
+            "c": 45.89,
+            "f": 9.76,
+            "fi": 9.8
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/174081/nutrients",
+            "note": "USDA SR Legacy · Tortillas, ready-to-bake or -fry, whole wheat；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "只计算饼皮；夹入的食物与酱料另记。每张暂按60g，可按包装调整。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 60,
+      "aliases": [
+        "wrap",
+        "tortilla"
+      ]
+    },
+    {
+      "id": "pita",
+      "name": "皮塔饼",
+      "group": "carbs",
+      "unit": "个",
+      "amount": 1,
+      "step": 1,
+      "max": 8,
+      "library": "more",
+      "pantryId": "pita",
+      "variants": [
+        {
+          "id": "usda-174915",
+          "name": "原味白皮塔饼",
+          "per100": {
+            "k": 275,
+            "p": 9.1,
+            "c": 55.7,
+            "f": 1.2,
+            "fi": 2.2
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/174915/nutrients",
+            "note": "USDA SR Legacy · Bread, pita, white, enriched；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "每个暂按60g；夹料和抹酱另计。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 60,
+      "aliases": [
+        "pita"
+      ]
+    },
+    {
+      "id": "english-muffin",
+      "name": "英式松饼",
+      "group": "carbs",
+      "unit": "个",
+      "amount": 1,
+      "step": 1,
+      "max": 8,
+      "library": "more",
+      "pantryId": "english-muffin",
+      "variants": [
+        {
+          "id": "usda-175063",
+          "name": "原味 English muffin",
+          "per100": {
+            "k": 235,
+            "p": 7.7,
+            "c": 46,
+            "f": 1.8,
+            "fi": 2.7
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/175063/nutrients",
+            "note": "USDA SR Legacy · English muffins, plain, enriched, without calcium propionate(includes sourdough)；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "指原味英式松饼，不是甜蛋糕；每个暂按60g，黄油另计。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 60,
+      "aliases": [
+        "english muffin"
+      ]
+    },
+    {
+      "id": "raisin-bread",
+      "name": "葡萄干面包",
+      "group": "carbs",
+      "unit": "片",
+      "amount": 2,
+      "step": 1,
+      "max": 12,
+      "library": "more",
+      "pantryId": "raisin-bread",
+      "variants": [
+        {
+          "id": "usda-172680",
+          "name": "普通葡萄干面包",
+          "per100": {
+            "k": 274,
+            "p": 7.9,
+            "c": 52.3,
+            "f": 4.4,
+            "fi": 4.3
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/172680/nutrients",
+            "note": "USDA SR Legacy · Bread, raisin, enriched；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "每片暂按30g；面包内的葡萄干已包含，不要重复计算。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 30
+    },
+    {
+      "id": "red-bean-bun",
+      "name": "红豆包（蒸豆沙包）",
+      "group": "carbs",
+      "unit": "个",
+      "amount": 2,
+      "step": 1,
+      "max": 12,
+      "library": "more",
+      "pantryId": "red-bean-bun",
+      "variants": [
+        {
+          "id": "pa-mini-red-bean",
+          "name": "PA迷你蒸豆沙包 · 30g",
+          "per100": {
+            "k": 310,
+            "p": 6.5,
+            "c": 54.5,
+            "f": 7.3,
+            "fi": 2.3
+          },
+          "basis": "g",
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://www.pa-food.com/products/pa/steamed-bun/mini-steamed-bun-baozi/mini-red-bean-steam-buns/",
+            "note": "PA厂家迷你蒸豆沙包每100g标签，单个30g；大包或烘焙红豆面包不能直接套用。"
+          }
+        }
+      ],
+      "note": "当前按迷你蒸豆沙包计算；大包请改每个克重。烘焙红豆面包的配方不同。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 30
+    },
+    {
+      "id": "mantou",
+      "name": "原味馒头",
+      "group": "carbs",
+      "unit": "个",
+      "amount": 1,
+      "step": 1,
+      "max": 10,
+      "library": "more",
+      "pantryId": "mantou",
+      "variants": [
+        {
+          "id": "pa-plain",
+          "name": "PA原味馒头 · 50g",
+          "per100": {
+            "k": 284.1778202676864,
+            "p": 7.6,
+            "c": 58.4,
+            "f": 2.1,
+            "fi": 0.6
+          },
+          "basis": "g",
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://www.pa-food.com/products/pa/steamed-bun/mantou/plain-mantou/",
+            "note": "厂家标签每100g1189kJ；单个50g，按蒸热做法，不含油炸和炼奶。"
+          }
+        }
+      ],
+      "note": "按蒸热成品记录；每个50g，额外蘸料与油另计。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 50
+    },
+    {
+      "id": "rice-ball",
+      "name": "饭团（原味无馅）",
+      "group": "carbs",
+      "unit": "个",
+      "amount": 1,
+      "step": 1,
+      "max": 8,
+      "library": "more",
+      "pantryId": "rice-ball",
+      "variants": [
+        {
+          "id": "usda-168932",
+          "name": "原味无馅 · 熟短粒白饭",
+          "per100": {
+            "k": 130,
+            "p": 2.36,
+            "c": 28.73,
+            "f": 0.19,
+            "fi": null
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/168932/nutrients",
+            "note": "USDA SR Legacy · Rice, white, short-grain, cooked, unenriched；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "只估算100g熟米饭捏成的无馅饭团；有馅、调味油或酱料需另外记录。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 100,
+      "aliases": [
+        "onigiri"
+      ]
+    },
+    {
+      "id": "potato",
+      "name": "马铃薯",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 175,
+      "step": 25,
+      "max": 600,
+      "library": "more",
+      "pantryId": "potato",
+      "variants": [
+        {
+          "id": "usda-170438",
+          "name": "水煮 · 熟可食重",
+          "per100": {
+            "k": 87,
+            "p": 1.87,
+            "c": 20.13,
+            "f": 0.1,
+            "fi": 1.8
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/170438/nutrients",
+            "note": "USDA SR Legacy · Potatoes, boiled, cooked in skin, flesh, without salt；按该种做法估算，非当前品牌标签。"
+          }
+        },
+        {
+          "id": "usda-170093",
+          "name": "烤 · 带皮熟可食重",
+          "per100": {
+            "k": 93,
+            "p": 2.5,
+            "c": 21.15,
+            "f": 0.13,
+            "fi": 2.2
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/170093/nutrients",
+            "note": "USDA SR Legacy · Potatoes, baked, flesh and skin, without salt；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "称实际吃下的熟重；不含另加的油、黄油或芝士。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "pumpkin",
+      "name": "蒸南瓜",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 150,
+      "step": 25,
+      "max": 600,
+      "library": "more",
+      "pantryId": "pumpkin",
+      "variants": [
+        {
+          "id": "usda-168449",
+          "name": "清蒸／水煮熟南瓜参考",
+          "per100": {
+            "k": 20,
+            "p": 0.72,
+            "c": 4.9,
+            "f": 0.07,
+            "fi": 1.1
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/168449/nutrients",
+            "note": "USDA SR Legacy · Pumpkin, cooked, boiled, drained, without salt；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "按熟可食重估算，不含糖或油；同重量的碳水通常少于米饭。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "nestum",
+      "name": "NESTUM 原味谷物粉",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 30,
+      "step": 5,
+      "max": 200,
+      "library": "more",
+      "pantryId": "nestum",
+      "variants": [
+        {
+          "id": "original-flakes",
+          "name": "All Family Cereal Original参考",
+          "per100": {
+            "k": 362,
+            "p": 7.5,
+            "c": 76.5,
+            "f": 1.8,
+            "fi": 7.6
+          },
+          "basis": "g",
+          "source": {
+            "kind": "retailer",
+            "label": "参考标签估算",
+            "url": "https://bansan.my/products/nestle-nestum-aromalicious-original-cereal-mix",
+            "note": "原味谷物粉零售包装资料；不是3-in-1。当前手边包装若不同，以实物为准。"
+          }
+        }
+      ],
+      "note": "按干粉克重；和3-in-1不同，加入牛奶、糖或其他食物要另计。",
+      "uses": [
+        "c"
+      ],
+      "aliases": [
+        "Nestum All Family Cereal Original"
+      ]
+    },
+    {
+      "id": "weet-bix",
+      "name": "原味 Weet-Bix",
+      "group": "carbs",
+      "unit": "片",
+      "amount": 2,
+      "step": 1,
+      "max": 12,
+      "library": "more",
+      "pantryId": "weet-bix",
+      "variants": [
+        {
+          "id": "sanitarium-original",
+          "name": "Sanitarium Original · 每2片31g",
+          "per100": {
+            "k": 355,
+            "p": 12.4,
+            "c": 65.9,
+            "f": 1.3,
+            "fi": 12.9
+          },
+          "basis": "g",
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://weetbix.com.au/products/weet-bix/Original-375g",
+            "note": "澳洲Original厂家每100g标签，2片31g；其他地区和系列以包装为准。"
+          }
+        }
+      ],
+      "note": "两片31g；奶和酸奶另记，不能套用其他调味系列。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 15.5,
+      "aliases": [
+        "weetbix"
+      ]
+    },
+    {
+      "id": "corn-flakes",
+      "name": "原味 Corn Flakes",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 30,
+      "step": 5,
+      "max": 200,
+      "library": "more",
+      "pantryId": "corn-flakes",
+      "variants": [
+        {
+          "id": "usda-174648",
+          "name": "普通原味玉米片参考",
+          "per100": {
+            "k": 384,
+            "p": 5.9,
+            "c": 88.01,
+            "f": 0.91,
+            "fi": 2.7
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/174648/nutrients",
+            "note": "USDA SR Legacy · Cereals ready-to-eat, RALSTON Corn Flakes；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "干重估算，不含牛奶；蜜糖、巧克力等调味款另用自己的包装标签。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "rice-cakes",
+      "name": "原味米饼／玉米饼干",
+      "group": "snacks",
+      "unit": "片",
+      "amount": 2,
+      "step": 1,
+      "max": 20,
+      "library": "more",
+      "pantryId": "rice-cakes",
+      "variants": [
+        {
+          "id": "usda-170250",
+          "name": "原味膨化糙米饼",
+          "per100": {
+            "k": 387,
+            "p": 8.2,
+            "c": 81.5,
+            "f": 2.8,
+            "fi": 4.2
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/170250/nutrients",
+            "note": "USDA SR Legacy · Snacks, rice cakes, brown rice, plain, unsalted；按该种做法估算，非当前品牌标签。"
+          }
+        },
+        {
+          "id": "usda-169679",
+          "name": "糙米玉米膨化饼",
+          "per100": {
+            "k": 385,
+            "p": 8.4,
+            "c": 81.2,
+            "f": 3.2,
+            "fi": 2.9
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/169679/nutrients",
+            "note": "USDA SR Legacy · Snacks, rice cakes, brown rice, corn；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "每片暂按9g；指膨化米饼，不是年糕或玉米脆片。抹酱另计。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 9
+    },
+    {
+      "id": "apple",
+      "name": "苹果",
+      "group": "fruit",
+      "unit": "个",
+      "amount": 1,
+      "step": 1,
+      "max": 6,
+      "library": "more",
+      "pantryId": "apple",
+      "variants": [
+        {
+          "id": "usda-171688",
+          "name": "带皮生苹果",
+          "per100": {
+            "k": 52,
+            "p": 0.26,
+            "c": 13.81,
+            "f": 0.17,
+            "fi": 2.4
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/171688/nutrients",
+            "note": "USDA SR Legacy · Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "每个暂按150g可食重；去掉果核后计算。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 150
+    },
+    {
+      "id": "orange",
+      "name": "橙",
+      "group": "fruit",
+      "unit": "个",
+      "amount": 1,
+      "step": 1,
+      "max": 6,
+      "library": "more",
+      "pantryId": "orange",
+      "variants": [
+        {
+          "id": "usda-169097",
+          "name": "橙果肉",
+          "per100": {
+            "k": 47,
+            "p": 0.94,
+            "c": 11.75,
+            "f": 0.12,
+            "fi": 2.4
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/169097/nutrients",
+            "note": "USDA SR Legacy · Oranges, raw, all commercial varieties；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "每个暂按130g果肉，不含果皮；果汁不能套用整果数据。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 130
+    },
+    {
+      "id": "pear",
+      "name": "梨",
+      "group": "fruit",
+      "unit": "个",
+      "amount": 1,
+      "step": 1,
+      "max": 6,
+      "library": "more",
+      "pantryId": "pear",
+      "variants": [
+        {
+          "id": "usda-169118",
+          "name": "生梨可食部分",
+          "per100": {
+            "k": 57,
+            "p": 0.36,
+            "c": 15.23,
+            "f": 0.14,
+            "fi": 3.1
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/169118/nutrients",
+            "note": "USDA SR Legacy · Pears, raw；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "每个暂按178g可食重；按实际大小或称重调整。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 178
+    },
+    {
+      "id": "mango",
+      "name": "芒果",
+      "group": "fruit",
+      "unit": "g",
+      "amount": 150,
+      "step": 25,
+      "max": 600,
+      "library": "more",
+      "pantryId": "mango",
+      "variants": [
+        {
+          "id": "usda-169910",
+          "name": "生芒果果肉",
+          "per100": {
+            "k": 60,
+            "p": 0.82,
+            "c": 14.98,
+            "f": 0.38,
+            "fi": 1.6
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/169910/nutrients",
+            "note": "USDA SR Legacy · Mangos, raw；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "去皮去核后称果肉重量，不含糖浆。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "dates",
+      "name": "椰枣",
+      "group": "fruit",
+      "unit": "g",
+      "amount": 25,
+      "step": 5,
+      "max": 150,
+      "library": "more",
+      "pantryId": "dates",
+      "variants": [
+        {
+          "id": "usda-171726",
+          "name": "Deglet Noor干椰枣参考",
+          "per100": {
+            "k": 282,
+            "p": 2.45,
+            "c": 75.03,
+            "f": 0.39,
+            "fi": 8
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/171726/nutrients",
+            "note": "USDA SR Legacy · Dates, deglet noor；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "按去核干果重量；不同品种和加糖产品会有差异。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "dried-apricot",
+      "name": "杏脯",
+      "group": "fruit",
+      "unit": "g",
+      "amount": 25,
+      "step": 5,
+      "max": 150,
+      "library": "more",
+      "pantryId": "dried-apricot",
+      "variants": [
+        {
+          "id": "usda-173941",
+          "name": "未加糖干杏参考",
+          "per100": {
+            "k": 241,
+            "p": 3.39,
+            "c": 62.64,
+            "f": 0.51,
+            "fi": 7.3
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/173941/nutrients",
+            "note": "USDA SR Legacy · Apricots, dried, sulfured, uncooked；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "按干果重量；加糖、糖渍版本以包装为准。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "popcorn",
+      "name": "原味爆米花（成品）",
+      "group": "snacks",
+      "unit": "g",
+      "amount": 20,
+      "step": 5,
+      "max": 150,
+      "library": "more",
+      "pantryId": "popcorn",
+      "variants": [
+        {
+          "id": "usda-170246",
+          "name": "无盐空气爆米花成品",
+          "per100": {
+            "k": 382,
+            "p": 12,
+            "c": 77.9,
+            "f": 4.2,
+            "fi": 15.1
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/170246/nutrients",
+            "note": "USDA SR Legacy · Snacks, popcorn, air-popped (Unsalted)；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "称爆开后的成品重量，不是未爆干玉米粒；额外油、焦糖或黄油另计。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "roasted-chickpeas",
+      "name": "原味烤鹰嘴豆",
+      "group": "snacks",
+      "unit": "g",
+      "amount": 25,
+      "step": 5,
+      "max": 150,
+      "library": "more",
+      "pantryId": "roasted-chickpeas",
+      "variants": [
+        {
+          "id": "chasers-reference",
+          "name": "Chasers烘烤参考 · 含油",
+          "per100": {
+            "k": 430.2103250478011,
+            "p": 18.7,
+            "c": 60.1,
+            "f": 12.6,
+            "fi": null
+          },
+          "basis": "g",
+          "source": {
+            "kind": "reference",
+            "label": "参考标签估算",
+            "url": "https://chasers.co.nz/app/uploads/2019/08/chickpeas-nip-chickpeas-.pdf",
+            "note": "厂商烘烤鹰嘴豆资料参考，含植物油和盐；纤维未标注，不套用水煮鹰嘴豆数据。"
+          }
+        }
+      ],
+      "note": "参考含少量油的烘烤零食；不同品牌按包装为准，不等同水煮鹰嘴豆。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "granola",
+      "name": "Granola 燕麦脆",
+      "group": "snacks",
+      "unit": "g",
+      "amount": 30,
+      "step": 5,
+      "max": 150,
+      "library": "more",
+      "pantryId": "granola",
+      "variants": [
+        {
+          "id": "usda-171646",
+          "name": "燕麦脆通用配方参考",
+          "per100": {
+            "k": 489,
+            "p": 13.67,
+            "c": 53.88,
+            "f": 24.31,
+            "fi": 8.9
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/171646/nutrients",
+            "note": "USDA SR Legacy · Cereals ready-to-eat, granola, homemade；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "含油、糖和坚果的配方估算，不是普通燕麦；不同产品差异较大。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "cottage-cheese",
+      "name": "原味茅屋芝士",
+      "group": "dairy",
+      "unit": "g",
+      "amount": 125,
+      "step": 25,
+      "max": 500,
+      "library": "more",
+      "pantryId": "cottage-cheese",
+      "variants": [
+        {
+          "id": "usda-172182",
+          "name": "低脂2% Cottage cheese参考",
+          "per100": {
+            "k": 81,
+            "p": 10.45,
+            "c": 4.76,
+            "f": 2.27,
+            "fi": 0
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/172182/nutrients",
+            "note": "USDA SR Legacy · Cheese, cottage, lowfat, 2% milkfat；按该种做法估算，非当前品牌标签。"
+          }
+        },
+        {
+          "id": "usda-172179",
+          "name": "全脂 Cottage cheese参考",
+          "per100": {
+            "k": 98,
+            "p": 11.12,
+            "c": 3.38,
+            "f": 4.3,
+            "fi": 0
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/172179/nutrients",
+            "note": "USDA SR Legacy · Cheese, cottage, creamed, large or small curd；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "与普通芝士片不同；按实际脂肪版本选，品牌标签优先。",
+      "uses": [
+        "p"
+      ],
+      "aliases": [
+        "cottage cheese"
+      ]
+    },
+    {
+      "id": "skyr",
+      "name": "原味 Skyr",
+      "group": "dairy",
+      "unit": "g",
+      "amount": 150,
+      "step": 25,
+      "max": 500,
+      "library": "more",
+      "pantryId": "skyr",
+      "variants": [
+        {
+          "id": "arla-natural",
+          "name": "Arla原味参考",
+          "per100": {
+            "k": 61,
+            "p": 10,
+            "c": 4,
+            "f": 0.2,
+            "fi": null
+          },
+          "basis": "g",
+          "source": {
+            "kind": "reference",
+            "label": "参考标签估算",
+            "url": "https://www.arlafoods.co.uk/brands/arla-skyr/natural-1kg/",
+            "note": "Arla Natural每100g标签参考；纤维未列，不代表所有Skyr或当地包装都相同。"
+          }
+        }
+      ],
+      "note": "原味参考配方；不同品牌和口味以包装为准，不套用普通Greek Style酸奶数据。",
+      "uses": [
+        "p"
+      ]
+    },
+    {
+      "id": "kefir",
+      "name": "原味 Kefir 发酵奶",
+      "group": "dairy",
+      "unit": "ml",
+      "amount": 200,
+      "step": 50,
+      "max": 1000,
+      "library": "more",
+      "pantryId": "kefir",
+      "variants": [
+        {
+          "id": "arla-organic",
+          "name": "Arla有机原味参考",
+          "per100": {
+            "k": 60,
+            "p": 3.6,
+            "c": 3.8,
+            "f": 3.1,
+            "fi": null
+          },
+          "basis": "ml",
+          "source": {
+            "kind": "reference",
+            "label": "参考标签估算",
+            "url": "https://www.arlafoods.co.uk/brands/arla/kefir-organic-1l/",
+            "note": "按厂家FAQ每100ml参考；不是所有Kefir同配方，纤维未列。"
+          }
+        }
+      ],
+      "note": "发酵乳饮品；按毫升估算，不把蛋白量当成高蛋白酸奶。",
+      "uses": [
+        "p"
+      ]
+    },
+    {
+      "id": "tempeh",
+      "name": "天贝",
+      "group": "dairy",
+      "unit": "g",
+      "amount": 100,
+      "step": 25,
+      "max": 400,
+      "library": "more",
+      "pantryId": "tempeh",
+      "variants": [
+        {
+          "id": "usda-172467",
+          "name": "熟天贝 · 不额外加油",
+          "per100": {
+            "k": 195,
+            "p": 19.91,
+            "c": 7.62,
+            "f": 11.38,
+            "fi": null
+          },
+          "basis": "g",
+          "source": {
+            "kind": "database",
+            "label": "USDA食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/172467/nutrients",
+            "note": "USDA SR Legacy · Tempeh, cooked；按该种做法估算，非当前品牌标签。"
+          }
+        }
+      ],
+      "note": "称熟可食重；煎炸所加的油和酱另计，纤维资料未列。",
+      "uses": [
+        "p"
+      ],
+      "aliases": [
+        "tempeh"
+      ]
+    }
+  ],
+  "foodPairings": [
+    {
+      "id": "bread-cheese",
+      "name": "白切片面包＋芝士",
+      "note": "简单咸口搭配，按自己的面包片重和芝士版本记录。",
+      "focus": "carbs",
+      "parts": [
+        {
+          "id": "bread",
+          "amount": 2
+        },
+        {
+          "id": "cheese",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": "bread-peanut",
+      "name": "面包＋花生酱",
+      "note": "想补一点热量时选，花生酱按实际抹上的重量。",
+      "focus": "energy",
+      "parts": [
+        {
+          "id": "bread",
+          "amount": 2
+        },
+        {
+          "id": "peanut",
+          "amount": 16
+        }
+      ]
+    },
+    {
+      "id": "yogurt-raisins",
+      "name": "酸奶＋葡萄干",
+      "note": "原味酸奶配一点甜味；酸奶版本和干果克重可调整。",
+      "focus": "dairy",
+      "parts": [
+        {
+          "id": "greek-yogurt",
+          "amount": 150
+        },
+        {
+          "id": "raisins",
+          "amount": 25
+        }
+      ]
+    },
+    {
+      "id": "yogurt-oats",
+      "name": "酸奶＋燕麦",
+      "note": "燕麦按干重，酸奶按实际买到的版本计算。",
+      "focus": "dairy",
+      "parts": [
+        {
+          "id": "greek-yogurt",
+          "amount": 150
+        },
+        {
+          "id": "oats",
+          "amount": 25
+        }
+      ]
+    },
+    {
+      "id": "sweet-soy",
+      "name": "番薯＋无糖豆奶",
+      "note": "番薯称熟可食重，豆奶不是少糖款。",
+      "focus": "carbs",
+      "parts": [
+        {
+          "id": "sweet-potato",
+          "amount": 150
+        },
+        {
+          "id": "soy-milk",
+          "amount": 250
+        }
+      ]
+    },
+    {
+      "id": "corn-meal",
+      "name": "玉米＋正餐蛋白",
+      "note": "玉米作为主食搭配；鸡胸肉仍在今日安排顶部按实际单独勾选。",
+      "focus": "carbs",
+      "foodIds": [
+        "corn"
+      ],
+      "action": "food"
+    },
+    {
+      "id": "milo-crackers",
+      "name": "Milo＋梳打饼",
+      "note": "8／10／12片可快速切换，粉和炼奶按实际用量调整。",
+      "focus": "snacks",
+      "foodIds": [
+        "milo-crackers"
+      ],
+      "action": "food"
+    },
+    {
+      "id": "noodles-meal",
+      "name": "快熟面＋蛋白与蔬菜",
+      "note": "先选当天吃的快熟面，蛋白和蔬菜另外记录。",
+      "focus": "convenience",
+      "foodIds": [
+        "maggi-curry",
+        "mamee-chicken"
+      ],
+      "action": "food"
     }
   ],
   "drinkDefaults": {
@@ -2014,19 +3128,6 @@ window.BULK_DATA = {
       "step": 25,
       "regular": false,
       "icon": "jar",
-      "note": ""
-    },
-    {
-      "id": "ice",
-      "name": "冰块",
-      "group": "blend",
-      "unit": "份",
-      "pack": 10,
-      "target": 10,
-      "threshold": 2,
-      "step": 1,
-      "regular": false,
-      "icon": "cube",
       "note": ""
     },
     {
@@ -2301,6 +3402,344 @@ window.BULK_DATA = {
       "regular": false,
       "icon": "box",
       "note": "配菜独立记录；餐盒库存若已含这份配菜，不要重复记为两份购买。"
+    },
+    {
+      "id": "wrap",
+      "name": "全麦卷饼皮",
+      "group": "staples",
+      "unit": "张",
+      "pack": 4,
+      "target": 4,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "pita",
+      "name": "皮塔饼",
+      "group": "staples",
+      "unit": "个",
+      "pack": 4,
+      "target": 4,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "english-muffin",
+      "name": "英式松饼",
+      "group": "staples",
+      "unit": "个",
+      "pack": 4,
+      "target": 4,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "raisin-bread",
+      "name": "葡萄干面包",
+      "group": "staples",
+      "unit": "片",
+      "pack": 8,
+      "target": 8,
+      "threshold": 2,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "red-bean-bun",
+      "name": "红豆包（蒸豆沙包）",
+      "group": "staples",
+      "unit": "个",
+      "pack": 8,
+      "target": 8,
+      "threshold": 2,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "mantou",
+      "name": "原味馒头",
+      "group": "staples",
+      "unit": "个",
+      "pack": 4,
+      "target": 4,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "rice-ball",
+      "name": "饭团（原味无馅）",
+      "group": "staples",
+      "unit": "个",
+      "pack": 4,
+      "target": 4,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "potato",
+      "name": "马铃薯",
+      "group": "staples",
+      "unit": "g",
+      "pack": 700,
+      "target": 700,
+      "threshold": 175,
+      "step": 25,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "pumpkin",
+      "name": "蒸南瓜",
+      "group": "staples",
+      "unit": "g",
+      "pack": 600,
+      "target": 600,
+      "threshold": 150,
+      "step": 25,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "nestum",
+      "name": "NESTUM 原味谷物粉",
+      "group": "staples",
+      "unit": "g",
+      "pack": 120,
+      "target": 120,
+      "threshold": 30,
+      "step": 5,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "weet-bix",
+      "name": "原味 Weet-Bix",
+      "group": "staples",
+      "unit": "片",
+      "pack": 8,
+      "target": 8,
+      "threshold": 2,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "corn-flakes",
+      "name": "原味 Corn Flakes",
+      "group": "staples",
+      "unit": "g",
+      "pack": 120,
+      "target": 120,
+      "threshold": 30,
+      "step": 5,
+      "regular": false,
+      "icon": "bread",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "rice-cakes",
+      "name": "原味米饼／玉米饼干",
+      "group": "snacks",
+      "unit": "片",
+      "pack": 8,
+      "target": 8,
+      "threshold": 2,
+      "step": 1,
+      "regular": false,
+      "icon": "cracker",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "apple",
+      "name": "苹果",
+      "group": "fruit",
+      "unit": "个",
+      "pack": 4,
+      "target": 4,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "fruit",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "orange",
+      "name": "橙",
+      "group": "fruit",
+      "unit": "个",
+      "pack": 4,
+      "target": 4,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "fruit",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "pear",
+      "name": "梨",
+      "group": "fruit",
+      "unit": "个",
+      "pack": 4,
+      "target": 4,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "fruit",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "mango",
+      "name": "芒果",
+      "group": "fruit",
+      "unit": "g",
+      "pack": 600,
+      "target": 600,
+      "threshold": 150,
+      "step": 25,
+      "regular": false,
+      "icon": "fruit",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "dates",
+      "name": "椰枣",
+      "group": "fruit",
+      "unit": "g",
+      "pack": 100,
+      "target": 100,
+      "threshold": 25,
+      "step": 5,
+      "regular": false,
+      "icon": "fruit",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "dried-apricot",
+      "name": "杏脯",
+      "group": "fruit",
+      "unit": "g",
+      "pack": 100,
+      "target": 100,
+      "threshold": 25,
+      "step": 5,
+      "regular": false,
+      "icon": "fruit",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "popcorn",
+      "name": "原味爆米花（成品）",
+      "group": "snacks",
+      "unit": "g",
+      "pack": 80,
+      "target": 80,
+      "threshold": 20,
+      "step": 5,
+      "regular": false,
+      "icon": "cracker",
+      "note": "爆开后的成品重量，不是干玉米粒。按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "roasted-chickpeas",
+      "name": "原味烤鹰嘴豆",
+      "group": "snacks",
+      "unit": "g",
+      "pack": 100,
+      "target": 100,
+      "threshold": 25,
+      "step": 5,
+      "regular": false,
+      "icon": "cracker",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "granola",
+      "name": "Granola 燕麦脆",
+      "group": "snacks",
+      "unit": "g",
+      "pack": 120,
+      "target": 120,
+      "threshold": 30,
+      "step": 5,
+      "regular": false,
+      "icon": "cracker",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "cottage-cheese",
+      "name": "原味茅屋芝士",
+      "group": "dairy",
+      "unit": "g",
+      "pack": 500,
+      "target": 500,
+      "threshold": 125,
+      "step": 25,
+      "regular": false,
+      "icon": "cup",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "skyr",
+      "name": "原味 Skyr",
+      "group": "dairy",
+      "unit": "g",
+      "pack": 600,
+      "target": 600,
+      "threshold": 150,
+      "step": 25,
+      "regular": false,
+      "icon": "cup",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "kefir",
+      "name": "原味 Kefir 发酵奶",
+      "group": "dairy",
+      "unit": "ml",
+      "pack": 800,
+      "target": 800,
+      "threshold": 200,
+      "step": 50,
+      "regular": false,
+      "icon": "cup",
+      "note": "按需购买，补货数量可按实际包装调整。"
+    },
+    {
+      "id": "tempeh",
+      "name": "天贝",
+      "group": "dairy",
+      "unit": "g",
+      "pack": 400,
+      "target": 400,
+      "threshold": 100,
+      "step": 25,
+      "regular": false,
+      "icon": "cup",
+      "note": "按需购买，补货数量可按实际包装调整。"
     }
   ],
   "blendIngredients": [
