@@ -983,7 +983,7 @@ window.BULK_DATA = {
     },
     {
       "id": "bread",
-      "name": "吐司 · 2 片",
+      "name": "白切片面包 · 2片",
       "k": 160,
       "p": 6,
       "c": 30,
@@ -1042,6 +1042,1267 @@ window.BULK_DATA = {
     "core": "核心稳定肌",
     "erectors": "竖脊肌"
   },
+  "foods": [
+    {
+      "id": "rice",
+      "name": "白饭",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 200,
+      "step": 50,
+      "max": 600,
+      "pantryId": "rice",
+      "variants": [
+        {
+          "id": "default",
+          "name": "白饭",
+          "per100": {
+            "k": 130,
+            "p": 2.5,
+            "c": 28.5,
+            "f": 0.5,
+            "fi": null
+          },
+          "source": {
+            "kind": "historical",
+            "label": "常用份量估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "按普通食物份量估算，未绑定具体品牌标签；纤维资料不全。实际包装不同请按包装记录。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "不含另外添加的油、糖或抹酱。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "banana",
+      "name": "香蕉",
+      "group": "carbs",
+      "unit": "根",
+      "amount": 1,
+      "step": 1,
+      "max": 5,
+      "pantryId": "banana",
+      "variants": [
+        {
+          "id": "default",
+          "name": "香蕉",
+          "per100": {
+            "k": 89,
+            "p": 1.09,
+            "c": 22.8,
+            "f": 0.33,
+            "fi": 2.6
+          },
+          "source": {
+            "kind": "database",
+            "label": "标准食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/173944/nutrients",
+            "description": "USDA FoodData Central · Bananas, raw"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 118
+    },
+    {
+      "id": "bread",
+      "name": "白切片面包",
+      "group": "carbs",
+      "unit": "片",
+      "amount": 2,
+      "step": 1,
+      "max": 12,
+      "pantryId": "white-bread",
+      "variants": [
+        {
+          "id": "default",
+          "name": "白切片面包",
+          "per100": {
+            "k": 266.6666666666667,
+            "p": 10,
+            "c": 50,
+            "f": 3.3333333333333335,
+            "fi": null
+          },
+          "source": {
+            "kind": "historical",
+            "label": "常用份量估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "按普通食物份量估算，未绑定具体品牌标签；纤维资料不全。实际包装不同请按包装记录。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "不含另外添加的油、糖或抹酱。",
+      "uses": [
+        "c"
+      ],
+      "gramsPerUnit": 30
+    },
+    {
+      "id": "milk",
+      "name": "全脂牛奶",
+      "group": "dairy",
+      "unit": "ml",
+      "amount": 250,
+      "step": 50,
+      "max": 1000,
+      "pantryId": "milk",
+      "variants": [
+        {
+          "id": "default",
+          "name": "全脂牛奶",
+          "per100": {
+            "k": 62.952,
+            "p": 3.2508,
+            "c": 4.9536,
+            "f": 3.354,
+            "fi": 0
+          },
+          "source": {
+            "kind": "database",
+            "label": "标准食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+            "description": "USDA FoodData Central · Milk, whole, 3.25% milkfat, with added vitamin D"
+          },
+          "basis": "ml"
+        }
+      ],
+      "note": "普通全脂牛奶估算；250ml暂按约258g换算，实际品牌以包装为准。",
+      "uses": [
+        "k"
+      ]
+    },
+    {
+      "id": "oats",
+      "name": "燕麦",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 50,
+      "step": 10,
+      "max": 200,
+      "pantryId": "oats",
+      "variants": [
+        {
+          "id": "default",
+          "name": "燕麦",
+          "per100": {
+            "k": 379,
+            "p": 13.2,
+            "c": 67.7,
+            "f": 6.52,
+            "fi": 10.1
+          },
+          "source": {
+            "kind": "database",
+            "label": "标准食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/173904/nutrients",
+            "description": "USDA FoodData Central · Cereals, oats, regular and quick, not fortified, dry"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "不含另外添加的油、糖或抹酱。",
+      "uses": [
+        "c"
+      ]
+    },
+    {
+      "id": "nuts",
+      "name": "坚果",
+      "group": "energy",
+      "unit": "g",
+      "amount": 30,
+      "step": 5,
+      "max": 100,
+      "pantryId": "nuts",
+      "variants": [
+        {
+          "id": "default",
+          "name": "坚果",
+          "per100": {
+            "k": 583.3333333333334,
+            "p": 20,
+            "c": 20,
+            "f": 50,
+            "fi": null
+          },
+          "source": {
+            "kind": "historical",
+            "label": "常用份量估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "按普通食物份量估算，未绑定具体品牌标签；纤维资料不全。实际包装不同请按包装记录。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "",
+      "uses": [
+        "k"
+      ]
+    },
+    {
+      "id": "choco-bun",
+      "name": "Gardenia 巧克力奶油包",
+      "group": "snacks",
+      "unit": "包",
+      "amount": 1,
+      "step": 1,
+      "max": 5,
+      "pantryId": "choco-bun",
+      "variants": [
+        {
+          "id": "delicia-50",
+          "name": "Delicia Coklat · 50g",
+          "per100": {
+            "k": 348,
+            "p": 7.8,
+            "c": 49.4,
+            "f": 12.8,
+            "fi": 1.4
+          },
+          "source": {
+            "kind": "historical",
+            "label": "历史标签估算",
+            "url": "https://malaysiafoodinformation.wordpress.com/2014/02/11/gardenia-delicia-chocolate-bread/",
+            "note": "2014年50g包装转录；当前配方未核实，不能套用QuickBites等其他版本。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "每包50g；约175 kcal。当前包装若有不同，以实物为准。",
+      "uses": [
+        "k",
+        "c"
+      ],
+      "gramsPerUnit": 50
+    },
+    {
+      "id": "wholemeal",
+      "name": "全麦切片面包",
+      "group": "carbs",
+      "unit": "片",
+      "amount": 2,
+      "step": 1,
+      "max": 12,
+      "pantryId": "wholemeal",
+      "variants": [
+        {
+          "id": "generic",
+          "name": "普通全麦切片",
+          "per100": {
+            "k": 252,
+            "p": 12.45,
+            "c": 42.71,
+            "f": 3.5,
+            "fi": 6
+          },
+          "source": {
+            "kind": "database",
+            "label": "食物数据库估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "2片暂按60g，厚切和不同品牌请按包装克重调整。",
+      "uses": [
+        "c",
+        "fi"
+      ],
+      "gramsPerUnit": 30
+    },
+    {
+      "id": "sweet-potato",
+      "name": "番薯",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 150,
+      "step": 25,
+      "max": 600,
+      "pantryId": "sweet-potato",
+      "variants": [
+        {
+          "id": "steamed",
+          "name": "蒸／水煮 · 熟可食重",
+          "per100": {
+            "k": 76,
+            "p": 1.37,
+            "c": 17.72,
+            "f": 0.14,
+            "fi": 2.5
+          },
+          "source": {
+            "kind": "database",
+            "label": "食物数据库估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+          },
+          "basis": "g"
+        },
+        {
+          "id": "baked",
+          "name": "烤 · 熟可食重",
+          "per100": {
+            "k": 90,
+            "p": 2.01,
+            "c": 20.71,
+            "f": 0.15,
+            "fi": 3.3
+          },
+          "source": {
+            "kind": "database",
+            "label": "食物数据库估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "按熟的可食重量记录；额外油、糖另计。",
+      "uses": [
+        "c",
+        "fi"
+      ]
+    },
+    {
+      "id": "corn",
+      "name": "玉米粒",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 150,
+      "step": 25,
+      "max": 600,
+      "pantryId": "corn",
+      "variants": [
+        {
+          "id": "cooked",
+          "name": "熟玉米粒",
+          "per100": {
+            "k": 96,
+            "p": 3.41,
+            "c": 20.98,
+            "f": 1.5,
+            "fi": 2.4
+          },
+          "source": {
+            "kind": "database",
+            "label": "食物数据库估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "去掉玉米芯后称重；黄油、糖和酱料另计。",
+      "uses": [
+        "c",
+        "fi"
+      ]
+    },
+    {
+      "id": "raisins",
+      "name": "葡萄干",
+      "group": "carbs",
+      "unit": "g",
+      "amount": 30,
+      "step": 5,
+      "max": 150,
+      "pantryId": "raisins",
+      "variants": [
+        {
+          "id": "plain",
+          "name": "原味葡萄干",
+          "per100": {
+            "k": 299,
+            "p": 3.07,
+            "c": 79.18,
+            "f": 0.46,
+            "fi": 3.7
+          },
+          "source": {
+            "kind": "database",
+            "label": "食物数据库估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "按克重记录，不把“一把”当作固定份量。",
+      "uses": [
+        "c",
+        "k"
+      ]
+    },
+    {
+      "id": "greek-yogurt",
+      "name": "原味希腊／高蛋白酸奶",
+      "group": "dairy",
+      "unit": "g",
+      "amount": 150,
+      "step": 25,
+      "max": 500,
+      "pantryId": "yogurt",
+      "variants": [
+        {
+          "id": "farmers-high-protein",
+          "name": "Farmers Union High Protein",
+          "per100": {
+            "k": 55.44933078393881,
+            "p": 8.3,
+            "c": 4.9,
+            "f": 0.2,
+            "fi": 0
+          },
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://farmersunionyogurt.com.au/products/range/the-all-natural-range/high-protein/",
+            "note": "每100g232kJ换算约55kcal；希腊风味高蛋白款。"
+          },
+          "basis": "g"
+        },
+        {
+          "id": "fage-2",
+          "name": "FAGE Total 2%",
+          "per100": {
+            "k": 70,
+            "p": 9.9,
+            "c": 3,
+            "f": 2,
+            "fi": 0
+          },
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://home.fage/yogurts/fage-total-2",
+            "note": "每100g标签；实际进口版本以包装为准。"
+          },
+          "basis": "g"
+        },
+        {
+          "id": "farmers-light",
+          "name": "Farmers Union All Natural Light",
+          "per100": {
+            "k": 83,
+            "p": 5.8,
+            "c": 6,
+            "f": 3.9,
+            "fi": 0
+          },
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://farmersunionyogurt.com.au/products/range/the-all-natural-range/all-natural-light-1kg/",
+            "note": "普通希腊风味低脂款，蛋白质少于High Protein；不是相同营养替代。"
+          },
+          "basis": "g"
+        },
+        {
+          "id": "farmers-natural",
+          "name": "Farmers Union All Natural",
+          "per100": {
+            "k": 122,
+            "p": 4.5,
+            "c": 5.2,
+            "f": 9.4,
+            "fi": 0
+          },
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://farmersunionyogurt.com.au/products/range/the-all-natural-range/all-natural-1kg/",
+            "note": "普通希腊风味全脂款；脂肪较高，按自己的缺口选。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "选择实际买到的版本；原味或Greek Style不代表蛋白量相同。",
+      "uses": [
+        "p"
+      ]
+    },
+    {
+      "id": "soy-milk",
+      "name": "无糖豆奶",
+      "group": "dairy",
+      "unit": "ml",
+      "amount": 250,
+      "step": 50,
+      "max": 1000,
+      "pantryId": "soy-milk",
+      "variants": [
+        {
+          "id": "generic",
+          "name": "无糖豆奶 · 通用估算",
+          "per100": {
+            "k": 33,
+            "p": 2.86,
+            "c": 1.74,
+            "f": 1.61,
+            "fi": 0.6
+          },
+          "source": {
+            "kind": "database",
+            "label": "食物数据库估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+          },
+          "basis": "ml"
+        }
+      ],
+      "note": "普通无糖豆奶估算；“少糖”或“无添加糖”可能有不同配方，以包装为准。",
+      "uses": [
+        "p",
+        "k"
+      ]
+    },
+    {
+      "id": "peanut",
+      "name": "花生酱",
+      "group": "energy",
+      "unit": "g",
+      "amount": 16,
+      "step": 4,
+      "max": 100,
+      "pantryId": "peanut",
+      "variants": [
+        {
+          "id": "plain",
+          "name": "原味花生酱",
+          "per100": {
+            "k": 598,
+            "p": 22.2,
+            "c": 22.3,
+            "f": 51.4,
+            "fi": 5
+          },
+          "source": {
+            "kind": "database",
+            "label": "标准食物估算",
+            "url": "https://fdc.nal.usda.gov/food-details/172470/nutrients",
+            "description": "USDA FoodData Central · Peanut butter, smooth style, without salt"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "1平汤匙暂按16g；这份独立计入加餐，不改变Blend里的份量。",
+      "uses": [
+        "k",
+        "f"
+      ]
+    },
+    {
+      "id": "cheese",
+      "name": "芝士",
+      "group": "energy",
+      "unit": "g",
+      "amount": 20,
+      "step": 5,
+      "max": 100,
+      "pantryId": "cheese",
+      "variants": [
+        {
+          "id": "processed",
+          "name": "加工芝士片 · 通用估算",
+          "per100": {
+            "k": 366,
+            "p": 18.13,
+            "c": 4.78,
+            "f": 30.71,
+            "fi": 0
+          },
+          "source": {
+            "kind": "database",
+            "label": "食物数据库估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+          },
+          "basis": "g"
+        },
+        {
+          "id": "cheddar",
+          "name": "切达芝士 · 通用估算",
+          "per100": {
+            "k": 403,
+            "p": 24.9,
+            "c": 1.28,
+            "f": 33.14,
+            "fi": 0
+          },
+          "source": {
+            "kind": "database",
+            "label": "食物数据库估算",
+            "url": "https://fdc.nal.usda.gov/",
+            "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "1片暂按20g，不同片装和天然芝士需分开计算。",
+      "uses": [
+        "k",
+        "p",
+        "f"
+      ]
+    },
+    {
+      "id": "crackers",
+      "name": "Hup Seng 梳打饼",
+      "group": "snacks",
+      "unit": "片",
+      "amount": 8,
+      "step": 2,
+      "max": 20,
+      "pantryId": "crackers",
+      "variants": [
+        {
+          "id": "cream",
+          "name": "Cream Crackers",
+          "per100": {
+            "k": 516.1,
+            "p": 6.5,
+            "c": 64.5,
+            "f": 25.8,
+            "fi": null
+          },
+          "source": {
+            "kind": "retailer",
+            "label": "包装资料估算",
+            "url": "https://tradewindsorientalwholesale.co.uk/products/hup-seng-cream-crackers-12x428g",
+            "note": "零售商营养表；不同包装存在差异。片重暂按4片31g；纤维未作为已知值合计。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "片重暂按4片约31g；8、10、12片可快速选择。",
+      "uses": [
+        "k",
+        "c"
+      ],
+      "gramsPerUnit": 7.75
+    },
+    {
+      "id": "milo-drink",
+      "name": "Milo 热饮",
+      "group": "snacks",
+      "unit": "份",
+      "amount": 1,
+      "step": 0.5,
+      "max": 3,
+      "pantryId": "milo",
+      "variants": [
+        {
+          "id": "original",
+          "name": "原味粉＋炼奶＋热水",
+          "per100": {
+            "k": 411,
+            "p": 10.2,
+            "c": 68,
+            "f": 9.9,
+            "fi": 4.6
+          },
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://www.milo.com.my/products",
+            "description": "马来西亚原味MILO粉，每100 g营养标签"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "2.5平汤匙Milo粉先估25g，半平汤匙炼奶先估10g；汤匙大小和压实程度会影响重量。",
+      "uses": [
+        "k",
+        "c"
+      ]
+    },
+    {
+      "id": "milo-crackers",
+      "name": "Milo＋梳打饼",
+      "group": "snacks",
+      "unit": "份",
+      "amount": 1,
+      "step": 0.5,
+      "max": 3,
+      "pantryId": "milo",
+      "variants": [
+        {
+          "id": "original",
+          "name": "热饮与梳打饼",
+          "per100": {
+            "k": 411,
+            "p": 10.2,
+            "c": 68,
+            "f": 9.9,
+            "fi": 4.6
+          },
+          "source": {
+            "kind": "label",
+            "label": "厂家标签",
+            "url": "https://www.milo.com.my/products",
+            "description": "马来西亚原味MILO粉，每100 g营养标签"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "按实际粉重、炼奶重量和饼干片数计算。",
+      "uses": [
+        "k",
+        "c"
+      ]
+    },
+    {
+      "id": "maggi-curry",
+      "name": "MAGGI 咖喱快熟面",
+      "group": "convenience",
+      "unit": "包",
+      "amount": 1,
+      "step": 0.5,
+      "max": 4,
+      "pantryId": "maggi-curry",
+      "variants": [
+        {
+          "id": "kari-79",
+          "name": "Kari · 79g",
+          "per100": {
+            "k": 445.56962025316454,
+            "p": 9.367088607594937,
+            "c": 62.40506329113924,
+            "f": 17.468354430379748,
+            "fi": null
+          },
+          "source": {
+            "kind": "database",
+            "label": "产品数据库估算",
+            "url": "https://www.fatsecret.co.id/kalori-gizi/maggi/kari/1-porsi?frc=True",
+            "note": "79g整包含调味料估算；并非Kari Letup/Big等其他版本。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "含整包调味料估算；不喝汤不能准确推算扣掉多少营养。加菜、蛋或肉另计。",
+      "uses": [
+        "k",
+        "c"
+      ],
+      "gramsPerUnit": 79
+    },
+    {
+      "id": "mamee-chicken",
+      "name": "Mamee Express 鸡汤杯面",
+      "group": "convenience",
+      "unit": "杯",
+      "amount": 1,
+      "step": 1,
+      "max": 4,
+      "pantryId": "mamee-chicken",
+      "variants": [
+        {
+          "id": "chicken-60",
+          "name": "Chicken · 60g",
+          "per100": {
+            "k": 456,
+            "p": 10.2,
+            "c": 60.1,
+            "f": 19.4,
+            "fi": null
+          },
+          "source": {
+            "kind": "retailer",
+            "label": "零售营养资料",
+            "url": "https://shop.redtick.com/store/mamee-express-cup-chicken",
+            "note": "每60g274kcal；还有64g包装，不把两款当同一重量。"
+          },
+          "basis": "g"
+        }
+      ],
+      "note": "此份为60g杯面。若包装标64g，请按包装净重调整估算，不能声称配方相同。",
+      "uses": [
+        "k",
+        "c"
+      ],
+      "gramsPerUnit": 60
+    }
+  ],
+  "drinkDefaults": {
+    "miloGrams": 25,
+    "condensedGrams": 10,
+    "crackers": 8
+  },
+  "foodComponents": {
+    "condensedMilk": {
+      "id": "condensed-milk",
+      "name": "炼奶",
+      "per100": {
+        "k": 321,
+        "p": 7.91,
+        "c": 54.4,
+        "f": 8.7,
+        "fi": 0
+      },
+      "source": {
+        "kind": "database",
+        "label": "食物数据库估算",
+        "url": "https://fdc.nal.usda.gov/",
+        "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+      }
+    }
+  },
+  "pantryItems": [
+    {
+      "id": "milk",
+      "name": "牛奶",
+      "group": "blend",
+      "unit": "ml",
+      "pack": 1000,
+      "target": 1000,
+      "threshold": 300,
+      "step": 100,
+      "regular": true,
+      "icon": "milk",
+      "note": ""
+    },
+    {
+      "id": "banana",
+      "name": "香蕉",
+      "group": "blend",
+      "unit": "根",
+      "pack": 6,
+      "target": 6,
+      "threshold": 2,
+      "step": 1,
+      "regular": true,
+      "icon": "fruit",
+      "note": ""
+    },
+    {
+      "id": "whey",
+      "name": "MMX Absolute Whey",
+      "group": "blend",
+      "unit": "g",
+      "pack": 1000,
+      "target": 1000,
+      "threshold": 120,
+      "step": 40,
+      "regular": true,
+      "icon": "jar",
+      "note": ""
+    },
+    {
+      "id": "oats",
+      "name": "燕麦",
+      "group": "blend",
+      "unit": "g",
+      "pack": 500,
+      "target": 500,
+      "threshold": 100,
+      "step": 25,
+      "regular": true,
+      "icon": "grain",
+      "note": ""
+    },
+    {
+      "id": "peanut",
+      "name": "花生酱",
+      "group": "blend",
+      "unit": "g",
+      "pack": 350,
+      "target": 350,
+      "threshold": 50,
+      "step": 16,
+      "regular": true,
+      "icon": "jar",
+      "note": ""
+    },
+    {
+      "id": "pineapple",
+      "name": "菠萝",
+      "group": "blend",
+      "unit": "g",
+      "pack": 500,
+      "target": 500,
+      "threshold": 100,
+      "step": 100,
+      "regular": false,
+      "icon": "fruit",
+      "note": ""
+    },
+    {
+      "id": "blueberry",
+      "name": "蓝莓",
+      "group": "blend",
+      "unit": "g",
+      "pack": 125,
+      "target": 125,
+      "threshold": 30,
+      "step": 25,
+      "regular": false,
+      "icon": "fruit",
+      "note": ""
+    },
+    {
+      "id": "grapes",
+      "name": "青葡萄",
+      "group": "blend",
+      "unit": "g",
+      "pack": 500,
+      "target": 500,
+      "threshold": 100,
+      "step": 50,
+      "regular": false,
+      "icon": "fruit",
+      "note": ""
+    },
+    {
+      "id": "almonds",
+      "name": "杏仁",
+      "group": "blend",
+      "unit": "g",
+      "pack": 200,
+      "target": 200,
+      "threshold": 40,
+      "step": 20,
+      "regular": false,
+      "icon": "grain",
+      "note": ""
+    },
+    {
+      "id": "yogurt",
+      "name": "原味酸奶",
+      "group": "blend",
+      "unit": "g",
+      "pack": 500,
+      "target": 500,
+      "threshold": 100,
+      "step": 30,
+      "regular": false,
+      "icon": "cup",
+      "note": ""
+    },
+    {
+      "id": "chocolate",
+      "name": "85%黑巧克力",
+      "group": "blend",
+      "unit": "g",
+      "pack": 100,
+      "target": 100,
+      "threshold": 20,
+      "step": 10,
+      "regular": false,
+      "icon": "bar",
+      "note": ""
+    },
+    {
+      "id": "milo",
+      "name": "MILO粉",
+      "group": "blend",
+      "unit": "g",
+      "pack": 1000,
+      "target": 1000,
+      "threshold": 100,
+      "step": 25,
+      "regular": false,
+      "icon": "jar",
+      "note": ""
+    },
+    {
+      "id": "ice",
+      "name": "冰块",
+      "group": "blend",
+      "unit": "份",
+      "pack": 10,
+      "target": 10,
+      "threshold": 2,
+      "step": 1,
+      "regular": false,
+      "icon": "cube",
+      "note": ""
+    },
+    {
+      "id": "chicken-box",
+      "name": "Diet Chicken 餐盒",
+      "group": "meals",
+      "unit": "盒",
+      "pack": 11,
+      "target": 23,
+      "threshold": 7,
+      "step": 1,
+      "regular": true,
+      "icon": "box",
+      "note": ""
+    },
+    {
+      "id": "rice",
+      "name": "大米（生重）",
+      "group": "meals",
+      "unit": "g",
+      "pack": 1000,
+      "target": 1000,
+      "threshold": 200,
+      "step": 100,
+      "regular": false,
+      "icon": "grain",
+      "note": "库存按生米重量；当天米饭按熟重记录，不自动换算或扣减。"
+    },
+    {
+      "id": "white-bread",
+      "name": "白切片面包",
+      "group": "staples",
+      "unit": "片",
+      "pack": 12,
+      "target": 12,
+      "threshold": 4,
+      "step": 2,
+      "regular": false,
+      "icon": "bread",
+      "note": ""
+    },
+    {
+      "id": "wholemeal",
+      "name": "全麦切片面包",
+      "group": "staples",
+      "unit": "片",
+      "pack": 12,
+      "target": 12,
+      "threshold": 4,
+      "step": 2,
+      "regular": false,
+      "icon": "bread",
+      "note": ""
+    },
+    {
+      "id": "sweet-potato",
+      "name": "番薯",
+      "group": "staples",
+      "unit": "g",
+      "pack": 1000,
+      "target": 1000,
+      "threshold": 200,
+      "step": 100,
+      "regular": false,
+      "icon": "fruit",
+      "note": "库存记录手边食材；当天吃的番薯按熟可食重记录。"
+    },
+    {
+      "id": "corn",
+      "name": "玉米粒",
+      "group": "staples",
+      "unit": "g",
+      "pack": 500,
+      "target": 500,
+      "threshold": 100,
+      "step": 100,
+      "regular": false,
+      "icon": "grain",
+      "note": ""
+    },
+    {
+      "id": "raisins",
+      "name": "葡萄干",
+      "group": "snacks",
+      "unit": "g",
+      "pack": 250,
+      "target": 250,
+      "threshold": 50,
+      "step": 30,
+      "regular": false,
+      "icon": "grain",
+      "note": ""
+    },
+    {
+      "id": "soy-milk",
+      "name": "无糖豆奶",
+      "group": "dairy",
+      "unit": "ml",
+      "pack": 1000,
+      "target": 1000,
+      "threshold": 250,
+      "step": 250,
+      "regular": false,
+      "icon": "milk",
+      "note": ""
+    },
+    {
+      "id": "cheese",
+      "name": "芝士",
+      "group": "dairy",
+      "unit": "g",
+      "pack": 200,
+      "target": 200,
+      "threshold": 40,
+      "step": 20,
+      "regular": false,
+      "icon": "cheese",
+      "note": ""
+    },
+    {
+      "id": "nuts",
+      "name": "坚果",
+      "group": "snacks",
+      "unit": "g",
+      "pack": 200,
+      "target": 200,
+      "threshold": 40,
+      "step": 30,
+      "regular": false,
+      "icon": "grain",
+      "note": ""
+    },
+    {
+      "id": "choco-bun",
+      "name": "Gardenia 巧克力奶油包",
+      "group": "snacks",
+      "unit": "包",
+      "pack": 1,
+      "target": 3,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "bread",
+      "note": ""
+    },
+    {
+      "id": "crackers",
+      "name": "Hup Seng 梳打饼",
+      "group": "snacks",
+      "unit": "片",
+      "pack": 40,
+      "target": 40,
+      "threshold": 8,
+      "step": 4,
+      "regular": false,
+      "icon": "cracker",
+      "note": ""
+    },
+    {
+      "id": "condensed-milk",
+      "name": "炼奶",
+      "group": "dairy",
+      "unit": "g",
+      "pack": 500,
+      "target": 500,
+      "threshold": 50,
+      "step": 10,
+      "regular": false,
+      "icon": "milk",
+      "note": ""
+    },
+    {
+      "id": "maggi-curry",
+      "name": "MAGGI 咖喱快熟面",
+      "group": "convenience",
+      "unit": "包",
+      "pack": 5,
+      "target": 5,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "bowl",
+      "note": ""
+    },
+    {
+      "id": "mamee-chicken",
+      "name": "Mamee Express 鸡汤杯面",
+      "group": "convenience",
+      "unit": "杯",
+      "pack": 1,
+      "target": 3,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "cup",
+      "note": ""
+    },
+    {
+      "id": "side-aglio",
+      "name": "Aglio Olio Pasta",
+      "group": "meals",
+      "unit": "份",
+      "pack": 1,
+      "target": 3,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "box",
+      "note": "配菜独立记录；餐盒库存若已含这份配菜，不要重复记为两份购买。"
+    },
+    {
+      "id": "side-sweet",
+      "name": "Roasted Sweet Potato",
+      "group": "meals",
+      "unit": "份",
+      "pack": 1,
+      "target": 3,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "box",
+      "note": "配菜独立记录；餐盒库存若已含这份配菜，不要重复记为两份购买。"
+    },
+    {
+      "id": "side-us",
+      "name": "Roasted US Potato",
+      "group": "meals",
+      "unit": "份",
+      "pack": 1,
+      "target": 3,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "box",
+      "note": "配菜独立记录；餐盒库存若已含这份配菜，不要重复记为两份购买。"
+    },
+    {
+      "id": "side-tomato",
+      "name": "Italian Tomato Pasta",
+      "group": "meals",
+      "unit": "份",
+      "pack": 1,
+      "target": 3,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "box",
+      "note": "配菜独立记录；餐盒库存若已含这份配菜，不要重复记为两份购买。"
+    },
+    {
+      "id": "side-veg",
+      "name": "Roasted Mixed Vege",
+      "group": "meals",
+      "unit": "份",
+      "pack": 1,
+      "target": 3,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "box",
+      "note": "配菜独立记录；餐盒库存若已含这份配菜，不要重复记为两份购买。"
+    },
+    {
+      "id": "side-mushroom",
+      "name": "Roasted Mushroom Soup",
+      "group": "meals",
+      "unit": "份",
+      "pack": 1,
+      "target": 3,
+      "threshold": 1,
+      "step": 1,
+      "regular": false,
+      "icon": "box",
+      "note": "配菜独立记录；餐盒库存若已含这份配菜，不要重复记为两份购买。"
+    }
+  ],
   "blendIngredients": [
     {
       "id": "milk",

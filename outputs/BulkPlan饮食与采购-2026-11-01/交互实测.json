@@ -1,0 +1,143 @@
+[
+  {
+    "case": "optional does not auto-buy; purchase cancel and undo",
+    "success": true
+  },
+  {
+    "case": "remaining/use/ruler preview is not committed until save",
+    "remaining": 34
+  },
+  {
+    "case": "food actual portions, Greek labels, snapshots and planned-only additions",
+    "k8": "455 kcal",
+    "k12": "615 kcal",
+    "combo": {
+      "k": 614.823,
+      "p": 9.386,
+      "c": 82.425,
+      "f": 27.339,
+      "fi": 1.15,
+      "unknownFibre": true,
+      "name": "Milo＋梳打饼 · 25g粉＋10g炼奶＋12片饼干",
+      "foodId": "milo-crackers",
+      "variantId": "original",
+      "portion": {
+        "amount": 1,
+        "unit": "份",
+        "grams": 128,
+        "unitGrams": null
+      },
+      "components": [
+        {
+          "name": "MILO粉",
+          "grams": 25
+        },
+        {
+          "name": "炼奶",
+          "grams": 10
+        },
+        {
+          "name": "Hup Seng 梳打饼",
+          "grams": 93
+        }
+      ],
+      "sources": [
+        {
+          "kind": "label",
+          "label": "厂家标签",
+          "url": "https://www.milo.com.my/products",
+          "description": "马来西亚原味MILO粉，每100 g营养标签"
+        },
+        {
+          "kind": "database",
+          "label": "食物数据库估算",
+          "url": "https://fdc.nal.usda.gov/",
+          "note": "同类食物平均值；烹调、品牌和份量会影响营养。"
+        },
+        {
+          "kind": "retailer",
+          "label": "包装资料估算",
+          "url": "https://tradewindsorientalwholesale.co.uk/products/hup-seng-cream-crackers-12x428g",
+          "note": "零售商营养表；不同包装存在差异。片重暂按4片31g；纤维未作为已知值合计。"
+        }
+      ],
+      "estimated": true,
+      "version": 1
+    },
+    "yogurt": {
+      "k": 119,
+      "p": 16.83,
+      "c": 5.1,
+      "f": 3.4,
+      "fi": 0,
+      "unknownFibre": false,
+      "name": "原味希腊／高蛋白酸奶 · 170g",
+      "foodId": "greek-yogurt",
+      "variantId": "fage-2",
+      "portion": {
+        "amount": 170,
+        "unit": "g",
+        "grams": 170,
+        "unitGrams": null
+      },
+      "components": [
+        {
+          "name": "原味希腊／高蛋白酸奶",
+          "grams": 170
+        }
+      ],
+      "sources": [
+        {
+          "kind": "label",
+          "label": "厂家标签",
+          "url": "https://home.fage/yogurts/fage-total-2",
+          "note": "每100g标签；实际进口版本以包装为准。"
+        }
+      ],
+      "estimated": false,
+      "version": 1
+    }
+  },
+  {
+    "case": "refresh preserves pantry and preferred portions",
+    "valid": true
+  },
+  {
+    "case": "pantry width 320",
+    "w": 320,
+    "scroll": 320,
+    "visible": 34
+  },
+  {
+    "case": "pantry width 375",
+    "w": 375,
+    "scroll": 375,
+    "visible": 34
+  },
+  {
+    "case": "pantry width 390",
+    "w": 390,
+    "scroll": 390,
+    "visible": 34
+  },
+  {
+    "case": "pantry width 430",
+    "w": 430,
+    "scroll": 430,
+    "visible": 34
+  },
+  {
+    "case": "landscape dialog",
+    "w": 844,
+    "dialog": 844,
+    "scroll": 844
+  },
+  {
+    "case": "reduced motion",
+    "duration": "0s"
+  },
+  {
+    "case": "browser errors",
+    "errors": []
+  }
+]

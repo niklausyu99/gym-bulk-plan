@@ -1,0 +1,44 @@
+[
+  {
+    "case": "horizontal filters retain position across consecutive choices",
+    "left": 255
+  },
+  {
+    "case": "unknown movement can be selected, completed without fabricated RIR, add/remove set",
+    "id": "custom-a9cddda1-2bf8-4025-a200-51bf9baa7d13"
+  },
+  {
+    "case": "changing unit preserves completed snapshots and clears pending weight only"
+  },
+  {
+    "case": "multiple custom entries persist; historical session can be edited without duplication"
+  },
+  {
+    "case": "custom entry mobile 320",
+    "width": 320,
+    "dialog": 320,
+    "scroll": 320
+  },
+  {
+    "case": "custom entry mobile 375",
+    "width": 375,
+    "dialog": 375,
+    "scroll": 375
+  },
+  {
+    "case": "custom entry mobile 390",
+    "width": 390,
+    "dialog": 390,
+    "scroll": 390
+  },
+  {
+    "case": "custom entry mobile 430",
+    "width": 430,
+    "dialog": 430,
+    "scroll": 430
+  },
+  {
+    "case": "browser console",
+    "errors": []
+  }
+]

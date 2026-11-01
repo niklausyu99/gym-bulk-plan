@@ -59,6 +59,10 @@ window.BulkHandbook = {
     {
       "title": "主要研究依据（供查阅）",
       "body": "下列研究支持总体训练原则与部分动作选择；**它们并不能证明整张动作表是适合所有人的唯一最优组合**。\n\n1. **ACSM（2026）**，《Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults》：关于阻力训练、增肌组数及个体化安排的综合证据。https://pubmed.ncbi.nlm.nih.gov/41843416/\n2. **Ramos-Campo 等（2024）**，《Efficacy of Split Versus Full-Body Resistance Training on Strength and Muscle Growth》：在训练量匹配时，分化形式本身不保证额外的肌肥大优势。https://pubmed.ncbi.nlm.nih.gov/38595233/\n3. **The Resistance Training Dose Response（2025／2026 在线出版记录）**：训练量与增肌存在剂量反应及边际收益递减，间接训练组数不应简单视为零或全额。https://pubmed.ncbi.nlm.nih.gov/41343037/\n4. **Hip Thrust 与 Squat 的随机训练研究（2023）**：两者可带来相近的臀肌增长，而深蹲对大腿肌肉的训练收益不同。https://pubmed.ncbi.nlm.nih.gov/37877099/\n5. **Maeo 等（2021）**，坐姿与俯卧腿弯举研究：坐姿腿弯举在该研究中带来更大的整体腘绳肌增长。https://pubmed.ncbi.nlm.nih.gov/33009197/\n6. **Kinoshita 等（2023／2024）**，站姿与坐姿提踵研究：站姿版本对腓肠肌增长更有利；两者对比目鱼肌的效果在该样本中相近。https://pubmed.ncbi.nlm.nih.gov/38156065/\n7. **Drop-set 训练系统综述与Meta分析（2026）**：递减组与传统组的长期增肌效果总体接近，主观用力感可能更高。https://pubmed.ncbi.nlm.nih.gov/41920484/\n8. **The Interplay Between Muscle Length, Range of Motion, and Exercise Selection（2026）**：讨论肌肉拉长位置的负荷与肌肥大的关系；证据支持考虑肌肉长度，但并非强行追求极端拉伸。https://pubmed.ncbi.nlm.nih.gov/41777276/\n9. **Current Clinical Concepts: Exercise and Load Management of Adductor Strains（2023）**：内收肌训练应根据疼痛、负荷耐受及恢复阶段循序推进。https://pmc.ncbi.nlm.nih.gov/articles/PMC10569248/\n\n---\n\n**最终训练口诀：**\n\n> **Push 练胸肩三头，Pull 练背后束二头，Legs 练腿臀小腿；练三天，休一天。**  \n> **先完成基础计划，补充动作按需选择；让表现和恢复决定训练量，而不是让疲劳决定成就感。**"
+    },
+    {
+      "title": "记录计划外的训练",
+      "body": "动作库中没有的项目，也能加入今天的训练。选择训练部位与重量记法，名称可以留空。填写重量和次数后会预填每组，也可以先只建组，练的时候再逐组记录。组数随时可加减，做完后再勾选完成。\n\n器械标重、每侧加片、加片合计与每只哑铃分开记；不自动把两侧或两只相加。自重训练填写外加重量，纯自重填0。更换记重方式时，已完成组保留原来的记法，未完成组重新核对重量。\n\n部位相同不代表动作或器械相同。自定义项目按本次实际记录保存，不根据部位推测动作示范、余力或下次应加多少重量。已保存的训练仍可从历史记录重开修改。"
     }
   ],
   "nutrition": [
@@ -101,6 +105,18 @@ window.BulkHandbook = {
     {
       "title": "体重与调整",
       "body": "晨起称重，观察7日平均，避免按单日波动改饮食。目标每周约增加0.15–0.25 kg。\n\n| 连续趋势 | 调整方向 |\n|---|---|\n| 连续2周低于每周＋0.1 kg | 先检查执行与恢复，再考虑每天加150–200 kcal |\n| 稳定每周＋0.15–0.25 kg | 保持当前安排 |\n| 长期超过每周＋0.30–0.35 kg，且腰围快速增加 | 考虑每天减100–150 kcal并继续观察 |\n\n每周平均至少记录4天，数据不足时先继续记录。每天记录实际训练、是否喝Blend，以及大致是否达到热量目标；不要求每天完美。"
+    },
+    {
+      "title": "加餐与方便食品",
+      "body": "加餐可以按口味和实际份量安排，不必把食物分成“干净”和“不干净”。优先保证正常正餐、蛋白质、蔬菜水果和纤维，再用喜欢的面包、饼干或热饮补足缺口。高糖、高盐或脂肪较多的食物需要看整天累计摄入，不把它们当成唯一的增肌食物。\n\nMAGGI咖喱和Mamee Express鸡汤杯按各自包装估算。不同口味、净重和额外配料不能套同一数值。少喝汤可能减少部分盐分摄入，但不能据此精确扣掉热量、脂肪或钠。\n\nMilo热饮分开记录粉、炼奶和水，水不增加热量。普通汤匙平勺的克重仍是估算；称过后可改成自己的实际用量。Hup Seng梳打饼按片数或克重记录，8–12片本身也是一份有分量的加餐。"
+    },
+    {
+      "title": "原味酸奶怎么换",
+      "body": "选择实际购买的品牌和版本，再看标签计算。FAGE Total、Farmers Union High Protein、All Natural Light和普通All Natural的蛋白质与脂肪不同，不能直接互换同一组营养数值。“原味”“希腊”或“希腊风味”也不自动代表高蛋白。"
+    },
+    {
+      "title": "食物采购与盘点",
+      "body": "Blend的常备食材和按需加餐分开管理。常备食材低于提醒量时进入待购；可选食物用完后只给建议，想吃再加入清单。每项都可以调整是否常备、提醒量、备货目标和每次补货数量。\n\n备餐时可以记录“还剩多少”或“这次用了多少”。未盘点不等于缺货。库存不会因饮食计划或勾选“已吃”自动扣减，避免混入估计用量。\n\n买到后先核对数量，再确认入库。最近操作保留撤销入口；若该项已有后续记录，应重新盘点，避免用旧数量覆盖新库存。"
     }
   ]
 };
