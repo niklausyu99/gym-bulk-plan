@@ -24,7 +24,7 @@ Today starts with the next workout or existing draft. Training supports one set 
 
 ## 6. Components
 
-Preserve explicit selected states, visible form labels and destructive-action confirmation. Numeric steppers show minus and plus. Exercise details contain a neutral muscle-location diagram with a readable role legend, a large-image entrance and concise setup, movement-range and breathing text. User-provided exercise animations are now requested again. Only visually verified animations for the exact selected equipment version may appear; no approximate exercise substitutions or pose hotspots. Keep image labels outside the body and physically distinct.
+Preserve explicit selected states, visible form labels and destructive-action confirmation. Equipment alternatives can coexist as independent workout entries, with their own order, sets and equipment history. Give every version an explicit add action and added count; distinguish adding another item from replacing the current item. Confirm an intentional duplicate of the exact same version. Numeric steppers show minus and plus. Exercise details contain a neutral muscle-location diagram with a readable role legend, a large-image entrance and concise setup, movement-range and breathing text. User-provided exercise animations are now requested again. Only visually verified animations for the exact selected equipment version may appear; no approximate exercise substitutions or pose hotspots. Keep image labels outside the body and physically distinct.
 
 ## 7. Motion & Interaction
 

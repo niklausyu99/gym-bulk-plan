@@ -1,0 +1,258 @@
+[
+  {
+    "case": "two independent selections",
+    "items": [
+      {
+        "id": "incline",
+        "exerciseId": "incline",
+        "variantId": "incline-db"
+      },
+      {
+        "id": "incline@2",
+        "exerciseId": "incline",
+        "variantId": "incline-machine"
+      }
+    ]
+  },
+  {
+    "case": "separate sets and loads",
+    "entries": [
+      {
+        "id": "incline",
+        "variant": "上斜哑铃卧推",
+        "first": {
+          "kg": 15,
+          "reps": 8,
+          "rir": 2,
+          "done": true,
+          "quality": true,
+          "recording": {
+            "version": 1,
+            "variantId": "incline-db",
+            "familyId": "incline",
+            "label": "上斜哑铃卧推",
+            "loadConvention": "each_dumbbell_kg",
+            "sideAxis": "both",
+            "sided": false,
+            "device": "",
+            "settings": "",
+            "bodyMass": null,
+            "comparable": false,
+            "signature": "[\"incline-db\",\"each_dumbbell_kg\",\"\",\"\"]",
+            "prescription": {
+              "sets_min": 3,
+              "sets_max": 3,
+              "reps": [
+                6,
+                10
+              ],
+              "reps_unit": "per_bilateral_set",
+              "rest_seconds": 150,
+              "rir": [
+                1,
+                2
+              ],
+              "new_variant_rir": [
+                2,
+                3
+              ],
+              "sets_replace_not_add": true
+            }
+          },
+          "doneAt": 1793503578718
+        },
+        "groups": 3
+      },
+      {
+        "id": "incline@2",
+        "variant": "上斜胸推机",
+        "first": {
+          "kg": 40,
+          "reps": 10,
+          "rir": 2,
+          "done": true,
+          "quality": true,
+          "recording": {
+            "version": 1,
+            "variantId": "incline-machine",
+            "familyId": "incline",
+            "label": "上斜胸推机",
+            "loadConvention": "stack_display_kg",
+            "sideAxis": "both",
+            "sided": false,
+            "device": "",
+            "settings": "",
+            "bodyMass": null,
+            "comparable": false,
+            "signature": "[\"incline-machine\",\"stack_display_kg\",\"\",\"\"]",
+            "prescription": {
+              "sets_min": 3,
+              "sets_max": 3,
+              "reps": [
+                6,
+                10
+              ],
+              "reps_unit": "per_bilateral_set",
+              "rest_seconds": 150,
+              "rir": [
+                1,
+                2
+              ],
+              "new_variant_rir": [
+                2,
+                3
+              ],
+              "sets_replace_not_add": true
+            }
+          },
+          "doneAt": 1793503579134
+        },
+        "groups": 3
+      }
+    ]
+  },
+  {
+    "case": "save then reopen and edit independent entry",
+    "sessions": 1,
+    "entries": [
+      {
+        "id": "incline",
+        "groups": 3,
+        "kg": 15
+      },
+      {
+        "id": "incline@2",
+        "groups": 4,
+        "kg": 40
+      }
+    ]
+  },
+  {
+    "case": "mobile layout 320",
+    "width": 320,
+    "scroll": 320,
+    "targets": [
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "case": "mobile layout 375",
+    "width": 375,
+    "scroll": 375,
+    "targets": [
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "case": "mobile layout 390",
+    "width": 390,
+    "scroll": 390,
+    "targets": [
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "case": "mobile layout 430",
+    "width": 430,
+    "scroll": 430,
+    "targets": [
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 92,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "case": "browser errors",
+    "errors": []
+  }
+]
