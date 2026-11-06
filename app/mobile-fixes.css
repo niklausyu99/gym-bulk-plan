@@ -1,0 +1,24 @@
+/* Controls stay readable and reachable as text or content grows. */
+.mode-result{grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr))}
+.mode-result>div{min-width:0}
+.mode-result>div+div{border-left:0;padding-left:0}
+.mode-result strong{white-space:normal;overflow-wrap:anywhere}
+.mode-result strong span{display:inline-block}
+.mode-label{flex-wrap:wrap}.mode-label small{overflow-wrap:anywhere}
+.row-link{display:inline-flex;align-items:center;min-height:44px;min-width:44px;justify-content:center}
+.inline:has(>input[type=checkbox]),.inline:has(>input[type=radio]){min-height:44px;cursor:pointer}
+#main summary,dialog summary{min-height:44px;align-content:center;cursor:pointer}
+#main a:not(.brand):not(.food-choice){overflow-wrap:anywhere}
+.pantry-item-footer>.btn{min-width:44px}
+.chicken-portion b,.chicken-portion small{white-space:normal;overflow-wrap:anywhere}
+.portion-stepper,.portion-plan>span,.portion-plan>.btn{min-width:0}
+.portion-stepper{flex-wrap:wrap}
+.side-add-row{flex-wrap:wrap}.side-add-row .field{flex-basis:12rem}
+.food-sheet-actions{grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr))}
+.food-sheet-actions>.btn{min-width:0;overflow-wrap:anywhere;white-space:normal}
+.form-grid{align-items:start}
+.field,.field input,.field select{min-width:0}
+.field-error{grid-column:1/-1}
+@media(max-width:600px){.mode-result>div+div{border-top:1px solid var(--line);padding-top:12px}.history-row{align-items:flex-start;flex-wrap:wrap}.history-row>div{flex:1 1 10rem}.home-nutrition-open{flex-wrap:wrap}.nutrition-macro-heading{flex-wrap:wrap}}
+
+.mode-segments{grid-template-columns:repeat(2,minmax(0,1fr))}.mode-segments button{min-width:0;white-space:normal;overflow-wrap:anywhere}

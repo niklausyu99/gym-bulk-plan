@@ -12,7 +12,9 @@ Run `npm run build`. This generates the product content and offline resource lis
 
 ## Current status
 
-BulkPlan 0.13.0 temporarily withdraws all workout pages and actions at the user's request. Home now starts with today's eating arrangement; navigation contains Today, Nutrition, Progress and More. Progress and history show nutrition and weight. Workout links return Home. Training/rest-day nutrition targets remain manually selectable, independent of the archived PPL cursor; new days use the most recent dietary day type, without copying eaten records.
+0.13.1 repairs the mobile review findings: daily/history styles stay independent of archived training; the floating nutrition shortcut avoids editing and overlapping controls; larger text reflows; field errors remain beside their inputs; redraws preserve focus; common touch targets are enlarged.
+
+BulkPlan 0.13.1 temporarily withdraws all workout pages and actions at the user's request. Home now starts with today's eating arrangement; navigation contains Today, Nutrition, Progress and More. Progress and history show nutrition and weight. Workout links return Home. Training/rest-day nutrition targets remain manually selectable, independent of the archived PPL cursor; new days use the most recent dietary day type, without copying eaten records.
 
 The full pre-withdrawal app is preserved on `archive/training-v0.12.1` at commit `62800a79630fee064ed4774667b5565b88be18b4`. Workout modules, content and assets also remain in this repository, but the active runtime does not load workout views, muscle diagrams or exercise demonstrations. Prior workout records, drafts and timers remain in local/private backups without being advanced or edited. The original 677 MP4s remain on `exercise-media`. See docs/training-archive.md before restoring the feature.
 
