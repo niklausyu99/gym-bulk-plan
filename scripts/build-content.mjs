@@ -23,6 +23,6 @@ for(const [id,grams] of [['milk',258],['banana',118],['oats',50]]){
 writeFileSync(resolve(root,'app/data.js'),'window.BULK_DATA = '+JSON.stringify(plan,null,2)+';\n');
 const equipment=JSON.parse(readFileSync(resolve(root,'content/equipment.json'),'utf8'));
 writeFileSync(resolve(root,'app/equipment-data.js'),`(function(root,data){if(typeof module==='object'&&module.exports)module.exports=data;else root.BulkEquipmentData=data;})(typeof globalThis!=='undefined'?globalThis:this,${JSON.stringify(equipment)});\n`);
-const books={training:sections('content/training-guide.md'),nutrition:sections('content/nutrition-guide.md')};
+const books={nutrition:sections('content/nutrition-guide.md')};
 writeFileSync(resolve(root,'app/handbook.js'),'window.BulkHandbook = '+JSON.stringify(books,null,2)+';\n');
 console.log('Built product handbooks');

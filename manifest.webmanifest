@@ -3,7 +3,7 @@
   "name": "BulkPlan",
   "short_name": "BulkPlan",
   "lang": "zh-CN",
-  "description": "个人PPL训练、增肌饮食与日常记录",
+  "description": "增肌饮食、营养摄入与体重记录",
   "start_url": "./#home",
   "scope": "./",
   "display": "standalone",

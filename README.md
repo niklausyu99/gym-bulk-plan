@@ -1,6 +1,6 @@
 # BulkPlan
 
-A daily iPhone-first PPL training and lean-bulk nutrition app. Repository: niklausyu99/gym-bulk-plan.
+An iPhone-first lean-bulk nutrition and weight tracking app. Repository: niklausyu99/gym-bulk-plan.
 
 ## Development
 
@@ -12,9 +12,9 @@ Run `npm run build`. This generates the product content and offline resource lis
 
 ## Current status
 
-BulkPlan 0.5.0 uses the user-requested black/charcoal/fit-lime design. Today’s workouts are selected by muscle group, with ranked equipment choices, editable order and explicit optional suggested combinations. Sets can be added, selected and deleted; saved sessions can be reopened without duplicating records or advancing the cycle again. Separate drafts and pending history edits persist.
+BulkPlan 0.13.0 temporarily withdraws all workout pages and actions at the user's request. Home now starts with today's eating arrangement; navigation contains Today, Nutrition, Progress and More. Progress and history show nutrition and weight. Workout links return Home. Training/rest-day nutrition targets remain manually selectable, independent of the archived PPL cursor; new days use the most recent dietary day type, without copying eaten records.
 
-All 31 slots / 92 equipment variants retain written technique guidance and muscle-role diagrams. Exact-version animations are available for 46 variants across 24 slots. The user-provided 677 original MP4s are preserved on the `exercise-media` branch under `GYM Exercise Animations/`; they are not included in the application deployment. Runtime demonstrations are silent inline loops with a WebP fallback. Missing exact matches are omitted rather than substituted.
+The full pre-withdrawal app is preserved on `archive/training-v0.12.1` at commit `62800a79630fee064ed4774667b5565b88be18b4`. Workout modules, content and assets also remain in this repository, but the active runtime does not load workout views, muscle diagrams or exercise demonstrations. Prior workout records, drafts and timers remain in local/private backups without being advanced or edited. The original 677 MP4s remain on `exercise-media`. See docs/training-archive.md before restoring the feature.
 
 Chicken breast is recorded independently by portion, above the Side selection. Consumed food retains nutrient snapshots. Existing meal records migrate without changing their totals. The header reports verified synchronization, pending work or an actionable error; offline browsing and local data are distinct from cloud synchronization.
 

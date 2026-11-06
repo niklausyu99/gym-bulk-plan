@@ -1,5 +1,7 @@
 # BulkPlan
 
+2026-11-06 scope override: workout functions and pages are temporarily withdrawn. Preserve the existing black/charcoal/lime system. Home starts with food arrangement and nutrition; the four navigation items are Today, Nutrition, Progress and More. Progress/history cover weight and diet; More provides nutrition guidance, pantry and backups. Training/rest-day remains a manual nutrition setting. Old training records stay in complete backups, but no workout entry, timer, library or training handbook is exposed. Earlier training UI specifications below are archived guidance for a possible restoration.
+
 ## 1. Visual Theme & Atmosphere
 
 BulkPlan is a daily iPhone training and nutrition app. On 2026-11-01 the user explicitly replaced the prior paper/sage/navy direction with a modern black/charcoal/lime gym theme. Use pure black ground, charcoal surface steps and fit-lime highlights. Muscle-location teaching uses a shared charcoal scene with neutral gray anatomical figures and deterministic regional tinting; food hero illustrations retain the existing watercolor treatment. Food and ingredient icons use one consistent matte 3D family in natural food colors, with neutral light, transparent backgrounds and no global lime tint. Lime belongs to controls and selection states; it does not recolor food. Keep the functional layout and data behavior while applying the newly requested palette.
