@@ -49,3 +49,6 @@ input[aria-invalid="true"],select[aria-invalid="true"]{border-color:var(--negati
 @media(max-width:360px){.food-library .food-scope{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 #confirm-continue[data-danger="true"]{color:var(--negative);border-color:var(--negative);background:var(--panel)}
+
+.side-picker{display:grid;gap:8px}
+.side-picker>.btn{justify-content:flex-start;min-height:44px;text-align:left;white-space:normal}

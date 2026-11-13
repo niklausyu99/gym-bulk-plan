@@ -13,7 +13,7 @@
 .chicken-portion b,.chicken-portion small{white-space:normal;overflow-wrap:anywhere}
 .portion-stepper,.portion-plan>span,.portion-plan>.btn{min-width:0}
 .portion-stepper{flex-wrap:wrap}
-.side-add-row{flex-wrap:wrap}.side-add-row .field{flex-basis:12rem}
+
 .food-sheet-actions{grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr))}
 .food-sheet-actions>.btn{min-width:0;overflow-wrap:anywhere;white-space:normal}
 .form-grid{align-items:start}

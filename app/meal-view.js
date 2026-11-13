@@ -23,7 +23,8 @@ row({p,a,index,D,esc,num,btn}) {
   ${eaten?'':btn('移除','side-remove',index,'text',`aria-label="移除第 ${index+1} 份配菜"`)}
  </div>`;
 },
-add({p,D,esc,btn}) {
- return `<div class="side-add-row"><label class="field"><span>添加配菜</span><select id="side-add-choice">${D.sides.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('')}</select></label>${btn('加入一份','side-add','','secondary',p.sides.length>=20?'disabled':'')}</div>`;
+sidePicker({D,esc,btn,date}) {
+ return `<h2 id="dialog-title">添加配菜</h2>
+  <div class="side-picker">${D.sides.map(s=>btn(esc(s.name),'side-add',s.id+'|'+date,'secondary')).join('')}</div>`;
 }
 };
