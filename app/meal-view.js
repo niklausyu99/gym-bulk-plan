@@ -1,6 +1,29 @@
 window.BulkMealView={
-chickenLog({p,esc,btn}){const count=p.chickenPortions.length,ate=p.chickenPortions.filter(q=>q.eaten).length;return `<section class="chicken-daily"><div class="daily-group-head"><div><h3>鸡胸肉</h3><small>计划 ${count} 份 · 已吃 ${ate} 份</small></div>${btn('调整份数','nutrition-tab','arrange','text')}</div>${count?`<div class="chicken-portions">${p.chickenPortions.map((q,i)=>`<label class="chicken-portion ${q.eaten?'is-selected':''}"><input type="checkbox" data-chicken-portion="${i}" aria-label="鸡胸肉第${i+1}份已吃" ${q.eaten?'checked':''}><span><b>第 ${i+1} 份</b><small>${q.eaten?'已吃':'待吃'}</small></span></label>`).join('')}</div>`:'<p class="small">今天不安排鸡胸肉。</p>'}</section>`;},
-chicken({p,esc,num,btn}){const count=p.chickenPortions.length,eaten=p.chickenPortions.filter(q=>q.eaten).length;return `<section class="chicken-core"><div class="panel-head"><div><span class="eyebrow">核心蛋白</span><h3>鸡胸肉</h3></div><span class="chip" aria-live="polite">已吃 ${eaten} / ${count} 份</span></div><p class="small">每份约160g · 约263 kcal · 蛋白48g</p><div class="portion-plan"><span>今天计划</span><div class="portion-stepper">${btn('−','chicken-count',count-1,'secondary',`data-focus-key="chicken-less" aria-label="减少一份鸡胸肉" ${count<=eaten?'disabled':''}`)}<strong aria-live="polite">${count} 份</strong>${btn('＋','chicken-add','','secondary',`aria-label="增加一份鸡胸肉" ${count>=20?'disabled':''}`)}</div>${btn('今天不吃','chicken-count',0,'text',eaten?'disabled':'')}</div>${eaten?'<p class="small">已吃份数会保留；取消已吃后才能继续减少。</p>':''}<p class="small">${count?'已计入计划摄入，吃完再逐份打钩。':'今天不安排鸡胸肉，可随时加回。'}</p>${count?`<div class="chicken-portions" role="group" aria-label="鸡胸肉已吃记录">${p.chickenPortions.map((q,i)=>`<label class="chicken-portion ${q.eaten?'is-selected':''}"><input type="checkbox" data-chicken-portion="${i}" aria-label="鸡胸肉第${i+1}份已吃" ${q.eaten?'checked':''}><span><b>第 ${i+1} 份</b><small>${q.eaten?'已吃':'待吃'}</small></span></label>`).join('')}</div>`:''}</section>`;},
-row({p,a,index,D,esc,num,btn,compact=false}){const locked=p.eaten.includes(a.id);if(compact)return `<div class="meal-row compact-side"><label class="meal-eaten"><input type="checkbox" data-eaten="${a.id}" aria-label="${esc(a.name)}已吃" ${locked?'checked':''}><span>已吃</span></label><div><strong>${esc(a.name)}</strong><small>约${num(a.k)} kcal · 蛋白${num(a.p)}g</small></div>${btn('调整','nutrition-tab','arrange','text')}</div>`;return `<div class="meal-row composed-meal"><label class="meal-eaten"><input type="checkbox" data-eaten="${a.id}" aria-label="${esc(a.name)}已吃" ${locked?'checked':''}><span>已吃</span></label><div><strong>${esc(a.name)}</strong><small>约${num(a.k)} kcal · 蛋白 ${num(a.p)}g · 碳水 ${num(a.c)}g · 脂肪 ${num(a.f)}g</small><label class="field"><span>第 ${index+1} 份配菜</span><select data-side="${index}" ${locked?'disabled':''}>${D.sides.map(s=>`<option value="${s.id}" ${p.sides[index]===s.id?'selected':''}>${esc(s.name)}</option>`).join('')}</select></label><div class="side-row-actions">${btn('再加一份','side-add',p.sides[index],'text',p.sides.length>=20?'disabled':'')}${btn('移除','side-remove',index,'text',locked?'disabled':'')}</div>${locked?'<small>先取消已吃，才可更换或移除。</small>':''}</div></div>`;},
-add({p,D,esc,btn}){return `<div class="side-add-row"><label class="field"><span>添加配菜</span><select id="side-add-choice">${D.sides.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('')}</select></label>${btn('加入一份','side-add','','secondary',p.sides.length>=20?'disabled':'')}</div><p class="small">默认安排可自由删改，同一种配菜也可加多份。其他食物可从下方选择。</p>`;}
+chicken({p,btn}) {
+ const count=p.chickenPortions.length,ate=p.chickenPortions.filter(q=>q.eaten).length;
+ return `<section class="chicken-daily">
+  <div class="daily-group-head"><div><h3>鸡胸肉</h3><small aria-live="polite">计划 ${count} 份 · 已吃 ${ate} 份</small></div></div>
+  <div class="chicken-tools">
+   <small>每份约160g · 263 kcal · 蛋白48g</small>
+   <div class="portion-stepper" role="group" aria-label="鸡胸肉计划份数">
+    ${btn('−','chicken-count',count-1,'secondary',`data-focus-key="chicken-less" aria-label="减少一份鸡胸肉" ${count<=ate?'disabled':''}`)}
+    <strong>${count} 份</strong>
+    ${btn('＋','chicken-add','','secondary',`aria-label="增加一份鸡胸肉" ${count>=20?'disabled':''}`)}
+   </div>
+  </div>
+  ${count?`<div class="chicken-portions" role="group" aria-label="鸡胸肉已吃记录">${p.chickenPortions.map((q,i)=>`<div class="chicken-portion ${q.eaten?'is-selected':''}"><label><input type="checkbox" data-chicken-portion="${i}" aria-label="鸡胸肉第${i+1}份已吃" ${q.eaten?'checked':''}><span><b>第 ${i+1} 份</b><small>${q.eaten?'已吃':'待吃'}</small></span></label>${btn((q.grams??160)+' g','chicken-edit',i,'text',`aria-label="编辑第 ${i+1} 份鸡胸肉，${q.grams??160}克" aria-haspopup="dialog"`)}</div>`).join('')}</div>`:''}
+ </section>`;
+},
+row({p,a,index,D,esc,num,btn}) {
+ const eaten=p.eaten.includes(a.id);
+ return `<div class="meal-row daily-side">
+  <label class="meal-eaten"><input type="checkbox" data-eaten="${a.id}" aria-label="${esc(a.name)}已吃" ${eaten?'checked':''}><span>已吃</span></label>
+  <div>${eaten?`<strong>${esc(a.name)}</strong>`:`<select data-side="${index}" aria-label="第 ${index+1} 份配菜">${D.sides.map(s=>`<option value="${s.id}" ${p.sides[index]===s.id?'selected':''}>${esc(s.name)}</option>`).join('')}</select>`}
+  <small>约${num(a.k)} kcal · 蛋白${num(a.p)}g</small></div>
+  ${eaten?'':btn('移除','side-remove',index,'text',`aria-label="移除第 ${index+1} 份配菜"`)}
+ </div>`;
+},
+add({p,D,esc,btn}) {
+ return `<div class="side-add-row"><label class="field"><span>添加配菜</span><select id="side-add-choice">${D.sides.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('')}</select></label>${btn('加入一份','side-add','','secondary',p.sides.length>=20?'disabled':'')}</div>`;
+}
 };

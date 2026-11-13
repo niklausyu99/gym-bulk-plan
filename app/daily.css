@@ -29,3 +29,23 @@
 input[aria-invalid="true"],select[aria-invalid="true"]{border-color:var(--negative)!important;outline:1px solid var(--negative)}
 .brand .brand-symbol{width:32px;height:32px;border-radius:8px;flex:none;object-fit:contain}
 @media(max-width:360px){.sync-indicator{font-size:11px}.meal-row{gap:8px}}
+
+.chicken-tools{display:flex;align-items:center;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.chicken-tools>small{color:var(--muted)}
+.nutrition-daily-plan .daily-side select{width:100%;min-height:44px}
+.nutrition-daily-plan .daily-side small{margin-top:4px}
+.custom-food-row{flex-wrap:wrap}
+.custom-food-actions{display:flex;flex-wrap:wrap;gap:4px}
+.custom-food-actions>.btn{min-height:44px;padding-inline:10px}
+.recovery-panel{border-color:var(--negative)}
+.recovery-panel .btn,.backup-list .btn{min-height:44px}
+.backup-list .history-row{flex-wrap:wrap}
+
+.chicken-daily .chicken-portion{padding-block:4px;justify-content:space-between;cursor:default}
+.chicken-portion>label{display:flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}
+.chicken-portion>.btn{min-height:44px;padding-inline:6px;white-space:nowrap}
+@media(max-width:450px){.chicken-daily .chicken-portions{grid-template-columns:1fr}}
+.food-library .food-scope{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:360px){.food-library .food-scope{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+#confirm-continue[data-danger="true"]{color:var(--negative);border-color:var(--negative);background:var(--panel)}

@@ -29,6 +29,30 @@
  }
  function parseSetField(field,raw){if(!['kg','reps','rir'].includes(field))return {valid:false};if(raw==='')return {valid:true,value:null};const v=Number(raw),bounds={kg:[0,1000],reps:[1,100],rir:[0,10]};return {valid:finite(v,...bounds[field])&&(field!=='reps'||Number.isInteger(v)),value:v};}
  function restCursor(cursor){return cursor===3?0:cursor;}
+ function validCustomFood(food){
+  return food&&typeof food.name==='string'&&food.name.trim().length>0&&food.name.length<=100
+   &&finite(food.k,0,10000)&&food.k>0&&['p','c','f'].every(k=>finite(food[k],0,10000))
+   &&(food.fi==null||finite(food.fi,0,300));
+ }
+ function migrateCustomFoods(s){
+  if(s.customFoods!==undefined)return false;
+  const foods={},names=new Set();
+  for(const date of Object.keys(s.plans).sort().reverse()){
+   const addons=s.plans[date].addons;
+   for(let i=addons.length-1;i>=0;i--){
+    const food=addons[i];
+    if(food.foodId||food.id||!validCustomFood(food))continue;
+    const name=food.name.trim(),key=name.toLowerCase();
+    if(names.has(key))continue;
+    names.add(key);
+    const {k,p,c,f,fi=null}=food;
+    foods['legacy-'+date+'-'+i]={name,k,p,c,f,fi};
+   }
+  }
+  if(!names.size)return false;
+  s.customFoods=foods;
+  return true;
+ }
  function validateState(s){
   if(!s||s.schema!==2||!Number.isInteger(s.cursor)||s.cursor<0||s.cursor>3||!Array.isArray(s.weights)||!Array.isArray(s.sessions)||!Array.isArray(s.events)||!s.plans||typeof s.plans!=='object'||Array.isArray(s.plans))return false;
   if(s.weights.length>10000||s.sessions.length>3000||s.events.length>12000||Object.keys(s.plans).length>5000||!Number.isInteger(s.inventory)||!finite(s.inventory,0,10000)||!Number.isInteger(s.blendDays)||!finite(s.blendDays,0,31)||typeof s.waistConcern!=='boolean'||!finite(s.restEnds,0,Date.now()+86400000))return false;
@@ -55,8 +79,10 @@
   }
   if(P&&!P.valid(s.pantry))return false;
   if(F&&!F.validPreferences(s.foodPreferences))return false;
+  if(s.customFoods!==undefined&&(!s.customFoods||typeof s.customFoods!=='object'||Array.isArray(s.customFoods)
+   ||Object.entries(s.customFoods).some(([id,food])=>!(/^(?:food-[a-f0-9-]{36}|legacy-\d{4}-\d{2}-\d{2}-\d{1,2})$/).test(id)||!validCustomFood(food))))return false;
   return true;
  }
 
- return {CYCLE,iso,validDate,shift,finite,nutrition,weightWindow,trend,progression,validSet,optionalAllowed,nextPhase,defaultPlan,emptyState,parseSetField,restCursor,activateDraft,validateState};
+ return {CYCLE,iso,validDate,shift,finite,nutrition,weightWindow,trend,progression,validSet,optionalAllowed,nextPhase,defaultPlan,emptyState,parseSetField,restCursor,activateDraft,validateState,validCustomFood,migrateCustomFoods};
 });

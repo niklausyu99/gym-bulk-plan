@@ -1,25 +1,322 @@
-const test=require('node:test'),assert=require('node:assert/strict'),S=require('../app/sync.js'),C=require('../app/core.js');
-function fixture(){let server=null,sha=0,privateRepo=true,fail=false,denied=false,hook=null;const calls=[];const request=async(url,opts)=>{calls.push({url,opts});if(fail)throw Error('offline');if(denied)return {status:typeof denied==='number'?denied:401,ok:false};if(!url.includes('/contents/'))return {status:200,ok:true,json:async()=>({private:privateRepo,default_branch:'main'})};if(opts.method==='PUT'){const body=JSON.parse(opts.body);if(hook){await hook();hook=null;}if((body.sha||null)!==(server?.sha||null))return {status:409,ok:false};const pack=JSON.parse(S.decode(body.content));server={sha:String(++sha),data:pack.data};return {status:200,ok:true,json:async()=>({content:{sha:server.sha}})};}return server?{status:200,ok:true,json:async()=>({sha:server.sha,type:'file',encoding:'base64',content:S.encode(JSON.stringify({app:'BulkPlan',format:1,data:server.data}))})}:{status:404,ok:false};};
- function device(initial=C.emptyState()){let data=structuredClone(initial);const map=new Map();const storage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v)};const sync=S.create({storage,fetch:request,getState:()=>data,apply:s=>data=s,validate:C.validateState});return {sync,map,get data(){return data},set data(s){data=s},connect:(remember=false)=>sync.connect({owner:'test',repo:'private',secret:'fake-secret-for-test-only',remember})};}
- return {device,calls,get server(){return server},set server(v){server=v},set private(v){privateRepo=v},set offline(v){fail=v},set denied(v){denied=v},set hook(v){hook=v}};}
-test('首次连接创建私有记录，Unicode与备份全部字段完整往返，默认不保存令牌',async()=>{const f=fixture(),a=f.device();a.data.weights.push({date:'2026-10-30',value:68});await a.connect();assert.deepEqual(f.server.data,a.data);const meta=JSON.parse(a.map.get('bulkplan-github-sync'));assert(!meta.token);assert(!JSON.stringify(f.server).includes('fake-secret'));assert.equal(a.sync.config().connected,true);a.sync.disconnect();});
-test('空白新设备拉取线上版本，同步前副本可导出',async()=>{const f=fixture(),a=f.device();a.data.inventory=4;await a.connect();const b=f.device();await b.connect();assert.equal(b.data.inventory,4);assert.equal(JSON.parse(b.sync.recovery()).length,1);a.sync.disconnect();b.sync.disconnect();});
-test('只改本机时上传，只改远端时拉取，两个设备可以先后继续',async()=>{const f=fixture(),a=f.device();await a.connect();const b=f.device();await b.connect();a.data.inventory=7;await a.sync.sync();await b.sync.sync();assert.equal(b.data.inventory,7);b.data.blendDays=12;await b.sync.sync();await a.sync.sync();assert.equal(a.data.blendDays,12);a.sync.disconnect();b.sync.disconnect();});
-test('双端修改不覆盖，冲突时两份版本均可导出，确认后方可恢复',async()=>{const f=fixture(),a=f.device();await a.connect();const b=f.device();await b.connect();a.data.inventory=3;await a.sync.sync();b.data.inventory=8;await b.sync.sync();assert(b.sync.config().conflict);assert.equal(f.server.data.inventory,3);assert.equal(b.data.inventory,8);assert.equal(JSON.parse(await b.sync.remoteBackup()).data.inventory,3);await b.sync.sync('remote');assert.equal(b.data.inventory,3);assert.equal(JSON.parse(b.sync.recovery())[0].data.inventory,8);a.sync.disconnect();b.sync.disconnect();});
-test('确认冲突后远端又变化则不强行覆盖；SHA竞争失败保持本地记录',async()=>{const f=fixture(),a=f.device();await a.connect();const b=f.device();await b.connect();a.data.inventory=2;await a.sync.sync();b.data.inventory=3;await b.sync.sync();a.data.inventory=4;await a.sync.sync();await b.sync.sync('local');assert.equal(f.server.data.inventory,4);await b.sync.sync();assert(b.sync.config().conflict);await b.sync.sync('local');assert.equal(f.server.data.inventory,3);a.data.inventory=5;await a.sync.sync();assert(a.sync.config().conflict);a.sync.disconnect();b.sync.disconnect();});
-test('拒绝公开仓库、失效授权和损坏远端；离线不丢本机数据',async()=>{for(const mode of ['public','offline','denied','invalid']){const f=fixture(),a=f.device();a.data.inventory=6;if(mode==='public')f.private=false;if(mode==='offline')f.offline=true;if(mode==='denied')f.denied=true;if(mode==='invalid')f.server={sha:'invalid',data:{wrong:true}};await a.connect();assert.equal(a.data.inventory,6);assert.equal(f.calls.filter(c=>c.opts.method==='PUT').length,0,mode);assert(!a.sync.config().status.includes('已同步到'));a.sync.disconnect();}});
-test('线上文件被删除不静默重建，断开连接删除持久令牌但保留双方记录',async()=>{const f=fixture(),a=f.device();await a.connect(true);assert(JSON.parse(a.map.get('bulkplan-github-sync')).token);f.server=null;await a.sync.sync();assert(a.sync.config().conflict);assert.equal(f.server,null);a.sync.disconnect();assert(!JSON.parse(a.map.get('bulkplan-github-sync')).token);assert.equal(a.data.schema,2);});
-test('上传请求期间继续输入，不把尚未上传的记录标记为同一版本',async()=>{const f=fixture(),a=f.device();await a.connect();a.data.inventory=1;f.hook=()=>{a.data.inventory=2;};await a.sync.sync();assert.equal(f.server.data.inventory,1);assert.equal(a.data.inventory,2);await a.sync.sync();assert.equal(f.server.data.inventory,2);a.sync.disconnect();});
+const test=require('node:test'),assert=require('node:assert/strict');
+const S=require('../app/sync.js'),C=require('../app/core.js');
+const FILE='bulkplan-records.json';
+const state=(inventory=0)=>({...C.emptyState(),inventory});
 
-test('写入前另一设备抢先更新，GitHub冲突响应不会覆盖远端',async()=>{const f=fixture(),a=f.device();await a.connect();a.data.inventory=9;f.hook=()=>{f.server={sha:'newer-server-version',data:{...C.emptyState(),inventory:5}};};await a.sync.sync();assert.equal(f.server.data.inventory,5);assert.equal(a.data.inventory,9);assert(a.sync.config().status.includes('变化'));await a.sync.sync();assert(a.sync.config().conflict);a.sync.disconnect();});
-test('打开默认饮食计划的新设备不制造冲突；实际取消鸡胸属于用户修改',async()=>{const f=fixture(),a=f.device();a.data.inventory=5;await a.connect();const initial=C.emptyState();initial.plans['2026-11-01']=C.defaultPlan(true);const b=f.device(initial);await b.connect();assert.equal(b.data.inventory,5);assert.equal(b.sync.config().phase,'synced');const modified=C.emptyState();modified.plans['2026-11-01']={...C.defaultPlan(true),mealParts:{0:{chicken:false,side:true}}};assert(S.meaningful(modified));a.sync.disconnect();b.sync.disconnect();});
-test('失效授权不显示已连接或已同步，联网失败保留等待同步状态',async()=>{const f=fixture(),a=f.device();await a.connect();assert.equal(a.sync.config().phase,'synced');a.data.inventory=2;a.sync.changed();assert.equal(a.sync.config().phase,'pending');f.offline=true;await a.sync.sync();assert.equal(a.sync.config().phase,'pending');f.offline=false;f.denied=true;await a.sync.sync();assert.equal(a.sync.config().connected,false);assert.equal(a.sync.config().phase,'error');a.sync.disconnect();});
-test('新设备打开独立鸡胸选项但未勾选，不构成虚假的用户修改',()=>{const s=C.emptyState(),M=require('../app/meals.js');s.plans['2026-11-01']=C.defaultPlan(true);M.separate(s.plans['2026-11-01'],require('../content/plan.json').sides);assert.equal(S.meaningful(s),false);M.selectChicken(s.plans['2026-11-01'],0,true);assert.equal(S.meaningful(s),true);});
+function fixture(){
+  let server=null,serial=0,privateRepo=true,offline=false,denied=0,hook=null;
+  const calls=[],commits=[];
+  const ok=value=>({status:200,ok:true,json:async()=>value});
+  const fail=status=>({status,ok:false});
+  function write(data){
+    const id=(++serial).toString(16).padStart(40,'0');
+    const at=new Date(Date.UTC(2026,10,1,12,0,serial)).toISOString();
+    server={id,sha:'blob-'+serial,data:structuredClone(data)};
+    commits.unshift({...server,at});
+    return server;
+  }
+  const request=async(url,opts)=>{
+    const path=new URL(url);
+    calls.push({path,opts});
+    if(offline)throw Error('offline');
+    if(denied)return fail(denied);
+    if(path.pathname.endsWith('/commits')){
+      assert.equal(path.searchParams.get('path'),FILE);
+      assert.equal(path.searchParams.get('sha'),'main');
+      return ok(commits.map(row=>({sha:row.id,commit:{message:'Save BulkPlan records',committer:{date:row.at}}})));
+    }
+    if(!path.pathname.includes('/contents/'))return ok({private:privateRepo,default_branch:'main'});
+    if(hook){
+      const run=hook;
+      hook=null;
+      if(!await run({path,opts}))hook=run;
+    }
+    if(opts.method==='PUT'){
+      const body=JSON.parse(opts.body);
+      assert.equal(body.branch,'main');
+      if((body.sha||null)!==(server?.sha||null))return fail(409);
+      const pack=JSON.parse(S.decode(body.content));
+      assert.equal(pack.format,1);
+      return ok({content:{sha:write(pack.data).sha}});
+    }
+    const ref=path.searchParams.get('ref');
+    const row=ref==='main'?server:commits.find(row=>row.id===ref);
+    if(!row)return fail(404);
+    return ok({sha:row.sha,type:'file',encoding:'base64',content:S.encode(JSON.stringify({app:'BulkPlan',format:1,data:row.data}))});
+  };
+  function device(initial=state(),saved=new Map()){
+    let data=structuredClone(initial),applies=0,failCopy=false;
+    const storage={
+      getItem:key=>saved.get(key)||null,
+      setItem:(key,value)=>{
+        if(failCopy&&key==='bulkplan-sync-copies')throw Error('quota');
+        saved.set(key,value);
+      }
+    };
+    const sync=S.create({
+      storage,fetch:request,getState:()=>data,getRestoreState:()=>({local:data}),
+      apply(next,{expected}){
+        assert.deepEqual(expected,{local:data});
+        applies++;
+        data=next;
+      },
+      validate:C.validateState,
+      now:()=>new Date(Date.UTC(2026,10,1,12,0,serial)).toISOString()
+    });
+    return {
+      sync,saved,get data(){return data;},set data(next){data=next;},get applies(){return applies;},set failCopy(value){failCopy=value;},
+      connect:(remember=false)=>sync.connect({owner:'test',repo:'private',secret:'fake-secret-for-test-only',remember})
+    };
+  }
+  return {
+    device,calls,write,commits,
+    get server(){return server;},set server(value){server=value;},
+    set private(value){privateRepo=value;},set offline(value){offline=value;},set denied(value){denied=value;},set hook(value){hook=value;}
+  };
+}
 
-test('403授权不足时取消有效连接，不显示已同步',async()=>{const f=fixture(),a=f.device();await a.connect();f.denied=403;await a.sync.sync();assert.equal(a.sync.config().connected,false);assert.equal(a.sync.config().phase,'error');assert(a.sync.config().status.includes('访问被拒绝'));a.sync.disconnect();});
+test('首次连接只上传本机记录，Unicode 与备份字段完整往返，默认不保存令牌',async()=>{
+  const f=fixture(),a=f.device(state(6));
+  a.data.weights.push({date:'2026-10-30',value:68});
+  await a.connect();
+  assert.deepEqual(f.server.data,a.data);
+  assert(!JSON.parse(a.saved.get('bulkplan-github-sync')).token);
+  assert(!JSON.stringify(f.server).includes('fake-secret'));
+  assert.equal(a.sync.config().connected,true);
+  assert.equal(a.applies,0);
+});
 
-test('仅盘点或份量偏好也算个人修改，初次连接不能被线上记录静默覆盖；新字段完整往返',async()=>{const P=require('../app/pantry.js'),F=require('../app/foods.js'),f=fixture(),a=f.device();P.record(a.data,{id:'peanut',threshold:50,target:350,pack:350,regular:true},40);a.data.foodPreferences={bread:F.config(F.get('bread'),{amount:3})};assert(S.meaningful(a.data));await a.connect();const b=f.device();await b.connect();assert.deepEqual(b.data.pantry,a.data.pantry);assert.deepEqual(b.data.foodPreferences,a.data.foodPreferences);const c=f.device();P.record(c.data,{id:'oats',threshold:100,target:500,pack:500,regular:true},250);await c.connect();assert(c.sync.config().conflict);assert.equal(c.data.pantry.items.oats.amount,250);assert.equal(f.server.data.pantry.items.peanut.amount,40);a.sync.disconnect();b.sync.disconnect();c.sync.disconnect();});
+test('空白新设备连接私有仓库但不读取或覆盖现有备份',async()=>{
+  const f=fixture();
+  f.write(state(4));
+  const blank=state();
+  blank.plans['2026-11-01']=C.defaultPlan(true);
+  for(const initial of [null,blank]){
+    const a=f.device(initial);
+    await a.connect();
+    assert.equal(a.sync.config().connected,true);
+    assert.equal(a.sync.config().phase,'idle');
+    assert.deepEqual(a.data,initial);
+    assert.equal(f.server.data.inventory,4);
+    assert.equal(a.applies,0);
+  }
+  assert.equal(f.calls.filter(c=>c.path.pathname.endsWith('/commits')||c.opts.method==='PUT').length,0);
+});
 
-test('自定义训练及已完成组的记重快照随私有同步完整往返',async()=>{const X=require('../app/custom-exercise.js'),f=fixture(),a=f.device(),e=X.create({group:'back',name:'',unit:'plates_per_arm_kg',sets:2,kg:20,reps:12,rest:90});e.sets[0].done=true;a.data.draft={id:'custom-cloud',day:'pull',date:C.iso(new Date()),started:Date.now(),recovery:'normal',note:'',exercises:[e]};assert(C.validateState(a.data));await a.connect();const b=f.device();await b.connect();assert.deepEqual(b.data.draft,a.data.draft);assert.equal(b.data.draft.exercises[0].sets[0].rir,null);assert.equal(b.data.draft.exercises[0].sets[0].recording.loadConvention,'plates_per_arm_kg');a.sync.disconnect();b.sync.disconnect();});
+test('其他设备的新记录不拉取，手机下次保存自动上传并保留云端旧点',async()=>{
+  const f=fixture(),a=f.device(state(3));
+  await a.connect();
+  f.write(state(4));
+  await a.sync.sync();
+  assert.equal(a.data.inventory,3);
+  assert.equal(f.server.data.inventory,4);
+  a.data.inventory=8;
+  a.sync.changed();
+  await a.sync.sync();
+  assert.equal(f.server.data.inventory,8);
+  assert.equal(a.applies,0);
+  assert.deepEqual(f.commits.map(row=>row.data.inventory),[8,4,3]);
+});
 
-test('仅补充剂服用也是个人修改，不被初次同步覆盖；来源与剂量跨设备完整往返',async()=>{const SU=require('../app/supplements.js'),f=fixture(),a=f.device();a.data.plans['2026-11-01']=C.defaultPlan();SU.record(a.data.plans['2026-11-01'],'omega3',1);SU.record(a.data.plans['2026-11-01'],'multi',1);assert(S.meaningful(a.data));await a.connect();const b=f.device();await b.connect();assert.deepEqual(b.data.plans['2026-11-01'].supplements,a.data.plans['2026-11-01'].supplements);SU.record(b.data.plans['2026-11-01'],'omega3',2);await b.sync.sync();await a.sync.sync();assert.equal(SU.totals(a.data.plans['2026-11-01']).nutrients.epa,1000);a.sync.disconnect();b.sync.disconnect();});
+test('最近的同步点按时间列出，只有明确选择的云端点才写回手机',async()=>{
+  const f=fixture(),a=f.device(state(7));
+  const first=f.write(state(1)),second=f.write(state(2));
+  await a.connect();
+  await assert.rejects(a.sync.restoreBackup(first.id),/重新打开/);
+  const points=await a.sync.listBackups();
+  assert.deepEqual(points.slice(1).map(p=>p.id),[second.id,first.id]);
+  assert.equal(a.applies,0);
+  await a.sync.restoreBackup(first.id,{local:a.data});
+  assert.equal(a.applies,1);
+  assert.equal(a.data.inventory,1);
+  assert.equal(f.server.data.inventory,7);
+  await a.sync.sync();
+  assert.equal(f.server.data.inventory,1);
+  assert.deepEqual(f.commits.map(row=>row.data.inventory),[1,7,2,1]);
+});
+
+test('明确恢复空白本机副本也可以覆盖备份新头，旧点仍保留',async()=>{
+  const f=fixture(),a=f.device(state());
+  f.write(state(5));
+  await a.connect();
+  a.sync.changed({restored:true});
+  await a.sync.sync();
+  assert.equal(f.server.data.inventory,0);
+  assert.equal(f.commits[1].data.inventory,5);
+});
+
+test('最终确认后本机变化或云端备份损坏，均保留当前手机记录',async()=>{
+  const f=fixture(),a=f.device(state(4));
+  const old=f.write(state(1)),bad=f.write({wrong:true});
+  await a.connect();
+  await a.sync.listBackups();
+  await assert.rejects(a.sync.restoreBackup(bad.id),/无法读取|不兼容/);
+  const expected={local:structuredClone(a.data)};
+  f.hook=({path})=>{
+    if(path.searchParams.get('ref')!==old.id)return false;
+    a.data.inventory=6;
+    return true;
+  };
+  await assert.rejects(a.sync.restoreBackup(old.id,expected),/本机记录有变化/);
+  assert.equal(a.data.inventory,6);
+  assert.equal(a.applies,0);
+});
+
+test('拒绝公开仓库和失效授权；离线保留手机记录并在下次联网同步',async()=>{
+  for(const mode of ['public','denied','offline']){
+    const f=fixture(),a=f.device(state(6));
+    if(mode==='public')f.private=false;
+    if(mode==='offline')f.offline=true;
+    if(mode==='denied')f.denied=401;
+    await a.connect();
+    assert.equal(a.data.inventory,6);
+    assert.equal(f.server,null,mode);
+    assert.equal(a.sync.config().connected,false);
+    assert.equal(a.sync.config().phase,mode==='offline'?'pending':'error');
+    if(mode==='offline'){
+      f.offline=false;
+      await a.sync.sync();
+      assert.equal(f.server.data.inventory,6);
+      assert.equal(a.sync.config().phase,'synced');
+    }
+  }
+});
+
+test('正常上传只需要云端文件信息，损坏的云端内容仍留在历史中',async()=>{
+  const f=fixture(),a=f.device(state(7));
+  const old=f.write({wrong:true});
+  await a.connect();
+  assert.equal(f.server.data.inventory,7);
+  assert.equal(f.commits[1].id,old.id);
+  assert.equal(a.applies,0);
+  const invalid=f.calls.some(call=>call.path.searchParams.get('ref')===old.id);
+  assert.equal(invalid,false);
+});
+
+test('两台设备同时上传时自动取新 SHA 重试，保留中间备份点',async()=>{
+  const f=fixture(),a=f.device(state(8));
+  f.write(state(2));
+  f.hook=({opts})=>{
+    if(opts.method!=='PUT')return false;
+    f.write(state(5));
+    return true;
+  };
+  await a.connect();
+  assert.equal(f.server.data.inventory,8);
+  assert.deepEqual(f.commits.map(row=>row.data.inventory),[8,5,2]);
+  assert.equal(a.sync.config().phase,'synced');
+});
+
+test('写入期间的新修改不会被标成已备份，下次上传取最新手机记录',async()=>{
+  const f=fixture(),a=f.device(state(8));
+  f.hook=({opts})=>{
+    if(opts.method!=='PUT')return false;
+    a.data.inventory=9;
+    return true;
+  };
+  await a.connect();
+  assert.equal(f.server.data.inventory,8);
+  assert.equal(a.sync.config().phase,'pending');
+  await a.sync.sync();
+  assert.equal(f.server.data.inventory,9);
+});
+
+test('恢复等待正在上传的请求后再应用备份',async()=>{
+  const f=fixture(),a=f.device(state(5)),old=f.write(state(2));
+  await a.connect();
+  await a.sync.listBackups();
+  let release,notify;
+  const started=new Promise(resolve=>{notify=resolve;});
+  f.hook=async({opts})=>{
+    if(opts.method!=='PUT')return false;
+    await new Promise(resolve=>{release=resolve;notify();});
+    return true;
+  };
+  a.data.inventory=6;
+  const pending=a.sync.sync();
+  await started;
+  const restoring=a.sync.restoreBackup(old.id);
+  assert.equal(a.applies,0);
+  release();
+  await pending;
+  await restoring;
+  assert.equal(a.data.inventory,2);
+  await a.sync.sync();
+  assert.deepEqual(f.commits.map(row=>row.data.inventory),[2,6,5,2]);
+});
+
+test('保留旧版副本和最近两个手机同步点，本机额外副本写入失败不会阻止自动备份',async()=>{
+  const f=fixture(),a=f.device(state(4));
+  a.saved.set('bulkplan-sync-recovery',JSON.stringify([{app:'BulkPlan',exportedAt:'2026-10-30T00:00:00Z',data:state(2)}]));
+  await a.connect(true);
+  for(const value of [5,6,7]){
+    a.data.inventory=value;
+    if(value===7)a.failCopy=true;
+    await a.sync.sync();
+  }
+  assert.equal(f.server.data.inventory,7);
+  assert.deepEqual(JSON.parse(a.sync.recovery()).map(row=>row.data.inventory),[6,5,2]);
+  assert(JSON.parse(a.saved.get('bulkplan-github-sync')).token);
+  a.sync.disconnect();
+  assert(!JSON.parse(a.saved.get('bulkplan-github-sync')).token);
+  assert.equal(a.data.inventory,7);
+});
+
+test('仅补充剂服用、份量偏好或自定义食物也构成可备份的手机记录',async()=>{
+  const SU=require('../app/supplements.js'),F=require('../app/foods.js'),f=fixture(),a=f.device(state());
+  const plan=a.data.plans['2026-11-01']=C.defaultPlan();
+  SU.record(plan,'omega3',2);
+  assert(S.meaningful(a.data));
+  a.data.foodPreferences={bread:F.config(F.get('bread'),{amount:3})};
+  assert(S.meaningful({...state(),foodPreferences:a.data.foodPreferences}));
+  assert(S.meaningful({...state(),customFoods:{local:{name:'红豆粥'}}}));
+  f.write(state(6));
+  await a.connect();
+  assert.deepEqual(f.server.data,a.data);
+  assert.equal(SU.totals(f.server.data.plans['2026-11-01']).nutrients.epa,1000);
+});
+
+test('恢复旧点保留停用训练的内容和计重快照',async()=>{
+  const X=require('../app/custom-exercise.js'),f=fixture();
+  const archived=state();
+  const exercise=X.create({group:'back',name:'划船',unit:'plates_per_arm_kg',sets:2,kg:20,reps:12,rest:90});
+  exercise.sets[0].done=true;
+  archived.draft={id:'custom-cloud',day:'pull',date:'2026-11-01',started:Date.now(),recovery:'normal',note:'',exercises:[exercise]};
+  assert(C.validateState(archived));
+  const old=f.write(archived),a=f.device(state(4));
+  await a.connect();
+  await a.sync.listBackups();
+  await a.sync.restoreBackup(old.id);
+  assert.deepEqual(a.data.draft,archived.draft);
+  await a.sync.sync();
+  assert.equal(f.server.data.draft.exercises[0].sets[0].recording.loadConvention,'plates_per_arm_kg');
+});
+
+test('上传遇到 403 时自动备份状态不显示已连接或成功',async()=>{
+  const f=fixture(),a=f.device(state(5));
+  await a.connect();
+  f.denied=403;
+  a.data.inventory=9;
+  await a.sync.sync();
+  assert.equal(a.sync.config().connected,false);
+  assert.equal(a.sync.config().phase,'error');
+  assert.match(a.sync.config().status,/访问被拒绝/);
+  assert.equal(f.server.data.inventory,5);
+  f.denied=0;
+  await a.sync.sync();
+  assert.equal(f.server.data.inventory,9);
+});
+
+test('空白手机明确恢复空白旧点后，即使上传前关闭也会在重开时自动备份',async()=>{
+  const f=fixture(),old=f.write(state()),a=f.device(null);
+  f.write(state(8));
+  await a.connect(true);
+  await a.sync.listBackups();
+  await a.sync.restoreBackup(old.id);
+  assert.equal(a.data.inventory,0);
+  assert.equal(f.server.data.inventory,8);
+  const reopened=f.device(a.data,a.saved);
+  await reopened.sync.sync();
+  assert.equal(f.server.data.inventory,0);
+  a.sync.disconnect();
+});

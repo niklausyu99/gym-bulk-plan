@@ -6,21 +6,21 @@ const icon=(name)=>`<svg viewBox="0 0 24 24" width="20" height="20" fill="none" 
 const btn=(label,action,param='',kind='',extra='')=>`<button type="button" class="btn ${kind}" data-action="${action}" data-param="${esc(param)}" ${extra}>${label}</button>`;
 const header=(title,note,actions='')=>`<header class="page-head"><div><h1>${title}</h1><p>${note}</p></div><div class="head-actions">${actions}</div></header>`;
 const imeTargets=new Set();let imeNeedsRender=false,renderRevision=0;
-let cloud=null,vault=null,localConflict=false,pendingRecovery=[];const formDrafts={},openDetails={},horizontalScroll={};
+let cloud=null,vault=null,localConflict=false,pendingRecovery=[],backupPoints=[],restoreBusy=false;const formDrafts={},openDetails={},horizontalScroll={};
 let state=C.emptyState(),storageOK=true,migrated=false,storedRaw=null,invalidRaw=null;
 try{storedRaw=localStorage.getItem(KEY);if(storedRaw){const parsed=JSON.parse(storedRaw);if(C.validateState(parsed))state=parsed;else throw Error('invalid')}else{const old=JSON.parse(localStorage.getItem('bulk-weight-data')||'[]');if(Array.isArray(old)){state.weights=old.filter(w=>C.validDate(w.date)&&C.finite(w.value,25,250));migrated=state.weights.length>0;}}}catch(e){storageOK=false;if(storedRaw!==null)invalidRaw=storedRaw;}
-const preservedBlendHistory=B.preserveConsumedLegacy(state);for(const p of Object.values(state.plans))M.preserve(p,D.sides);
-let renderedDate=today(),foodUndo=null;
+const preservedBlendHistory=B.preserveConsumedLegacy(state),migratedFoods=C.migrateCustomFoods(state);for(const p of Object.values(state.plans))M.preserve(p,D.sides);
+let renderedDate=today(),foodUndo=null,chickenEdit=null;
 let view='',nutritionTab='today',saveStamp='',docSearch='',historyKind='diet',historyDate='',supplementDate='';
 const toast=text=>{const el=$('#toast');el.textContent=text;el.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>el.style.display='none',3200);};
 let pendingConfirmation=null;
-function confirmAction(message){if(pendingConfirmation)return Promise.resolve(false);const dialog=$('#confirm-dialog');$('#confirm-message').textContent=message;return new Promise(resolve=>{pendingConfirmation=result=>{dialog.close();pendingConfirmation=null;resolve(result);};dialog.showModal();$('#confirm-cancel').focus();});}
+function confirmAction(message,label='继续',danger=false){if(pendingConfirmation)return Promise.resolve(false);const dialog=$('#confirm-dialog'),button=$('#confirm-continue');$('#confirm-message').textContent=message;button.textContent=label;button.dataset.danger=String(danger);return new Promise(resolve=>{pendingConfirmation=result=>{dialog.close();pendingConfirmation=null;resolve(result);};dialog.showModal();$('#confirm-cancel').focus();});}
 $('#confirm-cancel').addEventListener('click',()=>pendingConfirmation?.(false));$('#confirm-continue').addEventListener('click',()=>pendingConfirmation?.(true));$('#confirm-dialog').addEventListener('cancel',e=>{e.preventDefault();pendingConfirmation?.(false);});
-function save(candidate){if(invalidRaw!==null){storageOK=false;saveStamp='原始记录已保留，请先导出并恢复备份';return Promise.resolve(false);}const success=()=>{storageOK=true;saveStamp='已保存在本机';cloud?.changed();document.querySelectorAll('.save-status').forEach(e=>e.textContent=saveStamp);return true;};const fail=e=>{storageOK=false;localConflict=!!vault?.conflicted();saveStamp=localConflict?'另一个页面有新记录，请先处理冲突':'本机未能保存，请导出记录';document.querySelectorAll('.save-status').forEach(e=>e.textContent=saveStamp);if(localConflict)render();return false;};if(vault)return vault.write(candidate,candidate?{expected:state}:{}).then(success).catch(fail);try{localStorage.setItem(KEY,JSON.stringify(candidate||state));if(candidate)state=candidate;return Promise.resolve(success());}catch(e){return Promise.resolve(fail(e));}}
+function save(candidate){if(invalidRaw!==null){storageOK=false;saveStamp='原始记录已保留，请先导出并恢复备份';return Promise.resolve(false);}const success=()=>{storageOK=true;saveStamp='已保存在本机';cloud?.changed();document.querySelectorAll('.save-status').forEach(e=>e.textContent=saveStamp);return true;};const fail=e=>{storageOK=false;localConflict=!!vault?.conflicted();saveStamp=localConflict?'另一个页面有新记录，可从本机备份恢复':'本机未能保存，请导出记录';document.querySelectorAll('.save-status').forEach(e=>e.textContent=saveStamp);if(localConflict)render();return false;};if(vault)return vault.write(candidate,candidate?{expected:state}:{}).then(success).catch(fail);try{localStorage.setItem(KEY,JSON.stringify(candidate||state));if(candidate)state=candidate;return Promise.resolve(success());}catch(e){return Promise.resolve(fail(e));}}
 function plan(){const t=today(),p=state.plans[t]||(state.plans[t]=C.defaultPlan(Object.entries(state.plans).filter(([date])=>date<t).sort(([a],[b])=>b.localeCompare(a))[0]?.[1].gym??true));M.separate(p,D.sides);return p;}
 function items(p=plan()){const list=[];if(p.blend)list.push({...B.nutritionForPlan(D.blendIngredients,p),id:'blend',name:'我的 Blend'});list.push(...M.items(p,D.sides));p.addons.forEach((a,i)=>list.push({...a,id:'add-'+i}));return list;}
 function renderRecipeKeepScroll(id){const scroll=$('#main').scrollTop,y=window.scrollY;render();$('#main').scrollTop=scroll;window.scrollTo(0,y);if(id)document.querySelector(`[data-blend-ingredient="${id}"]`)?.focus({preventScroll:true});}
-function foodContext(){return {date:today(),getDate:today,getState:()=>state,getPlan:plan,refresh:render,save,toast,added:(index,entry)=>{foodUndo={date:today(),index,snapshot:JSON.stringify(entry),name:entry.name,eaten:plan().eaten.includes('add-'+index)};nutritionTab='today';window.history?.replaceState(null,'','#nutrition/today');render();document.querySelector(`[data-action="food-edit"][data-param="${index}"]`)?.scrollIntoView({block:'center'});},dialog:$('#details'),content:$('#dialog-content'),items:D.pantryItems,esc,btn};}
+function foodContext(){return {date:today(),getDate:today,confirm:confirmAction,getState:()=>state,getPlan:plan,refresh:render,save,toast,added:(index,entry)=>{foodUndo={date:today(),index,snapshot:JSON.stringify(entry),name:entry.name,eaten:plan().eaten.includes('add-'+index)};nutritionTab='today';window.history?.replaceState(null,'','#nutrition/today');render();document.querySelector(`[data-action="food-edit"][data-param="${index}"]`)?.scrollIntoView({block:'center'});},dialog:$('#details'),content:$('#dialog-content'),items:D.pantryItems,esc,btn};}
 function supplementContext(date=supplementDate||today()){return {...foodContext(),date,today:today(),plan:state.plans[date]||C.defaultPlan(),ingredients:D.blendIngredients,sides:D.sides,validDate:C.validDate,getPlan:day=>state.plans[day]||(state.plans[day]=C.defaultPlan(day===today()?plan().gym:state.events.some(e=>e.date===day&&e.phase!=='rest')))};}
 function pantryContext(){return {...foodContext(),items:D.pantryItems,header};}
 function pantry(){return PV.render(pantryContext());}
@@ -28,14 +28,21 @@ function recipe(){return window.BulkRecipeView.render({ingredients:D.blendIngred
 
 const plannedTotal=()=>C.nutrition([...items(),...SU.macros(plan())]),actualTotal=()=>C.nutrition([...items().filter(x=>plan().eaten.includes(x.id)),...SU.macros(plan())]);
 const target=()=>plan().gym?{k:[2450,2550],p:[100,110],c:[320,360],f:[65,80],fi:[25,30]}:{k:[2350,2450],p:[100,110],c:[280,330],f:[65,80],fi:[25,30]};
-const nutritionSummary=window.BulkNutritionSummary?.create({esc,visible:()=>view==='home'||view==='pantry'||view==='nutrition'&&['today','foods','sides','budget'].includes(nutritionTab),getData:()=>({date:today(),plan:plan(),actual:actualTotal(),planned:plannedTotal(),goal:target(),advice:total=>B.suggestions(plan(),total,target(),D.sides)}),renderMicros:()=>NV.render({...supplementContext(today()),title:'维生素与矿物质'}),foods:()=>{nutritionTab='foods';if(view!=='nutrition')location.hash='#nutrition/foods';else{window.history.replaceState(null,'','#nutrition/foods');render();}requestAnimationFrame(()=>document.querySelector('.food-library')?.scrollIntoView({block:'start'}));}});
-function nav(){const links=[['home','今天'],['nutrition','饮食'],['progress','进度'],['more','更多']],active=view==='pantry'?'nutrition':view==='history'?'progress':['guide','movement','settings'].includes(view)?'more':view;$('#sidebar').innerHTML=`<a class="brand" href="#home"><img class="brand-symbol" src="assets/icons/bulkplan-lime-192.png" width="32" height="32" alt="">BulkPlan</a><p class="brand-caption">饮食与体重，每天记一点。</p><nav>${links.map(([id,n])=>`<a class="navitem ${active===id?'active':''}" href="#${id}">${icon(id)}${n}</a>`).join('')}</nav><div class="sidebar-bottom"><a class="navitem" href="#guide">${icon('book')}饮食手册</a><a class="navitem" href="#settings">${icon('download')}记录与备份</a><div class="goal-note"><small>个人增肌计划</small><b>49 → 60 kg</b><small>167 cm / 稳定增肌</small></div></div><div class="mobile-tools"><span class="sync-indicator is-pending" data-sync-indicator role="status">未连接同步</span><a class="btn text" href="#settings" aria-label="记录与备份">${icon('download')}</a></div>`;$('#mobile-nav').innerHTML=links.map(([id,n])=>`<a href="#${id}" class="${active===id?'active':''}" ${active===id?'aria-current="page"':''}>${icon(id)}${n}</a>`).join('');}
-function home(){const p=plan(),goal=target(),actual=actualTotal(),weight=state.weights.filter(w=>w.date<=today()).sort((a,b)=>a.date.localeCompare(b.date)).at(-1),days=state.weights.filter(w=>w.date>=C.shift(today(),-6)&&w.date<=today()).length;return header('今天',new Date().toLocaleDateString('zh-CN',{month:'long',day:'numeric',weekday:'long'}))+`<div class="grid12 home-grid"><section class="panel tonal span8"><div class="panel-head"><h2>今天怎么吃</h2><a class="row-link" href="#nutrition/arrange">调整安排</a></div>${dietModePicker(p)}<div class="home-actions"><a class="btn primary" href="#nutrition">记录今日饮食</a></div></section><section class="panel span4"><div class="panel-head"><h2>今日营养</h2><span class="small">${p.gym?'训练日':'休息日'}</span></div><button type="button" class="home-nutrition-open" data-action="nutrition-summary" aria-haspopup="dialog" aria-controls="nutrition-summary"><span><small>已记录摄入</small><strong>${num(Math.round(actual.k/10)*10)} <small>kcal</small></strong><small>目标 ${goal.k[0]}–${goal.k[1]} kcal</small></span><span>查看缺口 ↗</span></button></section><section class="panel span6"><div class="home-weight"><div><small>最近晨起体重</small><strong>${weight?num(weight.value,1)+' kg':'还没有记录'}</strong><p class="small">${weight?weight.date:'记录后，再看真实趋势。'}</p></div><a class="btn secondary" href="#progress">记体重</a></div></section><section class="panel span6"><div class="panel-head"><h2>最近七天</h2><a class="row-link" href="#history">查看记录</a></div><p style="margin:0">${days} 天体重记录</p><a class="btn secondary section" href="#pantry">食物与采购</a></section></div>`;}
+const nutritionSummary=window.BulkNutritionSummary?.create({esc,visible:()=>['home','pantry','nutrition'].includes(view),getData:()=>({date:today(),plan:plan(),actual:actualTotal(),planned:plannedTotal(),goal:target(),advice:total=>B.suggestions(plan(),total,target(),D.sides)}),renderMicros:()=>NV.render({...supplementContext(today()),title:'维生素与矿物质'}),foods:()=>{nutritionTab='foods';if(view!=='nutrition')location.hash='#nutrition/foods';else{window.history.replaceState(null,'','#nutrition/foods');render();}requestAnimationFrame(()=>document.querySelector('.food-library')?.scrollIntoView({block:'start'}));}});
+function nav(){const links=[['home','今天'],['nutrition','饮食'],['progress','进度'],['more','更多']],active=view==='pantry'?'nutrition':view==='history'?'progress':['guide','movement','settings'].includes(view)?'more':view;$('#sidebar').innerHTML=`<a class="brand" href="#home"><img class="brand-symbol" src="assets/icons/bulkplan-lime-192.png" width="32" height="32" alt="">BulkPlan</a><p class="brand-caption">饮食与体重，每天记一点。</p><nav>${links.map(([id,n])=>`<a class="navitem ${active===id?'active':''}" href="#${id}">${icon(id)}${n}</a>`).join('')}</nav><div class="sidebar-bottom"><a class="navitem" href="#guide">${icon('book')}饮食手册</a><a class="navitem" href="#settings">${icon('download')}记录与备份</a><div class="goal-note"><small>个人增肌计划</small><b>49 → 60 kg</b><small>167 cm / 稳定增肌</small></div></div><div class="mobile-tools"><span class="sync-indicator is-pending" data-sync-indicator role="status">未连接备份</span><a class="btn text" href="#settings" aria-label="记录与备份">${icon('download')}</a></div>`;$('#mobile-nav').innerHTML=links.map(([id,n])=>`<a href="#${id}" class="${active===id?'active':''}" ${active===id?'aria-current="page"':''}>${icon(id)}${n}</a>`).join('');}
+function home(){const p=plan(),goal=target(),actual=actualTotal(),weight=state.weights.filter(w=>w.date<=today()).sort((a,b)=>a.date.localeCompare(b.date)).at(-1),days=state.weights.filter(w=>w.date>=C.shift(today(),-6)&&w.date<=today()).length;return header('今天',new Date().toLocaleDateString('zh-CN',{month:'long',day:'numeric',weekday:'long'}))+SUV.reminder(supplementContext(today()))+`<div class="grid12 home-grid"><section class="panel tonal span8"><div class="panel-head"><h2>今天怎么吃</h2></div>${dietModePicker(p)}<div class="home-actions"><a class="btn primary" href="#nutrition">记录今日饮食</a></div></section><section class="panel span4"><div class="panel-head"><h2>今日营养</h2><span class="small">${p.gym?'训练日':'休息日'}</span></div><button type="button" class="home-nutrition-open" data-action="nutrition-summary" aria-haspopup="dialog" aria-controls="nutrition-summary"><span><small>已记录摄入</small><strong>${num(Math.round(actual.k/10)*10)} <small>kcal</small></strong><small>目标 ${goal.k[0]}–${goal.k[1]} kcal</small></span><span>查看缺口 ↗</span></button></section><section class="panel span6"><div class="home-weight"><div><small>最近晨起体重</small><strong>${weight?num(weight.value,1)+' kg':'还没有记录'}</strong><p class="small">${weight?weight.date:'记录后，再看真实趋势。'}</p></div><a class="btn secondary" href="#progress">记体重</a></div></section><section class="panel span6"><div class="panel-head"><h2>最近七天</h2><a class="row-link" href="#history">查看记录</a></div><p style="margin:0">${days} 天体重记录</p><a class="btn secondary section" href="#pantry">食物与采购</a></section></div>`;}
 function dietModePicker(p){const dayOptions=[['gym','训练日'],['rest','休息日']],blendOptions=[['yes','有 Blend'],['no','无 Blend']];return `<div class="diet-mode-picker"><div class="mode-group"><div class="mode-label"><span>今日安排</span><small>按实际训练选择</small></div><div class="mode-segments day-segments" role="group" aria-label="今日安排">${dayOptions.map(([v,n])=>`<button data-action="day-mode" data-param="${v}" aria-pressed="${p.gym===(v==='gym')}" class="${p.gym===(v==='gym')?'selected':''}"><span class="mode-check" aria-hidden="true">${p.gym===(v==='gym')?'<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8 3 3 7-7"/></svg>':''}</span>${n}</button>`).join('')}</div></div><div class="mode-group"><div class="mode-label"><span>今日奶昔</span><small>按今天食材计算</small></div><div class="mode-segments blend-segments" role="group" aria-label="今日奶昔">${blendOptions.map(([v,n])=>`<button data-action="blend-mode" data-param="${v}" aria-pressed="${p.blend===(v==='yes')}" class="${p.blend===(v==='yes')?'selected':''}"><span class="mode-check" aria-hidden="true">${p.blend===(v==='yes')?'<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 8 3 3 7-7"/></svg>':''}</span>${n}</button>`).join('')}</div></div><div class="mode-result" aria-live="polite"><div><small>热量目标 · ${p.gym?'训练日':'休息日'}</small><strong>${p.gym?'2,450–2,550':'2,350–2,450'} <span>kcal</span></strong></div><div><small>${p.blend?'有 Blend':'无 Blend'} · 建议 ${p.blend?1:2} 份搭配</small><strong>已安排 ${p.sides.length} <span>份搭配</span></strong></div></div></div>`;}
-function dailyFoodRow(p,a){if(a.id.startsWith('meal-'))return window.BulkMealView.row({p,a,index:+a.id.slice(5),D,esc,num,btn,compact:true});return `<div class="meal-row"><label class="meal-eaten"><input type="checkbox" data-eaten="${a.id}" aria-label="${esc(a.name)}已吃" ${p.eaten.includes(a.id)?'checked':''}><span>已吃</span></label><div>${a.id.startsWith('add-')?btn(esc(a.name),'food-edit',a.id.slice(4),'text meal-edit-name','aria-haspopup="dialog"'):btn(esc(a.name),'nutrition-tab','recipe','text meal-edit-name')}<small>约${num(a.k)} kcal · 蛋白${num(a.p)}g</small>${a.id==='blend'?`<small>${p.blendAmount===.5?'半杯':'整杯'} · ${btn('调整配方','nutrition-tab','recipe','text')}</small>`:''}</div>${a.id.startsWith('add-')?btn('移除','remove-addon',a.id.slice(4),'text'):''}</div>`;}
-function nutrition(){const p=plan(),all=items(),tabs=[['today','今日搭配'],['foods','选食物'],['recipe','Blend 配方'],['supplements','补充剂'],['sides','餐盒指南'],['budget','采购预算']];let content='';if(nutritionTab==='today')content=`<section class="panel nutrition-daily-plan"><div class="diet-summary"><div><h2>${p.gym?'训练日':'休息日'} · ${p.blend?'有 Blend':'无 Blend'}</h2><small>${today()}${p.sidesCustomized||p.chickenConfigured?' · 已自定义':''}</small></div>${btn('调整安排','nutrition-tab','arrange','secondary')}</div>${window.BulkMealView.chickenLog({p,esc,btn})}<div class="daily-group-head"><h3>配菜与其他食物</h3>${btn('＋ 选食物','food-jump','','secondary')}</div>${all.filter(a=>!a.id.startsWith('chicken-')).map(a=>dailyFoodRow(p,a)+(foodUndo?.date===today()&&a.id==='add-'+foodUndo.index?`<div class="food-added-result" role="status"><span>${foodUndo.eaten?'已记为已吃':'已加入计划'} ${esc(foodUndo.name)}</span>${btn('撤销这次新增','food-undo','','text')}</div>`:'')).join('')||'<p class="empty">还没有安排配菜或其他食物。</p>'}<div class="supplement-shortcut"><div><strong>每日补充剂</strong><p>${SUV.summary(p)}</p></div>${btn('去记录','supplement-open',today(),'secondary')}</div><p class="small">计划份数先计入计划；吃完打钩，才计入实际摄入。</p></section>`;
-if(nutritionTab==='arrange')content=`<section class="panel nutrition-arrange"><div class="panel-head"><h2>调整今天的安排</h2>${btn('返回清单','nutrition-tab','today','secondary')}</div>${dietModePicker(p)}${window.BulkMealView.chicken({p,esc,num,btn})}<h3>核心配菜</h3>${all.filter(a=>a.id.startsWith('meal-')).map(a=>window.BulkMealView.row({p,a,index:+a.id.slice(5),D,esc,num,btn})).join('')}${window.BulkMealView.add({p,D,esc,btn})}${p.blend?btn('调整 Blend 食材','nutrition-tab','recipe','secondary'):''}</section>`;
-if(nutritionTab==='foods')content=`<div class="grid12 nutrition-grid"><section class="panel span12">${FV.choices(foodContext())}</section><section class="panel span5"><h2>记一份外食</h2><div class="form-grid"><label class="field" style="grid-column:1/-1">食物名称<input id="food-name" maxlength="100" required></label>${[['k','热量 kcal'],['p','蛋白 g'],['c','碳水 g'],['f','脂肪 g'],['fi','纤维 g，可不填']].map(([k,n])=>`<label class="field">${n}<input id="food-${k}" type="number" min="${k==='k'?0.1:0}" max="${k==='fi'?300:10000}" ${k==='k'?'required':''} step=".1" inputmode="decimal"></label>`).join('')}</div>${btn('加入今日计划','custom-food','','','style="margin-top:16px"')}</section></div>`;
+function dailyFoodRow(p,a){if(a.id.startsWith('meal-'))return window.BulkMealView.row({p,a,index:+a.id.slice(5),D,esc,num,btn});return `<div class="meal-row"><label class="meal-eaten"><input type="checkbox" data-eaten="${a.id}" aria-label="${esc(a.name)}已吃" ${p.eaten.includes(a.id)?'checked':''}><span>已吃</span></label><div>${a.id.startsWith('add-')?btn(esc(a.name),'food-edit',a.id.slice(4),'text meal-edit-name','aria-haspopup="dialog"'):btn(esc(a.name),'nutrition-tab','recipe','text meal-edit-name')}<small>约${num(a.k)} kcal · 蛋白${num(a.p)}g</small>${a.id==='blend'?`<small>${p.blendAmount===.5?'半杯':'整杯'} · ${btn('调整配方','nutrition-tab','recipe','text')}</small>`:''}</div>${a.id.startsWith('add-')?btn('移除','remove-addon',a.id.slice(4),'text'):''}</div>`;}
+function nutrition(){const p=plan(),all=items(),tabs=[['today','今日搭配'],['foods','选食物'],['recipe','Blend 配方'],['supplements','补充剂'],['sides','餐盒指南'],['budget','采购预算']];let content='';if(nutritionTab==='today')content=`<section class="panel nutrition-daily-plan">
+ <div class="diet-summary"><div><h2>${p.gym?'训练日':'休息日'} · ${p.blend?'有 Blend':'无 Blend'}</h2><small>${today()}</small></div></div>
+ ${window.BulkMealView.chicken({p,btn})}
+ <div class="daily-group-head"><h3>配菜</h3></div>
+ ${all.filter(a=>a.id.startsWith('meal-')).map(a=>dailyFoodRow(p,a)).join('')}
+ ${window.BulkMealView.add({p,D,esc,btn})}
+ <div class="daily-group-head"><h3>Blend 与加餐</h3>${btn('＋ 选食物','food-jump','','secondary')}</div>
+ ${all.filter(a=>a.id==='blend'||a.id.startsWith('add-')).map(a=>dailyFoodRow(p,a)+(foodUndo?.date===today()&&a.id==='add-'+foodUndo.index?`<div class="food-added-result" role="status"><span>${foodUndo.eaten?'已记为已吃':'已加入计划'} ${esc(foodUndo.name)}</span>${btn('撤销这次新增','food-undo','','text')}</div>`:'')).join('')||'<p class="small">今天还没有安排 Blend 或加餐。</p>'}
+ </section>`;
+if(nutritionTab==='foods')content=`<section class="panel">${FV.choices(foodContext())}</section>`;
 if(nutritionTab==='supplements')content=SUV.render(supplementContext());
 if(nutritionTab==='recipe')content=recipe();
 if(nutritionTab==='sides')content=`<section class="panel"><h2>鸡胸与 Side，按当天搭配</h2><p>鸡胸约160g，约263 kcal · 蛋白48g · 碳水9g · 脂肪6.4g。可单吃，也可搭配一份 Side。</p><p class="small">下列展示整盒参考值；今日配菜按整盒减去鸡胸参考值估算，鸡胸肉按计划份数单独计算。</p><div class="side-guide">${D.sides.map(s=>`<div><strong>${s.name}</strong><small>${s.starch?'主食型，训练日优先':'轻 Side，可另加主食'}</small><p style="margin:10px 0 0">${s.k} kcal / ${s.p}P / ${s.c}C / ${s.f}F</p></div>`).join('')}</div><p class="notice section">明确排除 Garlic Chickpea、Pumpkin Soup、Tomato Soup；Italian Tomato Pasta 可以选。</p><p class="small">餐盒纤维未知，不按零计算。营养数值以实际包装标签为准。</p></section>`;
@@ -51,10 +58,24 @@ function guide(){const source=window.BulkHandbook.nutrition,sections=source.filt
 function more(){return header('更多','饮食指南、采购与记录备份。')+`<div class="app-links"><a class="app-link" href="#pantry"><div><strong>食物与采购</strong><small>盘点剩余、查看待购、补货后入库</small></div>${icon('nutrition')}</a><a class="app-link" href="#guide"><div><strong>饮食手册</strong><small>饮食安排、配方与营养目标</small></div>${icon('book')}</a><a class="app-link" href="#settings"><div><strong>记录与备份</strong><small>导出、恢复与私有同步</small></div>${icon('download')}</a></div><section class="panel section"><h2>放到 iPhone 主屏幕</h2><ol class="install-steps"><li>在 Safari 打开 BulkPlan。</li><li>点分享，选择“添加到主屏幕”。</li><li>在“记录与备份”连接后，等顶部显示“已同步”。</li></ol><p class="small section">断网浏览准备：<span data-offline-detail>检查中</span></p><p class="small">断网时先保存在本机，连接后的修改会在恢复联网时自动同步。更换设备前建议另存一份备份。</p></section>`;}
 
 function history(){return window.BulkHistory.render({state,kind:historyKind,date:historyDate,D,B,C,esc,btn});}
-function settings(){return header('记录与备份','本机随时保存，连接后同步到自己的私有仓库。')+`<div class="grid12"><section class="panel span12"><h2>本机记录</h2>${invalidRaw!==null?btn('导出未能读取的原始记录','export-raw','','secondary'):''}<div class="stats"><div class="stat"><span>体重</span><b>${state.weights.length}</b><small>天</small></div><div class="stat"><span>饮食记录</span><b>${Object.keys(state.plans).length}</b><small>天</small></div></div><p class="small section">连接私有仓库后，可在其他设备继续。尚未连接时，换设备前请先导出饮食、体重与库存。旧版训练记录仍随完整备份保留。</p><div class="inline">${btn('导出全部记录','export')}${btn('从备份恢复','import','','secondary')}</div><p class="save-status">${saveStamp||'记录会自动保存'}</p></section></div>${window.BulkSyncView?.render(cloud,esc,btn)||''}${vault?.recovery().length?`<section class="panel section"><details><summary>找回本机保存的副本</summary><p class="small section">恢复或处理冲突前保留的记录，可导出后从备份恢复。</p>${vault.recovery().map((r,i)=>`<div class="history-row"><span>${esc(new Date(r.exportedAt).toLocaleString('zh-CN'))}</span>${btn('导出这份副本','local-recovery',i,'secondary')}</div>`).join('')}</details></section>`:''}`;}
+function settings(){
+ return header('记录与备份','本机自动保存，联网后自动上传到私有仓库。')+`
+ <section class="panel">
+  <h2>本机记录</h2>
+  ${invalidRaw!==null||localStorage.getItem('bulkplan-original-raw')!==null?btn('导出原始记录','export-raw','','secondary'):''}
+  <div class="stats"><div class="stat"><span>体重</span><b>${state.weights.length}</b><small>天</small></div><div class="stat"><span>饮食记录</span><b>${Object.keys(state.plans).length}</b><small>天</small></div></div>
+  ${btn('导出全部记录','export','','secondary')}
+  <p class="save-status">${saveStamp||'记录会自动保存'}</p>
+ </section>
+ ${window.BulkSyncView?.render(cloud,esc,btn)||''}
+ <section class="panel section recovery-panel">
+  <h2>危险区</h2><p>恢复会用选中的备份替换这台设备上的整份记录。</p>
+  ${btn('恢复备份','restore-backup','','secondary','aria-haspopup="dialog"')}
+ </section>`;
+}
 function formKey(el){return (view||'home')+'|'+el.id;}
-function render(){if(imeTargets.size){imeNeedsRender=true;return;}const focused=UI.captureFocus($('#main')),fieldErrors=[...$('#main').querySelectorAll('[aria-invalid="true"]')].map(el=>({id:el.id,message:$('#'+el.id+'-error')?.textContent}));renderRevision++;for(const el of document.querySelectorAll('[data-scroll-key]'))horizontalScroll[view+'|'+el.dataset.scrollKey]=el.scrollLeft;for(const d of document.querySelectorAll('#main details[data-keep-open]'))openDetails[view+'|'+d.dataset.keepOpen]=d.open;for(const el of document.querySelectorAll('#main input[id],#main textarea[data-equipment-field],#main input[data-equipment-field]'))if(!el.dataset.equipmentField&&!['session-note','recovery','sync-token'].includes(el.id)&&el.type!=='checkbox'&&el.type!=='range')formDrafts[formKey(el)]=el.value;if(renderedDate!==today()&&supplementDate===renderedDate)supplementDate='';renderedDate=today();nav();const pages={home,nutrition,pantry,progress,guide,settings,more,history};$('#main').innerHTML=(localConflict?`<section class="panel local-conflict"><h2>另一个页面有新记录</h2><p>两个版本都已保留。先导出副本，再选择要继续使用的记录。</p><div class="inline">${btn('导出两个版本','local-export','','secondary')}${btn('使用另一页面记录','local-remote','','secondary')}${btn('保留本页记录','local-local','','text')}</div></section>`:'')+(!storageOK?'<div class="notice warning">本机数据无法可靠读取或保存。<a href="#settings">先导出原始记录或恢复备份</a>，原数据不会被覆盖。</div>':'')+(pages[view]||home)();for(const el of document.querySelectorAll('#main input[id],#main textarea[data-equipment-field],#main input[data-equipment-field]')){const value=formDrafts[formKey(el)];if(value!=null&&el.type!=='checkbox'&&el.type!=='range'&&el.id!=='sync-token'&&el.id!=='session-note')el.value=value;}for(const d of document.querySelectorAll('#main details[data-keep-open]')){const open=openDetails[view+'|'+d.dataset.keepOpen];if(open!=null)d.open=open;}for(const el of document.querySelectorAll('[data-scroll-key]'))el.scrollLeft=horizontalScroll[view+'|'+el.dataset.scrollKey]||0;for(const {id,message} of fieldErrors){const field=document.getElementById(id);if(field&&$('#main').contains(field))UI.error(field,message);}UI.restoreFocus(focused,$('#main'));if(cloud)window.BulkSyncView.update(cloud);nutritionSummary?.update();window.dispatchEvent(new Event('bulkplan-render'));}
-function route(){for(const el of document.querySelectorAll('#main input[id]'))if(el.id!=='sync-token'&&el.type!=='checkbox')formDrafts[(view||'home')+'|'+el.id]=el.value;view=location.hash.slice(1).split(/[?\/]/)[0]||'home';if(view==='training'||view==='movement'){view='home';window.history?.replaceState(null,'','#home');}if(view==='nutrition'&&['today','foods','arrange','recipe','supplements','sides','budget'].includes(location.hash.split('/')[1]))nutritionTab=location.hash.split('/')[1];if(!['home','nutrition','pantry','progress','guide','settings','more','history'].includes(view))view='home';render();$('#main').scrollTo(0,0);scrollTo(0,0);$('#main').focus({preventScroll:true});}
+function render(){if(imeTargets.size){imeNeedsRender=true;return;}const focused=UI.captureFocus($('#main')),fieldErrors=[...$('#main').querySelectorAll('[aria-invalid="true"]')].map(el=>({id:el.id,message:$('#'+el.id+'-error')?.textContent}));renderRevision++;for(const el of document.querySelectorAll('[data-scroll-key]'))horizontalScroll[view+'|'+el.dataset.scrollKey]=el.scrollLeft;for(const d of document.querySelectorAll('#main details[data-keep-open]'))openDetails[view+'|'+d.dataset.keepOpen]=d.open;for(const el of document.querySelectorAll('#main input[id],#main textarea[data-equipment-field],#main input[data-equipment-field]'))if(!el.dataset.equipmentField&&!['session-note','recovery','sync-token'].includes(el.id)&&el.type!=='checkbox'&&el.type!=='range')formDrafts[formKey(el)]=el.value;if(renderedDate!==today()&&supplementDate===renderedDate)supplementDate='';renderedDate=today();nav();const pages={home,nutrition,pantry,progress,guide,settings,more,history};$('#main').innerHTML=(localConflict?`<section class="panel local-conflict"><h2>另一个页面有新记录</h2><p>两个版本都已保存为本机备份。恢复一份备份后可继续记录。</p>${btn('恢复备份','restore-backup','','secondary')}</section>`:'')+(!storageOK?'<div class="notice warning">本机数据无法可靠读取或保存。<a href="#settings">先导出原始记录或恢复备份</a>，原数据不会被覆盖。</div>':'')+(pages[view]||home)();for(const el of document.querySelectorAll('#main input[id],#main textarea[data-equipment-field],#main input[data-equipment-field]')){const value=formDrafts[formKey(el)];if(value!=null&&el.type!=='checkbox'&&el.type!=='range'&&el.id!=='sync-token'&&el.id!=='session-note')el.value=value;}for(const d of document.querySelectorAll('#main details[data-keep-open]')){const open=openDetails[view+'|'+d.dataset.keepOpen];if(open!=null)d.open=open;}for(const el of document.querySelectorAll('[data-scroll-key]'))el.scrollLeft=horizontalScroll[view+'|'+el.dataset.scrollKey]||0;for(const {id,message} of fieldErrors){const field=document.getElementById(id);if(field&&$('#main').contains(field))UI.error(field,message);}UI.restoreFocus(focused,$('#main'));if(cloud)window.BulkSyncView.update(cloud);nutritionSummary?.update();window.dispatchEvent(new Event('bulkplan-render'));}
+function route(){for(const el of document.querySelectorAll('#main input[id]'))if(el.id!=='sync-token'&&el.type!=='checkbox')formDrafts[(view||'home')+'|'+el.id]=el.value;view=location.hash.slice(1).split(/[?\/]/)[0]||'home';if(view==='training'||view==='movement'){view='home';window.history?.replaceState(null,'','#home');}if(view==='nutrition'){const tab=location.hash.split('/')[1];nutritionTab=['today','foods','recipe','supplements','sides','budget'].includes(tab)?tab:'today';if(tab==='arrange')window.history?.replaceState(null,'','#nutrition/today');}if(!['home','nutrition','pantry','progress','guide','settings','more','history'].includes(view))view='home';render();$('#main').scrollTo(0,0);scrollTo(0,0);$('#main').focus({preventScroll:true});}
 document.addEventListener('click',async e=>{const b=e.target.closest('[data-action]');if(!b)return;const a=b.dataset.action,p=b.dataset.param;
 if(a==='supplement-open'){supplementDate=C.validDate(p)&&p<=today()?p:today();nutritionTab='supplements';$('#details').close();location.hash='#nutrition/supplements';route();return;}
 if(a.startsWith('supplement-'))return SUV.handle(supplementContext(),a,p);
@@ -67,9 +88,29 @@ if(a==='zoom-blend'){const img=b.querySelector('img');window.BulkZoom.open(img.g
 if(a==='guide-tab'||a==='library-day')return;
 if(a==='history-kind'){historyKind=p==='weight'?'weight':'diet';render();return;}
 if(a==='history-diet'){const q=state.plans[p];if(!q)return;const rows=items(q);$('#dialog-content').innerHTML=`<h2 id="dialog-title">${esc(p)}的饮食</h2><ul>${rows.map(a=>`<li><strong>${esc(a.name)}</strong> · ${q.eaten.includes(a.id)?'已吃':'已安排'}<p>约${num(a.k)} kcal · 蛋白${num(a.p)}g · 碳水${num(a.c)}g · 脂肪${num(a.f)}g</p></li>`).join('')}</ul><section class="supplement-history"><h3>补充剂</h3><ul>${Object.values(q.supplements||{}).map(r=>`<li>${esc(r.snapshot.name)} · 已服用 ${r.count} ${esc(r.snapshot.unit)}</li>`).join('')||'<li>尚未记录</li>'}</ul><p class="small">已知热量 ${num(SU.totals(q).k)} kcal · 脂肪 ${num(SU.totals(q).f)} g</p>${btn('查看与调整补充剂','supplement-open',p,'secondary')}</section>`;$('#details').showModal();return;}
-if(a==='local-recovery'){const row=vault?.recovery()[Number(p)];if(row)downloadSync(JSON.stringify(row,null,2),'BulkPlan-local-backup-'+today()+'.json');return;}
-if(a==='local-export'){const v=vault.versions();downloadSync(JSON.stringify([{app:'BulkPlan',exportedAt:new Date().toISOString(),data:v.local},{app:'BulkPlan',exportedAt:new Date().toISOString(),data:v.remote}],null,2),'BulkPlan-versions-'+today()+'.json');return;}
-if(a==='local-local'||a==='local-remote'){if(!await confirmAction('选择这个版本继续？原来的两个版本仍可从副本中找回。'))return;await vault.resolve(a==='local-local'?'local':'remote');localConflict=false;storageOK=true;cloud?.changed();render();return;}
+if(a==='chicken-edit'){
+ const i=Number(p),q=plan().chickenPortions[i];
+ if(!q)return;
+ chickenEdit={i,date:today(),original:JSON.stringify(q)};
+ $('#dialog-content').innerHTML=`<h2 id="dialog-title">编辑第 ${i+1} 份鸡胸肉</h2>
+ <label class="field">这份鸡胸肉有多少克<input id="chicken-grams" type="number" min="1" max="1000" step="any" required inputmode="decimal" value="${q.grams??160}"></label>
+ <p class="small">以原计划的 160g 份量为基准，按重量换算营养。</p>
+ <div class="food-sheet-actions">${btn('保存修改','chicken-edit-save','','primary')}</div>`;
+ $('#details').showModal();
+ return;
+}
+if(a==='chicken-edit-save'){
+ const edit=chickenEdit,field=$('#chicken-grams'),grams=Number(field.value);
+ if(!edit||edit.date!==today()||JSON.stringify(plan().chickenPortions[edit.i])!==edit.original)return toast('这份记录已有变化，请重新打开。');
+ if(!C.finite(grams,1,1000)){UI.error(field,'填写 1–1,000 g 的份量。');field.focus();return;}
+ const next=structuredClone(state);
+ if(M.chickenGrams(next.plans[edit.date],edit.i,grams)&&await save(next)){
+  $('#details').close();
+  render();
+  toast('鸡胸肉份量已更新。');
+ }
+ return;
+}
 if(a==='chicken-count'){if(!M.chickenCount(plan(),Number(p)))return toast('已吃的份数会保留，先取消已吃再减少。');await save();render();return;}
 if(a==='side-add'){M.addSide(plan(),p||$('#side-add-choice').value);await save();render();return;}
 if(a==='side-remove'){if(!M.removeSide(plan(),Number(p)))return toast('先取消已吃，再移除这份配菜。');await save();render();return;}
@@ -83,20 +124,21 @@ if(a==='blend-honey'){const q=plan();if(q.eaten.includes('blend'))return toast('
 if(a==='blend-unrecord'){const q=plan();if(!await confirmAction('取消这杯的已喝记录后，可以重新调整食材；调整好再标记已喝。继续？'))return;q.eaten=q.eaten.filter(id=>id!=='blend');delete q.blendSnapshot;save();renderRecipeKeepScroll();return;}
 if(a==='addon'){plan().addons.push({...D.addons.find(x=>x.id===p)});save();render();return;}
 if(a==='remove-addon'){const q=plan();if(q.eaten.includes('add-'+p))return toast('这份食物已记为已吃，先取消勾选再移除。');q.addons.splice(+p,1);q.eaten=q.eaten.map(id=>id.startsWith('add-')&&Number(id.slice(4))>+p?'add-'+(Number(id.slice(4))-1):id);save();render();return;}
-if(a==='custom-food'){UI.clearErrors($('#main'));const name=$('#food-name'),n=name.value.trim(),v={};let first=null;const invalid=(field,message)=>{UI.error(field,message);first??=field;};if(!n)invalid(name,'填写食物名称。');for(const k of ['k','p','c','f','fi']){const field=$('#food-'+k),max=k==='fi'?300:10000;v[k]=field.value===''?(k==='fi'?null:0):Number(field.value);if(v[k]!=null&&(!C.finite(v[k],0,max)||k==='k'&&v[k]<=0))invalid(field,k==='k'?'填写大于0、最多10,000 kcal的热量。':'填写0–'+max+'之间的数值。');}if(first){first.focus();return;}plan().addons.push({name:n,...v});for(const id of ['food-name','food-k','food-p','food-c','food-f','food-fi']){$('#'+id).value='';delete formDrafts['nutrition|'+id];}save();render();return;}
 if(a==='stock'){P.record(state,D.pantryItems.find(i=>i.id==='chicken-box'),Math.max(0,Math.min(10000,state.inventory+Number(p))));save();render();return;}
 if(a==='save-weight'){UI.clearErrors($('#main'));const dateField=$('#weight-date'),weightField=$('#weight-value'),date=dateField.value,value=Number(weightField.value);let first=null;if(!C.validDate(date)||date>today()){UI.error(dateField,'选择今天或之前的有效日期。');first=dateField;}if(!C.finite(value,25,250)){UI.error(weightField,'填写25–250 kg之间的体重。');first??=weightField;}if(first){first.focus();return;}state.weights=state.weights.filter(w=>w.date!==date);state.weights.push({date,value});state.weights.sort((a,b)=>a.date.localeCompare(b.date));$('#weight-value').value='';delete formDrafts['progress|weight-value'];save();render();return toast('体重已保存，同日记录采用最后一次。');}
 if(a==='delete-weight'){if(await confirmAction('删除 '+p+' 的体重记录？')){state.weights=state.weights.filter(w=>w.date!==p);save();render();}return;}
 if(a==='sync-connect'){try{await cloud.connect({owner:$('#sync-owner').value.trim(),repo:$('#sync-repo').value.trim(),secret:$('#sync-token').value,remember:$('#sync-remember').checked});$('#sync-token').value='';render();}catch(e){toast(e.message);}return;}
-if(a==='sync-now'){await cloud.sync();return;}
 if(a==='sync-disconnect'){cloud.disconnect();render();return;}
-if(a==='sync-local'||a==='sync-remote'){if(await confirmAction(a==='sync-local'?'用整份本机记录替换线上版本？请先导出两个版本。':'用整份线上记录恢复本机？本机旧版会保留一份副本。'))await cloud.sync(a==='sync-local'?'local':'remote');render();return;}
-if(a==='sync-export-remote'){try{downloadSync(await cloud.remoteBackup(),'BulkPlan-cloud-'+today()+'.json');}catch(e){toast(e.message);}return;}
-if(a==='sync-recovery'){const rows=JSON.parse(cloud.recovery()),row=rows[Number(p)||0];if(!row)return toast('还没有保留副本。');downloadSync(JSON.stringify(row,null,2),'BulkPlan-recovery-'+today()+'.json');return;}
-if(a==='export-raw'){if(invalidRaw!==null){const link=document.createElement('a'),url=URL.createObjectURL(new Blob([invalidRaw],{type:'application/json'}));link.href=url;link.download='BulkPlan-original-'+today()+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),5000);}return;}
+if(a==='restore-backup')return openBackupList();
+if(a==='restore-point')return restorePoint(backupPoints[Number(p)]);
+if(a==='export-raw'){
+ const raw=invalidRaw??localStorage.getItem('bulkplan-original-raw');
+ if(raw!==null)downloadSync(raw,'BulkPlan-original-'+today()+'.json');
+ return;
+}
 if(a==='export'){const blob=new Blob([JSON.stringify({app:'BulkPlan',exportedAt:new Date().toISOString(),data:state},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='BulkPlan-'+today()+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),5000);return;}
 if(a==='recovery-import'){const data=pendingRecovery[Number(p)]?.data;if(data){$('#details').close();await restoreBackup(data);}return;}
-if(a==='import')return $('#import-file').click();
+if(a==='import'){$('#details').close();return $('#import-file').click();}
 });
 document.addEventListener('change',async e=>{if(PairV.input(e)||PV.input(e)||FV.input(e))return;const el=e.target;if(el.dataset.supplementDate!==undefined){if(C.validDate(el.value)&&el.value<=today()){supplementDate=el.value;render();}else toast('请选择今天或之前的有效日期。');return;}
 if(el.id==='history-date'){historyDate=el.value;render();return;}
@@ -104,7 +146,7 @@ if(el.dataset.chickenPortion!=null){M.selectChicken(plan(),+el.dataset.chickenPo
 if(el.dataset.mealPart){const q=plan(),i=+el.dataset.mealIndex;if(q.eaten.includes('meal-'+i)){el.checked=!el.checked;return toast('先取消已吃，再调整这份搭配。');}M.configure(q,i,el.dataset.mealPart,el.checked);save();render();return;}
 if(el.dataset.blendIngredient){const q=plan(),id=el.dataset.blendIngredient;if(q.eaten.includes('blend')){el.checked=!el.checked;return toast('先取消已喝，再调整食材。');}const ingredient=D.blendIngredients.find(i=>i.id===id);if(!ingredient||ingredient.group==='core')return;q.blendRecipe=q.blendRecipe||B.defaultRecipe(D.blendIngredients);q.blendRecipe.included=q.blendRecipe.included.filter(x=>x!==id);if(el.checked)q.blendRecipe.included.push(id);delete q.blendSnapshot;save();renderRecipeKeepScroll(id);return;}
 if(el.dataset.eaten){const q=plan();q.eaten=q.eaten.filter(x=>x!==el.dataset.eaten);if(el.checked){if(el.dataset.eaten.startsWith('meal-')){const i=+el.dataset.eaten.slice(5);if(q.independentMeals)M.configure(q,i,'side',true);if(!q.independentMeals&&!M.component(q,i,'chicken')&&!M.component(q,i,'side')){el.checked=false;return toast('先选择这一餐要吃的食物。');}}q.eaten.push(el.dataset.eaten);if(el.dataset.eaten==='blend'){q.blendSnapshot=B.capture(D.blendIngredients,q);q.blendSnapshot.micronutrients=N.captureBlend(D.blendIngredients,q);}if(el.dataset.eaten.startsWith('meal-'))M.capture(q,+el.dataset.eaten.slice(5),D.sides);}else if(el.dataset.eaten==='blend')delete q.blendSnapshot;else if(el.dataset.eaten.startsWith('meal-')&&q.mealSnapshots)delete q.mealSnapshots[+el.dataset.eaten.slice(5)];save();render();return;}
-if(el.dataset.side!=null){if(plan().eaten.includes('meal-'+el.dataset.side))return;if(!D.sides.some(s=>s.id===el.value))return;plan().sides[+el.dataset.side]=el.value;plan().sidesCustomized=true;save();render();return;}
+if(el.dataset.side!=null){const q=plan(),i=Number(el.dataset.side);if(q.eaten.includes('meal-'+i)||!q.sides[i]||!D.sides.some(s=>s.id===el.value))return;q.sides[i]=el.value;M.configure(q,i,'side',true);q.sidesCustomized=true;await save();render();return;}
 if(el.dataset.change==='blend-amount'){if(plan().eaten.includes('blend'))return toast('先取消已喝，再修改份量。');plan().blendAmount=Number(el.value);save();render();return;}
 if(el.dataset.change==='blend-days'){state.blendDays=Number(el.value);save();render();return;}
 if(el.id==='waist-concern'){state.waistConcern=el.checked;save();render();return;}
@@ -112,15 +154,118 @@ if(el.id==='waist-concern'){state.waistConcern=el.checked;save();render();return
 document.addEventListener('compositionstart',e=>{imeTargets.add(e.target);});
 document.addEventListener('compositionend',e=>{const target=e.target;setTimeout(()=>{imeTargets.delete(target);const pending=imeNeedsRender;imeNeedsRender=false;const revision=renderRevision;if(target.isConnected)target.dispatchEvent(new Event('input',{bubbles:true}));if(pending&&revision===renderRevision)render();},0);});
 document.addEventListener('input',e=>{if(e.isComposing||imeTargets.has(e.target))return;if(PairV.input(e)||PV.input(e)||FV.input(e)||FV.search(e,foodContext())||PV.search(e,pantryContext()))return;if(e.target.id==='doc-search'){const pos=e.target.selectionStart;docSearch=e.target.value;const scroll=$('#main').scrollTop;render();$('#doc-search').focus({preventScroll:true});$('#doc-search').setSelectionRange(pos,pos);$('#main').scrollTop=scroll;}});
-async function restoreBackup(data){if(!C.validateState(data))return toast('这份备份无法读取，未更改记录。');if(!await confirmAction(`恢复这份饮食、体重与库存备份？当前记录会保留副本，旧版训练记录也会保留。`))return;const next=structuredClone(data);B.preserveConsumedLegacy(next);for(const p of Object.values(next.plans))M.preserve(p,D.sides);if(vault)await vault.replace(next);else{state=next;localStorage.setItem(KEY,JSON.stringify(next));}invalidRaw=null;localConflict=false;storageOK=true;cloud?.changed();render();toast('备份已恢复。');}
+function captureRestoreState(){
+ return {raw:localStorage.getItem(KEY),memory:JSON.stringify(state)};
+}
+function assertRestoreState(expected){
+ const current=captureRestoreState();
+ if(current.raw!==expected.raw||current.memory!==expected.memory)throw Error('本机记录刚有变化，请重新选择备份。');
+}
+async function applyBackup(data,{expected=captureRestoreState()}={}){
+ assertRestoreState(expected);
+ const next=structuredClone(data);
+ B.preserveConsumedLegacy(next);
+ for(const p of Object.values(next.plans))M.preserve(p,D.sides);
+ C.migrateCustomFoods(next);
+ if(vault)await vault.replace(next,{expected:state,expectedRaw:expected.raw});
+ else{
+  if(invalidRaw!==null)localStorage.setItem('bulkplan-original-raw',invalidRaw);
+  localStorage.setItem(KEY,JSON.stringify(next));
+  state=next;
+  openVault();
+ }
+ invalidRaw=null;
+ localConflict=false;
+ storageOK=true;
+ foodUndo=null;
+ render();
+}
+async function restoreBackup(data){
+ const expected=captureRestoreState();
+ if(!C.validateState(data))return toast('这份备份无法读取，未更改记录。');
+ if(!await confirmAction('用这份备份替换本机记录？当前记录会先保留副本。','恢复并替换',true))return;
+ try{
+  await applyBackup(data,{expected});
+  cloud?.changed({restored:true});
+  toast('已恢复备份。');
+ }catch(e){toast(e.message);}
+}
+function backupTime(at){
+ const d=new Date(at||'');
+ return Number.isNaN(d.getTime())?'时间未知':d.toLocaleString('zh-CN',{hour12:false});
+}
+async function openBackupList(){
+ if(restoreBusy||!await confirmAction('恢复备份会替换本机的饮食、体重和其他记录。继续查看可恢复的版本？','查看恢复点'))return;
+ let legacy=[];
+ try{legacy=JSON.parse(cloud?.recovery()||'[]');}catch{}
+ backupPoints=[...(vault?.recovery()||[]),...legacy].filter(x=>C.validateState(x?.data))
+  .map(x=>({at:x.exportedAt,data:x.data}))
+  .sort((a,b)=>String(b.at).localeCompare(String(a.at)));
+ const dialog=$('#details'),content=$('#dialog-content');
+ const row=(point,i,source)=>`<div class="history-row"><div><strong>${esc(backupTime(point.at))}</strong>
+ <small>${source}${point.data?' · '+Object.keys(point.data.plans).length+' 天饮食 · '+point.data.weights.length+' 天体重':''}</small></div>
+ ${btn('选择这份','restore-point',i,'secondary',`aria-label="选择${source} ${esc(backupTime(point.at))}"`)}</div>`;
+ content.innerHTML=`<div class="backup-list"><h2 id="dialog-title">选择恢复点</h2>
+ <h3>云端同步点</h3><div data-cloud-points role="status">正在读取云端同步点…</div>
+ <h3>本机备份</h3>${backupPoints.map((x,i)=>row(x,i,'本机备份')).join('')||'<p class="small">暂无本机备份。</p>'}
+ ${btn('从文件恢复','import','','text')}</div>`;
+ dialog.showModal();
+ const list=content.querySelector('[data-cloud-points]');
+ if(!list)return;
+ if(!cloud?.config().configured){list.textContent='连接私有仓库后可查看云端同步点。';return;}
+ try{
+  const rows=await cloud.listBackups();
+  if(!dialog.open||!list.isConnected)return;
+  const start=backupPoints.length;
+  backupPoints.push(...rows);
+  list.innerHTML=rows.map((x,i)=>row(x,start+i,'云端')).join('')||'<p class="small">还没有云端同步点。</p>';
+ }catch(e){list.textContent=e.message||'暂时无法读取云端同步点。';}
+}
+async function restorePoint(point){
+ if(!point||restoreBusy)return;
+ restoreBusy=true;
+ const expected=captureRestoreState();
+ try{
+  if(!await confirmAction('用 '+backupTime(point.at)+' 的'+(point.id?'云端同步点':'本机备份')+'替换本机全部记录？当前本机记录会先保留副本。','恢复并替换',true))return;
+  assertRestoreState(expected);
+  if(point.id)await cloud.restoreBackup(point.id,expected);
+  else{await applyBackup(point.data,{expected});cloud?.changed({restored:true});}
+  $('#details').close();
+  toast('已恢复备份。');
+ }catch(e){toast(e.message||'恢复失败，请重试。');}
+ finally{restoreBusy=false;}
+}
 $('#import-file').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;if(file.size>50000000){e.target.value='';return toast('备份超过50MB，未导入。');}try{const parsed=JSON.parse(await file.text());if(Array.isArray(parsed)){pendingRecovery=parsed.filter(x=>x?.app==='BulkPlan'&&C.validateState(x.data));if(!pendingRecovery.length)throw Error();$('#dialog-content').innerHTML=`<h2 id="dialog-title">选择要恢复的副本</h2>${pendingRecovery.map((x,i)=>`<div class="history-row"><div><strong>${esc(new Date(x.exportedAt).toLocaleString('zh-CN'))}</strong><small>${Object.keys(x.data.plans).length}天饮食 · ${x.data.weights.length}天体重</small></div>${btn('恢复这份','recovery-import',i,'secondary')}</div>`).join('')}`;$('#details').showModal();}else if(parsed.app==='BulkPlan'&&C.validateState(parsed.data))await restoreBackup(parsed.data);else throw Error();}catch{toast('文件不是有效的BulkPlan备份，未更改本机数据。');}e.target.value='';});
 
 $('.skip').addEventListener('click',e=>{e.preventDefault();$('#main').focus({preventScroll:true});});
 $('.close-dialog').addEventListener('click',()=>$('#details').close());$('#details').addEventListener('click',e=>{if(e.target===$('#details'))$('#details').close();});
-if(window.BulkStorage&&invalidRaw===null)vault=window.BulkStorage.create({storage:localStorage,getState:()=>state,apply:data=>{state=data;storageOK=true;localConflict=false;},validate:C.validateState,locks:globalThis.navigator?.locks});window.addEventListener('storage',e=>{if(e.key===KEY&&invalidRaw===null)save().then(()=>render());});
-window.addEventListener('hashchange',route);setInterval(()=>{if(renderedDate!==today()&&document.visibilityState==='visible')render();},1000);route();if(preservedBlendHistory)save();if(migrated){save();toast('已读取旧版体重记录；可在进度页核对并导出。');}
+function openVault(){
+ if(window.BulkStorage)vault=window.BulkStorage.create({storage:localStorage,getState:()=>state,apply:data=>{state=data;storageOK=true;localConflict=false;},validate:C.validateState,locks:globalThis.navigator?.locks});
+}
+if(invalidRaw===null)openVault();window.addEventListener('storage',e=>{if(e.key===KEY&&invalidRaw===null)save().then(()=>render());});
+window.addEventListener('hashchange',route);setInterval(()=>{if(renderedDate!==today()&&document.visibilityState==='visible')render();},1000);route();if(preservedBlendHistory||migratedFoods)save();if(migrated){save();toast('已读取旧版体重记录；可在进度页核对并导出。');}
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')save();else if(renderedDate!==today())render();});window.addEventListener('pagehide',()=>save());window.addEventListener('bulkplan-before-update',()=>save());window.BulkPlan={version:'0.13.1',flush:()=>save()};
 function downloadSync(text,name){const url=URL.createObjectURL(new Blob([text],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(url),5000);}
-if(window.BulkSync){cloud=window.BulkSync.create({storage:localStorage,fetch:(...args)=>fetch(...args),getState:()=>{if(invalidRaw!==null)throw Error('请先导出原始记录并恢复有效备份');if(localConflict)throw Error('请先处理两个页面之间的记录差异');return state;},validate:C.validateState,apply:async data=>{if(vault)await vault.replace(data,{expected:state});else{localStorage.setItem(KEY,JSON.stringify(data));state=data;}invalidRaw=null;storageOK=true;render();},onStatus:()=>window.BulkSyncView.update(cloud)});window.addEventListener('online',()=>cloud.sync());document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')cloud.sync();});setInterval(()=>{if(document.visibilityState==='visible')cloud.sync();},60000);if(view==='settings')render();if(invalidRaw===null)cloud.sync();}
-
+if(window.BulkSync){
+ cloud=window.BulkSync.create({
+  storage:localStorage,
+  fetch:(...args)=>fetch(...args),
+  getState:()=>{
+   const raw=localStorage.getItem(KEY);
+   if(raw===null)return null;
+   const persisted=JSON.parse(raw);
+   if(!C.validateState(persisted))throw Error('本机记录需要先恢复备份。');
+   return persisted;
+  },
+  getRestoreState:captureRestoreState,
+  validate:C.validateState,
+  apply:applyBackup,
+  onStatus:()=>window.BulkSyncView.update(cloud)
+ });
+ window.addEventListener('online',()=>cloud.sync());
+ document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')cloud.sync();});
+ setInterval(()=>{if(document.visibilityState==='visible')cloud.sync();},60000);
+ if(view==='settings')render();
+ cloud.sync();
+}
 })();
