@@ -14,7 +14,7 @@ test('旧版三份副本数组可从正常导入入口逐一恢复，不必手�
 test('采购页首次浏览不伪造库存；补货确认前可取消；食物加入计划保留营养快照',async()=>{const app=boot();app.context.location.hash='#pantry';app.events.hashchange();assert(app.el('#main').innerHTML.includes('先盘点常备食材'));assert(!app.storage.has('bulkplan-v2'));await app.click('pantry-open','peanut');assert(app.el('#dialog-content').innerHTML.includes('data-pantry-range'));await app.click('pantry-amount','40');await app.click('pantry-save');assert.equal(app.read().pantry.items.peanut.amount,40);const before=JSON.stringify(app.read());await app.click('pantry-purchase','peanut');await app.click('pantry-cancel');assert.equal(JSON.stringify(app.read()),before);app.context.location.hash='#nutrition';app.events.hashchange();await app.click('food-open','milo-crackers');await app.click('food-crackers','10');await app.click('food-save');const s=app.read(),p=Object.values(s.plans)[0];assert.equal(p.addons[0].foodId,'milo-crackers');assert(p.addons[0].name.includes('10片'));assert.equal(p.eaten.length,0);assert(app.context.BulkCore.validateState(s));});
 
 
-test('更多选择和搭配入口实际可用，不会自动添加摄入或回购；组合分项加入计划',async()=>{const app=boot();app.context.location.hash='#nutrition';app.events.hashchange();await app.click('food-jump');assert(app.el('#main').innerHTML.includes('搭配灵感'));await app.click('food-scope','more');assert(app.el('#main').innerHTML.includes('NESTUM 原味谷物粉'));assert(!app.storage.has('bulkplan-v2'));await app.click('pantry-queue','wrap');assert(app.read().pantry.items.wrap.queued);assert.equal(app.read().pantry.items.wrap.amount,null);assert.equal(Object.values(app.read().plans)[0].addons.length,0);await app.click('food-scope','pairings');assert(app.el('#main').innerHTML.includes('白切片面包＋芝士'));await app.click('pairing-open','bread-cheese');assert(app.el('#dialog-content').innerHTML.includes('分别加入今日计划'));await app.click('pairing-save');const s=app.read(),p=Object.values(s.plans)[0];assert.equal(p.addons.length,2);assert.deepEqual(p.addons.map(a=>a.foodId),['bread','cheese']);assert.equal(p.eaten.length,0);assert(app.context.BulkCore.validateState(s));});
+test('更多选择和搭配入口实际可用，不会自动添加摄入或回购；组合分项加入计划',async()=>{const app=boot();app.context.location.hash='#nutrition';app.events.hashchange();await app.click('food-jump');assert(app.el('#main').innerHTML.includes('搭配灵感'));await app.click('food-scope','more');assert(app.el('#main').innerHTML.includes('NESTUM 原味谷物粉'));assert(!app.storage.has('bulkplan-v2'));await app.click('pantry-queue','wrap');assert(app.read().pantry.items.wrap.queued);assert.equal(app.read().pantry.items.wrap.amount,null);assert.deepEqual(app.read().plans,{});await app.click('food-scope','pairings');assert(app.el('#main').innerHTML.includes('白切片面包＋芝士'));await app.click('pairing-open','bread-cheese');assert(app.el('#dialog-content').innerHTML.includes('分别加入今日计划'));await app.click('pairing-save');const s=app.read(),p=Object.values(s.plans)[0];assert.equal(p.addons.length,2);assert.deepEqual(p.addons.map(a=>a.foodId),['bread','cheese']);assert.equal(p.eaten.length,0);assert(app.context.BulkCore.validateState(s));});
 
 test('补充剂从饮食进入、部分记录、取消、历史修改均使用实际日期和有效状态',async()=>{const C=require('../app/core.js'),app=boot(),date=C.iso(new Date()),past=C.shift(date,-1);await app.click('supplement-open',date);assert(app.el('#main').innerHTML.includes('每日补充剂'));assert(app.el('#main').innerHTML.includes('已服用 0 / 5 项'));await app.click('supplement-count',date+'|omega3|1');assert.equal(app.read().plans[date].supplements.omega3.count,1);await app.click('supplement-count',date+'|omega3|2');assert.equal(app.read().plans[date].supplements.omega3.count,2);await app.click('supplement-count',date+'|multi|1');assert(C.validateState(app.read()));await app.click('supplement-open',past);assert(app.el('#main').innerHTML.includes('已服用 0 / 5 项'));await app.click('supplement-count',past+'|magnesium|1');assert.equal(app.read().plans[past].supplements.magnesium.snapshot.perUnit.magnesium,100);assert.equal(app.read().plans[date].supplements.omega3.count,2);await app.click('supplement-count',past+'|magnesium|0');assert.equal(app.read().plans[past].supplements,undefined);await app.click('history-diet',date);assert(app.el('#dialog-content').innerHTML.includes('NOW Ultra Omega-3'));assert(app.el('#dialog-content').innerHTML.includes('查看与调整补充剂'));assert(C.validateState(app.read()));});
 test('饮食清单点名称编辑：原位更新、保留已吃和其他食物；取消无副作用；外食可修改',async()=>{const C=require('../app/core.js'),F=require('../app/foods.js'),date=C.iso(new Date()),s=C.emptyState();s.plans[date]={...C.defaultPlan(),addons:[F.serving('rice',{amount:237}),{name:'蒸鱼饭',k:400,p:25,c:50,f:10,fi:null}],eaten:['add-0','add-1']};const app=boot(s);app.context.location.hash='#nutrition';app.events.hashchange();assert(app.el('#main').innerHTML.includes('data-action="food-edit" data-param="0"'));await app.click('food-edit','0');assert(app.el('#dialog-content').innerHTML.includes('value="237"'));app.handlers.input({target:{dataset:{foodField:'amount'},value:'300'}});await app.click('food-save');let q=app.read().plans[date];assert.equal(q.addons.length,2);assert.equal(q.addons[0].k,390);assert.deepEqual(q.eaten,['add-0','add-1']);assert.equal(q.addons[1].k,400);const before=JSON.stringify(app.read());await app.click('food-edit','0');app.handlers.input({target:{dataset:{foodField:'amount'},value:'400'}});await app.click('food-cancel');assert.equal(JSON.stringify(app.read()),before);await app.click('food-edit','1');app.handlers.input({target:{dataset:{foodManual:'k'},value:'450'}});await app.click('food-save');q=app.read().plans[date];assert.equal(q.addons[1].k,450);assert.deepEqual(q.eaten,['add-0','add-1']);assert(C.validateState(app.read()));});
@@ -86,5 +86,67 @@ test('页面退出和更新保存忽略事件参数，仍写入有效状态',asy
 
 test('训练入口与页面下架，旧书签回首页；历史仅显示饮食和体重',async()=>{const app=boot();for(const hash of ['#home','#training','#training/record/incline','#movement','#movement/flat','#progress','#more','#settings','#guide','#history']){app.context.location.hash=hash;app.events.hashchange();const html=app.el('#main').innerHTML;assert(!/href="#(?:training|movement)|data-action="(?:start|resume|session-edit|session-detail|log|plan-add)"|训练草稿|最近28天训练/.test(html),hash);assert(!app.el('#mobile-nav').innerHTML.includes('#training'));assert.equal((app.el('#mobile-nav').innerHTML.match(/<a /g)||[]).length,4);}assert(!app.el('#main').innerHTML.includes('训练记录'));assert(app.el('#main').innerHTML.includes('饮食记录'));await app.click('history-kind','training');assert(!app.el('#main').innerHTML.includes('训练记录'));assert(app.el('#main').innerHTML.includes('饮食记录'));});
 test('下架后保留旧训练、草稿和计时数据，饮食保存与刷新不推进循环',async()=>{const C=require('../app/core.js'),E=require('../app/equipment.js'),s=C.emptyState(),e=E.create({id:'incline'}),date=C.iso(new Date());s.cursor=3;s.restEnds=Date.now()-10000;s.draft={id:'archived-draft',date,day:'push',started:Date.now()-20000,exercises:[e],checks:[false,false,false,false],note:'keep',recovery:'normal'};s.sessions=[{...structuredClone(s.draft),id:'archived-session',finished:Date.now()-15000}];s.events=[{date,phase:'push',sessionId:'archived-session'}];assert(C.validateState(s));const app=boot(s),before=structuredClone(s);await app.click('day-mode','rest');await app.context.BulkPlan.flush();const q=app.read();for(const key of ['draft','sessions','events','cursor','restEnds'])assert.deepEqual(q[key],before[key],key);assert(!app.el('#main').innerHTML.includes('继续这次训练'));assert(C.validateState(q));const reloaded=boot(q);await reloaded.context.BulkPlan.flush();for(const key of ['draft','sessions','events','cursor','restEnds'])assert.deepEqual(reloaded.read()[key],before[key],key);});
-test('当天饮食日型独立于旧训练循环，新一天沿用最近一次日型而不复制已吃',async()=>{const C=require('../app/core.js'),s=C.emptyState(),date=C.iso(new Date());s.cursor=0;s.plans[C.shift(date,-1)]=C.defaultPlan(false);const app=boot(s);await app.context.BulkPlan.flush();let p=app.read().plans[date];assert.equal(p.gym,false);assert.deepEqual(p.eaten,[]);await app.click('day-mode','gym');assert.equal(app.read().plans[date].gym,true);assert.equal(app.read().cursor,0);});
+test('当天饮食日型独立于旧训练循环，新一天沿用最近一次日型而不复制已吃',async()=>{const C=require('../app/core.js'),s=C.emptyState(),date=C.iso(new Date());s.cursor=0;s.plans[C.shift(date,-1)]=C.defaultPlan(false);const app=boot(s);assert(app.el('#main').innerHTML.includes('热量目标 · 休息日'));await app.click('day-mode','gym');assert.equal(app.read().plans[date].gym,true);assert.deepEqual(app.read().plans[date].eaten,[]);assert.equal(app.read().cursor,0);});
 test('发布包不加载训练界面或媒体，GitHub源码仍保留恢复资料',()=>{const html=fs.readFileSync('index.html','utf8'),sw=fs.readFileSync('sw.js','utf8'),files=JSON.parse(sw.match(/^const FILES=(.+);$/m)[1]);for(const name of ['workout','workout-view','equipment','equipment-view','muscle-maps','animation-view','shoulder','custom-exercise-view']){assert(!html.includes('src="app/'+name+'.js"'));assert(!files.includes('app/'+name+'.js'));assert(fs.existsSync('app/'+name+'.js'));}assert(!files.some(x=>x.includes('/animations/')||x.includes('/muscle-maps/')));assert(!Object.hasOwn(require('node:vm').runInNewContext(fs.readFileSync('app/handbook.js','utf8')+';window.BulkHandbook',{window:{}}),'training'));});
+
+test('同一饮食日期贯通加餐、配菜、鸡胸肉、Blend 和补充剂；重开默认今天',async()=>{
+ const C=require('../app/core.js'),today=C.iso(new Date()),past=C.shift(today,-2),other=C.shift(today,-1),s=C.emptyState();
+ s.plans[today]={...C.defaultPlan(),addons:[{name:'今天的记录',k:240,p:10,c:20,f:4}],eaten:['add-0']};
+ const app=boot(s);
+ const go=hash=>{app.context.location.hash=hash;app.events.hashchange();};
+ const pick=value=>app.handlers.change({target:{dataset:{dietDate:''},value}});
+ go('#nutrition');await pick(other);await pick(past);
+ assert(app.el('#main').innerHTML.includes('data-diet-date value="'+past+'"'));
+ await app.context.BulkPlan.flush();
+ assert.deepEqual(Object.keys(app.read().plans),[today]);
+ await app.click('side-add-open');await app.click('side-add','tomato|'+past);
+ await app.click('chicken-edit','0');app.el('#chicken-grams').value='100';await app.click('chicken-edit-save');
+ await app.handlers.change({target:{dataset:{chickenPortion:'0'},checked:true}});
+ await app.click('food-jump');await app.click('food-open','rice');
+ assert(app.el('#dialog-content').innerHTML.includes(past));
+ await app.click('food-save-eaten');
+ await app.click('food-edit','0');
+ app.handlers.input({target:{dataset:{foodField:'amount'},value:'150'}});
+ await app.click('food-save');
+ await app.click('nutrition-tab','recipe');
+ await app.click('blend-mode','yes');
+ await app.click('nutrition-tab','today');
+ await app.handlers.change({target:{dataset:{eaten:'blend'},checked:true}});
+ await app.click('nutrition-tab','supplements');
+ assert(app.el('#main').innerHTML.includes('data-diet-date value="'+past+'"'));
+ await app.click('supplement-count',past+'|multi|1');
+ await app.click('supplement-count',today+'|calcium|1');
+ const state=app.read(),p=state.plans[past];
+ assert.equal(p.addons[0].portion.amount,150);
+ assert.equal(p.sides.at(-1),'tomato');
+ assert.equal(p.chickenPortions[0].grams,100);
+ assert.deepEqual(p.eaten,['chicken-0','add-0','blend']);
+ assert.equal(p.supplements.multi.count,1);
+ assert.deepEqual(state.plans[today],s.plans[today]);
+ assert(C.validateState(state));
+ await pick(C.shift(today,1));
+ assert(app.el('#main').innerHTML.includes('data-diet-date value="'+past+'"'));
+ await app.click('diet-today');
+ assert(app.el('#main').innerHTML.includes('data-diet-date value="'+today+'"'));
+ const reloaded=boot(state);reloaded.context.location.hash='#nutrition/supplements';reloaded.events.hashchange();
+ assert(reloaded.el('#main').innerHTML.includes('data-diet-date value="'+today+'"'));
+});
+
+test('历史入口打开正确日期，日期切换后的旧搭配弹窗不能写入别天',async()=>{
+ const C=require('../app/core.js'),today=C.iso(new Date()),past=C.shift(today,-3),other=C.shift(today,-1),s=C.emptyState();
+ s.plans[past]=C.defaultPlan();
+ const app=boot(s);
+ app.context.location.hash='#history';app.events.hashchange();
+ await app.click('history-diet',past);
+ assert(app.el('#dialog-content').innerHTML.includes('编辑这天的饮食'));
+ await app.click('diet-edit-day',past);
+ assert(app.el('#main').innerHTML.includes('data-diet-date value="'+past+'"'));
+ await app.click('food-jump');await app.click('pairing-open','bread-cheese');
+ await app.handlers.change({target:{dataset:{dietDate:''},value:other}});
+ await app.click('pairing-save');
+ assert(!app.read().plans[other]);
+ await app.click('pairing-cancel');
+ await app.click('pairing-open','bread-cheese');await app.click('pairing-save');
+ assert.equal(app.read().plans[other].addons.length,2);
+ assert.deepEqual(app.read().plans[past].addons,[]);
+});

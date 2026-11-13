@@ -52,3 +52,8 @@ input[aria-invalid="true"],select[aria-invalid="true"]{border-color:var(--negati
 
 .side-picker{display:grid;gap:8px}
 .side-picker>.btn{justify-content:flex-start;min-height:44px;text-align:left;white-space:normal}
+
+.diet-date-controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;margin:0 0 12px}
+.diet-date-field{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0}
+.diet-date-field input{width:auto;min-width:min(10rem,100%);min-height:44px;margin:0;color-scheme:dark}
+.diet-date-controls>.btn{min-height:44px}
