@@ -12,7 +12,7 @@ Run `npm run build`. This generates the product content and offline resource lis
 
 ## Current status
 
-0.13.1 repairs the mobile review findings: daily/history styles stay independent of archived training; the nutrition shortcut sits above navigation; larger text reflows; field errors remain beside their inputs; redraws preserve focus; common touch targets are enlarged.
+0.13.1 repairs the mobile review findings: daily/history styles stay independent of archived training; the nutrition shortcut floats above navigation and stays visible while scrolling; larger text reflows; field errors remain beside their inputs; redraws preserve focus; common touch targets are enlarged.
 
 BulkPlan 0.13.1 temporarily withdraws all workout pages and actions at the user's request. Home now starts with today's eating arrangement; navigation contains Today, Nutrition, Progress and More. Progress and history show nutrition and weight. Workout links return Home. Training/rest-day nutrition targets remain manually selectable, independent of the archived PPL cursor; new days use the most recent dietary day type, without copying eaten records.
 
