@@ -12,3 +12,42 @@ test('餐盒未知库存撤销恢复未知；拒绝小数与超限数量且不�
 test('操作历史满100条时撤销仍可用，不因裁剪旧记录中断入库回退',()=>{const s=C.emptyState();let when=Date.now()-10000;const id=P.purchase(s,item,350,{previousAmount:0,now:when++});for(let i=0;i<99;i++)P.record(s,optional,i,{now:when++});assert.equal(Object.keys(s.pantry.history).length,100);P.undo(s,id,{now:when++});assert.equal(P.get(s,item).amount,null);assert.equal(Object.keys(s.pantry.history).length,100);assert(C.validateState(s));});
 
 test('自制冰块只保留在Blend配方，不属于采购；旧冰块记录不破坏备份',()=>{const items=require('../content/pantry.json').items,B=require('../content/blend-ingredients.json').ingredients,s=C.emptyState();assert(!items.some(i=>i.id==='ice'));assert(B.some(i=>i.id==='ice'));P.queue(s,{id:'ice',pack:10,target:10,threshold:2,regular:false},true);assert(C.validateState(s));assert(!P.all(s,items).some(i=>i.id==='ice'||i.need));});
+
+test('移除常备待补保留原库存和提醒设置，可撤销、手动加回或重新触发',()=>{
+ const state=C.emptyState();
+ P.record(state,item,40);
+ const removal=P.queue(state,item,false);
+ assert(!P.status(state,item).need);
+ assert.equal(P.get(state,item).amount,40);
+ assert.equal(P.get(state,item).threshold,50);
+ P.undo(state,removal);
+ assert(P.status(state,item).need);
+ P.queue(state,item,false);
+ P.record(state,item,30);
+ assert(!P.status(state,item).need);
+ P.queue(state,item,true);
+ assert(P.status(state,item).need);
+ P.queue(state,item,false);
+ P.record(state,item,80);
+ P.use(state,item,40);
+ assert(P.status(state,item).need);
+ assert(C.validateState(state));
+});
+
+test('自订商品可编辑及移除，备份保留名称与数量但没有库存记录',()=>{
+ const state=C.emptyState();
+ const id=P.saveShoppingItem(state,'',' 牛油果 ',' 2 个 ');
+ assert.deepEqual(state.pantry.shopping[id],{name:'牛油果',quantity:'2 个'});
+ const restored=JSON.parse(JSON.stringify(state));
+ assert(C.validateState(restored));
+ assert(require('../app/sync.js').meaningful(restored));
+ P.saveShoppingItem(restored,id,'牛油果','1 袋');
+ assert.equal(restored.pantry.shopping[id].quantity,'1 袋');
+ assert.deepEqual(restored.pantry.items,{});
+ P.removeShoppingItem(restored,id);
+ assert.deepEqual(restored.pantry.shopping,{});
+ assert.throws(()=>P.saveShoppingItem(restored,id,'牛油果'),/已移除/);
+ assert.throws(()=>P.saveShoppingItem(restored,'',' '),/名称/);
+ restored.pantry.shopping[id]={name:'',quantity:''};
+ assert(!C.validateState(restored));
+});

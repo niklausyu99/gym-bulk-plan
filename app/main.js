@@ -286,7 +286,7 @@ function openVault(){
 }
 if(invalidRaw===null)openVault();window.addEventListener('storage',e=>{if(e.key===KEY&&invalidRaw===null)save().then(()=>render());});
 window.addEventListener('hashchange',route);window.addEventListener('pageshow',e=>{if(e.persisted&&dietDate){dietDate='';render();}});setInterval(()=>{if(renderedDate!==today()&&document.visibilityState==='visible')render();},1000);route();if(preservedBlendHistory||migratedFoods)save();if(migrated){save();toast('已读取旧版体重记录；可在进度页核对并导出。');}
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')save();else if(renderedDate!==today()){dietDate='';render();}});window.addEventListener('pagehide',()=>save());window.addEventListener('bulkplan-before-update',()=>save());window.BulkPlan={version:'0.13.1',flush:()=>save()};
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')save();else if(renderedDate!==today()){dietDate='';render();}});window.addEventListener('pagehide',()=>save());window.addEventListener('bulkplan-before-update',()=>save());window.BulkPlan={version:'0.13.2',flush:()=>save()};
 function downloadSync(text,name){const url=URL.createObjectURL(new Blob([text],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download=name;link.click();setTimeout(()=>URL.revokeObjectURL(url),5000);}
 if(window.BulkSync){
  cloud=window.BulkSync.create({
